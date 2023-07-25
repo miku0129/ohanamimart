@@ -1,0 +1,30 @@
+{
+  "name": "les-artisans",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server-dev": "nodemon server.js",
+    "server-start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miku0129/les-artisans.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miku0129/les-artisans/issues"
+  },
+  "homepage": "https://github.com/miku0129/les-artisans#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase": "^10.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
