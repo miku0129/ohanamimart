@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
 import SignUpForm from "../../compoments/sign-up-form/sign-up-form.component";
 
