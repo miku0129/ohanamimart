@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e54d3bff.css",
+    "main.js": "/static/js/main.d587e008.js",
+    "static/js/787.ebabf931.chunk.js": "/static/js/787.ebabf931.chunk.js",
+    "static/media/cherry-blossom-9-svgrepo-com.svg": "/static/media/cherry-blossom-9-svgrepo-com.5ab20eea49b99f8be28b297bea3d7a22.svg",
+    "index.html": "/index.html",
+    "main.e54d3bff.css.map": "/static/css/main.e54d3bff.css.map",
+    "main.d587e008.js.map": "/static/js/main.d587e008.js.map",
+    "787.ebabf931.chunk.js.map": "/static/js/787.ebabf931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e54d3bff.css",
+    "static/js/main.d587e008.js"
+  ]
+}
