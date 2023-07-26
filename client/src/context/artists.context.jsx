@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
-import ARTIST_DATA from "../artist-data";
+import ARTIST_DATA from "../utils/data/artist-data";
 
 export const ArtistsContext = createContext({
   artistsMap: {},
