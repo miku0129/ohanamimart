@@ -9,6 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 import { CategoriesProvider } from "./context/categories.context";
 import { ArtistsProvider } from "./context/artists.context";
 import { HeadlinesProvider } from "./context/headlines.context";
+import { ExhibitorsProvider } from "./context/exhibitors.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,7 +18,9 @@ root.render(
       <ArtistsProvider>
         <CategoriesProvider>
           <HeadlinesProvider>
-            <App />
+            <ExhibitorsProvider>
+              <App />
+            </ExhibitorsProvider>
           </HeadlinesProvider>
         </CategoriesProvider>
       </ArtistsProvider>

@@ -1,6 +1,14 @@
+import { useContext } from "react";
+import { ExhibitorsContext } from "../../context/exhibitors.context";
+
+import ExhibitorCard from "../../compoments/exhibitor-card/exhibitor-card.component";
+
 import "./upcomings.styles.scss";
 
 const Upcomings = () => {
+  const { exhibitorsMap } = useContext(ExhibitorsContext);
+  console.log("?", exhibitorsMap);
+
   return (
     <div className="contents-container">
       <div className="image-container">
@@ -24,44 +32,10 @@ const Upcomings = () => {
         </div>
         <div className="contents-subcontainer-right">
           <h2>Exhibitors</h2>
-          <div className="exhibitor">
-            <img
-              src="https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg"
-              alt="artist"
-            />
-            <div className="exhibitor-details">
-              <h3>Tsubaki Création</h3>
-              <span>Instagram</span>
-            </div>
-          </div>
-          <div className="exhibitor">
-            <img
-              src="https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg"
-              alt="artist"
-            />
-            <div className="exhibitor-details">
-              <h3>Tsubaki Création</h3>
-              <span>Instagram</span>
-            </div>
-          </div><div className="exhibitor">
-            <img
-              src="https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg"
-              alt="artist"
-            />
-            <div className="exhibitor-details">
-              <h3>Tsubaki Création</h3>
-              <span>Instagram</span>
-            </div>
-          </div><div className="exhibitor">
-            <img
-              src="https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg"
-              alt="artist"
-            />
-            <div className="exhibitor-details">
-              <h3>Tsubaki Création</h3>
-              <span>Instagram</span>
-            </div>
-          </div>
+          {exhibitorsMap["exhibitors"] &&
+            exhibitorsMap["exhibitors"].map((exhibitor) => {
+              return <ExhibitorCard key={exhibitor.id} exhibitor={exhibitor} />;
+            })}
         </div>
       </div>
     </div>

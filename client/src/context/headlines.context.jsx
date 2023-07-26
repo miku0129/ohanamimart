@@ -11,16 +11,17 @@ export const HeadlinesProvider = ({ children }) => {
 
   useEffect(() => {
     const getHeadlinesMap = () => {
-      console.log("?", HEADLINES_DATA)
       const headlinesMap = HEADLINES_DATA;
-      setHeadlinesMap(headlinesMap); 
+      setHeadlinesMap(headlinesMap);
     };
 
-    getHeadlinesMap(); 
+    getHeadlinesMap();
   }, []);
 
-  const value = {headlinesMap};
+  const value = { headlinesMap };
   return (
-    <HeadlinesContext.Provider value={value}>{children}</HeadlinesContext.Provider>
+    <HeadlinesContext.Provider value={value}>
+      {children}
+    </HeadlinesContext.Provider>
   );
 };

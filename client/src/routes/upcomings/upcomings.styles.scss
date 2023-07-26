@@ -37,26 +37,6 @@
       flex-direction: column;
       gap: 10px;
       background-color: white;
-
-      .exhibitor {
-        display: flex;
-        justify-content: space-evenly;
-        padding: 5px 2px 5px 2px;
-
-        img {
-          width: 30%;
-          height: 10%;
-          object-fit: cover;
-        }
-        .exhibitor-details {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-        }
-        &:hover {
-          cursor: pointer;
-        }
-      }
     }
   }
 }
