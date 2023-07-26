@@ -17,7 +17,8 @@ jobs:
             echo FIREBASE_STORAGEBUCKET=${{secrets.FIREBASE_STORAGEBUCKET}} >> .env
             echo FIREBASE_MESSAGINGSENDERID=${{secrets.FIREBASE_MESSAGINGSENDERID}} >> .env
             echo FIREBASE_APPID=${{secrets.FIREBASE_APPID}} >> .env
-            npm ci && npm run client-build
+            cat .env
+      - run:  npm ci && npm run client-build
         working-directory: ./client
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
