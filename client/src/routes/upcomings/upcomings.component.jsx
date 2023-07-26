@@ -24,7 +24,7 @@ const Upcomings = () => {
         </div>
         <div className="contents-subcontainer-right">
           <h2>Exhibitors</h2>
-          <div className="exhibitors">
+          <div className="exhibitor">
             <img
               src="https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg"
               alt="artist"
@@ -34,7 +34,7 @@ const Upcomings = () => {
               <span>Instagram</span>
             </div>
           </div>
-          <div className="exhibitors">
+          <div className="exhibitor">
             <img
               src="https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg"
               alt="artist"
@@ -43,7 +43,7 @@ const Upcomings = () => {
               <h3>Tsubaki Création</h3>
               <span>Instagram</span>
             </div>
-          </div><div className="exhibitors">
+          </div><div className="exhibitor">
             <img
               src="https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg"
               alt="artist"
@@ -52,7 +52,7 @@ const Upcomings = () => {
               <h3>Tsubaki Création</h3>
               <span>Instagram</span>
             </div>
-          </div><div className="exhibitors">
+          </div><div className="exhibitor">
             <img
               src="https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg"
               alt="artist"

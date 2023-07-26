@@ -2,15 +2,18 @@
   .image-container {
     padding: 3% 0 3% 0;
     text-align: center;
+    position: relative; // アニメーションの基準となる親要素に対して相対的な位置に配置
 
     img {
       width: 80%;
       height: 400px;
       object-fit: cover;
-      border: solid 2px forestgreen;
+      border: solid 2px pink;
+      transition: transform 0.3s; // 0.3秒でアニメーションする
 
       &:hover {
         cursor: pointer;
+        transform: scale(1.1); // ホバー時に拡大
       }
     }
   }
@@ -35,9 +38,11 @@
       gap: 10px;
       background-color: white;
 
-      .exhibitors {
+      .exhibitor {
         display: flex;
         justify-content: space-evenly;
+        padding: 5px 2px 5px 2px;
+
         img {
           width: 30%;
           height: 10%;
@@ -47,6 +52,9 @@
           display: flex;
           flex-direction: column;
           justify-content: start;
+        }
+        &:hover {
+          cursor: pointer;
         }
       }
     }
