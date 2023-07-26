@@ -1,0 +1,18 @@
+.footer {
+  height: 80px;
+  width: 100%;
+  background-color: gainsboro;
+
+  .footer-container {
+    height: 100%;
+    padding: 0 1% 1% 0;
+    display: flex;
+    justify-content: end;
+
+    .footer-subcontainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+  }
+}

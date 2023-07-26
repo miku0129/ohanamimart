@@ -1,5 +1,6 @@
 import { Fragment } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import "./nav.styles.scss";
 
 import { ReactComponent as Shoplogo } from "../../assets/cherry-blossom-9-svgrepo-com.svg";
@@ -23,7 +24,6 @@ const Nav = () => {
           </Link>
         </div>
       </div>
-      <Outlet />
     </Fragment>
   );
 };
