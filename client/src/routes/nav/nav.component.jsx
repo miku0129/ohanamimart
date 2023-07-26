@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "./nav.styles.scss";
 
-import { ReactComponent as Shoplogo } from "../../assets/origami-crane-svgrepo-com.svg";
+import { ReactComponent as Shoplogo } from "../../assets/cherry-blossom-9-svgrepo-com.svg";
 
 const Nav = () => {
   return (
@@ -19,7 +19,7 @@ const Nav = () => {
             SIGN IN
           </Link> */}
           <Link className="nav-link" to="/shop">
-            <div className="shopTitle">Les artisans</div>
+            <div className="shopTitle">Hanami</div>
           </Link>
         </div>
       </div>
