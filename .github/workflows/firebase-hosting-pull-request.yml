@@ -11,6 +11,13 @@ jobs:
       - uses: actions/checkout@v3
       - run: npm ci && npm run client-build
         working-directory: ./client
+        env:
+          FIREBASE_APIKEY:${{secrets.FIREBASE_APIKEY}}
+          FIREBASE_AUTHDOMAIN:${{secrets.FIREBASE_AUTHDOMAIN}}
+          FIREBASE_PROJECTID:${{secrets.FIREBASE_PROJECTID}}
+          FIREBASE_STORAGEBUCKET:${{secrets.FIREBASE_STORAGEBUCKET}}
+          FIREBASE_MESSAGINGSENDERID:${{secrets.FIREBASE_MESSAGINGSENDERID}}
+          FIREBASE_APPID:${{secrets.FIREBASE_APPID}}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
