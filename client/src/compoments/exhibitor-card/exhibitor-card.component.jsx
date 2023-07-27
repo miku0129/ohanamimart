@@ -3,7 +3,7 @@ import "./exhibitor-card.styles.scss";
 const ExhibitorCard = (exhibitor) => {
   const { title, imageUrl, websiteUrl, headline } = exhibitor["exhibitor"];
   return (
-    <a href={websiteUrl} target="_blank">
+    <a href={websiteUrl} target="_blank" rel="noreferrer">
       <div className="exhibitor">
         <img src={imageUrl} alt="artist" />
         <div className="exhibitor-details">
