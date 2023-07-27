@@ -1,8 +1,10 @@
 .exhibitor {
+  padding: 5px 5px 5px 5px;
   display: flex;
   justify-content: start;
   gap: 10px;
-  padding: 5px 2px 5px 2px;
+  background-color: white;
+  transition: transform 0.3s; // 0.3秒でアニメーションする
 
   img {
     width: 100px;
@@ -16,6 +18,7 @@
   }
   &:hover {
     cursor: pointer;
+    transform: scale(1.1); // ホバー時に拡大
     border: solid 1px pink;
   }
 }
