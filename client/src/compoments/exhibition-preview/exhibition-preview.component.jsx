@@ -1,15 +1,21 @@
+import { useState } from "react";
+
 import ExhibitorCard from "../exhibitor-card/exhibitor-card.component";
 import "./exhibition-preview.styles.scss";
 
 const ExhibitionPreview = ({ exhibitionMap }) => {
   const { date, time, place, address, imageUrl, exhibitionTitle, exhibitors } =
     exhibitionMap;
+  const [showModal, setShowModal] = useState(false);
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     exhibitionMap && (
       <div>
         <div className="contents-container">
-          <div className="image-container">
+          <div className="image-container" onClick={handleShowModal}>
             <img src={imageUrl} alt={exhibitionTitle} />
           </div>
           <div className="contents-subcontainer">
@@ -35,14 +41,16 @@ const ExhibitionPreview = ({ exhibitionMap }) => {
             </div>
           </div>
         </div>
-        <div id="overlay">
-          <div className="modal-image-container">
-            <div className="modal-image-subcontainer">
-              <button>&times;</button>
+        {showModal && (
+          <div id="overlay" onClick={handleShowModal}>
+            <div className="modal-image-container">
+              <div className="modal-image-subcontainer">
+                <button onClick={handleShowModal}>&times;</button>
+              </div>
+              <img src={imageUrl} alt={exhibitionTitle} />
             </div>
-            <img src={imageUrl} alt={exhibitionTitle} />
           </div>
-        </div>
+        )}
       </div>
     )
   );
