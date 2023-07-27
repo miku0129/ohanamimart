@@ -5,10 +5,12 @@ const ExhibitorCard = (exhibitor) => {
   return (
     <a href={websiteUrl} target="_blank" rel="noreferrer">
       <div className="exhibitor">
-        <img src={imageUrl} alt="artist" />
+        <div>
+          <img src={imageUrl} alt="artist" />
+        </div>
         <div className="exhibitor-details">
-          <span>{headline}</span>
           <h3>{title}</h3>
+          <span>{headline}</span>
         </div>
       </div>
     </a>
