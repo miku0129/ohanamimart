@@ -3,7 +3,7 @@ const EXHIBITION_DATA = {
   time: "10:00-18:00", 
   place: "Yoïsho!", 
   address: "11 Avenue de Grammont",
-  imageUrl : "https://i.ibb.co/S3dBd36/360051126-1297912624141236-3022852886206423713-n.jpg",
+  imageUrl : "https://i.ibb.co/s5C8V0h/7438.jpg",
   exhibitionTitle: "Mini Expo Japoneise", 
   exhibitors: [
     {
