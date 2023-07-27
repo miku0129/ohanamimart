@@ -1,15 +1,16 @@
 import { useContext } from "react";
-import { ArtistsContext } from "../../context/artists.context";
+import { HeadlinesContext } from "../../context/headlines.context";
 
 import Directory from "../../compoments/directory/directory.component";
 
 const Home = () => {
-  const { artistsMap } = useContext(ArtistsContext);
+  const { headlinesMap } = useContext(HeadlinesContext);
+  console.log("headlines", headlinesMap["headlines"])
 
   return (
     <div>
-      {artistsMap["artistData"] && (
-        <Directory categories={artistsMap["artistData"]} />
+      {headlinesMap["headlines"] && (
+        <Directory categories={headlinesMap["headlines"]} />
       )}
     </div>
   );

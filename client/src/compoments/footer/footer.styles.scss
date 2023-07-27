@@ -1,0 +1,23 @@
+.footer {
+  height: 120px;
+  width: 100%;
+  background-color: gainsboro;
+
+  //For footer
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  .footer-container {
+    height: 100%;
+    padding: 0 1% 1% 0;
+    display: flex;
+    justify-content: flex-end;
+
+    .footer-subcontainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -8,6 +8,8 @@ import reportWebVitals from "./reportWebVitals";
 
 import { CategoriesProvider } from "./context/categories.context";
 import { ArtistsProvider } from "./context/artists.context";
+import { HeadlinesProvider } from "./context/headlines.context";
+import { ExhibitionProvider } from "./context/exhibition.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +17,11 @@ root.render(
     <BrowserRouter>
       <ArtistsProvider>
         <CategoriesProvider>
-          <App />
+          <HeadlinesProvider>
+            <ExhibitionProvider>
+              <App />
+            </ExhibitionProvider>
+          </HeadlinesProvider>
         </CategoriesProvider>
       </ArtistsProvider>
     </BrowserRouter>
