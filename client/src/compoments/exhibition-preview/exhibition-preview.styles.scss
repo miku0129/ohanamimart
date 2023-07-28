@@ -57,7 +57,6 @@
     padding: 5% 10% 5% 10%;
     display: flex;
     justify-content: space-between;
-    background-color: gainsboro;
 
     .contents-subcontainer-left {
       width: 100%;
@@ -138,7 +137,6 @@
       flex-direction: column; // スマホでは縦に並べる
       justify-content: center; // 中央寄せに調整
       align-items: center; // 中央寄せに調整
-      background-color: gainsboro;
 
       .contents-subcontainer-left {
         width: 100%;
