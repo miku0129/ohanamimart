@@ -11,19 +11,27 @@ const Category = () => {
   const { category } = useParams();
   const { categoriesMap } = useContext(CategoriesContext);
   const [products, setProducts] = useState([]);
+  const [shopName, setShopName] = useState("");
 
   useEffect(() => {
     if (categoriesMap[category]) {
+      setShopName(categoriesMap[category]["shopName"]);
       setProducts(categoriesMap[category]["items"]);
     }
   }, [category, categoriesMap]);
 
+
   return (
     <div className="category-container">
-      {products &&
-        products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+      <h2>
+        {shopName && <span className="title">{shopName.toUpperCase()}</span>}
+      </h2>
+      <div className="category-subcontainer">
+        {products &&
+          products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+      </div>
     </div>
   );
 };
