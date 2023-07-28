@@ -9,6 +9,10 @@
     margin-bottom: 25px;
     cursor: pointer;
     padding: 0 10px; // 両端に余白を追加
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   .preview {
