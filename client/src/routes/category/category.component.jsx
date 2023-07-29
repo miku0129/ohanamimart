@@ -12,24 +12,28 @@ const Category = () => {
   const { category } = useParams();
   const { categoriesMap } = useContext(CategoriesContext);
   const [products, setProducts] = useState([]);
-  const [shopName, setShopName] = useState("");
-  const [websiteUrl, setWebsiteUrl] = useState("");
+  const [store_name, setStoreName] = useState("");
+  const [store_website_url, setStoreWebsiteUrl] = useState("");
 
   useEffect(() => {
-    if (categoriesMap[category]) {
-      setShopName(categoriesMap[category]["shopName"]);
-      setWebsiteUrl(categoriesMap[category]["websiteUrl"]);
-      setProducts(categoriesMap[category]["items"]);
+    if (categoriesMap["store"]) {
+      categoriesMap["store"].forEach((store) => {
+        if (store["store_name_lowercase_for_url"] === category) {
+          setStoreName(store["store_name"]);
+          setStoreWebsiteUrl(store["store_website_url"]);
+          setProducts(store["products"]);
+        }
+      });
     }
   }, [category, categoriesMap]);
 
   return (
     <div className="category-container">
       <h2>
-        {shopName && (
+        {store_name && (
           <span className="title">
-            {shopName.toUpperCase()}{" "}
-            <a href={websiteUrl} target="_blank" rel="noreferrer">
+            {store_name.toUpperCase()}{" "}
+            <a href={store_website_url} target="_blank" rel="noreferrer">
               <Homelogo
                 className="homeLogo"
                 style={{ height: 20, width: 20 }}

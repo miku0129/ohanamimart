@@ -4,13 +4,13 @@ import ProductCard from "../product-card/product-card.component";
 
 import "./category-preview.style.scss";
 
-const CategoryPreview = ({ shopName, title, products }) => {
-  console.log("shopName", shopName)
+const CategoryPreview = ({ store_name_lowercase_for_url, store_name, products }) => {
+  console.log("store_name_lowercase_for_url", store_name_lowercase_for_url);
   return (
     <div className="category-preview-container">
       <h2>
-        <Link to={`/shop/${shopName}`}>
-          <span className="title">{title.toUpperCase()}</span>
+        <Link to={`/shop/${store_name_lowercase_for_url}`}>
+          <span className="store_name">{store_name.toUpperCase()}</span>
         </Link>
       </h2>
       <div className="preview">
