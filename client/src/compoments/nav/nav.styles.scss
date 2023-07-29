@@ -12,6 +12,12 @@
     height: 100%;
     width: 70px;
     padding: 10px;
+
+    .Shoplogo {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 
   .nav-links-container {
@@ -34,6 +40,10 @@
 
       //google font
       font-family: "Ysabeau Office", sans-serif;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
