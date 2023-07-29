@@ -13,7 +13,7 @@ const DirectoryItem = ({ category }) => {
       <div className="body">
         <Link to={`/shop/${url_title_lowercase_no_spaces}`}>
           <h2>{title}</h2>
-          <p>Look in</p>
+          <p>Voir</p>
         </Link>
       </div>
     </div>
