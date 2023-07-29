@@ -3,15 +3,41 @@
   flex-direction: column;
   padding-bottom: 20px;
   padding: 0 10px; // 両端に余白を追加
+  gap:10px;
 
-  .title {
-    font-size: 28px;
-    margin-bottom: 25px;
+  .category-headline {
+    width: 100%;
+    height: 100%;
     padding: 0 10px; // 両端に余白を追加
 
-    .homeLogo{
-      &:hover{
-          opacity: 0.5;
+    .category-main-headline {
+      display: flex;
+      gap: 5px;
+
+      .purchase-icon {
+
+        .purchaseLogo {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    .category-subtitle {
+      display: flex;
+      gap: 5px;
+      .category-icon {
+        position: relative;
+        .userLogo {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+      .category-intro-text{
+
+        color: gray;
       }
     }
   }
@@ -21,7 +47,7 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     row-gap: 50px;
-    padding: 0 10px; // 両端に余白を追加
+    padding: 10px 10px; // 両端に余白を追加
 
     // レスポンシブ対応
     @media (max-width: 767px) {
