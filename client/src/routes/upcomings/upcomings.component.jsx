@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { ExhibitionContext } from "../../context/exhibition.context";
+import { ExhibitionsContext } from "../../context/exhibitions.context";
 
 import ExhibitionPreview from "../../compoments/exhibition-preview/exhibition-preview.component";
 
 
 const Upcomings = () => {
-  const { exhibitionMap } = useContext(ExhibitionContext);
+  const { exhibitionsMap } = useContext(ExhibitionsContext);
 
-  return <ExhibitionPreview exhibitionMap={exhibitionMap} />;
+  return <ExhibitionPreview exhibitionsMap={exhibitionsMap} />;
 };
 
 export default Upcomings;
