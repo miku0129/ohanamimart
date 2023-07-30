@@ -41,14 +41,6 @@ const Category = () => {
               )}
             </h1>
           </div>
-          <div className="purchase-icon">
-            <a href={store_website_url} target="_blank" rel="noreferrer">
-              <Purchaselogo
-                className="purchaseLogo"
-                style={{ height: 20, width: 20 }}
-              />
-            </a>
-          </div>
         </div>
         <div className="category-subtitle">
           <div className="category-icon">
@@ -60,7 +52,17 @@ const Category = () => {
             </a>
           </div>
           <div className="category-intro-text">
-            <span>{store_intro_text}</span>
+            <div>
+              <span>{store_intro_text}</span>
+            </div>
+            <div className="purchase-icon">
+              {/* <a href={store_website_url} target="_blank" rel="noreferrer"> */}
+              <Purchaselogo
+                className="purchaseLogo"
+                style={{ height: 20, width: 20 }}
+              />
+              {/* </a> */}
+            </div>
           </div>
         </div>
       </div>
