@@ -4,7 +4,6 @@
   justify-content: flex-start;
   gap: 10px;
   background-color: white;
-  transition: transform 0.3s; // 0.3秒でアニメーションする
 
   @media (max-width: 360px) {
     flex-direction: column;
@@ -20,7 +19,6 @@
     flex-direction: column;
     justify-content: flex-start;
 
-
     @media (max-width: 360px) {
       h3 {
         margin: 0 0 0 0;
@@ -29,7 +27,6 @@
   }
   &:hover {
     cursor: pointer;
-    transform: scale(1.1); // ホバー時に拡大
-    border: solid 1px pink;
+    opacity: 0.5;
   }
 }

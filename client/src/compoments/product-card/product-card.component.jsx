@@ -1,13 +1,13 @@
 import "./product-card.styles.scss";
 
 const ProductCard = ({ product }) => {
-  const { name, price, imageUrl } = product;
+  const { product_name, product_price, product_image_url } = product;
   return (
     <div className="product-card-container">
-      <img src={imageUrl} alt={`${name}`} />
+      <img src={product_image_url} alt={`${product_name}`} />
       <div className="product-card-footer">
-        <span className="name">{name}</span>
-        <span className="price">{price}</span>
+        <span className="name">{product_name}</span>
+        <span className="price">{product_price}&euro;</span>
       </div>
     </div>
   );

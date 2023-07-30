@@ -1,29 +1,34 @@
 .category-preview-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  padding-bottom: 20px;
+  padding: 0 10px; // 両端に余白を追加
 
   .title {
     font-size: 28px;
     margin-bottom: 25px;
     cursor: pointer;
-    padding: 0 10px;  // 両端に余白を追加
+    padding: 0 10px; // 両端に余白を追加
 
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   .preview {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
-    padding: 0 10px;  // 両端に余白を追加
-
+    row-gap: 50px;
+    padding: 0 10px; // 両端に余白を追加
 
     // レスポンシブ対応
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
+      column-gap: 0;
       row-gap: 20px;
-      justify-items: center;
-      padding: 0 10px; // 左右の余白を追加
+      padding: 0;
+      padding: 0 10px; // 両端に余白を追加
     }
   }
 }

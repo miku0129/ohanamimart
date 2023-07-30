@@ -5,12 +5,12 @@ import Directory from "../../compoments/directory/directory.component";
 
 const Home = () => {
   const { headlinesMap } = useContext(HeadlinesContext);
-  console.log("headlines", headlinesMap["headlines"])
+  console.log("headlines", headlinesMap["headline"])
 
   return (
     <div>
-      {headlinesMap["headlines"] && (
-        <Directory categories={headlinesMap["headlines"]} />
+      {headlinesMap["headline"] && (
+        <Directory categories={headlinesMap["headline"]} />
       )}
     </div>
   );

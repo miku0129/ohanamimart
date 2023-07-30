@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-import "./nav.styles.scss";
-
 import { ReactComponent as Shoplogo } from "../../assets/cherry-blossom-9-svgrepo-com.svg";
+
+import "./nav.styles.scss";
 
 const Nav = () => {
   return (

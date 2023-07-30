@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
-import PRODUCTS_DATA from "../utils/data/products-data";
+import STORES_DATA from "../utils/data/stores-data";
 
 export const CategoriesContext = createContext({
   categoriesMap: {},
@@ -11,7 +11,7 @@ export const CategoriesProvider = ({ children }) => {
 
   useEffect(() => {
     const getCategoriesMap = () => {
-      const categoryMap = PRODUCTS_DATA;
+      const categoryMap = STORES_DATA;
       setcategoriesMap(categoryMap); 
     };
 

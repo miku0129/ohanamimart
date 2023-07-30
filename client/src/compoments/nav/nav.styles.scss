@@ -12,6 +12,12 @@
     height: 100%;
     width: 70px;
     padding: 10px;
+
+    .Shoplogo {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 
   .nav-links-container {
@@ -34,37 +40,18 @@
 
       //google font
       font-family: "Ysabeau Office", sans-serif;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
   /* Use a media query to add a breakpoint at 400px: */
   @media screen and (max-width: 400px) {
-    .logo-container {
-      height: 100%;
-      width: 70px;
-      padding: 10px;
-    }
-
     .nav-links-container {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-
-      // .nav-link {
-      //   padding: 10px 15px;
-      //   cursor: pointer;
-      // }
       .shopTitle {
         font-size: xx-large;
-        // margin-right: 20px;
-        margin-right: auto;
-        margin-top: 15px;
-        color: gainsboro;
-
-        //google font
-        font-family: "Ysabeau Office", sans-serif;
       }
     }
   }
