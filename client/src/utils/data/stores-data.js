@@ -68,65 +68,70 @@ const STORES_DATA = {
     {
       store_name: "AT bijoux",
       store_website_url: "https://www.instagram.com/atbijouxjapon/",
-      store_image_url: "",
+      store_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
       store_name_lowercase_for_url: "atbijoux",
       store_intro_text: "",
       store_headline: "",
       products: [
         {
+          id: 1,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
+          product_price: null,
+        },
+        {
+          id: 2,
+          product_name: "Produits d'intérieur",
+          product_image_url: "https://i.ibb.co/9t8xWZD/2.png",
+          product_price: null,
+        },
+        {
+          id: 3,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/Bq9B0Cv/3.png",
+          product_price: null,
+        },
+        {
+          id: 4,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/XxxjB4W/4.png",
+          product_price: null,
+        },
+        {
+          id: 5,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/kXRxbDq/5.png",
+          product_price: null,
+        },
+        {
+          id: 6,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/n1jkFkk/6.jpg",
+          product_price: null,
+        },
+        {
+          id: 7,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/dbXxgX6/7.jpg",
+          product_price: null,
+        },
+        {
+          id: 8,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/mDVRZyG/8.png",
+          product_price: null,
+        },
+        {
+          id: 9,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/R6B8XPR/9.jpg",
+          product_price: null,
+        },
+        {
           id: 10,
-          product_name: "Accessory",
-          product_image_url:
-            "https://i.ibb.co/qk9D5WC/346751694-805189864354339-6667077890498622125-n.jpg",
-          product_price: 220,
-        },
-        {
-          id: 11,
-          product_name: "Accessory",
-          product_image_url:
-            "https://i.ibb.co/TRnZ0Zx/311128417-633392271648201-7039921346873529879-n.jpg",
-          product_price: 280,
-        },
-        {
-          id: 12,
-          product_name: "Accessory",
-          product_image_url:
-            "https://i.ibb.co/wYmM3P7/310458558-197204246005009-4038288699559648048-n.jpg",
-          product_price: 110,
-        },
-        {
-          id: 13,
-          product_name: "Accessory",
-          product_image_url:
-            "https://i.ibb.co/XznqDZM/286512302-1822551324754596-5747116266699561890-n.jpg",
-          product_price: 160,
-        },
-        {
-          id: 14,
-          product_name: "Accessory",
-          product_image_url:
-            "https://i.ibb.co/CQHmynf/332850510-732754068541099-3346283014744796636-n.jpg",
-          product_price: 160,
-        },
-        {
-          id: 15,
-          product_name: "Accessory",
-          product_image_url:
-            "https://i.ibb.co/5rvBBxQ/339978302-3193268257629935-2675262353004250603-n.jpg",
-          product_price: 160,
-        },
-        {
-          id: 16,
-          product_name: "Accessory",
-          product_image_url:
-            "https://i.ibb.co/CmWWxZq/344597211-5538146432952014-2015759206251185477-n.jpg",
-          product_price: 190,
-        },
-        {
-          id: 17,
-          product_name: "Accessory",
-          product_image_url: "https://i.ibb.co/x7BmYY8/at-bijoux.jpg",
-          product_price: 200,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/PN9DLMd/10.png",
+          product_price: null,
         },
       ],
     },
