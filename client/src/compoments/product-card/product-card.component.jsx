@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
       <img src={product_image_url} alt={`${product_name}`} />
       <div className="product-card-footer">
         <span className="name">{product_name}</span>
-        <span className="price">{product_price}&euro;</span>
+        {product_price && <span className="price">{product_price}&euro;</span>}
       </div>
     </div>
   );

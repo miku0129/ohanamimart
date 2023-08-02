@@ -9,8 +9,7 @@ const HEADLINES_DATA = {
     {
       id: 2,
       title: "AT bijoux",
-      image_url:
-        "https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1920,f_auto,q_auto/1112040/IMG_20180110_093336_436_utakit.jpg",
+      image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
       url_title_lowercase_no_spaces: "atbijoux",
     },
     {
