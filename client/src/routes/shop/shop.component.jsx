@@ -24,7 +24,7 @@ const Shop = () => {
       }
     };
     handleSettingCategories();
-  }, []);
+  }, [categories, dispatch]);
 
   return (
     <Routes>

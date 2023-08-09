@@ -29,7 +29,7 @@ const Category = () => {
         }
       });
     }
-  }, []);
+  }, [categories, category]);
 
   return (
     <div className="category-container">
