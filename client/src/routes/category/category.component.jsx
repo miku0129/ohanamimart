@@ -1,25 +1,26 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-import { CategoriesContext } from "../../context/categories.context";
+import { useSelector } from "react-redux";
 
 import ProductCard from "../../compoments/product-card/product-card.component";
 import { ReactComponent as Purchaselogo } from "../../assets/gift-1-svgrepo-com.svg";
 import { ReactComponent as UserLogo } from "../../assets/user-2-svgrepo-com.svg";
 
+import { selectCategories } from "../../store/categories/category.selector";
+
 import "./category.styles.scss";
 
 const Category = () => {
   const { category } = useParams();
-  const { categoriesMap } = useContext(CategoriesContext);
+  const categories = useSelector(selectCategories);
   const [products, setProducts] = useState([]);
   const [store_name, setStoreName] = useState("");
   const [store_website_url, setStoreWebsiteUrl] = useState("");
   const [store_intro_text, setIntroText] = useState("");
 
   useEffect(() => {
-    if (categoriesMap["store"]) {
-      categoriesMap["store"].forEach((store) => {
+    if (categories) {
+      categories.forEach((store) => {
         if (store["store_name_lowercase_for_url"] === category) {
           setStoreName(store["store_name"]);
           setStoreWebsiteUrl(store["store_website_url"]);
@@ -28,7 +29,7 @@ const Category = () => {
         }
       });
     }
-  }, [category, categoriesMap]);
+  }, [categories]);
 
   return (
     <div className="category-container">
