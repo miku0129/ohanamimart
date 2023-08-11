@@ -21,7 +21,7 @@ const Category = () => {
   useEffect(() => {
     if (categories) {
       categories.forEach((store) => {
-        if (store["store_name_lowercase_for_url"] === category) {
+        if (store["store_name_lowercase_no_spaces_for_url"] === category) {
           setStoreName(store["store_name"]);
           setStoreWebsiteUrl(store["store_website_url"]);
           setProducts(store["products"]);

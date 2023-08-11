@@ -20,7 +20,7 @@ const Shop = () => {
   useEffect(() => {
     const handleSettingCategories = () => {
       if (!categories[0]) {
-        dispatch(setCategories(STORES_DATA.store));
+        dispatch(setCategories(STORES_DATA.stores));
       }
     };
     handleSettingCategories();

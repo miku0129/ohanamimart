@@ -15,8 +15,8 @@ const CategoriesPreview = () => {
           return (
             <CategoryPreview
               key={category["store_name"]}
-              store_name_lowercase_for_url={
-                category["store_name_lowercase_for_url"]
+              store_name_lowercase_no_spaces_for_url={
+                category["store_name_lowercase_no_spaces_for_url"]
               }
               store_name={category["store_name"]}
               products={category["products"]}
