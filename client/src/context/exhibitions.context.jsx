@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
-import EXHIBITIONS_DATA from "../utils/data/exhibitions-data";
+import { get_exhibitions_map } from "../utils/data/data.utils";
 
 export const ExhibitionsContext = createContext({
   exhibitionsMap: {},
@@ -11,7 +11,7 @@ export const ExhibitionsProvider = ({ children }) => {
 
   useEffect(() => {
     const getExhibitorsMap = () => {
-      const exhibitionsMap = EXHIBITIONS_DATA;
+      const exhibitionsMap = get_exhibitions_map();
       setExhibitionsMap(exhibitionsMap);
     };
 
@@ -19,7 +19,7 @@ export const ExhibitionsProvider = ({ children }) => {
   }, []);
 
   const value = { exhibitionsMap };
-  
+
   return (
     <ExhibitionsContext.Provider value={value}>
       {children}

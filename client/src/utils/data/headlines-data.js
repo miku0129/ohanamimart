@@ -1,37 +1,5 @@
 const HEADLINES_DATA = {
-  headline: [
-    {
-      id: 1,
-      title: "Tsubaki Création",
-      image_url: "https://i.ibb.co/d5Jr1k0/tubakicr-ation2.jpg",
-      url_title_lowercase_no_spaces: "tsubakicreation",
-    },
-    {
-      id: 2,
-      title: "AT bijoux",
-      image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
-      url_title_lowercase_no_spaces: "atbijoux",
-    },
-    {
-      id: 3,
-      title: "Nami Créations",
-      image_url: "https://i.ibb.co/2hjThJG/namicr-ations.jpg",
-      url_title_lowercase_no_spaces: "namicreations",
-    },
-    {
-      id: 4,
-      title: "GOEN",
-      image_url: "https://i.ibb.co/y0wV36n/goen.jpg",
-      url_title_lowercase_no_spaces: "goen",
-    },
-    {
-      id: 5,
-      title: "Up comings",
-      image_url:
-        "https://images.unsplash.com/photo-1590422886897-7dd50e58577e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
-      url_title_lowercase_no_spaces: "upcomings",
-    },
-  ],
+  headline_titles: ["Tsubaki création", "AT bijoux", "Nami Créations", "GOEN"],
 };
 
 export default HEADLINES_DATA;

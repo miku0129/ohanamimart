@@ -9,7 +9,7 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
     setShowModal(!showModal);
   };
 
-  if (exhibitionsMap["exhibition"]) {
+  if (exhibitionsMap) {
     const {
       date,
       time,
@@ -18,7 +18,7 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
       image_url,
       exhibition_name,
       exhibitors,
-    } = exhibitionsMap["exhibition"][0]; //need to be better functionality
+    } = exhibitionsMap;
 
     return (
       exhibition_name && (

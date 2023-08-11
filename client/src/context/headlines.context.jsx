@@ -1,24 +1,25 @@
 import { createContext, useEffect, useState } from "react";
 
-import HEADLINES_DATA from "../utils/data/headlines-data";
+import { get_headlines_array } from "../utils/data/data.utils";
 
 export const HeadlinesContext = createContext({
-  headlinesMap: {},
+  headlinesArray: [],
 });
 
 export const HeadlinesProvider = ({ children }) => {
-  const [headlinesMap, setHeadlinesMap] = useState({});
+  const [headlinesArray, setHeadlinesArray] = useState([]);
 
   useEffect(() => {
-    const getHeadlinesMap = () => {
-      const headlinesMap = HEADLINES_DATA;
-      setHeadlinesMap(headlinesMap);
+    const getHeadlinesArray = () => {
+      const headlinesArray = get_headlines_array();
+
+      setHeadlinesArray(headlinesArray);
     };
 
-    getHeadlinesMap();
+    getHeadlinesArray();
   }, []);
 
-  const value = { headlinesMap };
+  const value = { headlinesArray };
   return (
     <HeadlinesContext.Provider value={value}>
       {children}

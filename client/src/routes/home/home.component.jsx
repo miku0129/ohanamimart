@@ -4,15 +4,10 @@ import { HeadlinesContext } from "../../context/headlines.context";
 import Directory from "../../compoments/directory/directory.component";
 
 const Home = () => {
-  const { headlinesMap } = useContext(HeadlinesContext);
-  console.log("headlines", headlinesMap["headline"])
+  const { headlinesArray } = useContext(HeadlinesContext);
 
   return (
-    <div>
-      {headlinesMap["headline"] && (
-        <Directory categories={headlinesMap["headline"]} />
-      )}
-    </div>
+    <div>{headlinesArray && <Directory categories={headlinesArray} />}</div>
   );
 };
 
