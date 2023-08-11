@@ -65,7 +65,8 @@ const SHOPS_DATA = {
         {
           id: 8,
           product_name: "Bag",
-          product_image_url: "https://i.ibb.co/mqnn9Zw/tubakicr-ation.jpg",
+          product_image_url:
+            "https://i.ibb.co/DfvCTbm/340187100-1294555258103073-3333111128556297048-n.jpg",
           product_price: null,
         },
       ],
@@ -155,7 +156,8 @@ const SHOPS_DATA = {
       shop_website_url: "https://www.nami-creations.fr/",
       shop_purchase_website_url: "",
       shop_headline: "Auteure manga et créatrice d'objets en papier",
-      shop_intro_text: "",
+      shop_intro_text:
+        "Nami Créations est une entreprise individuelle créée début 2015 et basée à Tours.\nElle est spécialisée dans la fabrication artisanale de manga et yonkoma manga (comic strip japonais), recettes japonaises à dérouler et kirigami (papier découpé).\nNami est l'auteure des dessins et scenarii des livres qu'elle réalise entièrement à la main (découpe, collage, reliure).",
       products: [
         {
           id: 18,
@@ -195,8 +197,7 @@ const SHOPS_DATA = {
         {
           id: 221,
           product_name: "Art",
-          product_image_url:
-            "https://i.ibb.co/94PVWHs/image2.jpg",
+          product_image_url: "https://i.ibb.co/94PVWHs/image2.jpg",
           product_price: null,
         },
         {
