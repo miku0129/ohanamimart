@@ -1,14 +1,16 @@
 const SHOPS_DATA = {
   shops: [
     {
+      id: 0,
       shop_name: "Tsubaki création",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
-      shop_image_url: "",
-      shop_website_url: "https://www.instagram.com/tsubaki.creation/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
-      shop_purchase_website_url:"https://tsubaki-creation.sumupstore.com/",
+      shop_image_url: "https://i.ibb.co/BCKtdTV/tubakicr-ation2.jpg",
+      shop_website_url:
+        "https://www.instagram.com/tsubaki.creation/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+      shop_purchase_website_url: "https://tsubaki-creation.sumupstore.com/",
       shop_headline: "Créatrice de sacs et accessoires en tissu japonais",
       shop_intro_text:
-        "Tsubaki Création confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon et propose des sacs et des accessoires que vous pouvez utiliser tous les jours !",
+        "Tsubaki Création confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon et propose des sacs et des accessoires que vous pouvez.",
       products: [
         {
           id: 1,
@@ -67,13 +69,15 @@ const SHOPS_DATA = {
       ],
     },
     {
+      id: 1,
       shop_name: "AT bijoux",
       shop_name_lowercase_no_spaces_for_url: "atbijoux",
       shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
       shop_website_url: "https://www.instagram.com/atbijouxjapon/",
-      shop_purchase_website_url:"",
+      shop_purchase_website_url: "",
       shop_headline: "Créatrice de bijoux en soie",
-      shop_intro_text: "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon. Il faut du temps, de la précision et de la patience ",
+      shop_intro_text:
+        "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon. Il faut du temps, de la précision et de la patience ",
       products: [
         {
           id: 1,
@@ -138,11 +142,12 @@ const SHOPS_DATA = {
       ],
     },
     {
+      id: 2,
       shop_name: "Nami Créations",
       shop_name_lowercase_no_spaces_for_url: "namicreations",
-      shop_image_url: "",
+      shop_image_url: "https://i.ibb.co/545P4Zb/namicr-ations.jpg",
       shop_website_url: "https://www.nami-creations.fr/",
-      shop_purchase_website_url:"",
+      shop_purchase_website_url: "",
       shop_headline: "Auteure manga et créatrice d'objets en papier",
       shop_intro_text: "",
       products: [
@@ -204,11 +209,12 @@ const SHOPS_DATA = {
       ],
     },
     {
+      id: 3,
       shop_name: "GOEN",
       shop_name_lowercase_no_spaces_for_url: "goen",
-      shop_image_url: "",
+      shop_image_url: "https://i.ibb.co/9nFGMb9/goen.jpg",
       shop_website_url: "https://www.instagram.com/goenjpfr/",
-      shop_purchase_website_url:"https://goen.sumupstore.com/",
+      shop_purchase_website_url: "https://goen.sumupstore.com/",
       shop_headline: "Créateur de bijoux japonais",
       shop_intro_text: "Créateur de bijoux à partir de l'origami japonais ",
       products: [

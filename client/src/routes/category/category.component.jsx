@@ -17,6 +17,7 @@ const Category = () => {
   const [shop_name, setShopName] = useState("");
   const [shop_website_url, setShopWebsiteUrl] = useState("");
   const [shop_intro_text, setIntroText] = useState("");
+  const [shop_purchase_website_url, setShopPurchaseWebsiteUrl] = useState("");
 
   useEffect(() => {
     if (categories) {
@@ -26,6 +27,7 @@ const Category = () => {
           setShopWebsiteUrl(shop["shop_website_url"]);
           setProducts(shop["products"]);
           setIntroText(shop["shop_intro_text"]);
+          setShopPurchaseWebsiteUrl(shop["shop_purchase_website_url"]);
         }
       });
     }
@@ -56,14 +58,16 @@ const Category = () => {
             <div>
               <span>{shop_intro_text}</span>
             </div>
-            <div className="purchase-icon">
-              {/* <a href={shop_website_url} target="_blank" rel="noreferrer"> */}
-              <Purchaselogo
-                className="purchaseLogo"
-                style={{ height: 20, width: 20 }}
-              />
-              {/* </a> */}
-            </div>
+            {shop_purchase_website_url ? (
+              <div className="purchase-icon">
+                <a href={shop_purchase_website_url} target="_blank" rel="noreferrer">
+                  <Purchaselogo
+                    className="purchaseLogo"
+                    style={{ height: 20, width: 20 }}
+                  />
+                </a>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

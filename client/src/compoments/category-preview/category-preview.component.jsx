@@ -5,7 +5,6 @@ import ProductCard from "../product-card/product-card.component";
 import "./category-preview.style.scss";
 
 const CategoryPreview = ({ shop_name_lowercase_no_spaces_for_url, shop_name, products }) => {
-  console.log("shop_name_lowercase_no_spaces_for_url: ", shop_name_lowercase_no_spaces_for_url)
   return (
     <div className="category-preview-container">
       <h2>
