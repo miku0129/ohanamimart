@@ -1,5 +1,5 @@
 {
-  "name": "green-clothing",
+  "name": "hanami",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "redux-persist": "^6.0.0",
     "reselect": "^4.1.8",
     "sass": "^1.63.6",
+    "styled-components": "^6.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

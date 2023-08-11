@@ -1,18 +1,16 @@
-import "./exhibitor-card.styles.scss";
+import { Exhibitor, ExhibitorDetails } from "./exhibitor-card.styles";
 
 const ExhibitorCard = (exhibitor) => {
-  const { shop_name, shop_image_url, shop_website_url, shop_headline } = exhibitor["exhibitor"];
+  const { shop_name, shop_icon_url, shop_website_url, shop_headline } = exhibitor["exhibitor"];
   return (
     <a href={shop_website_url} target="_blank" rel="noreferrer">
-      <div className="exhibitor">
-        <div>
-          <img src={shop_image_url} alt="artist" />
-        </div>
-        <div className="exhibitor-details">
+      <Exhibitor imageurl={shop_icon_url}>
+        <div className="image_circle"></div>
+        <ExhibitorDetails>
           <h3>{shop_name}</h3>
           <span>{shop_headline}</span>
-        </div>
-      </div>
+        </ExhibitorDetails>
+      </Exhibitor>
     </a>
   );
 };

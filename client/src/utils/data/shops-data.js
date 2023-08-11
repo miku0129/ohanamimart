@@ -5,6 +5,8 @@ const SHOPS_DATA = {
       shop_name: "Tsubaki création",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
       shop_image_url: "https://i.ibb.co/BCKtdTV/tubakicr-ation2.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",
       shop_website_url:
         "https://www.instagram.com/tsubaki.creation/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
       shop_purchase_website_url: "https://tsubaki-creation.sumupstore.com/",
@@ -73,7 +75,9 @@ const SHOPS_DATA = {
       shop_name: "AT bijoux",
       shop_name_lowercase_no_spaces_for_url: "atbijoux",
       shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
-      shop_website_url: "https://www.instagram.com/atbijouxjapon/",
+      shop_icon_url:
+        "https://i.ibb.co/FWnJ8Js/Screenshot-2023-08-11-184044.jpg",
+      shop_website_url: "http://www.atbijoux.com",
       shop_purchase_website_url: "",
       shop_headline: "Créatrice de bijoux en soie",
       shop_intro_text:
@@ -146,6 +150,8 @@ const SHOPS_DATA = {
       shop_name: "Nami Créations",
       shop_name_lowercase_no_spaces_for_url: "namicreations",
       shop_image_url: "https://i.ibb.co/545P4Zb/namicr-ations.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/s6MtS0w/Screenshot-2023-08-11-185242.jpg",
       shop_website_url: "https://www.nami-creations.fr/",
       shop_purchase_website_url: "",
       shop_headline: "Auteure manga et créatrice d'objets en papier",
@@ -190,7 +196,7 @@ const SHOPS_DATA = {
           id: 221,
           product_name: "Art",
           product_image_url:
-            "https://i.ibb.co/PCwbZnn/182425265-143462637753408-656123107402387604-n.jpg",
+            "https://i.ibb.co/94PVWHs/image2.jpg",
           product_price: null,
         },
         {
@@ -213,6 +219,8 @@ const SHOPS_DATA = {
       shop_name: "GOEN",
       shop_name_lowercase_no_spaces_for_url: "goen",
       shop_image_url: "https://i.ibb.co/9nFGMb9/goen.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/sCfwL0j/313079373-187425353851045-7210455388149182739-n.jpg",
       shop_website_url: "https://www.instagram.com/goenjpfr/",
       shop_purchase_website_url: "https://goen.sumupstore.com/",
       shop_headline: "Créateur de bijoux japonais",
