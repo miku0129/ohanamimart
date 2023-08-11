@@ -14,11 +14,11 @@ const CategoriesPreview = () => {
         categories.map((category) => {
           return (
             <CategoryPreview
-              key={category["store_name"]}
-              store_name_lowercase_no_spaces_for_url={
-                category["store_name_lowercase_no_spaces_for_url"]
+              key={category["shop_name"]}
+              shop_name_lowercase_no_spaces_for_url={
+                category["shop_name_lowercase_no_spaces_for_url"]
               }
-              store_name={category["store_name"]}
+              shop_name={category["shop_name"]}
               products={category["products"]}
             />
           );

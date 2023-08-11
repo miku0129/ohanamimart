@@ -10,7 +10,7 @@ import { setCategories } from "../../store/categories/category.action";
 import { selectCategories } from "../../store/categories/category.selector";
 
 import "./shop.styles.scss";
-import STORES_DATA from "../../utils/data/stores-data";
+import SHOPS_DATA from "../../utils/data/shops-data";
 import { useEffect } from "react";
 
 const Shop = () => {
@@ -20,7 +20,7 @@ const Shop = () => {
   useEffect(() => {
     const handleSettingCategories = () => {
       if (!categories[0]) {
-        dispatch(setCategories(STORES_DATA.stores));
+        dispatch(setCategories(SHOPS_DATA.shops));
       }
     };
     handleSettingCategories();

@@ -1,13 +1,13 @@
-const STORES_DATA = {
-  stores: [
+const SHOPS_DATA = {
+  shops: [
     {
-      store_name: "Tsubaki création",
-      store_name_lowercase_no_spaces_for_url: "tsubakicreation",
-      store_image_url: "",
-      store_website_url: "https://www.instagram.com/tsubaki.creation/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
-      store_purchase_website_url:"https://tsubaki-creation.sumupstore.com/",
-      store_headline: "Créatrice de sacs et accessoires en tissu japonais",
-      store_intro_text:
+      shop_name: "Tsubaki création",
+      shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
+      shop_image_url: "",
+      shop_website_url: "https://www.instagram.com/tsubaki.creation/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+      shop_purchase_website_url:"https://tsubaki-creation.sumupstore.com/",
+      shop_headline: "Créatrice de sacs et accessoires en tissu japonais",
+      shop_intro_text:
         "Tsubaki Création confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon et propose des sacs et des accessoires que vous pouvez utiliser tous les jours !",
       products: [
         {
@@ -67,13 +67,13 @@ const STORES_DATA = {
       ],
     },
     {
-      store_name: "AT bijoux",
-      store_name_lowercase_no_spaces_for_url: "atbijoux",
-      store_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
-      store_website_url: "https://www.instagram.com/atbijouxjapon/",
-      store_purchase_website_url:"",
-      store_headline: "Créatrice de bijoux en soie",
-      store_intro_text: "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon. Il faut du temps, de la précision et de la patience ",
+      shop_name: "AT bijoux",
+      shop_name_lowercase_no_spaces_for_url: "atbijoux",
+      shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
+      shop_website_url: "https://www.instagram.com/atbijouxjapon/",
+      shop_purchase_website_url:"",
+      shop_headline: "Créatrice de bijoux en soie",
+      shop_intro_text: "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon. Il faut du temps, de la précision et de la patience ",
       products: [
         {
           id: 1,
@@ -138,13 +138,13 @@ const STORES_DATA = {
       ],
     },
     {
-      store_name: "Nami Créations",
-      store_name_lowercase_no_spaces_for_url: "namicreations",
-      store_image_url: "",
-      store_website_url: "https://www.nami-creations.fr/",
-      store_purchase_website_url:"",
-      store_headline: "Auteure manga et créatrice d'objets en papier",
-      store_intro_text: "",
+      shop_name: "Nami Créations",
+      shop_name_lowercase_no_spaces_for_url: "namicreations",
+      shop_image_url: "",
+      shop_website_url: "https://www.nami-creations.fr/",
+      shop_purchase_website_url:"",
+      shop_headline: "Auteure manga et créatrice d'objets en papier",
+      shop_intro_text: "",
       products: [
         {
           id: 18,
@@ -204,13 +204,13 @@ const STORES_DATA = {
       ],
     },
     {
-      store_name: "GOEN",
-      store_name_lowercase_no_spaces_for_url: "goen",
-      store_image_url: "",
-      store_website_url: "https://www.instagram.com/goenjpfr/",
-      store_purchase_website_url:"https://goen.sumupstore.com/",
-      store_headline: "Créateur de bijoux japonais",
-      store_intro_text: "Créateur de bijoux à partir de l'origami japonais ",
+      shop_name: "GOEN",
+      shop_name_lowercase_no_spaces_for_url: "goen",
+      shop_image_url: "",
+      shop_website_url: "https://www.instagram.com/goenjpfr/",
+      shop_purchase_website_url:"https://goen.sumupstore.com/",
+      shop_headline: "Créateur de bijoux japonais",
+      shop_intro_text: "Créateur de bijoux à partir de l'origami japonais ",
       products: [
         {
           id: 23,
@@ -272,4 +272,4 @@ const STORES_DATA = {
   ],
 };
 
-export default STORES_DATA;
+export default SHOPS_DATA;

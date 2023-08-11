@@ -14,18 +14,18 @@ const Category = () => {
   const { category } = useParams();
   const categories = useSelector(selectCategories);
   const [products, setProducts] = useState([]);
-  const [store_name, setStoreName] = useState("");
-  const [store_website_url, setStoreWebsiteUrl] = useState("");
-  const [store_intro_text, setIntroText] = useState("");
+  const [shop_name, setShopName] = useState("");
+  const [shop_website_url, setShopWebsiteUrl] = useState("");
+  const [shop_intro_text, setIntroText] = useState("");
 
   useEffect(() => {
     if (categories) {
-      categories.forEach((store) => {
-        if (store["store_name_lowercase_no_spaces_for_url"] === category) {
-          setStoreName(store["store_name"]);
-          setStoreWebsiteUrl(store["store_website_url"]);
-          setProducts(store["products"]);
-          setIntroText(store["store_intro_text"]);
+      categories.forEach((shop) => {
+        if (shop["shop_name_lowercase_no_spaces_for_url"] === category) {
+          setShopName(shop["shop_name"]);
+          setShopWebsiteUrl(shop["shop_website_url"]);
+          setProducts(shop["products"]);
+          setIntroText(shop["shop_intro_text"]);
         }
       });
     }
@@ -37,15 +37,15 @@ const Category = () => {
         <div className="category-main-headline">
           <div className="category-title">
             <h1>
-              {store_name && (
-                <span className="title">{store_name.toUpperCase()} </span>
+              {shop_name && (
+                <span className="title">{shop_name.toUpperCase()} </span>
               )}
             </h1>
           </div>
         </div>
         <div className="category-subtitle">
           <div className="category-icon">
-            <a href={store_website_url} target="_blank" rel="noreferrer">
+            <a href={shop_website_url} target="_blank" rel="noreferrer">
               <UserLogo
                 className="userLogo"
                 style={{ height: 40, width: 40 }}
@@ -54,10 +54,10 @@ const Category = () => {
           </div>
           <div className="category-intro-text">
             <div>
-              <span>{store_intro_text}</span>
+              <span>{shop_intro_text}</span>
             </div>
             <div className="purchase-icon">
-              {/* <a href={store_website_url} target="_blank" rel="noreferrer"> */}
+              {/* <a href={shop_website_url} target="_blank" rel="noreferrer"> */}
               <Purchaselogo
                 className="purchaseLogo"
                 style={{ height: 20, width: 20 }}
