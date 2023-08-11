@@ -48,6 +48,10 @@ export const CategoryIntro = styled.div`
   flex-direction: column;
   gap: 5px;
 
+  div {
+    max-width: 700px
+  }
+
   .purchase-icon {
     .purchaseLogo {
       &:hover {
