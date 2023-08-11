@@ -219,7 +219,7 @@ const SHOPS_DATA = {
       id: 3,
       shop_name: "GOEN",
       shop_name_lowercase_no_spaces_for_url: "goen",
-      shop_image_url: "https://i.ibb.co/9nFGMb9/goen.jpg",
+      shop_image_url: "https://i.ibb.co/BsLVP2q/270327246-1358404204597373-5130601482769547734-n.jpg",
       shop_icon_url:
         "https://i.ibb.co/sCfwL0j/313079373-187425353851045-7210455388149182739-n.jpg",
       shop_website_url: "https://www.instagram.com/goenjpfr/",
@@ -238,7 +238,7 @@ const SHOPS_DATA = {
           id: 24,
           product_name: "Accessory",
           product_image_url:
-            "https://i.ibb.co/8Y4ypgZ/286909839-593581938632081-240851648592919563-n.jpg",
+            "https://i.ibb.co/BsLVP2q/270327246-1358404204597373-5130601482769547734-n.jpg",
           product_price: null,
         },
         {
