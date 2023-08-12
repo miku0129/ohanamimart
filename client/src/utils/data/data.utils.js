@@ -1,7 +1,7 @@
 import EXHIBITIONS_DATA from "./exhibitions-data";
 import SHOPS_DATA from "./shops-data";
 import HEADLINES_DATA from "./headlines-data";
-import UPCOMINGS from "./headlines-upcomings-data";
+import EVENEMENTS from "./headlines-evenements-data";
 
 export const get_exhibitions_map = () => {
   const { exhibitions } = EXHIBITIONS_DATA;
@@ -31,7 +31,7 @@ export const get_headlines_array = () => {
       image_url: headline.shop_image_url,
     };
   });
-  const upcomings = UPCOMINGS;
+  const evenements = EVENEMENTS;
 
-  return [...headlines, upcomings];
+  return [...headlines, evenements];
 };

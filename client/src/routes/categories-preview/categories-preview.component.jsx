@@ -11,7 +11,7 @@ const CategoriesPreview = () => {
   return (
     <Fragment>
       {categories &&
-        categories.map((category) => {
+        categories.filter((_, idx)=> idx < 4).map((category) => {
           return (
             <CategoryPreview
               key={category["shop_name"]}

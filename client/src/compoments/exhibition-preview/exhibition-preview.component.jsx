@@ -16,20 +16,20 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
       location,
       address,
       image_url,
-      exhibition_name,
+      exhibition_title,
       exhibitors,
     } = exhibitionsMap;
 
     return (
-      exhibition_name && (
+      exhibition_title && (
         <div>
           <div className="contents-container">
             <div className="image-container" onClick={handleShowModal}>
-              <img src={image_url} alt={exhibition_name} />
+              <img src={image_url} alt={exhibition_title} />
             </div>
             <div className="contents-subcontainer">
               <div className="contents-subcontainer-left">
-                <h2>{exhibition_name}</h2>
+                <h2>{exhibition_title}</h2>
                 <span>{date}</span>
                 <br />
                 <span>{time}</span>
@@ -56,7 +56,7 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
                 <div className="modal-image-subcontainer">
                   <button onClick={handleShowModal}>&times;</button>
                 </div>
-                <img src={image_url} alt={exhibition_name} />
+                <img src={image_url} alt={exhibition_title} />
               </div>
             </div>
           )}

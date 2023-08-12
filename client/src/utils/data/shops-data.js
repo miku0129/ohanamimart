@@ -219,7 +219,8 @@ const SHOPS_DATA = {
       id: 3,
       shop_name: "GOEN",
       shop_name_lowercase_no_spaces_for_url: "goen",
-      shop_image_url: "https://i.ibb.co/BsLVP2q/270327246-1358404204597373-5130601482769547734-n.jpg",
+      shop_image_url:
+        "https://i.ibb.co/BsLVP2q/270327246-1358404204597373-5130601482769547734-n.jpg",
       shop_icon_url:
         "https://i.ibb.co/sCfwL0j/313079373-187425353851045-7210455388149182739-n.jpg",
       shop_website_url: "https://www.instagram.com/goenjpfr/",
@@ -283,6 +284,20 @@ const SHOPS_DATA = {
           product_price: null,
         },
       ],
+    },
+    {
+      id: 4,
+      shop_name: "SUGAR",
+      shop_name_lowercase_no_spaces_for_url: "sugar",
+      shop_image_url:
+        "",
+      shop_icon_url:
+        "https://i.ibb.co/XJXmgcx/Screenshot-2023-08-12-180643.jpg",
+      shop_website_url: "https://sugarlike.jp/",
+      shop_purchase_website_url: "https://sugarlike.jp/",
+      shop_headline: "Boutique des produits traditionnels japonais",
+      shop_intro_text: "SUGAR est une toute nouvelle entreprise d'origine japonaise dont l'objectif est de promouvoir l'artisanat traditionnel et les spécialités régionales à l'étranger. Au travers son catalogue de produits, notre équipe franco-nippone souhaite vous faire découvrir avec passion, les multiples facettes de l'histoire du Japon et ce qui reste de celle-ci.\nNos produits sont confectionnés par des artisans locaux du pays du soleil levant. Chaque produit possède une touche artistique propre à chaque créateur. Vous découvrirez un panel d'objets d'une époque passée et les techniques utilisées. Mais également les objets contemporains qui font tout le charme de la culture du pays.",
+      products: [],
     },
   ],
 };
