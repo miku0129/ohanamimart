@@ -15,7 +15,7 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
       time,
       location,
       address,
-      image_url,
+      main_image_url,
       exhibition_title,
       exhibitors,
     } = exhibitionsMap;
@@ -25,7 +25,7 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
         <div>
           <div className="contents-container">
             <div className="image-container" onClick={handleShowModal}>
-              <img src={image_url} alt={exhibition_title} />
+              <img src={main_image_url} alt={exhibition_title} />
             </div>
             <div className="contents-subcontainer">
               <div className="contents-subcontainer-left">
@@ -56,7 +56,7 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
                 <div className="modal-image-subcontainer">
                   <button onClick={handleShowModal}>&times;</button>
                 </div>
-                <img src={image_url} alt={exhibition_title} />
+                <img src={main_image_url} alt={exhibition_title} />
               </div>
             </div>
           )}
