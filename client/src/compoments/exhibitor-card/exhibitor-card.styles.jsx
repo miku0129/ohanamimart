@@ -12,6 +12,7 @@ export const Exhibitor = styled.div`
 
   .image_circle {
     min-width: 100px;
+    max-width: 100px;
     height: 100px;
     border-radius: 50%;
     background-image: ${({ imageurl }) => `url(${imageurl})`};
