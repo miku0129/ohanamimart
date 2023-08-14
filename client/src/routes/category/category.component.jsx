@@ -16,7 +16,6 @@ import {
   CategoryIntro,
   CategorySubContainer,
 } from "./category.styles";
-import { StrictMode } from "react";
 
 const Category = () => {
   const { category } = useParams();
