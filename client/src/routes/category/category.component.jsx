@@ -16,6 +16,7 @@ import {
   CategoryIntro,
   CategorySubContainer,
 } from "./category.styles";
+import { StrictMode } from "react";
 
 const Category = () => {
   const { category } = useParams();
@@ -68,7 +69,15 @@ const Category = () => {
           </CategoryIcon>
           <CategoryIntro>
             <div>
-              <span>{shop_intro_text}</span>
+              <div id="creator_description">
+                {(() => {
+                  const div = document.getElementById("creator_description");
+                  const str = shop_intro_text.replace(/\r?\n/g, "<br>");
+                  if (div) {
+                    div.innerHTML = str;
+                  }
+                })()}
+              </div>
             </div>
             {shop_purchase_website_url ? (
               <div className="purchase-icon">

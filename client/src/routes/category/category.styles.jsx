@@ -48,8 +48,20 @@ export const CategoryIntro = styled.div`
   flex-direction: column;
   gap: 5px;
 
-  div {
-    max-width: 700px
+  #creator_description {
+    max-width: 700px;
+
+    /最初だけ大文字にする/ 
+    font-size: 12pt; /* 文字のサイズ */
+    text-align: left; /* 文字位置     */
+    padding: 5px; /* 枠の余白     */
+    line-height: 1; /* 1行の高さ    */
+
+    &:first-letter {
+      font-size: 2em; /* 文字サイズ   */
+      padding: 0px; /* 余白         */
+      float: left; /* 2文字目の位置合わせ */
+    }
   }
 
   .purchase-icon {
