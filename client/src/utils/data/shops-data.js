@@ -21,21 +21,15 @@ const SHOPS_DATA = {
           product_price: null,
         },
         {
+          id: 16,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/8NrGR1G/11224.jpg",
+          product_price: null,
+        },
+        {
           id: 11,
           product_name: "Pochette pour téléphone",
           product_image_url: "https://i.ibb.co/DRZZQ4J/11168.jpg",
-          product_price: null,
-        },
-        {
-          id: 12,
-          product_name: "Porte cartes/monnaie",
-          product_image_url: "https://i.ibb.co/DfvJrCc/11169.jpg",
-          product_price: null,
-        },
-        {
-          id: 13,
-          product_name: "Sac banane",
-          product_image_url: "https://i.ibb.co/XFpQhZJ/11170.jpg",
           product_price: null,
         },
         {
@@ -45,21 +39,27 @@ const SHOPS_DATA = {
           product_price: null,
         },
         {
-          id: 15,
-          product_name: "Sac banane",
-          product_image_url: "https://i.ibb.co/zVzqLtZ/11172.jpg",
-          product_price: null,
-        },
-        {
-          id: 16,
-          product_name: "Bag",
-          product_image_url: "",
+          id: 12,
+          product_name: "Porte cartes/monnaie",
+          product_image_url: "https://i.ibb.co/DfvJrCc/11169.jpg",
           product_price: null,
         },
         {
           id: 17,
-          product_name: "Bag",
-          product_image_url: "",
+          product_name: "Pochette",
+          product_image_url: "https://i.ibb.co/gv8VzjT/11223.jpg",
+          product_price: null,
+        },
+        {
+          id: 13,
+          product_name: "Sac banane",
+          product_image_url: "https://i.ibb.co/XFpQhZJ/11170.jpg",
+          product_price: null,
+        },
+        {
+          id: 15,
+          product_name: "Sac banane",
+          product_image_url: "https://i.ibb.co/zVzqLtZ/11172.jpg",
           product_price: null,
         },
       ],
@@ -156,7 +156,7 @@ const SHOPS_DATA = {
           id: 22,
           product_name: "Manga",
           product_image_url: "https://i.ibb.co/PhWqLtb/7858.jpg",
-          product_price: 12,
+          product_price: null,
         },
         {
           id: 23,
@@ -168,7 +168,7 @@ const SHOPS_DATA = {
           id: 18,
           product_name: "Manga",
           product_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
-          product_price: 18,
+          product_price: null,
         },
         {
           id: 19,
@@ -180,7 +180,7 @@ const SHOPS_DATA = {
           id: 29,
           product_name: "Livre accordéon",
           product_image_url: "https://i.ibb.co/wCT34wC/7873.jpg",
-          product_price: 15,
+          product_price: null,
         },
         {
           id: 27,
@@ -192,7 +192,7 @@ const SHOPS_DATA = {
           id: 30,
           product_name: "Recette Japonaise",
           product_image_url: "https://i.ibb.co/8Bdxb1D/7864.jpg",
-          product_price: 15,
+          product_price: null,
         },
         {
           id: 32,
@@ -201,10 +201,16 @@ const SHOPS_DATA = {
           product_price: null,
         },
         {
+          id: 36,
+          product_name: "Kirigami",
+          product_image_url: "https://i.ibb.co/tq7dsnb/7879.jpg",
+          product_price: null,
+        },
+        {
           id: 34,
           product_name: "Kirigami",
           product_image_url: "https://i.ibb.co/0f5dsvc/7876.jpg",
-          product_price: 15,
+          product_price: null,
         },
         {
           id: 35,
@@ -217,12 +223,6 @@ const SHOPS_DATA = {
           product_name: "Kirigami",
           product_image_url:
             "https://i.ibb.co/fXXVq7v/183476402-1414405865586330-5233817337716917096-n.jpg",
-          product_price: null,
-        },
-        {
-          id: 36,
-          product_name: "Kirigami",
-          product_image_url: "https://i.ibb.co/tq7dsnb/7879.jpg",
           product_price: null,
         },
       ],
