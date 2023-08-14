@@ -12,6 +12,13 @@ export const CategoryHeadline = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 10px; // 両端に余白を追加
+
+  .category-title-text {
+    font-weight: initial;
+
+    //google font
+    font-family: "Ysabeau Office", sans-serif;
+  }
 `;
 
 export const CategorySubtitle = styled.div`

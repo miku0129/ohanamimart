@@ -49,7 +49,7 @@ const Category = () => {
           <div className="category-title">
             <h1>
               {shop_name && (
-                <span className="title">{shop_name.toUpperCase()} </span>
+                <span className="title">{shop_name} </span>
               )}
             </h1>
           </div>
