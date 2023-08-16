@@ -1,32 +1,30 @@
 .image-gallery-container {
   padding: 10px;
+  div {
+    div {
+      div {
+        button.image-gallery-icon.image-gallery-right-nav {
+          filter: none;
+          svg {
+            polyline {
+              color: gainsboro;
+            }
+          }
+        }
+        button.image-gallery-icon.image-gallery-left-nav {
+          filter: none;
+          svg {
+            polyline {
+              color: gainsboro;
+            }
+          }
+        }
+
+      }
+    }
+  }
 }
 
-#root
-  > div:nth-child(2)
-  > div.image-gallery-container
-  > div
-  > div
-  > div
-  > button.image-gallery-icon.image-gallery-right-nav
-  > svg
-  > polyline {
-  color: gainsboro;
-  filter: none;
-}
-
-#root
-  > div:nth-child(2)
-  > div.image-gallery-container
-  > div
-  > div
-  > div
-  > button.image-gallery-icon.image-gallery-left-nav
-  > svg
-  > polyline {
-  color: gainsboro;
-  filter: none;
-}
 
 .categories-container {
   width: 100%;
