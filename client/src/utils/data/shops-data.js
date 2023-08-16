@@ -143,7 +143,7 @@ const SHOPS_DATA = {
       id: 2,
       shop_name: "Nami Créations",
       shop_name_lowercase_no_spaces_for_url: "namicreations",
-      shop_image_url: "https://i.ibb.co/545P4Zb/namicr-ations.jpg",
+      shop_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
       shop_icon_url:
         "https://i.ibb.co/s6MtS0w/Screenshot-2023-08-11-185242.jpg",
       shop_website_url: "https://www.nami-creations.fr/",
