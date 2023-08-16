@@ -10,7 +10,6 @@ export const MainImageContainer = styled.div`
     max-width: 90%; // 画像の幅を調整
     max-height: 90vh; // 画像の高さを調整
   object-fit: cover;
-    border: solid 2px pink;
 
     &:hover {
       cursor: pointer;
