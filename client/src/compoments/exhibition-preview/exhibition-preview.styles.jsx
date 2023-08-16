@@ -7,9 +7,9 @@ export const MainImageContainer = styled.div`
   text-align: center;
 
   img {
-    width: 80%;
-    height: 400px;
-    object-fit: cover;
+    max-width: 90%; // 画像の幅を調整
+    max-height: 90vh; // 画像の高さを調整
+  object-fit: cover;
     border: solid 2px pink;
 
     &:hover {

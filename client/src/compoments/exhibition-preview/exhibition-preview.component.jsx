@@ -41,7 +41,6 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
           return obj;
         })
       : image_url;
-    console.log("?", images);
     return (
       exhibition_title && (
         <div>

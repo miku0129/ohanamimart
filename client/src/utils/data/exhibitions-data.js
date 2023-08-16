@@ -6,7 +6,7 @@ const EXHIBITIONS_DATA = {
       time: "10:00-18:00",
       location: "Yoïsho!",
       address: "11 Avenue de Grammont",
-      main_image_url: "https://i.ibb.co/s5C8V0h/7438.jpg",
+      main_image_url: "https://i.ibb.co/jMct7KD/11256.jpg",
       image_url: [
         "https://i.ibb.co/t3H7tSb/Screenshot-2023-08-12-185712.jpg",
         "https://i.ibb.co/pyWgNnj/Screenshot-2023-08-12-185122.jpg",
