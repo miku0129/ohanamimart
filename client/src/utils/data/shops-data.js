@@ -85,7 +85,7 @@ const SHOPS_DATA = {
         },
         {
           id: 2,
-          product_name: "Produits d'intérieur",
+          product_name: "Produit d'intérieur",
           product_image_url: "https://i.ibb.co/9t8xWZD/2.png",
           product_price: null,
         },
