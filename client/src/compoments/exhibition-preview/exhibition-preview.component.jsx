@@ -72,7 +72,7 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
                 <hr />
               </div>
               <div className="contents-subcontainer-right">
-                <h2>Exhibitors</h2>
+                <h2>Exposants</h2>
                 {exhibitors &&
                   exhibitors.map((exhibitor) => {
                     return (
