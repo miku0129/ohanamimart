@@ -1,6 +1,37 @@
+.image-gallery-container {
+  padding: 10px;
+}
+
+#root
+  > div:nth-child(2)
+  > div.image-gallery-container
+  > div
+  > div
+  > div
+  > button.image-gallery-icon.image-gallery-right-nav
+  > svg
+  > polyline {
+  color: gainsboro;
+  filter: none;
+}
+
+#root
+  > div:nth-child(2)
+  > div.image-gallery-container
+  > div
+  > div
+  > div
+  > button.image-gallery-icon.image-gallery-left-nav
+  > svg
+  > polyline {
+  color: gainsboro;
+  filter: none;
+}
+
 .categories-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}  
+  padding: 20px;
+}

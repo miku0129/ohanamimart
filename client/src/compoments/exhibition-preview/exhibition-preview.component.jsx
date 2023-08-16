@@ -7,8 +7,8 @@ import {
   ContentsContainer,
   MainImageContainer,
   ImageContainer,
-  Overlay, 
-  ContentsSubContainer
+  Overlay,
+  ContentsSubContainer,
 } from "./exhibition-preview.styles";
 
 const ExhibitionPreview = ({ exhibitionsMap }) => {
@@ -35,8 +35,8 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
             original: url,
             thumbnail: url,
             originalHeight: 450,
-            thumbnailHeight:100,
-            thumbnailWidth:100
+            thumbnailHeight: 100,
+            thumbnailWidth: 100,
           };
           return obj;
         })

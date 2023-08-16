@@ -3,7 +3,7 @@ const EVENEMENTS = {
   title: "Événements",
   url_title_lowercase_no_spaces: "evenements",
   image_url:
-    "https://i.ibb.co/jVfthGC/julia-caesar-m-Ea-YSkuc-Tys-unsplash.jpg",
+    "https://i.ibb.co/vLWDkSr/hong-feng-c-I2-BLo74zso-unsplash.jpg",
 };
 
 export default EVENEMENTS;
