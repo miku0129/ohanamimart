@@ -8,7 +8,6 @@ import Evenements from "../evenements/evenements.component";
 import { setCategories } from "../../store/categories/category.action";
 import { selectCategories } from "../../store/categories/category.selector";
 
-import "./shop.styles.scss";
 import SHOPS_DATA from "../../utils/data/shops-data";
 import { useEffect } from "react";
 
