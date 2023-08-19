@@ -4,12 +4,10 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 
 import CategoriesPreview from "../categories-preview/categories-preview.component";
 import Category from "../category/category.component";
-import Upcomings from "../upcomings/upcomings.component";
-
+import Evenements from "../evenements/evenements.component"; 
 import { setCategories } from "../../store/categories/category.action";
 import { selectCategories } from "../../store/categories/category.selector";
 
-import "./shop.styles.scss";
 import SHOPS_DATA from "../../utils/data/shops-data";
 import { useEffect } from "react";
 
@@ -30,7 +28,7 @@ const Shop = () => {
     <Routes>
       <Route index element={<CategoriesPreview />} />
       <Route path=":category" element={<Category />} />
-      <Route path="/upcomings" element={<Upcomings />} />
+      <Route path="/evenements" element={<Evenements />} />
     </Routes>
   );
 };

@@ -78,12 +78,15 @@
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 90%; // テキストがコンテナからはみ出さないように最大幅を設定
+      margin-bottom: 0px;
     }
 
     p {
       font-weight: lighter;
       font-size: 16px;
       text-align: center;
+      //google font
+      font-family: "Ysabeau Office", sans-serif;
     }
   }
 }

@@ -8,14 +8,33 @@
   z-index: 1;
   background-color: white;
 
-  .logo-container {
-    height: 100%;
-    width: 70px;
-    padding: 10px;
+  .navigation-left {
+    display: flex;
+    gap: 5px;
 
-    .Shoplogo {
-      &:hover {
-        opacity: 0.5;
+    .logo-container {
+      height: 100%;
+      width: 70px;
+      padding: 10px;
+
+      .Shoplogo {
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .catchcopy {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 10px;
+
+      div {
+        span {
+          //google font
+          font-family: "Ysabeau Office", sans-serif;
+        }
       }
     }
   }

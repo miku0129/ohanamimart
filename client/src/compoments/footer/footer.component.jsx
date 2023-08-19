@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <Fragment>
       <div className="footer">
+        <hr />
         <div className="footer-container">
           <div className="footer-subcontainer">
             <span>&copy;{footerText}</span>

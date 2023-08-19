@@ -9,9 +9,16 @@ const Nav = () => {
   return (
     <Fragment>
       <div className="navigation">
-        <Link className="logo-container" to="/">
-          <Shoplogo className="Shoplogo" style={{ height: 60, width: 60 }} />
-        </Link>
+        <div className="navigation-left">
+          <Link className="logo-container" to="/">
+            <Shoplogo className="Shoplogo" style={{ height: 60, width: 60 }} />
+          </Link>
+          <div className="catchcopy">
+            <div>
+              <span>Unis par la créativité</span>
+            </div>
+          </div>
+        </div>
         <div className="nav-links-container">
           {/* <Link className="nav-link" to="/shop">
             SHOP

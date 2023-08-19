@@ -4,66 +4,62 @@ const SHOPS_DATA = {
       id: 0,
       shop_name: "Tsubaki création",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
-      shop_image_url: "https://i.ibb.co/BCKtdTV/tubakicr-ation2.jpg",
+      shop_image_url: "https://i.ibb.co/8NrGR1G/11224.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",
       shop_website_url:
         "https://www.instagram.com/tsubaki.creation/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
       shop_purchase_website_url: "https://tsubaki-creation.sumupstore.com/",
       shop_headline: "Créatrice de sacs et accessoires en tissu japonais",
       shop_intro_text:
-        "Tsubaki Création confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon et propose des sacs et des accessoires que vous pouvez.",
+        "Tsubaki création confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon et propose des sacs et des accessoires que vous pouvez.",
       products: [
         {
-          id: 1,
-          product_name: "Bag",
-          product_image_url:
-            "https://i.ibb.co/mDJbMXH/340156543-1580592949073736-1963966559106618963-n.jpg",
+          id: 10,
+          product_name: "Chouchou en Kimono",
+          product_image_url: "https://i.ibb.co/DKHxPJP/11167.jpg",
           product_price: null,
         },
         {
-          id: 2,
-          product_name: "Bag",
-          product_image_url:
-            "https://i.ibb.co/H2qq14s/339507433-988881402522640-2439768866332386619-n.jpg",
+          id: 16,
+          product_name: "Bracelet",
+          product_image_url: "https://i.ibb.co/8NrGR1G/11224.jpg",
           product_price: null,
         },
         {
-          id: 3,
-          product_name: "Bag",
-          product_image_url:
-            "https://i.ibb.co/18bQpcy/315111862-202827022207293-6951652126240759731-n.jpg",
+          id: 11,
+          product_name: "Pochette pour téléphone",
+          product_image_url: "https://i.ibb.co/DRZZQ4J/11168.jpg",
           product_price: null,
         },
         {
-          id: 4,
-          product_name: "Bag",
-          product_image_url:
-            "https://i.ibb.co/NFb1szM/307029019-1726574081037759-4093308280242153544-n.jpg",
+          id: 14,
+          product_name: "Pochette pour téléphone",
+          product_image_url: "https://i.ibb.co/dBxVGh1/11171.jpg",
           product_price: null,
         },
         {
-          id: 5,
-          product_name: "Bag",
-          product_image_url:
-            "https://i.ibb.co/Fx4PHtL/310511217-505942311035532-6580455511301699967-n.jpg",
+          id: 12,
+          product_name: "Porte cartes/monnaie",
+          product_image_url: "https://i.ibb.co/DfvJrCc/11169.jpg",
           product_price: null,
         },
         {
-          id: 6,
-          product_name: "Bag",
-          product_image_url: "https://i.ibb.co/BCKtdTV/tubakicr-ation2.jpg",
+          id: 17,
+          product_name: "Porte cartes/monnaie",
+          product_image_url: "https://i.ibb.co/gv8VzjT/11223.jpg",
           product_price: null,
         },
         {
-          id: 7,
-          product_name: "Bag",
-          product_image_url:
-            "https://i.ibb.co/tK1YGN6/272019748-321633993212231-2159083599050553166-n.jpg",
+          id: 13,
+          product_name: "Sac banane",
+          product_image_url: "https://i.ibb.co/XFpQhZJ/11170.jpg",
           product_price: null,
         },
         {
-          id: 8,
-          product_name: "Bag",
-          product_image_url: "https://i.ibb.co/mqnn9Zw/tubakicr-ation.jpg",
+          id: 15,
+          product_name: "Sac banane",
+          product_image_url: "https://i.ibb.co/zVzqLtZ/11172.jpg",
           product_price: null,
         },
       ],
@@ -73,11 +69,13 @@ const SHOPS_DATA = {
       shop_name: "AT bijoux",
       shop_name_lowercase_no_spaces_for_url: "atbijoux",
       shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
-      shop_website_url: "https://www.instagram.com/atbijouxjapon/",
+      shop_icon_url:
+        "https://i.ibb.co/FWnJ8Js/Screenshot-2023-08-11-184044.jpg",
+      shop_website_url: "http://www.atbijoux.com",
       shop_purchase_website_url: "",
       shop_headline: "Créatrice de bijoux en soie",
       shop_intro_text:
-        "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon. Il faut du temps, de la précision et de la patience ",
+        "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon.\nIl faut du temps, de la précision et de la patience ",
       products: [
         {
           id: 1,
@@ -87,7 +85,7 @@ const SHOPS_DATA = {
         },
         {
           id: 2,
-          product_name: "Produits d'intérieur",
+          product_name: "Produit d'intérieur",
           product_image_url: "https://i.ibb.co/9t8xWZD/2.png",
           product_price: null,
         },
@@ -145,65 +143,86 @@ const SHOPS_DATA = {
       id: 2,
       shop_name: "Nami Créations",
       shop_name_lowercase_no_spaces_for_url: "namicreations",
-      shop_image_url: "https://i.ibb.co/545P4Zb/namicr-ations.jpg",
+      shop_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/s6MtS0w/Screenshot-2023-08-11-185242.jpg",
       shop_website_url: "https://www.nami-creations.fr/",
       shop_purchase_website_url: "",
       shop_headline: "Auteure manga et créatrice d'objets en papier",
-      shop_intro_text: "",
+      shop_intro_text:
+        "Nami Créations est une entreprise individuelle créée début 2015 et basée à Tours.\nElle est spécialisée dans la fabrication artisanale de manga et yonkoma manga (comic strip japonais), recettes japonaises à dérouler et kirigami (papier découpé).\nNami est l'auteure des dessins et scenarii des livres qu'elle réalise entièrement à la main (découpe, collage, reliure).",
       products: [
+        {
+          id: 22,
+          product_name: "Manga",
+          product_image_url: "https://i.ibb.co/PhWqLtb/7858.jpg",
+          product_price: null,
+        },
+        {
+          id: 23,
+          product_name: "Manga",
+          product_image_url: "https://i.ibb.co/SmGfM68/7861.jpg",
+          product_price: null,
+        },
         {
           id: 18,
           product_name: "Manga",
-          product_image_url:
-            "https://i.ibb.co/VwJqBFK/12106068-775724685872346-1545133245-n.jpg",
+          product_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
           product_price: null,
         },
         {
           id: 19,
           product_name: "Manga",
-          product_image_url:
-            "https://i.ibb.co/KGD7F0y/12093370-152164235131907-1723586096-n.jpg",
+          product_image_url: "https://i.ibb.co/GJSSGT4/7846.jpg",
           product_price: null,
         },
         {
-          id: 20,
-          product_name: "Manga",
-          product_image_url:
-            "https://i.ibb.co/zPzYq8M/12145210-165338877143967-1583655975-n.jpg",
+          id: 29,
+          product_name: "Livre accordéon",
+          product_image_url: "https://i.ibb.co/wCT34wC/7873.jpg",
           product_price: null,
         },
         {
-          id: 21,
-          product_name: "Art",
-          product_image_url:
-            "https://i.ibb.co/1GkC4X7/12331552-1685794798305212-973138596-n.jpg",
+          id: 27,
+          product_name: "Livre accordéon",
+          product_image_url: "https://i.ibb.co/pz3RsGp/7870.jpg",
           product_price: null,
         },
         {
-          id: 22,
-          product_name: "Art",
-          product_image_url:
-            "https://i.ibb.co/K0sHr7k/12534423-857146337741021-54165594-n.jpg",
+          id: 30,
+          product_name: "Recette Japonaise",
+          product_image_url: "https://i.ibb.co/8Bdxb1D/7864.jpg",
           product_price: null,
         },
         {
-          id: 221,
-          product_name: "Art",
-          product_image_url:
-            "https://i.ibb.co/PCwbZnn/182425265-143462637753408-656123107402387604-n.jpg",
+          id: 32,
+          product_name: "Recette Japonaise",
+          product_image_url: "https://i.ibb.co/Pwdb0zG/7866.jpg",
           product_price: null,
         },
         {
-          id: 222,
-          product_name: "Art",
-          product_image_url:
-            "https://i.ibb.co/28ZpSJX/183173658-302266474606695-3469464846294373328-n.jpg",
+          id: 36,
+          product_name: "Kirigami",
+          product_image_url: "https://i.ibb.co/tq7dsnb/7879.jpg",
           product_price: null,
         },
         {
-          id: 223,
-          product_name: "Art",
-          product_image_url: "https://i.ibb.co/545P4Zb/namicr-ations.jpg",
+          id: 34,
+          product_name: "Kirigami",
+          product_image_url: "https://i.ibb.co/0f5dsvc/7876.jpg",
+          product_price: null,
+        },
+        {
+          id: 35,
+          product_name: "Kirigami",
+          product_image_url: "https://i.ibb.co/RSY2fjM/7878.jpg",
+          product_price: null,
+        },
+        {
+          id: 37,
+          product_name: "Kirigami",
+          product_image_url:
+            "https://i.ibb.co/fXXVq7v/183476402-1414405865586330-5233817337716917096-n.jpg",
           product_price: null,
         },
       ],
@@ -212,68 +231,85 @@ const SHOPS_DATA = {
       id: 3,
       shop_name: "GOEN",
       shop_name_lowercase_no_spaces_for_url: "goen",
-      shop_image_url: "https://i.ibb.co/9nFGMb9/goen.jpg",
+      shop_image_url:
+        "https://i.ibb.co/Cn80MbW/317708.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/sCfwL0j/313079373-187425353851045-7210455388149182739-n.jpg",
       shop_website_url: "https://www.instagram.com/goenjpfr/",
       shop_purchase_website_url: "https://goen.sumupstore.com/",
       shop_headline: "Créateur de bijoux japonais",
       shop_intro_text: "Créateur de bijoux à partir de l'origami japonais ",
       products: [
         {
-          id: 23,
-          product_name: "Accessory",
+          id: 38,
+          product_name: "Accessoire",
           product_image_url:
-            "https://i.ibb.co/xHtcZKt/350796599-1460853344452013-7446909390185489329-n.jpg",
+            "https://i.ibb.co/P4kFhJ9/317712.jpg",
           product_price: null,
         },
         {
-          id: 24,
-          product_name: "Accessory",
+          id: 39,
+          product_name: "Accessoire",
           product_image_url:
-            "https://i.ibb.co/8Y4ypgZ/286909839-593581938632081-240851648592919563-n.jpg",
+            "https://i.ibb.co/HXZPh50/317713.jpg",
           product_price: null,
         },
         {
-          id: 25,
-          product_name: "Accessory",
+          id: 40,
+          product_name: "Accessoire",
           product_image_url:
-            "https://i.ibb.co/j443z8K/350569496-1281611739443222-1522847207843220052-n.jpg",
+            "https://i.ibb.co/r6WhP9d/317714.jpg",
           product_price: null,
         },
         {
-          id: 26,
-          product_name: "Accessory",
+          id: 41,
+          product_name: "Accessoire",
           product_image_url:
-            "https://i.ibb.co/YyJzxf1/272898910-3243367145893928-8824315507361064424-n.jpg",
+            "https://i.ibb.co/MVsWLNR/317715.jpg",
           product_price: null,
         },
         {
-          id: 27,
-          product_name: "Accessory",
+          id: 42,
+          product_name: "Accessoire",
           product_image_url:
-            "https://i.ibb.co/KwffpvH/318753451-205576898579698-6439655907164669935-n.jpg",
+            "https://i.ibb.co/d2GTBgj/317716.jpg",
           product_price: null,
         },
         {
-          id: 28,
-          product_name: "Accessory",
+          id: 43,
+          product_name: "Accessoire",
           product_image_url:
-            "https://i.ibb.co/C9v1436/339986387-236553878857231-4716027452308966452-n.jpg",
+            "https://i.ibb.co/7yMYRh4/317717.jpg",
           product_price: null,
         },
         {
-          id: 29,
-          product_name: "Accessory",
-          product_image_url: "https://i.ibb.co/9nFGMb9/goen.jpg",
+          id: 44,
+          product_name: "Accessoire",
+          product_image_url: "https://i.ibb.co/V2rfXvC/317718.jpg",
           product_price: null,
         },
         {
-          id: 30,
-          product_name: "Accessory",
+          id: 45,
+          product_name: "Accessoire",
           product_image_url:
-            "https://i.ibb.co/NZX9kj0/269841067-3214165605486600-1323362896622091483-n.jpg",
+            "https://i.ibb.co/ck9vygY/317719.jpg",
           product_price: null,
         },
       ],
+    },
+    {
+      id: 4,
+      shop_name: "SUGAR",
+      shop_name_lowercase_no_spaces_for_url: "sugar",
+      shop_image_url: "",
+      shop_icon_url:
+        "https://i.ibb.co/XJXmgcx/Screenshot-2023-08-12-180643.jpg",
+      shop_website_url: "https://sugarlike.jp/",
+      shop_purchase_website_url: "https://sugarlike.jp/",
+      shop_headline: "Boutique de produits traditionnels japonais",
+      shop_intro_text:
+        "SUGAR est une toute nouvelle entreprise d'origine japonaise dont l'objectif est de promouvoir l'artisanat traditionnel et les spécialités régionales à l'étranger. Au travers son catalogue de produits, notre équipe franco-nippone souhaite vous faire découvrir avec passion, les multiples facettes de l'histoire du Japon et ce qui reste de celle-ci.\nNos produits sont confectionnés par des artisans locaux du pays du soleil levant. Chaque produit possède une touche artistique propre à chaque créateur. Vous découvrirez un panel d'objets d'une époque passée et les techniques utilisées. \nMais également les objets contemporains qui font tout le charme de la culture du pays.",
+      products: [],
     },
   ],
 };

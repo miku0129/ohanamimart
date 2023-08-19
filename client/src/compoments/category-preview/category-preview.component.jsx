@@ -9,7 +9,7 @@ const CategoryPreview = ({ shop_name_lowercase_no_spaces_for_url, shop_name, pro
     <div className="category-preview-container">
       <h2>
         <Link to={`/shop/${shop_name_lowercase_no_spaces_for_url}`}>
-          <span className="title">{shop_name.toUpperCase()}</span>
+          <span className="title">{shop_name}</span>
         </Link>
       </h2>
       <div className="preview">
