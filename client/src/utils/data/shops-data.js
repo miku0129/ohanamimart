@@ -16,13 +16,13 @@ const SHOPS_DATA = {
       products: [
         {
           id: 10,
-          product_name: "Chouchou",
+          product_name: "Chouchou en Kimono",
           product_image_url: "https://i.ibb.co/DKHxPJP/11167.jpg",
           product_price: null,
         },
         {
           id: 16,
-          product_name: "Accessoire",
+          product_name: "Bracelet",
           product_image_url: "https://i.ibb.co/8NrGR1G/11224.jpg",
           product_price: null,
         },
@@ -46,7 +46,7 @@ const SHOPS_DATA = {
         },
         {
           id: 17,
-          product_name: "Pochette",
+          product_name: "Porte cartes/monnaie",
           product_image_url: "https://i.ibb.co/gv8VzjT/11223.jpg",
           product_price: null,
         },
