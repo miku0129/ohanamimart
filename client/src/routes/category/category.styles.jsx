@@ -17,7 +17,7 @@ export const CategoryHeadline = styled.div`
     font-weight: initial;
 
     //google font
-    font-family: "Ysabeau Office", sans-serif;
+    // font-family: "Ysabeau Office", sans-serif;
   }
 `;
 

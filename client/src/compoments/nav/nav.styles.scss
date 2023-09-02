@@ -7,6 +7,7 @@
   top: 0;
   z-index: 1;
   background-color: white;
+  border-bottom: solid 0.5px gainsboro;
 
   .navigation-left {
     display: flex;
@@ -33,7 +34,7 @@
       div {
         span {
           //google font
-          font-family: "Ysabeau Office", sans-serif;
+          // font-family: "Ysabeau Office", sans-serif;
         }
       }
     }
@@ -58,7 +59,7 @@
       color: gainsboro;
 
       //google font
-      font-family: "Ysabeau Office", sans-serif;
+      // font-family: "Ysabeau Office", sans-serif;
 
       &:hover {
         opacity: 0.5;
