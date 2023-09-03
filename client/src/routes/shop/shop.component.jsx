@@ -4,7 +4,6 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 
 import CategoriesPreview from "../categories-preview/categories-preview.component";
 import Category from "../category/category.component";
-import Evenements from "../evenements/evenements.component"; 
 import { setCategories } from "../../store/categories/category.action";
 import { selectCategories } from "../../store/categories/category.selector";
 
@@ -28,7 +27,6 @@ const Shop = () => {
     <Routes>
       <Route index element={<CategoriesPreview />} />
       <Route path=":category" element={<Category />} />
-      <Route path="/evenements" element={<Evenements />} />
     </Routes>
   );
 };

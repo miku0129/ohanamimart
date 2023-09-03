@@ -15,13 +15,18 @@ const Nav = () => {
           </Link>
           <div className="menu-container">
             <div className="menu-content">
-              <div className="menu-content-with-indicator">
-                <div className="menu-text">Boutique</div>
-                <Indicator style={{ height: 20, width: 20 }} />
-              </div>
+              <Link to="/shop">
+                <div className="menu-content-with-indicator">
+                  <div className="menu-text">Boutique</div>
+                  <Indicator style={{ height: 20, width: 20 }} />
+                </div>
+              </Link>
             </div>
-            <div className="menu-content">Événements</div>
-
+            <div className="menu-content">
+              <Link to="/evenements">
+                <span>Événements</span>
+              </Link>
+            </div>
           </div>
         </div>
         {/* <div className="nav-links-container">

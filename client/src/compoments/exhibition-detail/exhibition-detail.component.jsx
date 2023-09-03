@@ -9,9 +9,9 @@ import {
   ImageContainer,
   Overlay,
   ContentsSubContainer,
-} from "./exhibition-preview.styles";
+} from "./exhibition-detail.styles";
 
-const ExhibitionPreview = ({ exhibitionsMap }) => {
+const ExhibitionDetail = ({ exhibitionsMap }) => {
   const [showModal, setShowModal] = useState(false);
   const handleShowModal = () => {
     setShowModal(!showModal);
@@ -98,4 +98,4 @@ const ExhibitionPreview = ({ exhibitionsMap }) => {
   }
 };
 
-export default ExhibitionPreview;
+export default ExhibitionDetail;
