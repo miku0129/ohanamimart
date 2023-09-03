@@ -46,13 +46,10 @@
           opacity: 0.5;
           cursor: pointer;
         }
-        .menu-content {
-          font-size: 20px;
 
-          .menu-content-with-indicator {
-            display: flex;
-            flex-direction: row;
-          }
+        .menu-content-with-indicator {
+          display: flex;
+          flex-direction: row;
         }
       }
     }
