@@ -23,7 +23,7 @@ const Nav = () => {
               </Link>
             </div>
             <div className="menu-content">
-              <Link to="/evenements">
+              <Link to="/exhibitions">
                 <span>Événements</span>
               </Link>
             </div>

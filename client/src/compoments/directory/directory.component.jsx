@@ -5,7 +5,7 @@ import MainVisualImages from "./main-visual-images";
 
 import CategoriesPreview from "../../routes/categories-preview/categories-preview.component";
 import ProductCard from "../product-card/product-card.component";
-import { BottomLine, ProductsPreview } from "../utility/utility.styles";
+import { BottomLine, PreviewFourItemsInALine } from "../utility/utility.styles";
 
 import { get_products_for_main_visual } from "../../utils/data/data.utils";
 
@@ -47,10 +47,10 @@ const Directory = ({ categories }) => {
           </p>
           <p>Hanami est la maison de l'artisanat japonais de qualité</p>
         </div>
-        <ProductsPreview>
+        <PreviewFourItemsInALine>
           {products &&
             products.map((product) => <ProductCard product={product} />)}
-        </ProductsPreview>
+        </PreviewFourItemsInALine>
         <BottomLine />
         <CategoriesPreview />
       </div>
