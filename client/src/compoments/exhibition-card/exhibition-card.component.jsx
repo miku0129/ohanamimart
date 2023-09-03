@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import "./exhibition-card.styles.scss";
 
 const ExhibitionCard = ({ exhibition }) => {
-  const { exhibition_title, date, time, address, main_image_url } = exhibition;
+  const {id, exhibition_title, date, time, address, main_image_url } = exhibition;
 
   const src = main_image_url
     ? main_image_url
@@ -9,6 +10,7 @@ const ExhibitionCard = ({ exhibition }) => {
 
   return (
     <div>
+      <Link to={`/exhibitions/${id}`}>
       <div className="blog-card">
         <div className="blog-contents-container">
           <p className="blog-title">{exhibition_title}</p>
@@ -19,6 +21,7 @@ const ExhibitionCard = ({ exhibition }) => {
           <p className="blog-description">{address}</p>
         </div>
       </div>
+      </Link>
     </div>
   );
 };

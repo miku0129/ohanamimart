@@ -1,13 +1,15 @@
 import { Fragment } from "react";
+import { useContext } from "react";
 
 import ExhibitionCard from "../exhibition-card/exhibition-card.component";
 
-import { PreviewThreeItemsInALine } from "../utility/utility.styles";
+import { ExhibitionsContext } from "../../context/exhibitions.context";
 
+import { PreviewThreeItemsInALine } from "../utility/utility.styles";
 import "./exhibition-preview.styles.scss";
 
-const ExhibitionPreview = ({ exhibitions }) => {
-  console.log(exhibitions);
+const ExhibitionPreview = () => {
+  const { exhibitions } = useContext(ExhibitionsContext);
   return (
     <Fragment>
       <div className="exhibitions-container">
