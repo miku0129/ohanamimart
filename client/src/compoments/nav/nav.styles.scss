@@ -11,68 +11,63 @@
 
   .navigation-left {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 
     .logo-container {
       height: 100%;
-      width: 70px;
-      padding: 10px;
-
-      .Shoplogo {
-        &:hover {
-          opacity: 0.5;
-        }
-      }
-    }
-
-    .catchcopy {
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding-bottom: 10px;
 
-      div {
-        span {
-          //google font
-          // font-family: "Ysabeau Office", sans-serif;
+      .logo {
+        font-size: xxx-large;
+        padding: 0px 10px 0px 10px;
+      }
+      /* Use a media query to add a breakpoint at 400px: */
+      @media screen and (max-width: 400px) {
+        .logo {
+          font-size: xx-large;
+        }
+      }
+    }
+
+    .menu-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      gap: 10px;
+
+      .menu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+        .menu-content {
+          font-size: 20px;
+
+          .menu-content-with-indicator {
+            display: flex;
+            flex-direction: row;
+          }
         }
       }
     }
   }
 
-  .nav-links-container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  // .nav-links-container {
+  //   width: 50%;
+  //   height: 100%;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: flex-end;
 
-    .nav-link {
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-    .shopTitle {
-      font-size: xxx-large;
-      // margin-right: 20px;
-      margin-right: auto;
-      margin-top: 15px;
-      color: gainsboro;
-
-      //google font
-      // font-family: "Ysabeau Office", sans-serif;
-
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-  }
-
-  /* Use a media query to add a breakpoint at 400px: */
-  @media screen and (max-width: 400px) {
-    .nav-links-container {
-      .shopTitle {
-        font-size: xx-large;
-      }
-    }
-  }
+  //   .nav-link {
+  //     padding: 10px 15px;
+  //     cursor: pointer;
+  //   }
+  // }
 }

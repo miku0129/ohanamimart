@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as Shoplogo } from "../../assets/cherry-blossom-9-svgrepo-com.svg";
+import { ReactComponent as Indicator } from "../../assets/chevron-down-svgrepo-com.svg";
 
 import "./nav.styles.scss";
 
@@ -11,25 +11,29 @@ const Nav = () => {
       <div className="navigation">
         <div className="navigation-left">
           <Link className="logo-container" to="/">
-            <Shoplogo className="Shoplogo" style={{ height: 60, width: 60 }} />
+            <div className="logo">Hanami</div>
           </Link>
-          <div className="catchcopy">
-            <div>
-              <span>Unis par la créativité</span>
+          <div className="menu-container">
+            <div className="menu-content">
+              <div className="menu-content-with-indicator">
+                <div className="menu-text">Boutique</div>
+                <Indicator style={{ height: 20, width: 20 }} />
+              </div>
             </div>
+            <div className="menu-content">Événements</div>
           </div>
         </div>
-        <div className="nav-links-container">
-          {/* <Link className="nav-link" to="/shop">
-            SHOP
-          </Link>
-          <Link className="nav-link" to="/sign-in">
-            SIGN IN
-          </Link> */}
+        {/* <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
-            <div className="shopTitle">Hanami</div>
+            SHOP
+            </Link>
+            <Link className="nav-link" to="/sign-in">
+            SIGN IN
           </Link>
-        </div>
+          <div>
+            <span>Unis par la créativité</span>
+          </div>
+        </div> */}
       </div>
     </Fragment>
   );
