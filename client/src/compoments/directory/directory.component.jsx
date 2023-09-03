@@ -54,13 +54,6 @@ const Directory = ({ categories }) => {
         <BottomLine />
         <CategoriesPreview />
       </div>
-
-      {/* <div className="categories-container">
-        {categories.length !== 0 &&
-          categories.map((category) => {
-            return <DirectoryItem category={category} key={category.id} />;
-          })}
-      </div> */}
     </>
   );
 };
