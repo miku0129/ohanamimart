@@ -35,3 +35,9 @@ export const get_headlines_array = () => {
 
   return [...headlines, evenements];
 };
+
+export const get_products_for_main_visual = () => {
+  const { shops } = SHOPS_DATA;
+  return shops.filter((_, idx) => idx < 4).map((shop) => { 
+    return shop.products[0]})
+};

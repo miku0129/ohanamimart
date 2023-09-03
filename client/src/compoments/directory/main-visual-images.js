@@ -1,4 +1,4 @@
-const Images = [
+const MainVisualImages = [
     {
       id: 1,
       src: "https://i.ibb.co/cwDwg3X/IMG-9828-3.jpg",
@@ -27,5 +27,5 @@ const Images = [
 
   ];
   
-  export default Images;
+  export default MainVisualImages;
   
