@@ -2,13 +2,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MainVisualImages from "./main-visual-images";
-import "./directory.styles.scss";
 
+import CategoriesPreview from "../../routes/categories-preview/categories-preview.component";
 import ProductCard from "../product-card/product-card.component";
 import { BottomLine, ProductsPreview } from "../utility/utility.styles";
-// import DirectoryItem from "../directory-item/directory-item.component";
 
 import { get_products_for_main_visual } from "../../utils/data/data.utils";
+
+import "./directory.styles.scss";
 
 const Directory = ({ categories }) => {
   const settings = {
@@ -51,6 +52,7 @@ const Directory = ({ categories }) => {
             products.map((product) => <ProductCard product={product} />)}
         </ProductsPreview>
         <BottomLine />
+        <CategoriesPreview />
       </div>
 
       {/* <div className="categories-container">

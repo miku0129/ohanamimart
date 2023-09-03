@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import ProductCard from "../product-card/product-card.component";
+import { BottomLine, ProductsPreview } from "../utility/utility.styles";
 
 import "./category-preview.style.scss";
 
@@ -12,7 +13,7 @@ const CategoryPreview = ({ shop_name_lowercase_no_spaces_for_url, shop_name, pro
           <span className="title">{shop_name}</span>
         </Link>
       </h2>
-      <div className="preview">
+      <ProductsPreview>
         {products
           .filter((_, idx) => idx < 4)
           .map((product) => {
@@ -20,7 +21,8 @@ const CategoryPreview = ({ shop_name_lowercase_no_spaces_for_url, shop_name, pro
             return <ProductCard key={product.id} product={product} />
           }
           )}
-      </div>
+      </ProductsPreview>
+      <BottomLine />
     </div>
   );
 };
