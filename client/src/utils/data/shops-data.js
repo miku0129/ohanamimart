@@ -28,7 +28,7 @@ const SHOPS_DATA = {
         },
         {
           id: 11,
-          product_name: "Pochette pour téléphone",
+          product_name: "Pochette pour téléphone en OBI",
           product_image_url: "https://i.ibb.co/DRZZQ4J/11168.jpg",
           product_price: null,
         },
