@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import MainVisualImages from "./main-visual-images";
 
 import CategoriesPreview from "../../routes/categories-preview/categories-preview.component";
@@ -14,7 +15,7 @@ import { get_products_for_main_visual } from "../../utils/data/data.utils";
 
 import "./directory.styles.scss";
 
-const Directory = ({ categories }) => {
+const Directory = () => {
   const settings = {
     dots: true,
     fade: true,

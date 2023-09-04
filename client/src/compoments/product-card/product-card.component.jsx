@@ -4,7 +4,7 @@ const ProductCard = ({ product }) => {
 
   const { product_name, product_price, product_image_url } = product;
 
-  const name = product_name.length < 30 ? product_name : product_name.slice(0, 30) + "...";
+  const name = product_name.length < 35 ? product_name : product_name.slice(0, 35) + "...";
 
   return (
     <div className="product-card-container">

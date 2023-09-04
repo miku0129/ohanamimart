@@ -154,7 +154,7 @@ const SHOPS_DATA = {
       products: [
         {
           id: 22,
-          product_name: "Manga",
+          product_name: "Manga'BLANC & NOIR'",
           product_image_url: "https://i.ibb.co/PhWqLtb/7858.jpg",
           product_price: null,
         },
@@ -166,7 +166,7 @@ const SHOPS_DATA = {
         },
         {
           id: 18,
-          product_name: "Manga",
+          product_name: "Manga'L'ODYSSÉE JAPONAISE'",
           product_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
           product_price: null,
         },
@@ -178,25 +178,25 @@ const SHOPS_DATA = {
         },
         {
           id: 29,
-          product_name: "Livre accordéon",
+          product_name: "Livre accordéon'Origami'",
           product_image_url: "https://i.ibb.co/wCT34wC/7873.jpg",
           product_price: null,
         },
         {
           id: 27,
-          product_name: "Livre accordéon",
+          product_name: "Livre accordéon'Origami'",
           product_image_url: "https://i.ibb.co/pz3RsGp/7870.jpg",
           product_price: null,
         },
         {
           id: 30,
-          product_name: "Recette Japonaise",
+          product_name: "Makimono'Recette Japonaise'",
           product_image_url: "https://i.ibb.co/8Bdxb1D/7864.jpg",
           product_price: null,
         },
         {
           id: 32,
-          product_name: "Recette Japonaise",
+          product_name: "Makimono'Recette Japonaise'",
           product_image_url: "https://i.ibb.co/Pwdb0zG/7866.jpg",
           product_price: null,
         },
