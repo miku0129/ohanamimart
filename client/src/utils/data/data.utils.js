@@ -9,9 +9,9 @@ export const get_exhibitions_array = () => {
 
   return exhibitions
     .filter((exhibition) => {
-      const dateOfExhibition = new Date(exhibition.date);
+      const endDateOfExhibition = new Date(exhibition.end_date);
       const today = new Date();
-      return dateOfExhibition >= today;
+      return endDateOfExhibition >= today;
     })
     .map((exhibition) => {
       const exhibitors = exhibition.exhibitors.map(

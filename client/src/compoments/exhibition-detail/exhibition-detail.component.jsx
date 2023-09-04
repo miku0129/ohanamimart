@@ -24,6 +24,7 @@ const ExhibitionDetail = () => {
   useEffect(() => {
     if (exhibitions.length > 0) {
       const exhibition = exhibitions.filter((exhibition) => {
+        console.log(exhibition)
         return exhibition.id === Number(id);
       });
       setExhibitionMap(exhibition[0])
@@ -37,8 +38,10 @@ const ExhibitionDetail = () => {
 
   if (exhibitionMap) {
     const {
-      date,
-      time,
+      start_date,
+      end_date,
+      start_time,
+      end_time,
       location,
       address,
       main_image_url,
@@ -80,9 +83,9 @@ const ExhibitionDetail = () => {
             <ContentsSubContainer>
               <div className="contents-subcontainer-left">
                 <h2>{exhibition_title}</h2>
-                <span>{date}</span>
+                <span>{start_date} ~ {end_date}</span>
                 <br />
-                <span>{time}</span>
+                <span>{start_time} ~ {end_time}</span>
                 <hr />
                 <span>{location}</span>
                 <br />
@@ -93,6 +96,7 @@ const ExhibitionDetail = () => {
                 <h2>Exposants</h2>
                 {exhibitors &&
                   exhibitors.map((exhibitor) => {
+                    console.log(exhibitor)
                     return (
                       <ExhibitorCard key={exhibitor.id} exhibitor={exhibitor} />
                     );
