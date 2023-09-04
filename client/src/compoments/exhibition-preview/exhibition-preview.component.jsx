@@ -5,7 +5,7 @@ import ExhibitionCard from "../exhibition-card/exhibition-card.component";
 
 import { ExhibitionsContext } from "../../context/exhibitions.context";
 
-import { PreviewOneItemsInALine } from "../utility/utility.styles";
+import { PreviewOneItemsInALine } from "../../component-utils/component-utils.styles";
 import "./exhibition-preview.styles.scss";
 
 const ExhibitionPreview = () => {

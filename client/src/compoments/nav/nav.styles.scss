@@ -38,20 +38,20 @@
       display: flex;
       gap: 10px;
 
-      .menu-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        &:hover {
-          opacity: 0.5;
-          cursor: pointer;
-        }
+      // .menu-content {
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: flex-end;
+      //   &:hover {
+      //     opacity: 0.5;
+      //     cursor: pointer;
+      //   }
 
-        .menu-content-with-indicator {
-          display: flex;
-          flex-direction: row;
-        }
-      }
+      //   .menu-content-with-indicator {
+      //     display: flex;
+      //     flex-direction: row;
+      //   }
+      // }
     }
   }
 

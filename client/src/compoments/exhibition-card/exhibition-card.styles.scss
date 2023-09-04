@@ -16,26 +16,10 @@
       border-radius: 4px;
     }
 
-    .blog-title-container {
-      display: flex;
-      gap: 10px;
-
-      &:hover {
-        opacity: 0.5;
-        cursor: pointer;
-      }
-
-      .blog-title-subcontainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-
-        .blog-title {
-          font-size: 30px;
-          margin: 0px 0;
-          text-align: left;
-        }
-      }
+    .blog-title {
+      font-size: 30px;
+      margin: 0px 0;
+      text-align: left;
     }
 
     .blog-contents-container {

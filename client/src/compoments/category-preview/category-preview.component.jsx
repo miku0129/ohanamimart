@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 
 import ProductCard from "../product-card/product-card.component";
-import { BottomLine, PreviewFourItemsInALine } from "../utility/utility.styles";
+import {
+  BottomLine,
+  PreviewFourItemsInALine,
+} from "../../component-utils/component-utils.styles";
 
 import "./category-preview.style.scss";
 

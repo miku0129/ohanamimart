@@ -7,6 +7,31 @@ export const BottomLine = styled.div`
   border-bottom: solid 0.5px gainsboro;
 `;
 
+export const LabelLink = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &:hover {
+    opacity: 0.6;
+  }
+`;
+
+export const LabelWithIndicatorLink = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  .label-with-indicator-inner {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
 //layout
 export const PreviewOneItemsInALine = styled.div`
   display: grid;

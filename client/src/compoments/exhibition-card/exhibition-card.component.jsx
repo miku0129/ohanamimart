@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 import { ReactComponent as Foward } from "../../assets/chevrons-right-arrows-svgrepo-com.svg";
 
-import { BottomLine } from "../utility/utility.styles";
+import {
+  BottomLine,
+  LabelWithIndicatorLink,
+} from "../../component-utils/component-utils.styles";
 import "./exhibition-card.styles.scss";
 
 const ExhibitionCard = ({ exhibition }) => {
@@ -36,16 +39,15 @@ const ExhibitionCard = ({ exhibition }) => {
     <div>
       <div className="blog-card">
         <div className="blog-contents-container">
-          <Link to={`/exhibitions/${id}`}>
-            <div className="blog-title-container">
-              <div className="blog-title-subcontainer">
+          <LabelWithIndicatorLink>
+            <Link to={`/exhibitions/${id}`}>
+              <div className="label-with-indicator-inner">
                 <p className="blog-title">{exhibition_title}</p>
-              </div>
-              <div className="blog-title-subcontainer">
                 <Foward style={{ height: 30, width: 30 }} />
               </div>
-            </div>
-          </Link>
+            </Link>
+          </LabelWithIndicatorLink>
+
           <p className="blog-description date">{date}</p>
           <div className="blog-contents-container">
             <img src={src} alt={exhibition_title} />

@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 
 import { ReactComponent as Indicator } from "../../assets/chevron-down-svgrepo-com.svg";
 
+import {
+  LabelLink,
+  LabelWithIndicatorLink,
+} from "../../component-utils/component-utils.styles";
+
 import "./nav.styles.scss";
 
 const Nav = () => {
@@ -14,19 +19,19 @@ const Nav = () => {
             <div className="logo">Hanami</div>
           </Link>
           <div className="menu-container">
-            <div className="menu-content">
+            <LabelWithIndicatorLink>
               <Link to="/shop">
-                <div className="menu-content-with-indicator">
+                <div className="label-with-indicator-inner">
                   <div className="menu-text">Boutique</div>
                   <Indicator style={{ height: 20, width: 20 }} />
                 </div>
               </Link>
-            </div>
-            <div className="menu-content">
+            </LabelWithIndicatorLink>
+            <LabelLink>
               <Link to="/exhibitions">
                 <span>Événements</span>
               </Link>
-            </div>
+            </LabelLink>
           </div>
         </div>
         {/* <div className="nav-links-container">

@@ -5,7 +5,10 @@ import MainVisualImages from "./main-visual-images";
 
 import CategoriesPreview from "../../routes/categories-preview/categories-preview.component";
 import ProductCard from "../product-card/product-card.component";
-import { BottomLine, PreviewFourItemsInALine } from "../utility/utility.styles";
+import {
+  BottomLine,
+  PreviewFourItemsInALine,
+} from "../../component-utils/component-utils.styles";
 
 import { get_products_for_main_visual } from "../../utils/data/data.utils";
 
