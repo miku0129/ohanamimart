@@ -18,6 +18,9 @@ const EXHIBITIONS_DATA = {
         "https://i.ibb.co/8bhSznd/Screenshot-2023-08-12-185630.jpg",
       ],
       exhibitors: ["SUGAR", "Tsubaki création", "GOEN"],
+      about_exhibition : "",
+      exhibition_url : ""
+
     },
     {
       id: 1,
@@ -31,6 +34,8 @@ const EXHIBITIONS_DATA = {
       main_image_url: "https://i.ibb.co/BGYJzCq/8228.jpg",
       image_url: [],
       exhibitors: ["Nami Créations"],
+      about_exhibition : "Festivals de bande dessinée à Tours!",
+      exhibition_url : "https://www.atoursdebulles.fr/"
     },
     {
       id: 2,
@@ -43,13 +48,11 @@ const EXHIBITIONS_DATA = {
       address: "11 Avenue de Grammont",
       main_image_url: "https://i.ibb.co/jMct7KD/11256.jpg",
       image_url: [
-        "https://i.ibb.co/t3H7tSb/Screenshot-2023-08-12-185712.jpg",
-        "https://i.ibb.co/pyWgNnj/Screenshot-2023-08-12-185122.jpg",
-        "https://i.ibb.co/HGFWDT6/Screenshot-2023-08-12-185550.jpg",
-        "https://i.ibb.co/s2PPJ63/Screenshot-2023-08-12-185224.jpg",
-        "https://i.ibb.co/8bhSznd/Screenshot-2023-08-12-185630.jpg",
       ],
       exhibitors: ["SUGAR", "Tsubaki création", "GOEN"],
+      about_exhibition : "Vendus par quatre créateurs japonais.",
+      exhibition_url : ""
+
     },
 
   ],
