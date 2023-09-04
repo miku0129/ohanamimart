@@ -26,9 +26,10 @@ export const LabelWithIndicatorLink = styled.div`
     opacity: 0.6;
   }
 
-  .label-with-indicator-inner {
+  .label-with-indicator-link-inner {
     display: flex;
     flex-direction: row;
+    gap:1%;
   }
 `;
 

@@ -41,7 +41,7 @@ const ExhibitionCard = ({ exhibition }) => {
         <div className="blog-contents-container">
           <LabelWithIndicatorLink>
             <Link to={`/exhibitions/${id}`}>
-              <div className="label-with-indicator-inner">
+              <div className="label-with-indicator-link-inner">
                 <p className="blog-title">{exhibition_title}</p>
                 <Foward style={{ height: 30, width: 30 }} />
               </div>

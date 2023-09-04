@@ -21,7 +21,7 @@ const Nav = () => {
           <div className="menu-container">
             <LabelWithIndicatorLink>
               <Link to="/shop">
-                <div className="label-with-indicator-inner">
+                <div className="label-with-indicator-link-inner">
                   <div className="menu-text">Boutique</div>
                   <Indicator style={{ height: 20, width: 20 }} />
                 </div>
