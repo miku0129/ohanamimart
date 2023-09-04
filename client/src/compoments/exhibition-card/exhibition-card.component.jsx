@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { ReactComponent as Foward } from "../../assets/chevrons-right-arrows-svgrepo-com.svg";
 
+import { BottomLine } from "../utility/utility.styles";
 import "./exhibition-card.styles.scss";
 
 const ExhibitionCard = ({ exhibition }) => {
@@ -56,6 +57,7 @@ const ExhibitionCard = ({ exhibition }) => {
           </div>
         </div>
       </div>
+      <BottomLine />
     </div>
   );
 };

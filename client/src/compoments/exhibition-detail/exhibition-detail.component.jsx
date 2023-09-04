@@ -3,14 +3,10 @@ import { useParams } from "react-router-dom";
 
 import { ExhibitionsContext } from "../../context/exhibitions.context";
 
-// import "react-image-gallery/styles/css/image-gallery.css";
-// import ImageGallery from "react-image-gallery";
-
 import ExhibitorCard from "../exhibitor-card/exhibitor-card.component";
 import {
   ContentsContainer,
   MainImageContainer,
-  // ImageContainer,
   Overlay,
   ContentsSubContainer,
 } from "./exhibition-detail.styles";
@@ -19,15 +15,15 @@ const ExhibitionDetail = () => {
   const { id } = useParams();
   const { exhibitions } = useContext(ExhibitionsContext);
 
-  const [exhibitionMap, setExhibitionMap] = useState(null)
+  const [exhibitionMap, setExhibitionMap] = useState(null);
 
   useEffect(() => {
     if (exhibitions.length > 0) {
       const exhibition = exhibitions.filter((exhibition) => {
-        console.log(exhibition)
+        console.log(exhibition);
         return exhibition.id === Number(id);
       });
-      setExhibitionMap(exhibition[0])
+      setExhibitionMap(exhibition[0]);
     }
   }, [exhibitions, id]);
 
@@ -45,23 +41,22 @@ const ExhibitionDetail = () => {
       location,
       address,
       main_image_url,
-      // image_url,
       exhibition_title,
       exhibitors,
+      exhibition_url,
     } = exhibitionMap;
 
-    // const images = image_url
-    //   ? image_url.map((url) => {
-    //       const obj = {
-    //         original: url,
-    //         thumbnail: url,
-    //         originalHeight: 450,
-    //         thumbnailHeight: 100,
-    //         thumbnailWidth: 100,
-    //       };
-    //       return obj;
-    //     })
-    //   : image_url;
+    const date =
+      start_date !== end_date ? `${start_date} ~ ${end_date}` : start_date;
+
+    const url = exhibition_url ? (
+      <a href={exhibition_url}>
+        <p className="blog-description url">{exhibition_url}</p>
+      </a>
+    ) : (
+      ""
+    );
+
     return (
       exhibition_title && (
         <div>
@@ -69,34 +64,26 @@ const ExhibitionDetail = () => {
             <MainImageContainer onClick={handleShowModal}>
               <img src={main_image_url} alt={exhibition_title} />
             </MainImageContainer>
-            {/* <ImageContainer>
-              <ImageGallery
-                items={images}
-                showNav={false}
-                autoPlay={false}
-                showFullscreenButton={false}
-                useBrowserFullscreen={false}
-                showPlayButton={false}
-                showBullets={true}
-              />
-            </ImageContainer> */}
             <ContentsSubContainer>
               <div className="contents-subcontainer-left">
                 <h2>{exhibition_title}</h2>
-                <span>{start_date} ~ {end_date}</span>
+                <span>{date}</span>
                 <br />
-                <span>{start_time} ~ {end_time}</span>
+                <span>
+                  {start_time} ~ {end_time}
+                </span>
                 <hr />
                 <span>{location}</span>
                 <br />
                 <span>{address}</span>
                 <hr />
+                <span>{url}</span>
               </div>
               <div className="contents-subcontainer-right">
                 <h2>Exposants</h2>
                 {exhibitors &&
                   exhibitors.map((exhibitor) => {
-                    console.log(exhibitor)
+                    console.log(exhibitor);
                     return (
                       <ExhibitorCard key={exhibitor.id} exhibitor={exhibitor} />
                     );

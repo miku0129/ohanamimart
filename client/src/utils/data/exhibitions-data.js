@@ -37,23 +37,6 @@ const EXHIBITIONS_DATA = {
       about_exhibition : "Festivals de bande dessinée à Tours!",
       exhibition_url : "https://www.atoursdebulles.fr/"
     },
-    {
-      id: 2,
-      exhibition_title: "Mini Expo Japonaise",
-      start_date: "2023/9/27",
-      end_date: "2023/9/27",
-      start_time: "10:00-18:00",
-      end_time: "10:00-18:00",
-      location: "Yoïsho!",
-      address: "11 Avenue de Grammont",
-      main_image_url: "https://i.ibb.co/jMct7KD/11256.jpg",
-      image_url: [
-      ],
-      exhibitors: ["SUGAR", "Tsubaki création", "GOEN"],
-      about_exhibition : "Vendus par quatre créateurs japonais.",
-      exhibition_url : ""
-
-    },
 
   ],
 };
