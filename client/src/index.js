@@ -10,7 +10,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./store/store";
 
-import { HeadlinesProvider } from "./context/headlines.context";
+// import { HeadlinesProvider } from "./context/headlines.context";
 import { ExhibitionsProvider } from "./context/exhibitions.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -19,11 +19,11 @@ root.render(
     <BrowserRouter>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <HeadlinesProvider>
+          {/* <HeadlinesProvider> */}
             <ExhibitionsProvider>
               <App />
             </ExhibitionsProvider>
-          </HeadlinesProvider>
+          {/* </HeadlinesProvider> */}
         </PersistGate>
       </Provider>
     </BrowserRouter>
