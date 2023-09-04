@@ -11,9 +11,6 @@ export const get_exhibitions_array = () => {
     .filter((exhibition) => {
       const dateOfExhibition = new Date(exhibition.date);
       const today = new Date();
-      console.log(dateOfExhibition);
-      console.log(today);
-
       return dateOfExhibition >= today;
     })
     .map((exhibition) => {
