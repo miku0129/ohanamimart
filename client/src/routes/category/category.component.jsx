@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import ProductCard from "../../compoments/product-card/product-card.component";
-import { ReactComponent as Purchaselogo } from "../../assets/gift-1-svgrepo-com.svg";
-import { ReactComponent as UserLogo } from "../../assets/user-2-svgrepo-com.svg";
 
 import { selectCategories } from "../../store/categories/category.selector";
 
@@ -12,10 +10,16 @@ import {
   CategoryContainer,
   CategoryHeadline,
   CategorySubtitle,
-  CategoryIcon,
   CategoryIntro,
   CategorySubContainer,
 } from "./category.styles";
+import {
+  CustomUserIcon,
+  DefaultUserIcon,
+  StyledPurchaseLogo,
+  StyledHomeLogo,
+  PreviewLogosInALine
+} from "../../component-utils/component-utils.styles";
 
 const Category = () => {
   const { category } = useParams();
@@ -47,25 +51,14 @@ const Category = () => {
       <CategoryHeadline>
         <div className="category-main-headline">
           <div className="category-title">
-            <h1>
-              {shop_name && (
-                <span className="title">{shop_name} </span>
-              )}
-            </h1>
+            <h1>{shop_name && <span className="title">{shop_name} </span>}</h1>
           </div>
         </div>
         <CategorySubtitle>
-          <CategoryIcon imageurl={shop_icon_url}>
-            <a href={shop_website_url} target="_blank" rel="noreferrer">
-              {shop_icon_url && <div class="image_circle"></div>}
-              {!shop_icon_url && (
-                <UserLogo
-                  className="userLogo"
-                  style={{ height: 100, width: 100 }}
-                />
-              )}
-            </a>
-          </CategoryIcon>
+          <CustomUserIcon imageurl={shop_icon_url}>
+            {shop_icon_url && <div class="image_circle"></div>}
+            {!shop_icon_url && <DefaultUserIcon />}
+          </CustomUserIcon>
           <CategoryIntro>
             <div>
               <div id="creator_description">
@@ -78,20 +71,23 @@ const Category = () => {
                 })()}
               </div>
             </div>
-            {shop_purchase_website_url ? (
-              <div className="purchase-icon">
+            <PreviewLogosInALine>
+              {shop_website_url ? (
+                <a href={shop_website_url} target="_blank" rel="noreferrer">
+                  <StyledHomeLogo />
+                </a>
+              ) : null}
+
+              {shop_purchase_website_url ? (
                 <a
                   href={shop_purchase_website_url}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Purchaselogo
-                    className="purchaseLogo"
-                    style={{ height: 30, width: 30 }}
-                  />
+                  <StyledPurchaseLogo />
                 </a>
-              </div>
-            ) : null}
+              ) : null}
+            </PreviewLogosInALine>
           </CategoryIntro>
         </CategorySubtitle>
       </CategoryHeadline>

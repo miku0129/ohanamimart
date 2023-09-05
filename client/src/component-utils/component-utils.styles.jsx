@@ -1,6 +1,44 @@
 import { styled } from "styled-components";
 
+import { ReactComponent as UserIcon } from "../assets/user-2-svgrepo-com.svg";
+import { ReactComponent as PurchaseLogo } from "../assets/gift-1-svgrepo-com.svg";
+import { ReactComponent as HomeLogo } from "../assets/home-1-svgrepo-com.svg";
+
 //decoration
+export const StyledHomeLogo = styled(HomeLogo)`
+  height: 20px;
+  width: 20px;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+`;
+
+export const StyledPurchaseLogo = styled(PurchaseLogo)`
+  height: 20px;
+  width: 20px;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+`;
+
+export const DefaultUserIcon = styled(UserIcon)`
+  height: 100px;
+  width: 100px;
+`;
+export const CustomUserIcon = styled.div`
+  position: relative;
+
+  .image_circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: ${({ imageurl }) => `url(${imageurl})`};
+    background-position: center;
+  }
+`;
+
 export const BottomLine = styled.div`
   margin: auto;
   width: 95vw;
@@ -29,11 +67,20 @@ export const LabelWithIndicatorLink = styled.div`
   .label-with-indicator-link-inner {
     display: flex;
     flex-direction: row;
-    gap:1%;
+    gap: 1%;
   }
 `;
 
 //layout
+export const PreviewLogosInALine = styled.div`
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+`;
+
 export const PreviewOneItemsInALine = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -47,7 +94,6 @@ export const PreviewOneItemsInALine = styled.div`
     column-gap: 0;
     row-gap: 20px;
     padding: 0;
-    padding: 0 10px; // 両端に余白を追加
   }
 `;
 
