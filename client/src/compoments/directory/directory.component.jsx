@@ -39,7 +39,7 @@ const Directory = () => {
           <Slider {...settings}>
             {MainVisualImages.map((image) => (
               <div>
-                <img className="slick-img" src={image.src} />
+                <img className="slick-img" src={image.src} alt={image.alt}/>
               </div>
             ))}
           </Slider>
