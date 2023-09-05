@@ -27,15 +27,14 @@ export const DefaultUserIcon = styled(UserIcon)`
   height: 100px;
   width: 100px;
 `;
-export const CustomUserIcon = styled.div`
-  position: relative;
 
-  .image_circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: ${({ imageurl }) => `url(${imageurl})`};
-    background-position: center;
+export const CustomUserIcon = styled.div`
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  background-image: ${({ imageurl }) => `url(${imageurl})`};
+  background-position: center;
   }
 `;
 
@@ -72,6 +71,16 @@ export const LabelWithIndicatorLink = styled.div`
 `;
 
 //layout
+export const IconwithLogoAtTheLeftBottom = styled.div`
+  display: flex;
+
+  .innerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+`;
+
 export const PreviewLogosInALine = styled.div`
   padding: 10px;
   display: flex;

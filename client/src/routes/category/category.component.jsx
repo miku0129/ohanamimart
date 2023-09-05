@@ -18,7 +18,7 @@ import {
   DefaultUserIcon,
   StyledPurchaseLogo,
   StyledHomeLogo,
-  PreviewLogosInALine
+  PreviewLogosInALine,
 } from "../../component-utils/component-utils.styles";
 
 const Category = () => {
@@ -55,10 +55,8 @@ const Category = () => {
           </div>
         </div>
         <CategorySubtitle>
-          <CustomUserIcon imageurl={shop_icon_url}>
-            {shop_icon_url && <div class="image_circle"></div>}
-            {!shop_icon_url && <DefaultUserIcon />}
-          </CustomUserIcon>
+          {shop_icon_url && <CustomUserIcon imageurl={shop_icon_url} />}
+          {!shop_icon_url && <DefaultUserIcon />}
           <CategoryIntro>
             <div>
               <div id="creator_description">
