@@ -22,9 +22,9 @@ const ProductCard = ({ product }) => {
       <div className="product-card-footer">
         <div className="product-card-footer-left">
           <span className="name_of_product">{name_of_product}</span>
-          <Link to={`/shop/${shop.shop_name_lowercase_no_spaces_for_url}`}>
+          {shop && <Link to={`/shop/${shop.shop_name_lowercase_no_spaces_for_url}`}>
             <SpanLink>{shop.shop_name}</SpanLink>
-          </Link>
+          </Link>}
         </div>
         {product_price && <span className="price">{product_price}&euro;</span>}
       </div>
