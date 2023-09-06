@@ -6,6 +6,7 @@ import {
   BottomLine,
   LabelWithIndicatorLink,
   DefaultPicture,
+  ParagraphLink
 } from "../../component-utils/component-utils.styles";
 import "./exhibition-card.styles.scss";
 
@@ -32,7 +33,7 @@ const ExhibitionCard = ({ exhibition }) => {
 
   const url = exhibition_url ? (
     <a href={exhibition_url}>
-      <p className="blog-description url">{exhibition_url}</p>
+      <ParagraphLink className="blog-description">{exhibition_url}</ParagraphLink>
     </a>
   ) : (
     ""

@@ -10,6 +10,7 @@ import {
   Overlay,
   ContentsSubContainer,
 } from "./exhibition-detail.styles";
+import { ParagraphLink } from "../../component-utils/component-utils.styles";
 
 import { DefaultPicture } from "../../component-utils/component-utils.styles";
 
@@ -53,7 +54,7 @@ const ExhibitionDetail = () => {
 
     const url = exhibition_url ? (
       <a href={exhibition_url}>
-        <p className="blog-description url">{exhibition_url}</p>
+        <ParagraphLink>{exhibition_url}</ParagraphLink>
       </a>
     ) : (
       ""

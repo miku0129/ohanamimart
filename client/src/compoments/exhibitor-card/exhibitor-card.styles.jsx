@@ -17,6 +17,6 @@ export const ExhibitorDetails = styled.div`
   justify-content: flex-start;
 
   h3 {
-    margin-top: 0;
+    margin: 0;
   }
 `;

@@ -1,28 +1,32 @@
+import { Link } from "react-router-dom";
+
 import { Exhibitor, ExhibitorDetails } from "./exhibitor-card.styles";
 import {
   CustomUserIcon,
-  StyledUserLogo,
   IconwithLogoAtTheLeftBottom,
+  ParagraphLink,
 } from "../../component-utils/component-utils.styles";
 
 const ExhibitorCard = (exhibitor) => {
-  const { shop_name, shop_icon_url, shop_website_url, shop_headline } =
-    exhibitor["exhibitor"];
+  const {
+    shop_name,
+    shop_icon_url,
+    shop_name_lowercase_no_spaces_for_url,
+    shop_headline,
+  } = exhibitor["exhibitor"];
   return (
     <Exhibitor>
       <IconwithLogoAtTheLeftBottom>
         <CustomUserIcon imageurl={shop_icon_url} />
-        <div className="innerContainer">
-          <a href={shop_website_url} target="_blank" rel="noreferrer">
-            <StyledUserLogo />
-          </a>
-        </div>
       </IconwithLogoAtTheLeftBottom>
       <ExhibitorDetails>
-        <h3>{shop_name} </h3>
+        <h3>
+          <Link to={`/shop/${shop_name_lowercase_no_spaces_for_url}`}>
+            <ParagraphLink>{shop_name}</ParagraphLink>
+          </Link>
+        </h3>
         <span>{shop_headline}</span>
       </ExhibitorDetails>
-      {/* </a> */}
     </Exhibitor>
   );
 };

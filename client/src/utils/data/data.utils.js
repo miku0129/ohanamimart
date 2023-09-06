@@ -3,6 +3,7 @@ import SHOPS_DATA from "./shops-data";
 // import HEADLINES_DATA from "./headlines-data";
 // import EVENEMENTS from "./headlines-evenements-data";
 
+
 export const get_exhibitions_array = () => {
   const { exhibitions } = EXHIBITIONS_DATA;
   const { shops } = SHOPS_DATA;

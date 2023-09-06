@@ -10,7 +10,6 @@ DefaultPicture.defaultProps = {
   src: "https://i.ibb.co/vLWDkSr/hong-feng-c-I2-BLo74zso-unsplash.jpg",
 };
 
-//decoration
 export const StyledUserLogo = styled(UserLogo)`
   height: 20px;
   width: 20px;
@@ -49,6 +48,19 @@ export const BottomLine = styled.div`
   width: 95vw;
   border-bottom: solid 0.5px gainsboro;
 `;
+
+export const SpanLink = styled.span`
+  &:hover {
+    color: cornflowerblue;
+  }
+`;
+
+export const ParagraphLink = styled.p`
+  &:hover {
+    color: cornflowerblue;
+  }
+`;
+
 
 export const LabelLink = styled.div`
   display: flex;
