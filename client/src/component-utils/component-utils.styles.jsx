@@ -1,11 +1,17 @@
 import { styled } from "styled-components";
 
-import { ReactComponent as UserIcon } from "../assets/user-2-svgrepo-com.svg";
+import { ReactComponent as DefaultIcon } from "../assets/cherry-blossom-9-svgrepo-com.svg";
 import { ReactComponent as PurchaseLogo } from "../assets/gift-1-svgrepo-com.svg";
-import { ReactComponent as HomeLogo } from "../assets/home-1-svgrepo-com.svg";
+import { ReactComponent as UserLogo } from "../assets/user-2-svgrepo-com.svg";
+
+//component
+export const DefaultPicture = styled.img``;
+DefaultPicture.defaultProps = {
+  src: "https://i.ibb.co/vLWDkSr/hong-feng-c-I2-BLo74zso-unsplash.jpg",
+};
 
 //decoration
-export const StyledHomeLogo = styled(HomeLogo)`
+export const StyledUserLogo = styled(UserLogo)`
   height: 20px;
   width: 20px;
   &:hover {
@@ -23,7 +29,7 @@ export const StyledPurchaseLogo = styled(PurchaseLogo)`
   }
 `;
 
-export const DefaultUserIcon = styled(UserIcon)`
+export const DefaultUserIcon = styled(DefaultIcon)`
   height: 100px;
   width: 100px;
 `;

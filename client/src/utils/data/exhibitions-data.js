@@ -37,6 +37,22 @@ const EXHIBITIONS_DATA = {
       about_exhibition : "Festivals de bande dessinée à Tours!",
       exhibition_url : "https://www.atoursdebulles.fr/"
     },
+    {
+      id: 2,
+      exhibition_title: "MARCHÉ ARTISANAL JAPON, TOURS",
+      start_date: "2023/09/24",
+      end_date: "2023/09/24",
+      start_time: "10:30",
+      end_time: "19:00",
+      location: "YOÏSHO",
+      address: "11, avenue Grammont Tours",
+      main_image_url: "",
+      image_url: [],
+      exhibitors: ['GOEN', 'Tsubaki création', 'Nami Créations'],
+      about_exhibition : "Trois créateurs japonais vendent des produits faits à la main",
+      exhibition_url : ""
+    },
+
 
   ],
 };

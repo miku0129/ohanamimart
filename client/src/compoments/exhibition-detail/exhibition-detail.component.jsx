@@ -11,6 +11,8 @@ import {
   ContentsSubContainer,
 } from "./exhibition-detail.styles";
 
+import { DefaultPicture } from "../../component-utils/component-utils.styles";
+
 const ExhibitionDetail = () => {
   const { id } = useParams();
   const { exhibitions } = useContext(ExhibitionsContext);
@@ -57,12 +59,18 @@ const ExhibitionDetail = () => {
       ""
     );
 
+    const image = main_image_url ? (
+      <img src={main_image_url} alt={exhibition_title} />
+    ) : (
+      <DefaultPicture />
+    );
+
     return (
       exhibition_title && (
         <div>
           <ContentsContainer>
             <MainImageContainer onClick={handleShowModal}>
-              <img src={main_image_url} alt={exhibition_title} />
+              {image}
             </MainImageContainer>
             <ContentsSubContainer>
               <div className="contents-subcontainer-left">
@@ -97,7 +105,7 @@ const ExhibitionDetail = () => {
                 <div className="modal-image-subcontainer">
                   <button onClick={handleShowModal}>&times;</button>
                 </div>
-                <img src={main_image_url} alt={exhibition_title} />
+                {image}
               </div>
             </Overlay>
           )}

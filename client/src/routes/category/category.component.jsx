@@ -17,7 +17,7 @@ import {
   CustomUserIcon,
   DefaultUserIcon,
   StyledPurchaseLogo,
-  StyledHomeLogo,
+  StyledUserLogo,
   PreviewLogosInALine,
 } from "../../component-utils/component-utils.styles";
 
@@ -72,7 +72,7 @@ const Category = () => {
             <PreviewLogosInALine>
               {shop_website_url ? (
                 <a href={shop_website_url} target="_blank" rel="noreferrer">
-                  <StyledHomeLogo />
+                  <StyledUserLogo />
                 </a>
               ) : null}
 

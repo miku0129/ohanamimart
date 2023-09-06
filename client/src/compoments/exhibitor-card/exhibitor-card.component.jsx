@@ -1,7 +1,7 @@
 import { Exhibitor, ExhibitorDetails } from "./exhibitor-card.styles";
 import {
   CustomUserIcon,
-  StyledHomeLogo,
+  StyledUserLogo,
   IconwithLogoAtTheLeftBottom,
 } from "../../component-utils/component-utils.styles";
 
@@ -14,7 +14,7 @@ const ExhibitorCard = (exhibitor) => {
         <CustomUserIcon imageurl={shop_icon_url} />
         <div className="innerContainer">
           <a href={shop_website_url} target="_blank" rel="noreferrer">
-            <StyledHomeLogo />
+            <StyledUserLogo />
           </a>
         </div>
       </IconwithLogoAtTheLeftBottom>

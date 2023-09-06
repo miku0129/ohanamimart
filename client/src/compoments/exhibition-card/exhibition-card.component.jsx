@@ -5,6 +5,7 @@ import { ReactComponent as Foward } from "../../assets/chevrons-right-arrows-svg
 import {
   BottomLine,
   LabelWithIndicatorLink,
+  DefaultPicture,
 } from "../../component-utils/component-utils.styles";
 import "./exhibition-card.styles.scss";
 
@@ -23,9 +24,11 @@ const ExhibitionCard = ({ exhibition }) => {
   const date =
     start_date !== end_date ? `${start_date} ~ ${end_date}` : start_date;
 
-  const src = main_image_url
-    ? main_image_url
-    : "https://i.ibb.co/cwDwg3X/IMG-9828-3.jpg";
+  const image = main_image_url ? (
+    <img src={main_image_url} alt={exhibition_title} />
+  ) : (
+    <DefaultPicture />
+  );
 
   const url = exhibition_url ? (
     <a href={exhibition_url}>
@@ -50,7 +53,7 @@ const ExhibitionCard = ({ exhibition }) => {
 
           <p className="blog-description date">{date}</p>
           <div className="blog-contents-container">
-            <img src={src} alt={exhibition_title} />
+            {image}
             <div className="blog-contents-subcontainer">
               <p className="blog-description about">{about_exhibition}</p>
               <p className="blog-description">{address}</p>
