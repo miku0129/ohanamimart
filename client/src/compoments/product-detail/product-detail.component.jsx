@@ -16,8 +16,6 @@ const ProductDetail = () => {
   const shop = categories.filter(
     (category) => category.id === product.shop_id
   )[0];
-  console.log(product);
-  console.log(shop);
 
   return (
     <div className="product-detail-container">
@@ -33,7 +31,7 @@ const ProductDetail = () => {
         </div>
         <div className="product-detail">
           <div className="product-detail-image">
-            <img src={product.product_image_url} />
+            <img src={product.product_image_url} alt={product.product_name}/>
           </div>
           <div className="description">
             <div class="tab-001">
