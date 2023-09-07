@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCategories } from "../../store/categories/category.selector";
 import { get_product_by_id } from "../../utils/data/data.utils";
+import Slick from "../slick/slick.component";
 import {
   CustomUserIcon,
   ParagraphLink,
@@ -30,9 +31,10 @@ const ProductDetail = () => {
           </Link>
         </div>
         <div className="product-detail">
-          <div className="product-detail-image">
+          {/* <div className="product-detail-image">
             <img src={product.product_image_url} alt={product.product_name}/>
-          </div>
+          </div> */}
+          <Slick images={product.product_image_url} isPrimary={true}/>
           <div className="description">
             <div class="tab-001">
               <label>

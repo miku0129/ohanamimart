@@ -5,6 +5,20 @@ import { ReactComponent as PurchaseLogo } from "../assets/gift-1-svgrepo-com.svg
 import { ReactComponent as UserLogo } from "../assets/user-2-svgrepo-com.svg";
 
 //component
+export const SlickImage = styled.img`
+  height: 400px;
+  width: ${(props) => (props.primary ? "50%" : "100%")};
+  object-fit: cover;
+  margin: auto;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+`;
+export const SlickContainer = styled.div` //slickは必ず親コンポ―ネントの幅を決める必要がある。
+  width: ${(props) => (props.primary ? "80vw" : "100vw")};
+  padding: 10px;
+`;
+
 export const DefaultPicture = styled.img``;
 DefaultPicture.defaultProps = {
   src: "https://i.ibb.co/vLWDkSr/hong-feng-c-I2-BLo74zso-unsplash.jpg",
@@ -60,7 +74,6 @@ export const ParagraphLink = styled.p`
     color: cornflowerblue;
   }
 `;
-
 
 export const LabelLink = styled.div`
   display: flex;

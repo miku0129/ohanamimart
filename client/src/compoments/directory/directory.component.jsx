@@ -1,11 +1,8 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 import MainVisualImages from "./main-visual-images";
 
 import CategoriesPreview from "../../routes/categories-preview/categories-preview.component";
 import ProductCard from "../product-card/product-card.component";
+import Slick from "../slick/slick.component";
 import {
   BottomLine,
   PreviewFourItemsInALine,
@@ -16,34 +13,11 @@ import { get_products_for_main_visual } from "../../utils/data/data.utils";
 import "./directory.styles.scss";
 
 const Directory = () => {
-  const settings = {
-    dots: true,
-    fade: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-
-    centerMode: true,
-    centerPadding: "70px",
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
-
   const products = get_products_for_main_visual();
 
   return (
-    <>
       <div className="main-visual-container">
-        <div className="slick-container">
-          <Slider {...settings}>
-            {MainVisualImages.map((image) => (
-              <div>
-                <img className="slick-img" src={image.src} alt={image.alt}/>
-              </div>
-            ))}
-          </Slider>
-        </div>
+        <Slick images={MainVisualImages} isPrimary={false} />
         <div className="main-visual-message-container">
           <p className="message">
             Acheter en ligne des articles, directement auprès des fabricants
@@ -58,7 +32,6 @@ const Directory = () => {
         <BottomLine />
         <CategoriesPreview />
       </div>
-    </>
   );
 };
 
