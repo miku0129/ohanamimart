@@ -1,0 +1,119 @@
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .product-title {
+    text-align: center;
+    font-size: 38px;
+  }
+
+  .product-detail-sub-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+    padding: 0 10px; // 両端に余白を追加
+
+    // レスポンシブ対応
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 20px;
+      padding: 0;
+    }
+
+    .shop-datail {
+      display: flex;
+      flex-basis: content;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+
+      .shop-icon {
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .shop-title {
+        font-size: 28px;
+      }
+    }
+
+    .product-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .product-detail-image {
+        margin: auto;
+        img {
+          width: 500px;
+          height: 500px;
+          object-fit: cover;
+          @media (max-width: 767px) {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+
+      .description {
+        .tab-001 {
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 500px;
+        }
+
+        .tab-001 > label {
+          flex: 1 1;
+          order: -1;
+          min-width: 70px;
+          padding: 0.7em 1em 0.5em;
+          border-bottom: 1px solid #f0f0f0;
+          border-radius: 0;
+          background-color: #e9f0f6;
+          color: #535353;
+          font-size: 0.9em;
+          text-align: center;
+          cursor: pointer;
+        }
+
+        .tab-001 > label:hover {
+          opacity: 0.8;
+        }
+
+        .tab-001 input {
+          display: none;
+        }
+
+        .tab-001 > div {
+          display: none;
+          width: 100%;
+          padding: 1.5em 1em;
+          background-color: #fff;
+        }
+
+        .tab-001 label:has(:checked) {
+          background-color: #fff;
+          // border-color: #2589d0 #f0f0f0 #fff;
+          border-color: #f0f0f0 #f0f0f0 #fff;
+
+          border-style: solid;
+          border-width: 4px 1px 1px;
+          border-radius: 5px;
+          color: #333333;
+        }
+
+        .tab-001 label:has(:checked) + div {
+          display: block;
+        }
+
+        .description-text {
+          height: 45vh;
+          min-height: 40vh;
+        }
+      }
+    }
+  }
+}

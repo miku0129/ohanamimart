@@ -3,7 +3,6 @@ import SHOPS_DATA from "./shops-data";
 // import HEADLINES_DATA from "./headlines-data";
 // import EVENEMENTS from "./headlines-evenements-data";
 
-
 export const get_exhibitions_array = () => {
   const { exhibitions } = EXHIBITIONS_DATA;
   const { shops } = SHOPS_DATA;
@@ -51,4 +50,14 @@ export const get_products_for_main_visual = () => {
     .map((shop) => {
       return shop.products[0];
     });
+};
+
+export const get_product_by_id = (id) => {
+  const { shops } = SHOPS_DATA;
+  const product_arrays = shops.map((shop) =>
+    shop.products.filter((product) => product.id === Number(id))
+  );
+  return product_arrays.filter(
+    (product_array) => product_array[0] !== undefined
+  )[0][0];
 };

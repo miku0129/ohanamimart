@@ -149,7 +149,7 @@ const SHOPS_DATA = {
           shop_id: 1,
         },
         {
-          id: 10,
+          id: 101,
           product_name: "Accessoire",
           product_image_url: "https://i.ibb.co/PN9DLMd/10.png",
           product_price: null,
