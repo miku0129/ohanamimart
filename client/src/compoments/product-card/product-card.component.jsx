@@ -14,7 +14,6 @@ const ProductCard = ({ product }) => {
 
   const shops = useSelector(selectCategories);
   const shop = shops.filter((shop) => shop.id === shop_id)[0];
-  console.log(shop);
 
   return (
     <div className="product-card-container">
