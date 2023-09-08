@@ -44,7 +44,7 @@ const ProductDetail = () => {
               Description
             </label>
             <div className="description-text">
-              Les accessoires sont des éléments qui complètent et améliorent la
+              {/* Les accessoires sont des éléments qui complètent et améliorent la
               tenue ou l'apparence d'une personne. Ils jouent un rôle crucial
               dans le style personnel et l'expression de soi. Ces ajouts peuvent
               inclure des bijoux, des écharpes, des ceintures, des chapeaux, des
@@ -53,7 +53,7 @@ const ProductDetail = () => {
               transformant une tenue de base en quelque chose d'unique et
               élégant. Ils peuvent également avoir des fonctions pratiques,
               comme se tenir au chaud en hiver avec une écharpe douillette ou
-              protéger les yeux du soleil avec des lunettes de soleil.
+              protéger les yeux du soleil avec des lunettes de soleil. */}
             </div>
 
             <label>

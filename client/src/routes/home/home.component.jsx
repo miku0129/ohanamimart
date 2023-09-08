@@ -7,7 +7,7 @@ import { selectCategories } from "../../store/categories/category.selector";
 
 import Directory from "../../compoments/directory/directory.component";
 
-import SHOPS_DATA from "../../utils/data/shops-data";
+import SHOP_DATA from "../../utils/data/shop-data";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const handleSettingCategories = () => {
       if (!categories[0]) {
-        dispatch(setCategories(SHOPS_DATA.shops));
+        dispatch(setCategories(SHOP_DATA.shops));
       }
     };
     handleSettingCategories();

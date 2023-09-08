@@ -10,6 +10,7 @@ const ProductCard = ({ product }) => {
   const { id, product_name, product_price, product_image_url, shop_id } =
     product;
 
+  console.log(product)
   const name_of_product =
     product_name.length < 20 ? product_name : product_name.slice(0, 20) + "...";
 

@@ -1,7 +1,7 @@
 import MainVisualImages from "./main-visual-images";
 
 import CategoriesPreview from "../../routes/categories-preview/categories-preview.component";
-import ProductCard from "../product-card/product-card.component";
+// import ProductCard from "../product-card/product-card.component";
 import Slick from "../slick/slick.component";
 import {
   BottomLine,
@@ -26,8 +26,8 @@ const Directory = () => {
           <p>Hanami est la maison de l'artisanat japonais de qualité</p>
         </div>
         <PreviewFourItemsInALine>
-          {products &&
-            products.map((product) => <ProductCard product={product} />)}
+          {/* {products &&
+            products.map((product) => <ProductCard product={product} />)} */}
         </PreviewFourItemsInALine>
         <BottomLine />
         <CategoriesPreview />

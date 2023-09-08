@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import ProductCard from "../../compoments/product-card/product-card.component";
+// import ProductCard from "../../compoments/product-card/product-card.component";
 
 import { selectCategories } from "../../store/categories/category.selector";
 
@@ -90,10 +90,10 @@ const Category = () => {
         </CategorySubtitle>
       </CategoryHeadline>
       <CategorySubContainer>
-        {products &&
+        {/* {products &&
           products.map((product) => (
             <ProductCard key={product.id} product={product} />
-          ))}
+          ))} */}
       </CategorySubContainer>
     </CategoryContainer>
   );
