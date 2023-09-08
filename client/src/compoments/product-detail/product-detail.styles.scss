@@ -1,19 +1,15 @@
 .product-detail-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  .product-title {
-    text-align: center;
-    font-size: 38px;
-  }
+  // display: flex;
+  // flex-direction: column;
+  // gap: 20px;
 
   .product-detail-sub-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    // column-gap: 20px;
+    // row-gap: 50px;
     padding: 0 10px; // 両端に余白を追加
+    padding-top: 20px;
 
     // レスポンシブ対応
     @media (max-width: 767px) {
@@ -23,39 +19,36 @@
       padding: 0;
     }
 
-    .shop-datail {
-      display: flex;
-      flex-basis: content;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: center;
+    // .product-detail-sub-right {
+      // display: flex;
+      // flex-basis: content;
+      // flex-direction: column;
+      // justify-content: flex-start;
+      // text-align: center;
 
-      .shop-icon {
-        margin: auto;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      .shop-title {
-        font-size: 28px;
-      }
-    }
+      // width: 20vw;
+      // padding-top: 20px;
+      // padding-left: 20px;
 
-    .product-detail {
+      // .shop-icon {
+      //   margin: auto;
+      //   margin-top: 0;
+      //   margin-bottom: 0;
+      // }
+      // .shop-title {
+      //   font-size: 28px;
+      // }
+    // }
+
+    .product-detail-sub-center {
       display: flex;
       flex-direction: column;
       gap: 20px;
 
-      .product-detail-image {
-        margin: auto;
-        img {
-          width: 500px;
-          height: 500px;
-          object-fit: cover;
-          @media (max-width: 767px) {
-            width: 200px;
-            height: 200px;
-          }
-        }
+      .product-title {
+        text-align: center;
+        font-size: 38px;
+        padding-top: 20px;
       }
 
       .description {
@@ -115,6 +108,28 @@
           min-height: 40vh;
         }
       }
+    }
+
+    .product-detail-sub-left {
+      display: flex;
+      flex-basis: content;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+
+      // width: 20vw;
+      // padding-top: 20px;
+      // padding-left: 20px;
+
+      .shop-icon {
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .shop-title {
+        font-size: 28px;
+      }
+
     }
   }
 }

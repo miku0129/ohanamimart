@@ -20,21 +20,21 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail-container">
-      <div className="product-title">{product.product_name}</div>
       <div className="product-detail-sub-container">
-        <div className="shop-datail">
-          <CustomUserIcon className="shop-icon" imageurl={shop.shop_icon_url} />
+        {/* <div className="product-detail-sub-right"> */}
+          {/* <CustomUserIcon className="shop-icon" imageurl={shop.shop_icon_url} />
           <Link to={`/shop/${shop.shop_name_lowercase_no_spaces_for_url}`}>
             <ParagraphLink className="shop-title">
               {shop.shop_name}
             </ParagraphLink>
-          </Link>
-        </div>
-        <div className="product-detail">
+          </Link> */}
+        {/* </div> */}
+        <div className="product-detail-sub-center">
+          {/* <div className="product-title">{product.product_name}</div> */}
           {/* <div className="product-detail-image">
             <img src={product.product_image_url} alt={product.product_name}/>
           </div> */}
-          <Slick images={product.product_image_url} isPrimary={true}/>
+          <Slick images={product.product_image_url} isPrimary={true} />
           <div className="description">
             <div class="tab-001">
               <label>
@@ -62,6 +62,16 @@ const ProductDetail = () => {
               <div className="description-text">En préparation</div>
             </div>
           </div>
+        </div>
+        <div className="product-detail-sub-left">
+        <CustomUserIcon className="shop-icon" imageurl={shop.shop_icon_url} />
+          <Link to={`/shop/${shop.shop_name_lowercase_no_spaces_for_url}`}>
+            <ParagraphLink className="shop-title">
+              {shop.shop_name}
+            </ParagraphLink>
+          </Link>
+          <div className="product-title">{product.product_name}</div>
+
         </div>
       </div>
     </div>

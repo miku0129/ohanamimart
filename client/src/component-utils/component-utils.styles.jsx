@@ -7,7 +7,7 @@ import { ReactComponent as UserLogo } from "../assets/user-2-svgrepo-com.svg";
 //component
 export const SlickImage = styled.img`
   height: 400px;
-  width: ${(props) => (props.primary ? "50%" : "100%")};
+  width: 100%; 
   object-fit: cover;
   margin: auto;
   @media (max-width: 767px) {
@@ -15,7 +15,7 @@ export const SlickImage = styled.img`
   }
 `;
 export const SlickContainer = styled.div` //slickは必ず親コンポ―ネントの幅を決める必要がある。
-  width: ${(props) => (props.primary ? "80vw" : "100vw")};
+  width: ${(props) => (props.primary ? "70vw" : "100vw")};
   padding: 10px;
 `;
 
