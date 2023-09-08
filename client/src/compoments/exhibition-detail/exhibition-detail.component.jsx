@@ -43,7 +43,7 @@ const ExhibitionDetail = () => {
       end_time,
       location,
       address,
-      main_image_url,
+      exhibition_image_url,
       exhibition_title,
       exhibitors,
       exhibition_url,
@@ -60,8 +60,8 @@ const ExhibitionDetail = () => {
       ""
     );
 
-    const image = main_image_url ? (
-      <img src={main_image_url} alt={exhibition_title} />
+    const image = exhibition_image_url ? (
+      <img src={exhibition_image_url} alt={exhibition_title} />
     ) : (
       <DefaultPicture />
     );

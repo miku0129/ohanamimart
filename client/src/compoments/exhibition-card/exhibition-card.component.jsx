@@ -6,7 +6,7 @@ import {
   BottomLine,
   LabelWithIndicatorLink,
   DefaultPicture,
-  ParagraphLink
+  ParagraphLink,
 } from "../../component-utils/component-utils.styles";
 import "./exhibition-card.styles.scss";
 
@@ -17,7 +17,7 @@ const ExhibitionCard = ({ exhibition }) => {
     start_date,
     end_date,
     address,
-    main_image_url,
+    exhibition_image_url,
     about_exhibition,
     exhibition_url,
   } = exhibition;
@@ -25,15 +25,17 @@ const ExhibitionCard = ({ exhibition }) => {
   const date =
     start_date !== end_date ? `${start_date} ~ ${end_date}` : start_date;
 
-  const image = main_image_url ? (
-    <img src={main_image_url} alt={exhibition_title} />
+  const image = exhibition_image_url ? (
+    <img src={exhibition_image_url} alt={exhibition_title} />
   ) : (
     <DefaultPicture />
   );
 
   const url = exhibition_url ? (
     <a href={exhibition_url}>
-      <ParagraphLink className="blog-description">{exhibition_url}</ParagraphLink>
+      <ParagraphLink className="blog-description">
+        {exhibition_url}
+      </ParagraphLink>
     </a>
   ) : (
     ""

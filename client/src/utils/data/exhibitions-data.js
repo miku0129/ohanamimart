@@ -9,18 +9,10 @@ const EXHIBITIONS_DATA = {
       end_time: "10:00-18:00",
       location: "Yoïsho!",
       address: "11 Avenue de Grammont",
-      main_image_url: "https://i.ibb.co/jMct7KD/11256.jpg",
-      image_url: [
-        "https://i.ibb.co/t3H7tSb/Screenshot-2023-08-12-185712.jpg",
-        "https://i.ibb.co/pyWgNnj/Screenshot-2023-08-12-185122.jpg",
-        "https://i.ibb.co/HGFWDT6/Screenshot-2023-08-12-185550.jpg",
-        "https://i.ibb.co/s2PPJ63/Screenshot-2023-08-12-185224.jpg",
-        "https://i.ibb.co/8bhSznd/Screenshot-2023-08-12-185630.jpg",
-      ],
+      exhibition_image_url: "https://i.ibb.co/jMct7KD/11256.jpg",
       exhibitors: ["SUGAR", "Tsubaki création", "GOEN"],
-      about_exhibition : "",
-      exhibition_url : ""
-
+      about_exhibition: "",
+      exhibition_url: "",
     },
     {
       id: 1,
@@ -31,11 +23,10 @@ const EXHIBITIONS_DATA = {
       end_time: "18:00",
       location: "Place de Châteauneuf de Tours",
       address: "Place de Châteauneuf,37000, Tours France",
-      main_image_url: "https://i.ibb.co/BGYJzCq/8228.jpg",
-      image_url: [],
+      exhibition_image_url: "https://i.ibb.co/BGYJzCq/8228.jpg",
       exhibitors: ["Nami Créations"],
-      about_exhibition : "Festivals de bande dessinée à Tours!",
-      exhibition_url : "https://www.atoursdebulles.fr/"
+      about_exhibition: "Festivals de bande dessinée à Tours!",
+      exhibition_url: "https://www.atoursdebulles.fr/",
     },
     {
       id: 2,
@@ -46,14 +37,12 @@ const EXHIBITIONS_DATA = {
       end_time: "19:00",
       location: "YOÏSHO",
       address: "11, avenue Grammont Tours",
-      main_image_url: "",
-      image_url: [],
-      exhibitors: ['GOEN', 'Tsubaki création', 'Nami Créations'],
-      about_exhibition : "Trois créateurs japonais vendent des produits faits à la main",
-      exhibition_url : ""
+      exhibition_image_url: "",
+      exhibitors: ["GOEN", "Tsubaki création", "Nami Créations"],
+      about_exhibition:
+        "Trois créateurs japonais vendent des produits faits à la main",
+      exhibition_url: "",
     },
-
-
   ],
 };
 
