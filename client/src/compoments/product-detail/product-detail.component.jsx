@@ -6,7 +6,7 @@ import Slick from "../slick/slick.component";
 import {
   CustomUserIcon,
   ParagraphLink,
-  BottomLine
+  BottomLine,
 } from "../../component-utils/component-utils.styles";
 
 import "./product-detail.styles.scss";

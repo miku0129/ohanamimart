@@ -2,10 +2,8 @@
   .product-detail-sub-container-upper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // padding: 0 10px; // 両端に余白を追加
     padding-top: 20px;
     padding-bottom: 30px;
-
 
     // レスポンシブ対応
     @media (max-width: 767px) {
@@ -27,20 +25,35 @@
       flex-direction: column;
       justify-content: flex-start;
       text-align: center;
+      @media (max-width: 767px) {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
       .shop-icon {
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 20px;
+        @media (max-width: 767px) {
+          margin: auto;
+          margin-top: 20px;
+          margin-bottom: 0px;
+        }
       }
       .shop-title {
         font-size: 15px;
         text-align: left;
+        margin-bottom: 0px;
+        @media (max-width: 767px) {
+          text-align: center;
+        }
       }
       .product-title {
         text-align: left;
         font-size: 30px;
         font-weight: bold;
-        padding-top: 20px;
+        @media (max-width: 767px) {
+          order: -1;
+        }
       }
     }
   }
@@ -50,6 +63,11 @@
       max-width: 50%;
       margin: auto;
       padding-top: 30px;
+      @media (max-width: 767px) {
+        min-width: 80%;
+        height: 80vh;
+      }
+
       .tab-001 {
         display: flex;
         flex-wrap: wrap;
