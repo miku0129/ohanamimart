@@ -2,7 +2,7 @@ const SHOP_DATA = {
   shops: [
     {
       id: 0,
-      shop_name: "Tsubaki création",
+      shop_name: "Tsubaki création1 ",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
       shop_icon_url:
         "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",
@@ -16,7 +16,7 @@ const SHOP_DATA = {
 
     {
       id: 1,
-      shop_name: "Tsubaki création",
+      shop_name: "Tsubaki création2",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
       shop_icon_url:
         "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",
@@ -30,7 +30,7 @@ const SHOP_DATA = {
 
     {
       id: 2,
-      shop_name: "Tsubaki création",
+      shop_name: "Tsubaki création3",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
       shop_icon_url:
         "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",
@@ -44,7 +44,7 @@ const SHOP_DATA = {
 
     {
       id: 3,
-      shop_name: "Tsubaki création",
+      shop_name: "Tsubaki création4",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
       shop_icon_url:
         "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",

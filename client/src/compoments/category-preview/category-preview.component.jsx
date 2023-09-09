@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-// import ProductCard from "../product-card/product-card.component";
+import ProductCard from "../product-card/product-card.component";
 import { ReactComponent as Foward } from "../../assets/chevrons-right-arrows-svgrepo-com.svg";
 
 import {
@@ -14,7 +14,7 @@ import "./category-preview.style.scss";
 const CategoryPreview = ({
   shop_name_lowercase_no_spaces_for_url,
   shop_name,
-  // products,
+  products,
 }) => {
   return (
     <div className="category-preview-container">
@@ -28,13 +28,13 @@ const CategoryPreview = ({
           </div>
         </Link>
       </LabelWithIndicatorLink>
-      {/* <PreviewFourItemsInALine>
+      <PreviewFourItemsInALine>
         {products
           .filter((_, idx) => idx < 4)
           .map((product) => {
             return <ProductCard key={product.id} product={product} />;
           })}
-      </PreviewFourItemsInALine> */}
+      </PreviewFourItemsInALine>
       <BottomLine />
     </div>
   );
