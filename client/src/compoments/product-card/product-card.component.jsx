@@ -7,19 +7,18 @@ import { SpanLink } from "../../component-utils/component-utils.styles";
 import "./product-card.styles.scss";
 
 const ProductCard = ({ product }) => {
-  const { id, product_name, product_price, product_image_url, shop_id } =
-    product;
-
-  console.log(product)
-  const name_of_product =
-    product_name.length < 20 ? product_name : product_name.slice(0, 20) + "...";
-
-  const shops = useSelector(selectCategories);
-  const shop = shops.filter((shop) => shop.id === shop_id)[0];
+  console.log("product", product)
+  // const { id, product_name, product_price, product_image_url, shop_id } =
+  //   product;
+  // const name_of_product =
+  //   product_name.length < 20 ? product_name : product_name.slice(0, 20) + "...";
+  // const shops = useSelector(selectCategories);
+  // const shop = shops.filter((shop) => shop.id === shop_id)[0];
+  
 
   return (
     <div className="product-card-container">
-      {shop && (
+      {/* {shop && (
         <img
           className="product-image"
           src={product_image_url}
@@ -43,7 +42,7 @@ const ProductCard = ({ product }) => {
           )}
         </div>
         {product_price && <span className="price">{product_price}&euro;</span>}
-      </div>
+      </div> */}
     </div>
   );
 };

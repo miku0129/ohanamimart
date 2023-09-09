@@ -21,14 +21,27 @@ export const get_exhibitions_array = () => {
     });
 };
 
-export const get_products_for_main_visual = () => {
+export const get_product_array_for_main_visual = () => {
   const { shops } = SHOP_DATA;
+  const { products } = PRODUCT_DATA;
   const { product_images } = PRODUCT_IMAGE_DATA;
 
   return shops.map((shop) => {
     return product_images
       .filter((product_image) => product_image.shop_id === shop.id)
-      .filter((product_image) => product_image.is_product_image_in_main_visual);
+      .filter((product_image) => product_image.is_product_image_in_main_visual)
+      .map((product_image) => {
+        const product_info = products.filter(
+          (product) => product.id === product_image.product_id
+        );
+
+        const main_product_array = {
+          ...product_info[0],
+          product_image: product_image,
+          shop_of_product: shop,
+        };
+        return main_product_array;
+      });
   });
 };
 
