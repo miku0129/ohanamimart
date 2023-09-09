@@ -14,7 +14,6 @@ import "./directory.styles.scss";
 
 const Directory = () => {
   const products = get_product_array_for_main_visual();
-  console.log(products);
 
   return (
     <div className="main-visual-container">

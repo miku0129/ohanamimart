@@ -38,7 +38,7 @@ export const get_product_array_for_main_visual = () => {
         const main_product_array = {
           ...product_info[0],
           product_image: product_image,
-          shop_of_product: shop,
+          shop_of_the_product: shop,
         };
         return main_product_array;
       });
