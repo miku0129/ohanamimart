@@ -28,7 +28,7 @@ const Directory = () => {
       <PreviewFourItemsInALine>
         {products &&
           products.map((product) => {
-            return <ProductCard product={product[0]} />;
+            return <ProductCard product={product} />;
           })}
       </PreviewFourItemsInALine>
       <BottomLine />

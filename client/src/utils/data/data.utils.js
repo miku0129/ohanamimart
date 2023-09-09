@@ -3,28 +3,32 @@ import SHOP_DATA from "./shop-data";
 import PRODUCT_DATA from "./product-data";
 import PRODUCT_IMAGE_DATA from "./product-image-data";
 
-export const get_product_array_for_main_visual = () => {
+const getCategoriesMap = () => {
   const { shops } = SHOP_DATA;
   const { products } = PRODUCT_DATA;
   const { product_images } = PRODUCT_IMAGE_DATA;
 
   return shops.map((shop) => {
-    return product_images
-      .filter((product_image) => product_image.shop_id === shop.id)
-      .filter((product_image) => product_image.is_product_image_in_main_visual)
-      .map((product_image) => {
-        const product_info = products.filter(
-          (product) => product.id === product_image.product_id
-        );
+    const prods = products.filter((prod) => prod.shop_id === shop.id);
+    const prods_of_the_shop = prods.map((prod) => {
+      const imgs = product_images.filter((img) => img.product_id === prod.id);
+      const result = { ...prod, product_images: imgs };
+      return result;
+    });
 
-        const main_product_array = {
-          ...product_info[0],
-          product_image: product_image,
-          shop_of_the_product: shop,
-        };
-        return main_product_array;
-      });
+    const result = { ...shop, products: prods_of_the_shop };
+    return result;
   });
+};
+
+export const get_product_array_for_main_visual = () => {
+  const categoriesMap = getCategoriesMap();
+  return categoriesMap.map(
+    (category) =>
+      category.products.filter(
+        (product) => product.has_product_image_used_in_main_visual
+      )[0]
+  );
 };
 
 export const get_product_by_id = (id) => {
