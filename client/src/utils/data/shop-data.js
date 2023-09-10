@@ -13,7 +13,6 @@ const SHOP_DATA = {
       shop_intro_text:
         "Tsubaki création confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon et propose des sacs et des accessoires que vous pouvez.",
     },
-
     {
       id: 1,
       shop_name: "AT bijoux",
@@ -27,7 +26,6 @@ const SHOP_DATA = {
       shop_intro_text:
         "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon.\nIl faut du temps, de la précision et de la patience ",
     },
-
     {
       id: 2,
       shop_name: "Nami Créations",
@@ -41,7 +39,6 @@ const SHOP_DATA = {
       shop_intro_text:
         "Nami Créations est une entreprise individuelle créée début 2015 et basée à Tours.\nElle est spécialisée dans la fabrication artisanale de manga et yonkoma manga (comic strip japonais), recettes japonaises à dérouler et kirigami (papier découpé).\nNami est l'auteure des dessins et scenarii des livres qu'elle réalise entièrement à la main (découpe, collage, reliure).",
     },
-
     {
       id: 3,
       shop_name: "GOEN",
