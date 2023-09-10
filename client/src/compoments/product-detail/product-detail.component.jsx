@@ -38,7 +38,9 @@ const ProductDetail = () => {
       <div className="product-detail-sub-container-lower">
         <BottomLine />
         <div className="description">
-          <div className="tab-001">
+          <div className="description-text">{product.product_description}</div>
+
+          {/* <div className="tab-001">
             <label>
               <input type="radio" name="tab-001" checked />
               Description
@@ -51,7 +53,7 @@ const ProductDetail = () => {
               Paiement et expédition
             </label>
             <div className="description-text">En préparation</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -64,58 +64,58 @@
       margin: auto;
       padding-top: 30px;
       @media (max-width: 767px) {
-        min-width: 80%;
+        min-width: 60%;
         height: 80vh;
       }
 
-      .tab-001 {
-        display: flex;
-        flex-wrap: wrap;
-      }
+      // .tab-001 {
+      //   display: flex;
+      //   flex-wrap: wrap;
+      // }
 
-      .tab-001 > label {
-        flex: 1 1;
-        order: -1;
-        min-width: 70px;
-        padding: 0.7em 1em 0.5em;
-        border-bottom: 1px solid #f0f0f0;
-        border-radius: 0;
-        background-color: #e9f0f6;
-        color: #535353;
-        font-size: 0.9em;
-        text-align: center;
-        cursor: pointer;
-      }
+      // .tab-001 > label {
+      //   flex: 1 1;
+      //   order: -1;
+      //   min-width: 70px;
+      //   padding: 0.7em 1em 0.5em;
+      //   border-bottom: 1px solid #f0f0f0;
+      //   border-radius: 0;
+      //   background-color: #e9f0f6;
+      //   color: #535353;
+      //   font-size: 0.9em;
+      //   text-align: center;
+      //   cursor: pointer;
+      // }
 
-      .tab-001 > label:hover {
-        opacity: 0.8;
-      }
+      // .tab-001 > label:hover {
+      //   opacity: 0.8;
+      // }
 
-      .tab-001 input {
-        display: none;
-      }
+      // .tab-001 input {
+      //   display: none;
+      // }
 
-      .tab-001 > div {
-        display: none;
-        width: 100%;
-        padding: 1.5em 1em;
-        background-color: #fff;
-      }
+      // .tab-001 > div {
+      //   display: none;
+      //   width: 100%;
+      //   padding: 1.5em 1em;
+      //   background-color: #fff;
+      // }
 
-      .tab-001 label:has(:checked) {
-        background-color: #fff;
-        // border-color: #2589d0 #f0f0f0 #fff;
-        border-color: #f0f0f0 #f0f0f0 #fff;
+      // .tab-001 label:has(:checked) {
+      //   background-color: #fff;
+      //   // border-color: #2589d0 #f0f0f0 #fff;
+      //   border-color: #f0f0f0 #f0f0f0 #fff;
 
-        border-style: solid;
-        border-width: 4px 1px 1px;
-        border-radius: 5px;
-        color: #333333;
-      }
+      //   border-style: solid;
+      //   border-width: 4px 1px 1px;
+      //   border-radius: 5px;
+      //   color: #333333;
+      // }
 
-      .tab-001 label:has(:checked) + div {
-        display: block;
-      }
+      // .tab-001 label:has(:checked) + div {
+      //   display: block;
+      // }
 
       .description-text {
         height: 45vh;
