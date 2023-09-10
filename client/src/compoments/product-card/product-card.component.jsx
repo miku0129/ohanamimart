@@ -7,7 +7,6 @@ import { SpanLink } from "../../component-utils/component-utils.styles";
 import "./product-card.styles.scss";
 
 const ProductCard = ({ product }) => {
-  console.log("product card", product);
   const { id, product_name, product_price, shop_id, product_images } = product;
 
   const name_of_product =
@@ -15,6 +14,7 @@ const ProductCard = ({ product }) => {
 
   const shops = useSelector(selectCategories);
   const shop = shops.filter((shop) => shop.id === shop_id)[0];
+  console.log("shops", shops)
 
   return (
     <div className="product-card-container">
