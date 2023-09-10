@@ -6,10 +6,12 @@ import Shop from "./routes/shop/shop.component";
 import Exhibitions from "./routes/exhibitions/exhibitions.component";
 // import SignIn from "./routes/sign-in/sign-in.component";
 import ScrollToTop from "./component-utils/scroll-to-top";
+import LoadingResource from "./component-utils/loading-resource";
 
 const App = () => {
   return (
     <>
+    <LoadingResource />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<BasicLayout />}>
