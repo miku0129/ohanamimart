@@ -15,6 +15,7 @@ const ProductDetail = () => {
   const categories = useSelector(selectCategories);
   const { product_id } = useParams();
   const product = get_product_by_id(product_id);
+  console.log("product", product);
   const shop = categories.filter(
     (category) => category.id === product.shop_id
   )[0];
@@ -23,7 +24,7 @@ const ProductDetail = () => {
     <div className="product-detail-container">
       <div className="product-detail-sub-container-upper">
         <div className="product-detail-sub-right">
-          <Slick images={product.product_image_url} isPrimary={true} />
+          <Slick images={product.product_images} isPrimary={true} />
         </div>
         <div className="product-detail-sub-left">
           <CustomUserIcon className="shop-icon" imageurl={shop.shop_icon_url} />
@@ -44,18 +45,8 @@ const ProductDetail = () => {
               Description
             </label>
             <div className="description-text">
-              {/* Les accessoires sont des éléments qui complètent et améliorent la
-              tenue ou l'apparence d'une personne. Ils jouent un rôle crucial
-              dans le style personnel et l'expression de soi. Ces ajouts peuvent
-              inclure des bijoux, des écharpes, des ceintures, des chapeaux, des
-              lunettes de soleil, et plus encore. Les accessoires permettent aux
-              individus d'injecter de la personnalité dans leur tenue,
-              transformant une tenue de base en quelque chose d'unique et
-              élégant. Ils peuvent également avoir des fonctions pratiques,
-              comme se tenir au chaud en hiver avec une écharpe douillette ou
-              protéger les yeux du soleil avec des lunettes de soleil. */}
+              {product.product_description}
             </div>
-
             <label>
               <input type="radio" name="tab-001" />
               Paiement et expédition

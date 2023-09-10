@@ -38,13 +38,17 @@ export const get_product_array_for_main_visual = () => {
 };
 
 export const get_product_by_id = (id) => {
-  const { shops } = SHOP_DATA;
-  const product_arrays = shops.map((shop) =>
-    shop.products.filter((product) => product.id === Number(id))
-  );
-  return product_arrays.filter(
-    (product_array) => product_array[0] !== undefined
-  )[0][0];
+  const search_id = Number(id);
+  const categoriesMap = getCategoriesMap();
+  const filteredShop = categoriesMap.filter((category) => {
+    const result = category.products.filter((prod) => prod.id === search_id);
+    return result.length > 0;
+  })[0];
+
+  const result = filteredShop.products.filter(
+    (prod) => prod.id === search_id
+  )[0];
+  return result;
 };
 
 export const get_products_of_the_shop_by_shopid = (id) => {

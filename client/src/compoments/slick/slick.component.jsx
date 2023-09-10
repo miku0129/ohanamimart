@@ -2,7 +2,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { SlickImage, SlickContainer } from "../../component-utils/component-utils.styles";
+import {
+  SlickImage,
+  SlickContainer,
+} from "../../component-utils/component-utils.styles";
 
 const Slick = ({ images, isPrimary }) => {
   const settings = {
@@ -22,11 +25,18 @@ const Slick = ({ images, isPrimary }) => {
   return (
     <SlickContainer primary={isPrimary}>
       <Slider {...settings}>
-        {images.map((image) => (
-          <div>
-            <SlickImage src={image.src} alt={image.alt} primary={isPrimary} />
-          </div>
-        ))}
+        {images.map((image) => {
+          const image_source = image.src ? image.src : image.product_image_url;
+          return (
+            <div>
+              <SlickImage
+                src={image_source}
+                alt={image.alt}
+                primary={isPrimary}
+              />
+            </div>
+          );
+        })}
       </Slider>
     </SlickContainer>
   );
