@@ -7,6 +7,7 @@ import { SpanLink } from "../../component-utils/component-utils.styles";
 import "./product-card.styles.scss";
 
 const ProductCard = ({ product }) => {
+  console.log("product card", product);
   const { id, product_name, product_price, shop_id, product_images } = product;
 
   const name_of_product =
@@ -17,14 +18,19 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card-container">
-      <img
-        className="product-image"
-        src={
-          product_images.filter((img) => img.is_main_product_image)[0]
-            .product_image_url
-        }
-        alt={`${product_name}`}
-      />
+      {product_images.length > 0 ? (
+        <img
+          className="product-image"
+          src={
+            product_images.filter((img) => {
+              return img.is_main_product_image;
+            })[0].product_image_url
+          }
+          alt={`${product_name}`}
+        />
+      ) : (
+        <div>no image</div> // Need to arrange default image
+      )}
 
       <div className="product-card-footer">
         <div className="product-card-footer-left">
