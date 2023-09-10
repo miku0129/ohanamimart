@@ -23,10 +23,16 @@ const getCategoriesMap = () => {
 
 export const get_product_array_for_main_visual = () => {
   const categoriesMap = getCategoriesMap();
-  return categoriesMap.map(
+  const filteredShops = categoriesMap.filter(
     (category) =>
       category.products.filter(
-        (product) => product.has_product_image_used_in_main_visual
+        (prod) => prod.has_product_image_used_in_main_visual
+      ).length > 0
+  );
+  return filteredShops.map(
+    (shop) =>
+      shop.products.filter(
+        (prod) => prod.has_product_image_used_in_main_visual
       )[0]
   );
 };
