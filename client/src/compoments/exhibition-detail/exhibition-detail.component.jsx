@@ -23,7 +23,6 @@ const ExhibitionDetail = () => {
   useEffect(() => {
     if (exhibitions.length > 0) {
       const exhibition = exhibitions.filter((exhibition) => {
-        console.log(exhibition);
         return exhibition.id === Number(id);
       });
       setExhibitionMap(exhibition[0]);
@@ -92,7 +91,6 @@ const ExhibitionDetail = () => {
                 <h2>Exposants</h2>
                 {exhibitors &&
                   exhibitors.map((exhibitor) => {
-                    console.log(exhibitor);
                     return (
                       <ExhibitorCard key={exhibitor.id} exhibitor={exhibitor} />
                     );

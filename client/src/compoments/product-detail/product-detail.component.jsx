@@ -15,7 +15,6 @@ const ProductDetail = () => {
   const categories = useSelector(selectCategories);
   const { product_id } = useParams();
   const product = get_product_by_id(product_id);
-  console.log("product", product);
   const shop = categories.filter(
     (category) => category.id === product.shop_id
   )[0];

@@ -39,7 +39,6 @@ const Category = () => {
   } = shop;
 
   const products = get_products_of_the_shop_by_shopid(id);
-  console.log("shop_intro_text", shop_intro_text)
 
   // const [products, setProducts] = useState([]);
   // const [shop_name, setShopName] = useState("");

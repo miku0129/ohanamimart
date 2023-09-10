@@ -37,7 +37,7 @@ const EXHIBITIONS_DATA = {
       end_time: "19:00",
       location: "YOÏSHO",
       address: "11, avenue Grammont Tours",
-      exhibition_image_url: "",
+      exhibition_image_url: "https://i.ibb.co/gvSDPGH/12688.jpg",
       exhibitors: ["GOEN", "Tsubaki création", "Nami Créations"],
       about_exhibition:
         "Trois créateurs japonais vendent des produits faits à la main",

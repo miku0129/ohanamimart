@@ -10,7 +10,6 @@ import "./exhibition-preview.styles.scss";
 
 const ExhibitionPreview = () => {
   const { exhibitions } = useContext(ExhibitionsContext);
-  console.log(exhibitions);
   return (
     <Fragment>
       <div className="exhibitions-container">
