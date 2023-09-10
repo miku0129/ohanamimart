@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-// import ProductCard from "../../compoments/product-card/product-card.component";
-
 import { selectCategories } from "../../store/categories/category.selector";
+import { get_products_of_the_shop_by_shopid } from "../../utils/data/data.utils";
+
+import ProductCard from "../../compoments/product-card/product-card.component";
 
 import {
   CategoryContainer,
@@ -24,27 +25,43 @@ import {
 const Category = () => {
   const { category } = useParams();
   const categories = useSelector(selectCategories);
-  const [products, setProducts] = useState([]);
-  const [shop_name, setShopName] = useState("");
-  const [shop_website_url, setShopWebsiteUrl] = useState("");
-  const [shop_intro_text, setIntroText] = useState("");
-  const [shop_purchase_website_url, setShopPurchaseWebsiteUrl] = useState("");
-  const [shop_icon_url, setShopIconUrl] = useState("");
+  const shop = categories.filter((shop) => {
+    return shop.shop_name_lowercase_no_spaces_for_url === category;
+  })[0];
 
-  useEffect(() => {
-    if (categories) {
-      categories.forEach((shop) => {
-        if (shop["shop_name_lowercase_no_spaces_for_url"] === category) {
-          setShopName(shop["shop_name"]);
-          setShopWebsiteUrl(shop["shop_website_url"]);
-          setProducts(shop["products"]);
-          setIntroText(shop["shop_intro_text"]);
-          setShopPurchaseWebsiteUrl(shop["shop_purchase_website_url"]);
-          setShopIconUrl(shop["shop_icon_url"]);
-        }
-      });
-    }
-  }, [categories, category]);
+  const {
+    id,
+    shop_name,
+    shop_website_url,
+    shop_intro_text,
+    shop_purchase_website_url,
+    shop_icon_url,
+  } = shop;
+
+  const products = get_products_of_the_shop_by_shopid(id);
+  console.log("shop_intro_text", shop_intro_text)
+
+  // const [products, setProducts] = useState([]);
+  // const [shop_name, setShopName] = useState("");
+  // const [shop_website_url, setShopWebsiteUrl] = useState("");
+  // const [shop_intro_text, setIntroText] = useState("");
+  // const [shop_purchase_website_url, setShopPurchaseWebsiteUrl] = useState("");
+  // const [shop_icon_url, setShopIconUrl] = useState("");
+
+  // useEffect(() => {
+  //   if (categories) {
+  //     categories.forEach((shop) => {
+  //       if (shop["shop_name_lowercase_no_spaces_for_url"] === category) {
+  //         setShopName(shop["shop_name"]);
+  //         setShopWebsiteUrl(shop["shop_website_url"]);
+  //         setProducts(shop["products"]);
+  //         setIntroText(shop["shop_intro_text"]);
+  //         setShopPurchaseWebsiteUrl(shop["shop_purchase_website_url"]);
+  //         setShopIconUrl(shop["shop_icon_url"]);
+  //       }
+  //     });
+  //   }
+  // }, [categories, category]);
 
   return (
     <CategoryContainer>
@@ -60,13 +77,14 @@ const Category = () => {
           <CategoryIntro>
             <div>
               <div id="creator_description">
-                {(() => {
+                {/* {(() => {
                   const div = document.getElementById("creator_description");
                   const str = shop_intro_text.replace(/\r?\n/g, "<br>");
                   if (div) {
                     div.innerHTML = str;
                   }
-                })()}
+                })()} */}
+                {shop_intro_text}
               </div>
             </div>
             <PreviewLogosInALine>
@@ -90,10 +108,10 @@ const Category = () => {
         </CategorySubtitle>
       </CategoryHeadline>
       <CategorySubContainer>
-        {/* {products &&
+        {products &&
           products.map((product) => (
             <ProductCard key={product.id} product={product} />
-          ))} */}
+          ))}
       </CategorySubContainer>
     </CategoryContainer>
   );

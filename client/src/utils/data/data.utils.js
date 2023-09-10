@@ -3,7 +3,7 @@ import SHOP_DATA from "./shop-data";
 import PRODUCT_DATA from "./product-data";
 import PRODUCT_IMAGE_DATA from "./product-image-data";
 
-const getCategoriesMap = () => {
+export const getCategoriesMap = () => {
   const { shops } = SHOP_DATA;
   const { products } = PRODUCT_DATA;
   const { product_images } = PRODUCT_IMAGE_DATA;
@@ -48,23 +48,10 @@ export const get_product_by_id = (id) => {
 };
 
 export const get_products_of_the_shop_by_shopid = (id) => {
-  const { products } = PRODUCT_DATA;
-  const { product_images } = PRODUCT_IMAGE_DATA;
-  const { shops } = SHOP_DATA;
-
-  return products
-    .filter((product) => product.shop_id === id)
-    .map((product) => {
-      const images_of_product = product_images.filter(
-        (product_image) => product_image.product_id === product.id
-      );
-      const shop_of_the_product = shops.filter((shop) => shop.id === id)[0];
-      return {
-        ...product,
-        product_images: images_of_product,
-        shop_of_the_product: shop_of_the_product,
-      };
-    });
+  const categoriesMap = getCategoriesMap();
+  return categoriesMap.filter((category) => {
+    return category.id === id;
+  })[0].products;
 };
 
 export const get_exhibitions_array = () => {

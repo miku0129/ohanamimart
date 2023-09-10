@@ -2,7 +2,7 @@ const SHOP_DATA = {
   shops: [
     {
       id: 0,
-      shop_name: "Tsubaki création1 ",
+      shop_name: "Tsubaki création",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
       shop_icon_url:
         "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",
