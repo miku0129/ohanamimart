@@ -162,20 +162,87 @@ const PRODUCT_DATA = {
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
     },
-
-
-
-
-
     {
       id: 18,
-      product_name: "Manga'L'ODYSSÉE JAPONAISE'",
+      product_name: "Manga `BLANC & NOIR`",
       product_description:
-        "Les accessoires sont des éléments qui complètent et améliorent la tenue ou l'apparence d'une personne. Ils jouent un rôle crucial dans le style personnel et l'expression de soi. Ces ajouts peuvent inclure des bijoux, des écharpes, des ceintures, des chapeaux, des lunettes de soleil, et plus encore. Les accessoires permettent aux individus d'injecter de la personnalité dans leur tenue, transformant une tenue de base en quelque chose d'unique et élégant. Ils peuvent également avoir des fonctions pratiques,comme se tenir au chaud en hiver avec une écharpe douillette ou protéger les yeux du soleil avec des lunettes de soleil.",
+        "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: true,
     },
+    {
+      id: 19,
+      product_name: "Manga'L'ODYSSÉE JAPONAISE'",
+      product_description:
+        "",
+      product_price: null,
+      shop_id: 2,
+      is_product_image_used_in_main_visual: false,
+    },
+    {
+      id: 20,
+      product_name: "Livre accordéon 'Origami' ; `Grue en papier` et `Shuriken`",
+      product_description:
+        "",
+      product_price: null,
+      shop_id: 2,
+      is_product_image_used_in_main_visual: false,
+    },
+    {
+      id: 21,
+      product_name: "Makimono 'Recette Japonaise'",
+      product_description:
+        "",
+      product_price: null,
+      shop_id: 2,
+      is_product_image_used_in_main_visual: false,
+    },
+    {
+      id: 22,
+      product_name: "Kirigami",
+      product_description:
+        "",
+      product_price: null,
+      shop_id: 2,
+      is_product_image_used_in_main_visual: false,
+    },
+    {
+      id: 23,
+      product_name: "Kirigami",
+      product_description:
+        "",
+      product_price: null,
+      shop_id: 2,
+      is_product_image_used_in_main_visual: false,
+    },
+
+    {
+      id: 24,
+      product_name: "Kirigami",
+      product_description:
+        "",
+      product_price: null,
+      shop_id: 2,
+      is_product_image_used_in_main_visual: false,
+    },
+
+    {
+      id: 25,
+      product_name: "Kirigami",
+      product_description:
+        "",
+      product_price: null,
+      shop_id: 2,
+      is_product_image_used_in_main_visual: false,
+    },
+
+
+
+
+
+
+
     {
       id: 39,
       product_name: "Accessoire",
