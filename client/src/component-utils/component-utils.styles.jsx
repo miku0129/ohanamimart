@@ -16,7 +16,7 @@ export const SlickImage = styled.img`
 `;
 export const SlickContainer = styled.div`
   //slickは必ず親コンポ―ネントの幅を決める必要がある。
-  width: ${(props) => (props.primary ? "70vw" : "100vw")};
+  width: ${(props) => (props.primary === "primary" ? "70vw" : "100vw")};
   padding: 10px;
   @media (max-width: 767px) {
     width: 100vw;

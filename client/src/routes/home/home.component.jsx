@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 
@@ -13,14 +13,20 @@ const Home = () => {
   const dispatch = useDispatch();
   const categories = useSelector(selectCategories);
 
-  useEffect(() => {
-    const handleSettingCategories = () => {
-      if (!categories[0]) {
-        dispatch(setCategories(SHOP_DATA.shops));
-      }
-    };
-    handleSettingCategories();
-  }, [categories, dispatch]);
+  // useEffect(() => {
+  //   const handleSettingCategories = () => {
+  //     if (!categories[0]) {
+  //       dispatch(setCategories(SHOP_DATA.shops));
+  //     }
+  //   };
+  //   handleSettingCategories();
+  // }, [categories, dispatch]);
+  const handleSettingCategories = () => {
+    if (!categories[0]) {
+      dispatch(setCategories(SHOP_DATA.shops));
+    }
+  };
+  handleSettingCategories();
 
   return (
     <div>

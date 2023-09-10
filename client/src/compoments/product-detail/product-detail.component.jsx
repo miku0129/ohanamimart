@@ -23,7 +23,7 @@ const ProductDetail = () => {
     <div className="product-detail-container">
       <div className="product-detail-sub-container-upper">
         <div className="product-detail-sub-right">
-          <Slick images={product.product_images} isPrimary={true} />
+          <Slick images={product.product_images} isPrimary="primary" />
         </div>
         <div className="product-detail-sub-left">
           <CustomUserIcon className="shop-icon" imageurl={shop.shop_icon_url} />
@@ -38,7 +38,7 @@ const ProductDetail = () => {
       <div className="product-detail-sub-container-lower">
         <BottomLine />
         <div className="description">
-          <div class="tab-001">
+          <div className="tab-001">
             <label>
               <input type="radio" name="tab-001" checked />
               Description
