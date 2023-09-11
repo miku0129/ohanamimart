@@ -56,7 +56,7 @@ const PRODUCT_DATA = {
     },
     {
       id: 16,
-      product_name: "Bracelet en kinrine",
+      product_name: "Bracelet en kinrin",
       product_description:
         "",
       product_price: null,
