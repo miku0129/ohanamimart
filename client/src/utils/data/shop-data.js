@@ -11,7 +11,7 @@ const SHOP_DATA = {
       shop_purchase_website_url: "https://tsubaki-creation.sumupstore.com/",
       shop_headline: "Créatrice de sacs et accessoires en tissu japonais",
       shop_intro_text:
-        "Tsubaki création confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon et propose des sacs et des accessoires que vous pouvez.",
+        "Tsubaki Création  confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon.  Vous pouvez trouver des sacs et des accessoires que vous pouvez utiliser, facilement, tous les jours !",
     },
     {
       id: 1,

@@ -328,6 +328,48 @@ const PRODUCT_IMAGE_DATA = {
       product_id: 33,
       shop_id: 3,
     },
+    {
+      id: 46,
+      product_image_url: "https://i.ibb.co/c6C65Q3/8547.jpg",
+      is_main_product_image: true,
+      product_id: 34,
+      shop_id: 2,
+    },
+    {
+      id: 47,
+      product_image_url: "https://i.ibb.co/rGT216h/8551.jpg",
+      is_main_product_image: false,
+      product_id: 34,
+      shop_id: 2,
+    },
+    {
+      id: 48,
+      product_image_url: "https://i.ibb.co/dbGTYXq/8552.jpg",
+      is_main_product_image: false,
+      product_id: 34,
+      shop_id: 2,
+    },
+    {
+      id: 49,
+      product_image_url: "https://i.ibb.co/f4dR271/8550.jpg",
+      is_main_product_image: false,
+      product_id: 34,
+      shop_id: 2,
+    },
+    {
+      id: 50,
+      product_image_url: "https://i.ibb.co/gd1xRP8/8549.jpg",
+      is_main_product_image: false,
+      product_id: 34,
+      shop_id: 2,
+    },
+    {
+      id: 51,
+      product_image_url: "https://i.ibb.co/zJHCZS9/8548.jpg",
+      is_main_product_image: false,
+      product_id: 34,
+      shop_id: 2,
+    },
   ],
 };
 
