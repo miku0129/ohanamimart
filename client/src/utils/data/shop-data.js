@@ -5,7 +5,7 @@ const SHOP_DATA = {
       shop_name: "Tsubaki création",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
       shop_icon_url:
-        "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",
+        "https://i.ibb.co/MM5sqsj/Screenshot-2023-08-11-184555.jpg",
       shop_website_url:
         "https://www.instagram.com/tsubaki.creation/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
       shop_purchase_website_url: "https://tsubaki-creation.sumupstore.com/",
@@ -19,7 +19,7 @@ const SHOP_DATA = {
       shop_name_lowercase_no_spaces_for_url: "atbijoux",
       shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
       shop_icon_url:
-        "https://i.ibb.co/FWnJ8Js/Screenshot-2023-08-11-184044.jpg",
+        "https://i.ibb.co/55vzdb5/Screenshot-2023-08-11-184044.jpg",
       shop_website_url: "http://www.atbijoux.com",
       shop_purchase_website_url: "",
       shop_headline: "Créatrice de bijoux en soie",
