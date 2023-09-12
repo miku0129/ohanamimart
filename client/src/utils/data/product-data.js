@@ -3,8 +3,7 @@ const PRODUCT_DATA = {
     {
       id: 10,
       product_name: "Chouchou en Kimono",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
@@ -12,8 +11,7 @@ const PRODUCT_DATA = {
     {
       id: 11,
       product_name: "Pochette pour téléphone en OBI",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
@@ -21,8 +19,7 @@ const PRODUCT_DATA = {
     {
       id: 12,
       product_name: "Porte cartes/monnaie",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
@@ -30,8 +27,7 @@ const PRODUCT_DATA = {
     {
       id: 13,
       product_name: "Sac banane",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
@@ -39,8 +35,7 @@ const PRODUCT_DATA = {
     {
       id: 14,
       product_name: "Pochette pour téléphone en OBI",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
@@ -48,8 +43,7 @@ const PRODUCT_DATA = {
     {
       id: 15,
       product_name: "Sac banane",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
@@ -57,8 +51,7 @@ const PRODUCT_DATA = {
     {
       id: 16,
       product_name: "Bracelet en kinrin",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: true,
@@ -66,8 +59,7 @@ const PRODUCT_DATA = {
     {
       id: 17,
       product_name: "Pochette",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
@@ -75,8 +67,7 @@ const PRODUCT_DATA = {
     {
       id: 1,
       product_name: "Produit d'intérieur",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -84,8 +75,7 @@ const PRODUCT_DATA = {
     {
       id: 0,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: true,
@@ -93,8 +83,7 @@ const PRODUCT_DATA = {
     {
       id: 2,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -102,8 +91,7 @@ const PRODUCT_DATA = {
     {
       id: 3,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -111,8 +99,7 @@ const PRODUCT_DATA = {
     {
       id: 4,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -120,8 +107,7 @@ const PRODUCT_DATA = {
     {
       id: 5,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -129,8 +115,7 @@ const PRODUCT_DATA = {
     {
       id: 6,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -138,8 +123,7 @@ const PRODUCT_DATA = {
     {
       id: 7,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -147,8 +131,7 @@ const PRODUCT_DATA = {
     {
       id: 8,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -156,8 +139,7 @@ const PRODUCT_DATA = {
     {
       id: 9,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
@@ -165,8 +147,7 @@ const PRODUCT_DATA = {
     {
       id: 18,
       product_name: "Manga `BLANC & NOIR`",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
@@ -174,17 +155,17 @@ const PRODUCT_DATA = {
     {
       id: 19,
       product_name: "Manga'L'ODYSSÉE JAPONAISE'",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
     },
     {
       id: 20,
-      product_name: "Livre accordéon 'Origami' ; `Grue en papier` et `Shuriken`",
+      product_name:
+        "Livre accordéon 'Origami' ; `Grue en papier` et `Shuriken`",
       product_description:
-        "",
+        "apanese origami is a centuries-old traditional art form that has captivated hearts and minds worldwide with its elegance, simplicity, and creativity. Rooted in Japan's rich cultural heritage, origami, which means 'folded paper' in Japanese, involves transforming a single sheet of paper into intricate and often astonishing shapes, creatures, and designs through a series of precise folds and creases.Origami's origins date back to the 17th century when it was initially used in religious ceremonies, but it has since evolved into a global phenomenon that transcends cultural boundaries. It's a true testament to the power of simplicity and the beauty of minimalism. One of the most iconic origami creations is the paper crane, or 'tsuru' in Japanese. Folding a thousand paper cranes, known as 'senbazuru,' is a traditional practice in Japan that represents good luck, healing, and a prayer for peace. This custom gained international recognition through the story of Sadako Sasaki, a young girl who developed leukemia as a result of the atomic bombing of Hiroshima. She folded paper cranes in her hospital bed, inspired by the senbazuru legend.",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
@@ -192,8 +173,7 @@ const PRODUCT_DATA = {
     {
       id: 21,
       product_name: "Makimono 'Recette Japonaise'",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
@@ -201,8 +181,7 @@ const PRODUCT_DATA = {
     {
       id: 22,
       product_name: "Kirigami",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
@@ -210,8 +189,7 @@ const PRODUCT_DATA = {
     {
       id: 23,
       product_name: "Kirigami",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
@@ -220,8 +198,7 @@ const PRODUCT_DATA = {
     {
       id: 24,
       product_name: "Kirigami",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
@@ -230,8 +207,7 @@ const PRODUCT_DATA = {
     {
       id: 25,
       product_name: "Kirigami",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
@@ -240,8 +216,7 @@ const PRODUCT_DATA = {
     {
       id: 26,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
@@ -249,8 +224,7 @@ const PRODUCT_DATA = {
     {
       id: 27,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: true,
@@ -258,8 +232,7 @@ const PRODUCT_DATA = {
     {
       id: 28,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
@@ -268,8 +241,7 @@ const PRODUCT_DATA = {
     {
       id: 29,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
@@ -278,8 +250,7 @@ const PRODUCT_DATA = {
     {
       id: 30,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
@@ -288,8 +259,7 @@ const PRODUCT_DATA = {
     {
       id: 31,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
@@ -298,8 +268,7 @@ const PRODUCT_DATA = {
     {
       id: 32,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
@@ -308,8 +277,7 @@ const PRODUCT_DATA = {
     {
       id: 33,
       product_name: "Accessoire",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
@@ -317,15 +285,11 @@ const PRODUCT_DATA = {
     {
       id: 34,
       product_name: "Manga `FUTAGO`",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: true,
     },
-
-
-
   ],
 };
 

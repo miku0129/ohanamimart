@@ -330,7 +330,7 @@ const PRODUCT_IMAGE_DATA = {
     },
     {
       id: 46,
-      product_image_url: "https://i.ibb.co/c6C65Q3/8547.jpg",
+      product_image_url: "https://i.ibb.co/1XzHzwL/8645.jpg",
       is_main_product_image: true,
       product_id: 34,
       shop_id: 2,
