@@ -32,7 +32,7 @@ const SHOP_DATA = {
       shop_name_lowercase_no_spaces_for_url: "namicreations",
       shop_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
       shop_icon_url:
-        "https://i.ibb.co/s6MtS0w/Screenshot-2023-08-11-185242.jpg",
+        "https://i.ibb.co/tCjd8c0/Screenshot-2023-08-11-185242.jpg",
       shop_website_url: "https://www.nami-creations.fr/",
       shop_purchase_website_url: "",
       shop_headline: "Auteure manga et créatrice d'objets en papier",
