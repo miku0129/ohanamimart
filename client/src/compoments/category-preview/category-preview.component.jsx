@@ -1,26 +1,41 @@
 import { Link } from "react-router-dom";
 
 import ProductCard from "../product-card/product-card.component";
+import { ReactComponent as Foward } from "../../assets/chevrons-right-arrows-svgrepo-com.svg";
+
+import {
+  BottomLine,
+  PreviewFourItemsInALine,
+  LabelWithIndicatorLink,
+} from "../../component-utils/component-utils.styles";
 
 import "./category-preview.style.scss";
 
-const CategoryPreview = ({ shop_name_lowercase_no_spaces_for_url, shop_name, products }) => {
+const CategoryPreview = ({
+  shop_name_lowercase_no_spaces_for_url,
+  shop_name,
+  products,
+}) => {
   return (
     <div className="category-preview-container">
-      <h2>
+      <LabelWithIndicatorLink>
         <Link to={`/shop/${shop_name_lowercase_no_spaces_for_url}`}>
-          <span className="title">{shop_name}</span>
+          <div className="label-with-indicator-link-inner">
+            <p className="title fix-position">{shop_name}</p>
+            <div className="fix-position">
+              <Foward style={{ width: "30px", height: "30px" }} />
+            </div>
+          </div>
         </Link>
-      </h2>
-      <div className="preview">
+      </LabelWithIndicatorLink>
+      <PreviewFourItemsInALine>
         {products
           .filter((_, idx) => idx < 4)
           .map((product) => {
-
-            return <ProductCard key={product.id} product={product} />
-          }
-          )}
-      </div>
+            return <ProductCard key={product.id} product={product} />;
+          })}
+      </PreviewFourItemsInALine>
+      <BottomLine />
     </div>
   );
 };

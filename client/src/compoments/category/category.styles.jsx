@@ -17,36 +17,13 @@ export const CategoryHeadline = styled.div`
     font-weight: initial;
 
     //google font
-    font-family: "Ysabeau Office", sans-serif;
+    // font-family: "Ysabeau Office", sans-serif;
   }
 `;
 
 export const CategorySubtitle = styled.div`
   display: flex;
   gap: 5px;
-`;
-
-export const CategoryIcon = styled.div`
-  position: relative;
-
-  .image_circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: ${({ imageurl }) => `url(${imageurl})`};
-    background-position: center;
-  }
-  .image_circle {
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-
-  .userLogo {
-    &:hover {
-      opacity: 0.5;
-    }
-  }
 `;
 
 export const CategoryIntro = styled.div`
@@ -68,15 +45,6 @@ export const CategoryIntro = styled.div`
       font-size: 2em; /* 文字サイズ   */
       padding: 0px; /* 余白         */
       float: left; /* 2文字目の位置合わせ */
-    }
-  }
-
-  .purchase-icon {
-    .purchaseLogo {
-      &:hover {
-        opacity: 0.5;
-        cursor: pointer;
-      }
     }
   }
 `;

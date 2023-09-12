@@ -1,17 +1,20 @@
 import { Fragment } from "react";
-import "./footer.styles.scss";
+import { ReactComponent as TeamLogo } from "../../assets/cherry-blossom-9-svgrepo-com.svg";
+import { FooterContainer } from "./footer.styles";
 
 const Footer = () => {
   const footerText = "Hanami";
   return (
     <Fragment>
       <div className="footer">
-        <hr />
-        <div className="footer-container">
+        <FooterContainer>
           <div className="footer-subcontainer">
-            <span>&copy;{footerText}</span>
+            <TeamLogo style={{ width: "30px", height: "30px" }} />
+            <div className="footer-text">
+              <span>&copy;{footerText}</span>
+            </div>
           </div>
-        </div>
+        </FooterContainer>
       </div>
     </Fragment>
   );

@@ -1,41 +1,39 @@
-import "react-image-gallery/styles/css/image-gallery.css";
-import ImageGallery from "react-image-gallery";
+import MainVisualImages from "./main-visual-images";
 
-import DirectoryItem from "../directory-item/directory-item.component";
-import styles from "./directory.styles.scss";
+import CategoriesPreview from "../../routes/categories-preview/categories-preview.component";
+import ProductCard from "../product-card/product-card.component";
+import Slick from "../slick/slick.component";
+import {
+  BottomLine,
+  PreviewFourItemsInALine,
+} from "../../component-utils/component-utils.styles";
 
-const Directory = ({ categories }) => {
-  const images = [
-    {
-      original: "https://i.ibb.co/jMct7KD/11256.jpg",
-      originalHeight: 450,
-    },
-    {
-      original: "https://i.ibb.co/CHs1ysS/11113.jpg",
-      originalHeight: 450,
-    },
-  ];
+import { get_product_array_for_main_visual } from "../../utils/data/data.utils";
+
+import "./directory.styles.scss";
+
+const Directory = () => {
+  const products = get_product_array_for_main_visual();
+
   return (
-    <>
-      <div className="image-gallery-container">
-        <ImageGallery
-          items={images}
-          showNav={true}
-          autoPlay={false}
-          showFullscreenButton={false}
-          useBrowserFullscreen={false}
-          showPlayButton={false}
-          showBullets={true}
-          originalClass={styles.image}
-        />
+    <div className="main-visual-container">
+      <Slick images={MainVisualImages} isPrimary={false} />
+      <div className="main-visual-message-container">
+        <p className="message">
+          Acheter en ligne des articles, directement auprès des fabricants
+          japonais
+        </p>
+        <p>Hanami est la maison de l'artisanat japonais de qualité</p>
       </div>
-      <div className="categories-container">
-        {categories.length !== 0 &&
-          categories.map((category) => {
-            return <DirectoryItem category={category} key={category.id} />;
+      <PreviewFourItemsInALine>
+        {products &&
+          products.map((product) => {
+            return <ProductCard product={product} key={product.id}/>;
           })}
-      </div>
-    </>
+      </PreviewFourItemsInALine>
+      <BottomLine />
+      <CategoriesPreview />
+    </div>
   );
 };
 

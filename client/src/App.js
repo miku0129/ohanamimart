@@ -1,17 +1,23 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./routes/home/home.component";
-// import SignIn from "./routes/sign-in/sign-in.component";
-import Shop from "./routes/shop/shop.component";
 import BasicLayout from "./routes/basic-layout/basic-layout.component";
+import Home from "./routes/home/home.component";
+import Shop from "./routes/shop/shop.component";
+import Exhibitions from "./routes/exhibitions/exhibitions.component";
+// import SignIn from "./routes/sign-in/sign-in.component";
+import ScrollToTop from "./component-utils/scroll-to-top";
+import LoadingResource from "./component-utils/loading-resource";
 
 const App = () => {
   return (
     <>
+    <LoadingResource />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<BasicLayout />}>
           <Route index element={<Home />} />
           <Route path="shop/*" element={<Shop />} />
+          <Route path="/exhibitions/*" element={<Exhibitions />} />
         </Route>
       </Routes>
     </>
