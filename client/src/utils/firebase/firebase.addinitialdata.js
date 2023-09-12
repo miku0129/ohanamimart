@@ -10,7 +10,7 @@ import SHOP_DATA from "../data/shop-data";
 import PRODUCT_DATA from "../data/product-data";
 import PRODUCT_IMAGE_DATA from "../data/product-image-data";
 
-export const dbtest = async () => {
+export const initializeData = async () => {
   const { shops } = SHOP_DATA;
   const { products } = PRODUCT_DATA;
   const { product_images } = PRODUCT_IMAGE_DATA;
@@ -23,13 +23,20 @@ export const dbtest = async () => {
       products.length > 0
         ? products.filter((product) => product.shop_id === idx)
         : null;
-    if (products_array) {
-      products_array = 
+    if (products_array !== null) {
+      products_array = products_array.map((product) => {
+        const images = product_images.filter(
+          (image) => image.product_id === product.id
+        );
+        const result = { ...product, product_images: images };
+        return result;
+      }
+      );
     }
 
     if (!docSnap.exists()) {
       try {
-        const docRef = await setDoc(doc(db, "shops", shop_id), {
+        await setDoc(doc(db, "shops", shop_id), {
           id: idx,
           shop_name: shop.shop_name,
           shop_name_lowercase_no_spaces_for_url:
@@ -41,7 +48,6 @@ export const dbtest = async () => {
           shop_intro_text: shop.shop_intro_text,
           products: products_array,
         });
-        console.log("Document written with ID: ", docRef.id);
       } catch (e) {
         console.error("Error adding document: ", e);
       }

@@ -8,6 +8,7 @@ import FIREBASECONFIG from "./firebase.config";
 const app = initializeApp(FIREBASECONFIG);
 export const firestore = getFirestore(app);
 
+
 // import { initializeApp } from "firebase/app";
 // import {
 //   getAuth,
