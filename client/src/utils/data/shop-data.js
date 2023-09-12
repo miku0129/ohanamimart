@@ -45,7 +45,7 @@ const SHOP_DATA = {
       shop_name_lowercase_no_spaces_for_url: "goen",
       shop_image_url: "https://i.ibb.co/Cn80MbW/317708.jpg",
       shop_icon_url:
-        "https://i.ibb.co/sCfwL0j/313079373-187425353851045-7210455388149182739-n.jpg",
+        "https://i.ibb.co/sFJ540V/313079373-187425353851045-7210455388149182739-n.jpg",
       shop_website_url: "https://www.instagram.com/goenjpfr/",
       shop_purchase_website_url: "https://goen.sumupstore.com/",
       shop_headline: "Créateur de bijoux japonais",
