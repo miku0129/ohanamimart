@@ -165,7 +165,7 @@ const PRODUCT_DATA = {
       product_name:
         "Livre accordéon 'Origami' ; `Grue en papier` et `Shuriken`",
       product_description:
-        "apanese origami is a centuries-old traditional art form that has captivated hearts and minds worldwide with its elegance, simplicity, and creativity. Rooted in Japan's rich cultural heritage, origami, which means 'folded paper' in Japanese, involves transforming a single sheet of paper into intricate and often astonishing shapes, creatures, and designs through a series of precise folds and creases.Origami's origins date back to the 17th century when it was initially used in religious ceremonies, but it has since evolved into a global phenomenon that transcends cultural boundaries. It's a true testament to the power of simplicity and the beauty of minimalism.",
+        "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
