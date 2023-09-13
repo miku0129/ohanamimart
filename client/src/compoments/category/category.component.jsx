@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
 
+import { useSelector } from "react-redux";
 import { selectCategories } from "../../store/categories/category.selector";
 
 import ProductCard from "../../compoments/product-card/product-card.component";
