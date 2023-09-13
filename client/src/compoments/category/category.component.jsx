@@ -1,9 +1,7 @@
-// import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { selectCategories } from "../../store/categories/category.selector";
-import { get_products_of_the_shop_by_shopid } from "../../utils/data/data.utils";
 
 import ProductCard from "../../compoments/product-card/product-card.component";
 
@@ -36,9 +34,8 @@ const Category = () => {
     shop_intro_text,
     shop_purchase_website_url,
     shop_icon_url,
+    products,
   } = shop;
-
-  const products = get_products_of_the_shop_by_shopid(id);
 
   return (
     <CategoryContainer>

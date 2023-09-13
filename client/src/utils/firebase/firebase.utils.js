@@ -1,78 +1,67 @@
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
 import { FirebaseError, initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore/lite";
-import FIREBASECONFIG from "./firebase.config";
 
-// Initialize Firebase
+import {
+  getFirestore,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+} from "firebase/firestore/lite";
+import FIREBASECONFIG from "./firebase.config";
+import { firestore as db } from "./firebase.utils";
+import SHOP_DATA from "../data/shop-data";
+import PRODUCT_DATA from "../data/product-data";
+import PRODUCT_IMAGE_DATA from "../data/product-image-data";
+
 const app = initializeApp(FIREBASECONFIG);
 export const firestore = getFirestore(app);
 
+export const getAllDocuments = async () => {
+  const querySnapshot = await getDocs(collection(db, "shops"));
+  return querySnapshot.docs.map((docsnapshot) => docsnapshot.data());
+};
 
-// import { initializeApp } from "firebase/app";
-// import {
-//   getAuth,
-//   // signInWithRedirect,
-//   signInWithPopup,
-//   GoogleAuthProvider,
-//   createUserWithEmailAndPassword,
-// } from "firebase/auth";
-// import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+export const initializeData = async () => {
+  const { shops } = SHOP_DATA;
+  const { products } = PRODUCT_DATA;
+  const { product_images } = PRODUCT_IMAGE_DATA;
 
-// // Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: process.env.REACT_APP_APIKEY,
-//   authDomain: process.env.REACT_APP_AUTHDOMAIN,
-//   projectId: process.env.REACT_APP_PROJECTID,
-//   storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-//   messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-//   appId: process.env.REACT_APP_APPID,
-// };
+  shops.forEach(async (shop, idx) => {
+    const shop_id = String(idx);
+    const docRef = doc(db, "shops", shop_id);
+    const docSnap = await getDoc(docRef);
+    let products_array =
+      products.length > 0
+        ? products.filter((product) => product.shop_id === idx)
+        : null;
+    if (products_array !== null) {
+      products_array = products_array.map((product) => {
+        const images = product_images.filter(
+          (image) => image.product_id === product.id
+        );
+        const result = { ...product, product_images: images };
+        return result;
+      });
+    }
 
-// // Initialize Firebase
-// const firebaseApp = initializeApp(firebaseConfig);
-// console.log(firebaseApp);
-
-// const provider = new GoogleAuthProvider();
-// provider.setCustomParameters({
-//   prompt: "select_account",
-// });
-
-// export const auth = getAuth();
-// export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
-
-// export const db = getFirestore();
-
-// export const createUserDocumentFromAuth = async (
-//   userAuth,
-//   additionalInformation = {}
-// ) => {
-//   const userDocRef = doc(db, "users", userAuth.uid);
-
-//   console.log(userDocRef);
-
-//   const userSnapshot = await getDoc(userDocRef);
-//   console.log(userSnapshot);
-//   console.log(userSnapshot.exists());
-
-//   if (!userSnapshot.exists()) {
-//     const { displayName, email } = userAuth;
-//     const createdAt = new Date();
-
-//     try {
-//       await setDoc(userDocRef, {
-//         displayName,
-//         email,
-//         createdAt,
-//         ...additionalInformation,
-//       });
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-// };
-
-// export const createAuthUserWithEmailAndPassword = async (email, passowrd) => {
-//   if (!email || !passowrd) return;
-//   return await createUserWithEmailAndPassword(auth, email, passowrd);
-// };
+    if (!docSnap.exists()) {
+      try {
+        await setDoc(doc(db, "shops", shop_id), {
+          id: idx,
+          shop_name: shop.shop_name,
+          shop_name_lowercase_no_spaces_for_url:
+            shop.shop_name_lowercase_no_spaces_for_url,
+          shop_icon_url: shop.shop_icon_url,
+          shop_website_url: shop.shop_website_url,
+          shop_purchase_website_url: shop.shop_purchase_website_url,
+          shop_headline: shop.shop_headline,
+          shop_intro_text: shop.shop_intro_text,
+          products: products_array,
+        });
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    }
+  });
+};

@@ -1,28 +1,12 @@
 import EXHIBITIONS_DATA from "./exhibition-data";
 import SHOP_DATA from "./shop-data";
-import PRODUCT_DATA from "./product-data";
-import PRODUCT_IMAGE_DATA from "./product-image-data";
+// import PRODUCT_DATA from "./product-data";
+// import PRODUCT_IMAGE_DATA from "./product-image-data";
+import { getAllDocuments } from "../firebase/firebase.utils";
 
-export const getCategoriesMap = () => {
-  const { shops } = SHOP_DATA;
-  const { products } = PRODUCT_DATA;
-  const { product_images } = PRODUCT_IMAGE_DATA;
 
-  return shops.map((shop) => {
-    const prods = products.filter((prod) => prod.shop_id === shop.id);
-    const prods_of_the_shop = prods.map((prod) => {
-      const imgs = product_images.filter((img) => img.product_id === prod.id);
-      const result = { ...prod, product_images: imgs };
-      return result;
-    });
-
-    const result = { ...shop, products: prods_of_the_shop };
-    return result;
-  });
-};
-
-export const get_product_array_for_main_visual = () => {
-  const categoriesMap = getCategoriesMap();
+export const get_product_array_for_main_visual = async() => {
+  const categoriesMap = await getAllDocuments();
   const filteredShops = categoriesMap.filter(
     (category) =>
       category.products.filter(
@@ -37,9 +21,9 @@ export const get_product_array_for_main_visual = () => {
   );
 };
 
-export const get_product_by_id = (id) => {
+export const get_product_by_id = async(id) => {
   const search_id = Number(id);
-  const categoriesMap = getCategoriesMap();
+  const categoriesMap = await getAllDocuments();
   const filteredShop = categoriesMap.filter((category) => {
     const result = category.products.filter((prod) => prod.id === search_id);
     return result.length > 0;
@@ -49,13 +33,6 @@ export const get_product_by_id = (id) => {
     (prod) => prod.id === search_id
   )[0];
   return result;
-};
-
-export const get_products_of_the_shop_by_shopid = (id) => {
-  const categoriesMap = getCategoriesMap();
-  return categoriesMap.filter((category) => {
-    return category.id === id;
-  })[0].products;
 };
 
 export const get_exhibitions_array = () => {

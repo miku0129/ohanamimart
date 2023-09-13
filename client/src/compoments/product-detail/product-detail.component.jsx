@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCategories } from "../../store/categories/category.selector";
@@ -12,9 +13,18 @@ import {
 import "./product-detail.styles.scss";
 
 const ProductDetail = () => {
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const handleSetProduct = async () => {
+      const prod = await get_product_by_id(product_id);
+      setProduct(prod);
+    };
+    handleSetProduct();
+  }, []);
+
   const categories = useSelector(selectCategories);
   const { product_id } = useParams();
-  const product = get_product_by_id(product_id);
   const shop = categories.filter(
     (category) => category.id === product.shop_id
   )[0];
@@ -23,13 +33,18 @@ const ProductDetail = () => {
     <div className="product-detail-container">
       <div className="product-detail-sub-container-upper">
         <div className="product-detail-sub-right">
-          <Slick images={product.product_images} isPrimary="primary" />
+          {product.product_images && <Slick images={product.product_images} isPrimary="primary" />}
         </div>
         <div className="product-detail-sub-left">
-          <CustomUserIcon className="shop-icon" imageurl={shop.shop_icon_url} />
-          <Link to={`/shop/${shop.shop_name_lowercase_no_spaces_for_url}`}>
+          <CustomUserIcon
+            className="shop-icon"
+            imageurl={shop && shop.shop_icon_url}
+          />
+          <Link
+            to={shop && `/shop/${shop.shop_name_lowercase_no_spaces_for_url}`}
+          >
             <ParagraphLink className="shop-title">
-              {shop.shop_name}
+              {shop && shop.shop_name}
             </ParagraphLink>
           </Link>
           <div className="product-title">{product.product_name}</div>

@@ -4,15 +4,16 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import { setCategories } from "../store/categories/category.action";
 import { selectCategories } from "../store/categories/category.selector";
 
-import SHOP_DATA from "../utils/data/shop-data"
+import { getAllDocuments } from "../utils/firebase/firebase.utils";
 
 const LoadingResource = () => {
   const dispatch = useDispatch();
   const categories = useSelector(selectCategories);
 
-  const handleSettingCategories = () => {
+  const handleSettingCategories = async () => {
     if (!categories[0]) {
-      dispatch(setCategories(SHOP_DATA.shops));
+      const data = await getAllDocuments();
+      dispatch(setCategories(data));
     }
   };
   handleSettingCategories();

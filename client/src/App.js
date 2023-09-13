@@ -9,7 +9,7 @@ import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import ScrollToTop from "./component-utils/scroll-to-top";
 import LoadingResource from "./component-utils/loading-resource";
 
-// import { initializeData } from "./utils/firebase/firebase.addinitialdata";
+// import { initializeData } from "./utils/firebase/firebase.utils";
 
 const App = () => {
   // useEffect(() => {

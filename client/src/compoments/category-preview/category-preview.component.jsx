@@ -11,11 +11,9 @@ import {
 
 import "./category-preview.style.scss";
 
-const CategoryPreview = ({
-  shop_name_lowercase_no_spaces_for_url,
-  shop_name,
-  products,
-}) => {
+const CategoryPreview = ({ category }) => {
+  const { shop_name_lowercase_no_spaces_for_url, shop_name, products } =
+    category;
   return (
     <div className="category-preview-container">
       <LabelWithIndicatorLink>
@@ -29,11 +27,12 @@ const CategoryPreview = ({
         </Link>
       </LabelWithIndicatorLink>
       <PreviewFourItemsInALine>
-        {products
-          .filter((_, idx) => idx < 4)
-          .map((product) => {
-            return <ProductCard key={product.id} product={product} />;
-          })}
+        {products &&
+          products
+            .filter((_, idx) => idx < 4)
+            .map((product) => {
+              return <ProductCard key={product.id} product={product} />;
+            })}
       </PreviewFourItemsInALine>
       <BottomLine />
     </div>
