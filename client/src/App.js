@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 import BasicLayout from "./routes/basic-layout/basic-layout.component";
 import Home from "./routes/home/home.component";
@@ -9,15 +9,22 @@ import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import ScrollToTop from "./component-utils/scroll-to-top";
 import LoadingResource from "./component-utils/loading-resource";
 
-// import { initializeData } from "./utils/firebase/firebase.utils";
+import {
+  initializeCategoryData,
+  initializeExhibitionData,
+} from "./utils/firebase/firebase.utils";
 
 const App = () => {
-  // useEffect(() => {
-  //   const initData = async () => {
-  //     await initializeData();
-  //   };
-  //   initData();
-  // }, []);
+  useEffect(() => {
+    // const initCategoryData = async () => {
+    //     await initializeCategoryData();
+    // };
+    // initCategoryData();
+    const initExhibitionData = async () => {
+      await initializeExhibitionData();
+    };
+    initExhibitionData();
+  }, []);
 
   return (
     <>

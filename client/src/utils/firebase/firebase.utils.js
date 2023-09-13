@@ -13,6 +13,7 @@ import { firestore as db } from "./firebase.utils";
 import SHOP_DATA from "../data/shop-data";
 import PRODUCT_DATA from "../data/product-data";
 import PRODUCT_IMAGE_DATA from "../data/product-image-data";
+import EXHIBITIONS_DATA from "../data/exhibition-data";
 
 const app = initializeApp(FIREBASECONFIG);
 export const firestore = getFirestore(app);
@@ -22,7 +23,7 @@ export const getAllDocuments = async () => {
   return querySnapshot.docs.map((docsnapshot) => docsnapshot.data());
 };
 
-export const initializeData = async () => {
+export const initializeCategoryData = async () => {
   const { shops } = SHOP_DATA;
   const { products } = PRODUCT_DATA;
   const { product_images } = PRODUCT_IMAGE_DATA;
@@ -58,6 +59,37 @@ export const initializeData = async () => {
           shop_headline: shop.shop_headline,
           shop_intro_text: shop.shop_intro_text,
           products: products_array,
+        });
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    }
+  });
+};
+
+export const initializeExhibitionData = async () => {
+  const { exhibitions } = EXHIBITIONS_DATA;
+
+  exhibitions.forEach(async (exhibition, idx) => {
+    const exhibition_id = String(idx);
+    const docRef = doc(db, "exhibitions", exhibition_id);
+    const docSnap = await getDoc(docRef);
+
+    if (!docSnap.exists()) {
+      try {
+        await setDoc(doc(db, "exhibitions", exhibition_id), {
+          id: idx,
+          exhibition_title: exhibition.exhibition_title,
+          start_date: exhibition.start_date,
+          end_date: exhibition.end_date,
+          start_time: exhibition.start_time,
+          end_time: exhibition.end_time,
+          location: exhibition.location,
+          address: exhibition.address,
+          exhibition_image_url: exhibition.exhibition_image_url,
+          exhibitors: exhibition.exhibitors,
+          about_exhibition: exhibition.about_exhibition,
+          exhibition_url: exhibition.exhibition_url,
         });
       } catch (e) {
         console.error("Error adding document: ", e);
