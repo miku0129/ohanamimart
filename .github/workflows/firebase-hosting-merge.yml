@@ -14,7 +14,10 @@ jobs:
       - run: |
           touch .env 
           echo "${{ secrets.SERVER_ENV }}" >> .env
-      - run: npm ci && npm run client-build
+      - run: |
+          touch .env 
+          echo "${{ secrets.CLIENT_ENV }}" >> .env
+          npm ci && npm run client-build
         working-directory: ./client
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
