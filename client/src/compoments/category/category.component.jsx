@@ -1,9 +1,7 @@
-// import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
 
+import { useSelector } from "react-redux";
 import { selectCategories } from "../../store/categories/category.selector";
-import { get_products_of_the_shop_by_shopid } from "../../utils/data/data.utils";
 
 import ProductCard from "../../compoments/product-card/product-card.component";
 
@@ -30,15 +28,13 @@ const Category = () => {
   })[0];
 
   const {
-    id,
     shop_name,
     shop_website_url,
     shop_intro_text,
     shop_purchase_website_url,
     shop_icon_url,
+    products,
   } = shop;
-
-  const products = get_products_of_the_shop_by_shopid(id);
 
   return (
     <CategoryContainer>
@@ -53,16 +49,7 @@ const Category = () => {
           {!shop_icon_url && <DefaultUserIcon />}
           <CategoryIntro>
             <div>
-              <div id="creator_description">
-                {/* {(() => {
-                  const div = document.getElementById("creator_description");
-                  const str = shop_intro_text.replace(/\r?\n/g, "<br>");
-                  if (div) {
-                    div.innerHTML = str;
-                  }
-                })()} */}
-                {shop_intro_text}
-              </div>
+              <div id="creator_description">{shop_intro_text}</div>
             </div>
             <PreviewLogosInALine>
               {shop_website_url ? (

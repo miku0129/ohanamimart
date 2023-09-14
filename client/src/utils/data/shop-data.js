@@ -5,7 +5,7 @@ const SHOP_DATA = {
       shop_name: "Tsubaki création",
       shop_name_lowercase_no_spaces_for_url: "tsubakicreation",
       shop_icon_url:
-        "https://i.ibb.co/PzsxDgj/Screenshot-2023-08-11-184555.jpg",
+        "https://i.ibb.co/MM5sqsj/Screenshot-2023-08-11-184555.jpg",
       shop_website_url:
         "https://www.instagram.com/tsubaki.creation/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
       shop_purchase_website_url: "https://tsubaki-creation.sumupstore.com/",
@@ -19,7 +19,7 @@ const SHOP_DATA = {
       shop_name_lowercase_no_spaces_for_url: "atbijoux",
       shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
       shop_icon_url:
-        "https://i.ibb.co/FWnJ8Js/Screenshot-2023-08-11-184044.jpg",
+        "https://i.ibb.co/55vzdb5/Screenshot-2023-08-11-184044.jpg",
       shop_website_url: "http://www.atbijoux.com",
       shop_purchase_website_url: "",
       shop_headline: "Créatrice de bijoux en soie",
@@ -32,7 +32,7 @@ const SHOP_DATA = {
       shop_name_lowercase_no_spaces_for_url: "namicreations",
       shop_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
       shop_icon_url:
-        "https://i.ibb.co/s6MtS0w/Screenshot-2023-08-11-185242.jpg",
+        "https://i.ibb.co/tCjd8c0/Screenshot-2023-08-11-185242.jpg",
       shop_website_url: "https://www.nami-creations.fr/",
       shop_purchase_website_url: "",
       shop_headline: "Auteure manga et créatrice d'objets en papier",
@@ -45,7 +45,7 @@ const SHOP_DATA = {
       shop_name_lowercase_no_spaces_for_url: "goen",
       shop_image_url: "https://i.ibb.co/Cn80MbW/317708.jpg",
       shop_icon_url:
-        "https://i.ibb.co/sCfwL0j/313079373-187425353851045-7210455388149182739-n.jpg",
+        "https://i.ibb.co/sFJ540V/313079373-187425353851045-7210455388149182739-n.jpg",
       shop_website_url: "https://www.instagram.com/goenjpfr/",
       shop_purchase_website_url: "https://goen.sumupstore.com/",
       shop_headline: "Créateur de bijoux japonais",
@@ -57,7 +57,7 @@ const SHOP_DATA = {
       shop_name_lowercase_no_spaces_for_url: "sugar",
       shop_image_url: "",
       shop_icon_url:
-        "https://i.ibb.co/XJXmgcx/Screenshot-2023-08-12-180643.jpg",
+        "https://i.ibb.co/N2mPPKx/Screenshot-2023-08-12-180643.jpg",
       shop_website_url: "https://sugarlike.jp/",
       shop_purchase_website_url: "https://sugarlike.jp/",
       shop_headline: "Boutique de produits traditionnels japonais",

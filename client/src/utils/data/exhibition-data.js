@@ -44,6 +44,7 @@ const EXHIBITIONS_DATA = {
       exhibition_url: "",
     },
   ],
+  
 };
 
 export default EXHIBITIONS_DATA;

@@ -16,7 +16,7 @@ const ExhibitionPreview = () => {
         <PreviewOneItemsInALine>
           {exhibitions &&
             exhibitions.map((exhibition) => {
-              return <ExhibitionCard exhibition={exhibition} />;
+              return <ExhibitionCard exhibition={exhibition} key={exhibition.id}/>;
             })}
         </PreviewOneItemsInALine>
       </div>
