@@ -21,7 +21,7 @@ export const SlickImage = styled.img`
       ? "100%"
       : props.slickUsage === "common-product"
       ? "90%"
-      : "60%"};
+      : "70%"};
 
   @media (max-width: 767px) {
     height: ${(props) =>
