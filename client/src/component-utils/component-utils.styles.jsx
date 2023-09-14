@@ -6,7 +6,6 @@ import { ReactComponent as UserLogo } from "../assets/user-2-svgrepo-com.svg";
 
 import Slider from "react-slick";
 
-
 //component
 export const SlickImage = styled.img`
   object-fit: cover;
@@ -30,7 +29,7 @@ export const SlickImage = styled.img`
         : props.slickUsage === "common-product"
         ? "300px"
         : "500px"};
-    width: ${(props) => (props.slickUsage === "mainVisual" || props.slickUsage === "book" ? "350px" : "")};
+    width: ${(props) => (props.slickUsage === "book" ? "350px" : "")};
   }
 `;
 
@@ -38,9 +37,7 @@ export const CustomSlider = styled(Slider)`
   @media (max-width: 767px) {
     .slick-list {
       padding: ${(props) =>
-        props.slickUsage === "mainVisual" || props.slickUsage === "book"
-          ? "0px 0px !important"
-          : "0px 0px !important"};
+        props.slickUsage === "book" ? "0px 20px !important" : ""};
     }
   }
 `;
@@ -48,7 +45,6 @@ export const CustomSlider = styled(Slider)`
 export const SlickContainer = styled.div`
   //slickは必ず親コンポ―ネントの幅を決める必要がある。
   width: ${(props) => (props.slickUsage === "mainVisual" ? "100vw" : "70vw")};
-  padding: 10px;
   @media (max-width: 767px) {
     width: 100vw;
   }
