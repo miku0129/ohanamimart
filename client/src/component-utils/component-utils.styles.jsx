@@ -4,19 +4,50 @@ import { ReactComponent as DefaultIcon } from "../assets/cherry-blossom-9-svgrep
 import { ReactComponent as PurchaseLogo } from "../assets/gift-1-svgrepo-com.svg";
 import { ReactComponent as UserLogo } from "../assets/user-2-svgrepo-com.svg";
 
+import Slider from "react-slick";
+
+
 //component
 export const SlickImage = styled.img`
-  height: 400px;
-  width: 100%;
   object-fit: cover;
   margin: auto;
+
+  height: ${(props) =>
+    props.slickUsage === "mainVisual" || props.slickUsage === "common-product"
+      ? "400px"
+      : "600px"};
+  width: ${(props) =>
+    props.slickUsage === "mainVisual"
+      ? "100%"
+      : props.slickUsage === "common-product"
+      ? "90%"
+      : "60%"};
+
   @media (max-width: 767px) {
-    height: 300px
+    height: ${(props) =>
+      props.slickUsage === "mainVisual"
+        ? "400px"
+        : props.slickUsage === "common-product"
+        ? "300px"
+        : "500px"};
+    width: ${(props) => (props.slickUsage === "mainVisual" || props.slickUsage === "book" ? "350px" : "")};
   }
 `;
+
+export const CustomSlider = styled(Slider)`
+  @media (max-width: 767px) {
+    .slick-list {
+      padding: ${(props) =>
+        props.slickUsage === "mainVisual" || props.slickUsage === "book"
+          ? "0px 0px !important"
+          : "0px 0px !important"};
+    }
+  }
+`;
+
 export const SlickContainer = styled.div`
   //slickは必ず親コンポ―ネントの幅を決める必要がある。
-  width: ${(props) => (props.primary === "primary" ? "70vw" : "100vw")};
+  width: ${(props) => (props.slickUsage === "mainVisual" ? "100vw" : "70vw")};
   padding: 10px;
   @media (max-width: 767px) {
     width: 100vw;
