@@ -29,7 +29,8 @@ const EXHIBITIONS_DATA = {
     //   exhibition_url: "https://www.atoursdebulles.fr/",
     // },
     {
-      id: 2,
+      id: 1,
+      main
       exhibition_title: "MARCHÉ ARTISANAL JAPON, TOURS",
       start_date: "2023/09/24",
       end_date: "2023/09/24",
