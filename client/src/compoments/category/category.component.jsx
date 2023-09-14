@@ -28,7 +28,6 @@ const Category = () => {
   })[0];
 
   const {
-    id,
     shop_name,
     shop_website_url,
     shop_intro_text,
@@ -50,16 +49,7 @@ const Category = () => {
           {!shop_icon_url && <DefaultUserIcon />}
           <CategoryIntro>
             <div>
-              <div id="creator_description">
-                {/* {(() => {
-                  const div = document.getElementById("creator_description");
-                  const str = shop_intro_text.replace(/\r?\n/g, "<br>");
-                  if (div) {
-                    div.innerHTML = str;
-                  }
-                })()} */}
-                {shop_intro_text}
-              </div>
+              <div id="creator_description">{shop_intro_text}</div>
             </div>
             <PreviewLogosInALine>
               {shop_website_url ? (

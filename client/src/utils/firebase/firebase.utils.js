@@ -1,4 +1,4 @@
-import { FirebaseError, initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 
 import {
   getFirestore,
@@ -13,7 +13,7 @@ import { firestore as db } from "./firebase.utils";
 import SHOP_DATA from "../data/shop-data";
 import PRODUCT_DATA from "../data/product-data";
 import PRODUCT_IMAGE_DATA from "../data/product-image-data";
-import EXHIBITIONS_DATA from "../data/exhibition-data";
+// import EXHIBITIONS_DATA from "../data/exhibition-data";
 
 const app = initializeApp(FIREBASECONFIG);
 export const firestore = getFirestore(app);
@@ -67,33 +67,34 @@ export const initializeCategoryData = async () => {
   });
 };
 
-export const initializeExhibitionData = async () => {
-  const { exhibitions } = EXHIBITIONS_DATA;
+// exhibition-dataは今後 Facebook APIから取得する方向
+// export const initializeExhibitionData = async () => {
+//   const { exhibitions } = EXHIBITIONS_DATA;
 
-  exhibitions.forEach(async (exhibition, idx) => {
-    const exhibition_id = String(idx);
-    const docRef = doc(db, "exhibitions", exhibition_id);
-    const docSnap = await getDoc(docRef);
+//   exhibitions.forEach(async (exhibition, idx) => {
+//     const exhibition_id = String(idx);
+//     const docRef = doc(db, "exhibitions", exhibition_id);
+//     const docSnap = await getDoc(docRef);
 
-    if (!docSnap.exists()) {
-      try {
-        await setDoc(doc(db, "exhibitions", exhibition_id), {
-          id: idx,
-          exhibition_title: exhibition.exhibition_title,
-          start_date: exhibition.start_date,
-          end_date: exhibition.end_date,
-          start_time: exhibition.start_time,
-          end_time: exhibition.end_time,
-          location: exhibition.location,
-          address: exhibition.address,
-          exhibition_image_url: exhibition.exhibition_image_url,
-          exhibitors: exhibition.exhibitors,
-          about_exhibition: exhibition.about_exhibition,
-          exhibition_url: exhibition.exhibition_url,
-        });
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
-    }
-  });
-};
+//     if (!docSnap.exists()) {
+//       try {
+//         await setDoc(doc(db, "exhibitions", exhibition_id), {
+//           id: idx,
+//           exhibition_title: exhibition.exhibition_title,
+//           start_date: exhibition.start_date,
+//           end_date: exhibition.end_date,
+//           start_time: exhibition.start_time,
+//           end_time: exhibition.end_time,
+//           location: exhibition.location,
+//           address: exhibition.address,
+//           exhibition_image_url: exhibition.exhibition_image_url,
+//           exhibitors: exhibition.exhibitors,
+//           about_exhibition: exhibition.about_exhibition,
+//           exhibition_url: exhibition.exhibition_url,
+//         });
+//       } catch (e) {
+//         console.error("Error adding document: ", e);
+//       }
+//     }
+//   });
+// };

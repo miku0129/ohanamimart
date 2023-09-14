@@ -10,6 +10,7 @@ import {
 } from "../../component-utils/component-utils.styles";
 
 import { get_product_array_for_main_visual } from "../../utils/data/data.utils";
+import MainVisualImages from "../../assets/main-visual-images";
 
 import "./directory.styles.scss";
 
@@ -18,11 +19,9 @@ const Directory = () => {
   const products =
     categories.length > 0 ? get_product_array_for_main_visual(categories) : [];
   
-    const mainVisualImages = products.map(product => product.product_images.filter(img => img.is_main_product_image)[0])
-
   return (
     <div className="main-visual-container">
-      <Slick images={mainVisualImages} isPrimary={false} />
+      <Slick images={MainVisualImages} isPrimary={false} />
       <div className="main-visual-message-container">
         <p className="message">
           Acheter en ligne des articles, directement auprès des fabricants
