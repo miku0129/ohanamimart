@@ -33,14 +33,6 @@ export const SlickImage = styled.img`
   }
 `;
 
-export const CustomSlider = styled(Slider)`
-  @media (max-width: 767px) {
-    .slick-list {
-      padding: ${(props) =>
-        props.slickUsage === "book" ? "0px 20px !important" : ""};
-    }
-  }
-`;
 
 export const SlickContainer = styled.div`
   //slickは必ず親コンポ―ネントの幅を決める必要がある。
