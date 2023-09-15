@@ -4,7 +4,6 @@ import { ReactComponent as DefaultIcon } from "../assets/cherry-blossom-9-svgrep
 import { ReactComponent as PurchaseLogo } from "../assets/gift-1-svgrepo-com.svg";
 import { ReactComponent as UserLogo } from "../assets/user-2-svgrepo-com.svg";
 
-import Slider from "react-slick";
 
 //component
 export const SlickImage = styled.img`
@@ -15,30 +14,11 @@ export const SlickImage = styled.img`
     props.slickUsage === "mainVisual" || props.slickUsage === "common-product"
       ? "400px"
       : "600px"};
-  width: ${(props) =>
-    props.slickUsage === "mainVisual"
-      ? "100%"
-      : props.slickUsage === "common-product"
-      ? "90%"
-      : "70%"};
+  width: ${(props) => (props.slickUsage === "mainVisual" ? "100%" : "100%")}; //これがないとレスポンシブが崩れる
 
   @media (max-width: 767px) {
     height: ${(props) =>
-      props.slickUsage === "mainVisual"
-        ? "400px"
-        : props.slickUsage === "common-product"
-        ? "300px"
-        : "500px"};
-    width: ${(props) => (props.slickUsage === "book" ? "350px" : "")};
-  }
-`;
-
-export const CustomSlider = styled(Slider)`
-  @media (max-width: 767px) {
-    .slick-list {
-      padding: ${(props) =>
-        props.slickUsage === "book" ? "0px 20px !important" : ""};
-    }
+      props.slickUsage === "mainVisual" ? "400px" : "300px"};
   }
 `;
 
