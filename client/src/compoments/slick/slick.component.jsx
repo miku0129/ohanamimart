@@ -1,13 +1,14 @@
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 import {
   SlickImage,
   SlickContainer,
+  // CustomSlider,
 } from "../../component-utils/component-utils.styles";
 
-const Slick = ({ images, isPrimary }) => {
+const Slick = ({ images, slickUsage }) => {
   const settings = {
     dots: true,
     fade: true,
@@ -23,8 +24,9 @@ const Slick = ({ images, isPrimary }) => {
   };
 
   return (
-    <SlickContainer primary={isPrimary}>
-      <Slider {...settings}>
+    <SlickContainer slickUsage={slickUsage}>
+      {/* <CustomSlider {...settings} slickUsage={slickUsage}> */}
+      <Slider {...settings} slickUsage={slickUsage}>
         {images.map((image) => {
           const image_source = image.src ? image.src : image.product_image_url;
           return (
@@ -32,11 +34,12 @@ const Slick = ({ images, isPrimary }) => {
               <SlickImage
                 src={image_source}
                 alt={image.alt}
-                primary={isPrimary}
+                slickUsage={slickUsage}
               />
             </div>
           );
         })}
+        {/* </CustomSlider> */}
       </Slider>
     </SlickContainer>
   );

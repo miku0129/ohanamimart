@@ -4,20 +4,27 @@ import { ReactComponent as DefaultIcon } from "../assets/cherry-blossom-9-svgrep
 import { ReactComponent as PurchaseLogo } from "../assets/gift-1-svgrepo-com.svg";
 import { ReactComponent as UserLogo } from "../assets/user-2-svgrepo-com.svg";
 
+
 //component
 export const SlickImage = styled.img`
-  height: 400px;
-  width: 100%;
   object-fit: cover;
   margin: auto;
+
+  height: ${(props) =>
+    props.slickUsage === "mainVisual" || props.slickUsage === "common-product"
+      ? "400px"
+      : "600px"};
+  width: ${(props) => (props.slickUsage === "mainVisual" ? "100%" : "100%")}; //これがないとレスポンシブが崩れる
+
   @media (max-width: 767px) {
-    height: 300px
+    height: ${(props) =>
+      props.slickUsage === "mainVisual" ? "400px" : "300px"};
   }
 `;
+
 export const SlickContainer = styled.div`
   //slickは必ず親コンポ―ネントの幅を決める必要がある。
-  width: ${(props) => (props.primary === "primary" ? "70vw" : "100vw")};
-  padding: 10px;
+  width: ${(props) => (props.slickUsage === "mainVisual" ? "100vw" : "70vw")};
   @media (max-width: 767px) {
     width: 100vw;
   }

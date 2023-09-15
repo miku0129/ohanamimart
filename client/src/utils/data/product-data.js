@@ -7,6 +7,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 11,
@@ -15,6 +16,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 12,
@@ -23,6 +25,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 13,
@@ -31,6 +34,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 14,
@@ -39,6 +43,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 15,
@@ -47,6 +52,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 16,
@@ -55,6 +61,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: true,
+      is_book: false,
     },
     {
       id: 17,
@@ -63,6 +70,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 0,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 1,
@@ -71,6 +79,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 0,
@@ -79,6 +88,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: true,
+      is_book: false,
     },
     {
       id: 2,
@@ -87,6 +97,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 3,
@@ -95,6 +106,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 4,
@@ -103,6 +115,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 5,
@@ -111,6 +124,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 6,
@@ -119,6 +133,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 7,
@@ -127,6 +142,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 8,
@@ -135,6 +151,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 9,
@@ -143,6 +160,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 18,
@@ -151,6 +169,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
+      is_book: true,
     },
     {
       id: 19,
@@ -159,16 +178,17 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
+      is_book: true,
     },
     {
       id: 20,
       product_name:
         "Livre accordéon 'Origami' ; `Grue en papier` et `Shuriken`",
-      product_description:
-        "",
+      product_description: "",
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 21,
@@ -177,6 +197,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
+      is_book: true,
     },
     {
       id: 22,
@@ -185,6 +206,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 23,
@@ -193,6 +215,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
 
     {
@@ -202,6 +225,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
 
     {
@@ -211,6 +235,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
 
     {
@@ -220,6 +245,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 27,
@@ -228,6 +254,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: true,
+      is_book: false,
     },
     {
       id: 28,
@@ -236,6 +263,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
 
     {
@@ -245,6 +273,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
 
     {
@@ -254,6 +283,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
 
     {
@@ -263,6 +293,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
 
     {
@@ -272,6 +303,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
 
     {
@@ -281,6 +313,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 3,
       is_product_image_used_in_main_visual: false,
+      is_book: false,
     },
     {
       id: 34,
@@ -289,6 +322,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 2,
       is_product_image_used_in_main_visual: true,
+      is_book: true,
     },
   ],
 };

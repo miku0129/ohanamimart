@@ -2,13 +2,15 @@ import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCategories } from "../../store/categories/category.selector";
 import { get_product_by_id, get_shop_by_id } from "../../utils/data/data.utils";
+
+import ImgGallery from "../img-gallery/img-gallery";
 import Slick from "../slick/slick.component";
+
 import {
   CustomUserIcon,
   ParagraphLink,
   BottomLine,
 } from "../../component-utils/component-utils.styles";
-
 import "./product-detail.styles.scss";
 
 const ProductDetail = () => {
@@ -18,13 +20,20 @@ const ProductDetail = () => {
   const product =
     categories.length > 0 ? get_product_by_id(categories, product_id) : {};
   const shop = get_shop_by_id(categories, product.shop_id);
+  const productType = product.is_book ? "book" : "common-product";
 
   return (
     <div className="product-detail-container">
       <div className="product-detail-sub-container-upper">
         <div className="product-detail-sub-right">
-          {product.product_images && (
-            <Slick images={product.product_images} isPrimary="primary" />
+          {!product.is_book && (
+            <Slick images={product.product_images} slickUsage={productType} />
+          )}
+          {product.is_book && (
+            <ImgGallery
+              images={product.product_images}
+              slickUsage={productType}
+            />
           )}
         </div>
         <div className="product-detail-sub-left">

@@ -9,21 +9,14 @@ import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import ScrollToTop from "./component-utils/scroll-to-top";
 import LoadingResource from "./component-utils/loading-resource";
 
-// import {
-//   initializeCategoryData,
-//   initializeExhibitionData,
-// } from "./utils/firebase/firebase.utils";
+// import { initializeCategoryData } from "./utils/firebase/firebase.utils";
 
 const App = () => {
   // useEffect(() => {
-    // const initCategoryData = async () => {
-    //     await initializeCategoryData();
-    // };
-    // initCategoryData();
-  //   const initExhibitionData = async () => {
-  //     await initializeExhibitionData();
+  //   const initCategoryData = async () => {
+  //     await initializeCategoryData();
   //   };
-  //   initExhibitionData();
+  //   initCategoryData();
   // }, []);
 
   return (
