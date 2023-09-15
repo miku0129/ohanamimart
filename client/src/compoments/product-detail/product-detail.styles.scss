@@ -2,8 +2,8 @@
   .product-detail-sub-container-upper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding: 10px 20px;
+    gap:30px;
 
     // レスポンシブ対応
     @media (max-width: 767px) {
@@ -17,6 +17,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      min-width: 70vw;
     }
 
     .product-detail-sub-left {
