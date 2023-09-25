@@ -1,7 +1,7 @@
 const MainVisualImages = [
   {
     id: 1,
-    src: "https://i.ibb.co/ph17ptg/IMG-9937.jpg",
+    src: "https://i.ibb.co/qszJcVw/IMG-9828-3.jpg",
     alt: "Image 1",
   },
   {
