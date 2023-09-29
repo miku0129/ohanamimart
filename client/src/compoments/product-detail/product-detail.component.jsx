@@ -7,6 +7,11 @@ import ImgGallery from "../img-gallery/img-gallery";
 import Slick from "../slick/slick.component";
 
 import {
+  analytics,
+  analytics_logEvent,
+} from "../../utils/firebase/firebase.utils";
+
+import {
   CustomUserIcon,
   ParagraphLink,
   BottomLine,
@@ -21,6 +26,15 @@ const ProductDetail = () => {
     categories.length > 0 ? get_product_by_id(categories, product_id) : {};
   const shop = get_shop_by_id(categories, product.shop_id);
   const productType = product.is_book ? "book" : "common-product";
+
+  analytics_logEvent(analytics, "view_item", {
+    items: [
+      {
+        item_id: product_id,
+        item_name: product.product_name,
+      },
+    ],
+  });
 
   return (
     <div className="product-detail-container">
