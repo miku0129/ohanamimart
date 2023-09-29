@@ -19,6 +19,7 @@ import PRODUCT_IMAGE_DATA from "../data/product-image-data";
 const app = initializeApp(FIREBASECONFIG);
 export const firestore = getFirestore(app);
 const analytics = getAnalytics(app);
+console.log("analytics", analytics)
 
 export const getAllDocuments = async () => {
   const querySnapshot = await getDocs(collection(db, "shops"));
