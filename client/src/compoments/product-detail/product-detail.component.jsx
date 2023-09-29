@@ -28,12 +28,8 @@ const ProductDetail = () => {
   const productType = product.is_book ? "book" : "common-product";
 
   analytics_logEvent(analytics, "view_item", {
-    items: [
-      {
         item_id: product_id,
         item_name: product.product_name,
-      },
-    ],
   });
 
   return (
