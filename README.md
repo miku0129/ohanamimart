@@ -3,7 +3,7 @@
 This repository contains the codebase of a website for "Hanami" - Group of Japanese creators in France based in Tours, France. They sell one-off handmade pieces combining delicate Japanese culture with French elegance. Platform offering opportunities to become familiar with Japanese culture and share inspiration in France.
 
 
-<img src="https://i.ibb.co/2hLg1rV/HANAMI.png" alt="group logo" width="100px"/>
+<img src="https://i.ibb.co/gyZcTns/HANAMI-trimed.png" alt="group logo" width="100px"/>
 
 ## Features
 
