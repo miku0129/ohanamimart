@@ -32,7 +32,7 @@ export const SlickContainer = styled.div`
 
 export const DefaultPicture = styled.img``;
 DefaultPicture.defaultProps = {
-  src: "https://i.ibb.co/xmp2tKH/hong-feng-c-I2-BLo74zso-unsplash.jpg",
+  src: "https://i.ibb.co/t2r4HG6/HANAMI-logo.png",
 };
 
 export const StyledUserLogo = styled(UserLogo)`
