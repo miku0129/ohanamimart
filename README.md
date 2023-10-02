@@ -1,14 +1,15 @@
-# Ohanamimart 🏮🍡
+# 🌸Ohanamimart🌸
 
-This repository contains the codebase of a website for "Hanami" - Group of Japanese creators based in Tours, France. They sell one-off handmade pieces combining delicate Japanese culture with French elegance. Platform offering opportunities to become familiar with Japanese culture and share inspiration in France.🌸🌸🌸
+This repository contains the codebase of a website for "Hanami" - Group of Japanese creators based in Tours, France. They sell one-off handmade pieces combining delicate Japanese culture with French elegance. Platform offering opportunities to become familiar with Japanese culture and share inspiration in France.🌸🍡
 
 <img src="https://i.ibb.co/gyZcTns/HANAMI-trimed.png" alt="group logo" width="400px"/>
 
 ## Features
 
 - **Architected data driven application:** Embedded Google Analytics to provide research on user preferences.
-- **Increased development speed:** Enabled Github Actions in Firebase Hosting to gain CI/CD. 
-- **Appeal to the eye:** Enhance visuals with react-image-gallery and react-slick. 
+- **Increased development speed:** Enabled Github Actions in Firebase Hosting to gain CI/CD.
+- **Quality status management:** Achieved stability in status management using by Redux.
+- **Appeal to the eye:** Enhance visuals with react-image-gallery and react-slick.
 
 ## Demo
 
@@ -16,8 +17,8 @@ This repository contains the codebase of a website for "Hanami" - Group of Japan
 
 <hr>
 
-👉[Website-Hanami](https://ohanamimart-37000.web.app/)<br>
+🏮[Website-Hanami](https://ohanamimart-37000.web.app/)<br>
 
-👉[Facebook](https://www.facebook.com/profile.php?id=61551923815475)<br>
+🏮[Facebook](https://www.facebook.com/profile.php?id=61551923815475)<br>
 
-👉[Instagram](https://www.instagram.com/hanamimarche/)
+🏮[Instagram](https://www.instagram.com/hanamimarche/)
