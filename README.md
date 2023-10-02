@@ -8,7 +8,7 @@ This repository contains the codebase of a website for "Hanami" - Group of Japan
 
 - **Architected data driven application:** Embedded Google Analytics to provide research on user preferences.
 - **Increased development speed:** Enabled Github Actions in Firebase Hosting to gain CI/CD.
-- **Quality status management:** Achieved stability in status management using by Redux.
+- **Achieved stability in status management:** Introducing Redux for status management.
 - **Appeal to the eye:** Enhance visuals with react-image-gallery and react-slick.
 
 ## Demo
