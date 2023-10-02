@@ -43,8 +43,22 @@ const EXHIBITIONS_DATA = {
         "Trois créateurs japonais vendent des produits faits à la main",
       exhibition_url: "",
     },
+    {
+      id: 2,
+      exhibition_title: "MARCHÉ ARTISANAL JAPON, TOURS",
+      start_date: "2023/10/22",
+      end_date: "2023/10/22",
+      start_time: "10:30",
+      end_time: "19:00",
+      location: "YOÏSHO",
+      address: "11, avenue Grammont Tours",
+      exhibition_image_url: "",
+      exhibitors: ["GOEN", "Tsubaki création", "Nami Créations"],
+      about_exhibition:
+        "Trois créateurs japonais vendent des produits faits à la main",
+      exhibition_url: "",
+    },
   ],
-  
 };
 
 export default EXHIBITIONS_DATA;
