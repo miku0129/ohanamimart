@@ -14,6 +14,7 @@ This repository contains the codebase of a website for "Hanami" - Group of Japan
 
 <img src="https://media.giphy.com/media/Ji3Hi8zckqmpLNuvn0/giphy.gif" alt="demo video" width="700px"/>
 
-👉[Website](https://ohanamimart-37000.web.app/)
-👉[Facebook](https://www.facebook.com/profile.php?id=61551923815475)
+<hr>
+👉[Website-Hanami](https://ohanamimart-37000.web.app/)<br>
+👉[Facebook](https://www.facebook.com/profile.php?id=61551923815475)<br>
 👉[Instagram](https://www.instagram.com/hanamimarche/)
