@@ -1,10 +1,5 @@
 const MainVisualImages = [
   {
-    id: 0,
-    src: "https://i.ibb.co/hdWvdR0/HANAMI-trimed-rectangle.png",
-    alt: "Image 0",
-  },
-  {
     id: 1,
     src: "https://i.ibb.co/qszJcVw/IMG-9828-3.jpg",
     alt: "Image 1",
