@@ -15,6 +15,31 @@ const SHOP_DATA = {
     },
     {
       id: 1,
+      shop_name: "Nami Créations",
+      shop_name_lowercase_no_spaces_for_url: "namicreations",
+      shop_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/tCjd8c0/Screenshot-2023-08-11-185242.jpg",
+        shop_website_url: "https://www.nami-creations.fr/",
+      shop_purchase_website_url: "",
+      shop_headline: "Auteure manga et créatrice d'objets en papier",
+      shop_intro_text:
+        "Nami Créations est une entreprise individuelle créée début 2015 et basée à Tours.\nElle est spécialisée dans la fabrication artisanale de manga et yonkoma manga (comic strip japonais), recettes japonaises à dérouler et kirigami (papier découpé).\nNami est l'auteure des dessins et scenarii des livres qu'elle réalise entièrement à la main (découpe, collage, reliure).",
+    },
+    {
+      id: 2,
+      shop_name: "GOEN",
+      shop_name_lowercase_no_spaces_for_url: "goen",
+      shop_image_url: "https://i.ibb.co/Cn80MbW/317708.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/sFJ540V/313079373-187425353851045-7210455388149182739-n.jpg",
+      shop_website_url: "https://www.instagram.com/goenjpfr/",
+      shop_purchase_website_url: "https://goen.sumupstore.com/",
+      shop_headline: "Créateur de bijoux japonais",
+      shop_intro_text: "Créateur de bijoux à partir de l'origami japonais ",
+    },
+    {
+      id: 3,
       shop_name: "AT bijoux",
       shop_name_lowercase_no_spaces_for_url: "atbijoux",
       shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
@@ -25,31 +50,6 @@ const SHOP_DATA = {
       shop_headline: "Créatrice de bijoux en soie",
       shop_intro_text:
         "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon.\nIl faut du temps, de la précision et de la patience ",
-    },
-    {
-      id: 2,
-      shop_name: "Nami Créations",
-      shop_name_lowercase_no_spaces_for_url: "namicreations",
-      shop_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
-      shop_icon_url:
-        "https://i.ibb.co/tCjd8c0/Screenshot-2023-08-11-185242.jpg",
-      shop_website_url: "https://www.nami-creations.fr/",
-      shop_purchase_website_url: "",
-      shop_headline: "Auteure manga et créatrice d'objets en papier",
-      shop_intro_text:
-        "Nami Créations est une entreprise individuelle créée début 2015 et basée à Tours.\nElle est spécialisée dans la fabrication artisanale de manga et yonkoma manga (comic strip japonais), recettes japonaises à dérouler et kirigami (papier découpé).\nNami est l'auteure des dessins et scenarii des livres qu'elle réalise entièrement à la main (découpe, collage, reliure).",
-    },
-    {
-      id: 3,
-      shop_name: "GOEN",
-      shop_name_lowercase_no_spaces_for_url: "goen",
-      shop_image_url: "https://i.ibb.co/Cn80MbW/317708.jpg",
-      shop_icon_url:
-        "https://i.ibb.co/sFJ540V/313079373-187425353851045-7210455388149182739-n.jpg",
-      shop_website_url: "https://www.instagram.com/goenjpfr/",
-      shop_purchase_website_url: "https://goen.sumupstore.com/",
-      shop_headline: "Créateur de bijoux japonais",
-      shop_intro_text: "Créateur de bijoux à partir de l'origami japonais ",
     },
     {
       id: 4,

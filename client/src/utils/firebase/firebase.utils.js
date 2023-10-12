@@ -11,9 +11,12 @@ import {
 } from "firebase/firestore/lite";
 import FIREBASECONFIG from "./firebase.config";
 import { firestore as db } from "./firebase.utils";
+
+//To initialize shop data
 import SHOP_DATA from "../data/shop-data";
 import PRODUCT_DATA from "../data/product-data";
 import PRODUCT_IMAGE_DATA from "../data/product-image-data";
+
 // import EXHIBITIONS_DATA from "../data/exhibition-data";
 
 const app = initializeApp(FIREBASECONFIG);
