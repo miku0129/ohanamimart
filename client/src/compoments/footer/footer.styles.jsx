@@ -6,11 +6,10 @@ export const FooterContainer = styled.div`
 
   .footer-subcontainer {
     display: flex;
-    gap: 5px;
+    flex-direction: column; 
     .footer-text {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
     }
   }
 `;

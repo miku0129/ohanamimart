@@ -12,13 +12,15 @@ import {
 import "./category-preview.style.scss";
 
 const CategoryPreview = ({ category }) => {
-  const { shop_name_lowercase_no_spaces_for_url, shop_name, products } =
+  const { id, shop_name_lowercase_no_spaces_for_url, shop_name, products } =
     category;
+  console.log("id", id);
   return (
     <div className="category-preview-container">
       <LabelWithIndicatorLink>
         <Link to={`/shop/${shop_name_lowercase_no_spaces_for_url}`}>
           <div className="label-with-indicator-link-inner">
+            {id > 2 && <p>Créateur associé</p>}
             <p className="title fix-position">{shop_name}</p>
             <div className="fix-position">
               <Foward style={{ width: "30px", height: "30px" }} />

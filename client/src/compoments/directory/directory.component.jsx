@@ -12,6 +12,8 @@ import {
 import { get_product_array_for_main_visual } from "../../utils/data/data.utils";
 import MainVisualImages from "../../assets/main-visual-images";
 
+import { ReactComponent as TeamLogo } from "../../assets/hanami-cat-logo.svg";
+
 import "./directory.styles.scss";
 
 const Directory = () => {
@@ -28,6 +30,7 @@ const Directory = () => {
           japonais
         </p>
         <p>Hanami est la maison de l'artisanat japonais de qualité</p>
+        <TeamLogo id="team-logo" style={{ width: "150px", height: "150px" }} />
       </div>
       <PreviewFourItemsInALine>
         {products.length > 0 &&
