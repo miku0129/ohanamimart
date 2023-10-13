@@ -1,7 +1,7 @@
-import { Fragment } from "react";
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 
 import ExhibitionCard from "../exhibition-card/exhibition-card.component";
+import ExhibitionCalendar from "../exhibition-calendar/exhibition-calendar.component";
 
 import { ExhibitionsContext } from "../../context/exhibitions.context";
 
@@ -10,13 +10,17 @@ import "./exhibition-preview.styles.scss";
 
 const ExhibitionPreview = () => {
   const { exhibitions } = useContext(ExhibitionsContext);
+
   return (
     <Fragment>
+      <ExhibitionCalendar />
       <div className="exhibitions-container">
         <PreviewOneItemsInALine>
           {exhibitions &&
             exhibitions.map((exhibition) => {
-              return <ExhibitionCard exhibition={exhibition} key={exhibition.id}/>;
+              return (
+                <ExhibitionCard exhibition={exhibition} key={exhibition.id} />
+              );
             })}
         </PreviewOneItemsInALine>
       </div>
