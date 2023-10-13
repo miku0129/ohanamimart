@@ -21,11 +21,10 @@ const ExhibitionCalendar = () => {
         onChange={onChange}
         value={value}
         tileClassName={({ date }) => {
-          // console.log("date", moment(date).format("DD-MM-YYYY"))
           if (mark.find((x) => x === moment(date).format("DD-MM-YYYY"))) {
-            console.log("date", moment(date).format("DD-MM-YYYY"));
-
             return "highlight1";
+          } else if (moment(value).format("DD-MM-YYYY") === moment(date).format("DD-MM-YYYY")) {
+            return "highlight3";
           }
         }}
       ></Calendar>

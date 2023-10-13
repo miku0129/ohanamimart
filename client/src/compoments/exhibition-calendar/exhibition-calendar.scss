@@ -7,6 +7,8 @@
     /* border: 1px solid #a0a096; */
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
+
+    margin:auto;
   }
   .react-calendar--doubleView {
     width: 700px;
@@ -39,6 +41,8 @@
   .react-calendar__navigation {
     height: 44px;
     margin-bottom: 1em;
+
+    text-align: center;
   }
   .react-calendar__navigation button {
     min-width: 44px;
@@ -126,56 +130,56 @@
     background: #f08080;
     border-radius: 50%;
   }
-  // .highlight2 {
-  //   background: #add8e6;
-  //   border-radius: 50%;
-  // }
-  // .highlight3 {
-  //   background: #fffacd;
-  //   border-radius: 50%;
-  // }
-  // .highlight4 {
-  //   background: #87cefa;
-  //   border-radius: 50%;
-  // }
-  // .highlight5 {
-  //   background: #20b2aa;
-  //   border-radius: 50%;
-  // }
-  // .highlight6 {
-  //   background: #ffa07a;
-  //   border-radius: 50%;
-  // }
-  // .highlight7 {
-  //   background: #00fa9a;
-  //   border-radius: 50%;
-  // }
-  // .highlight8 {
-  //   background: #ffe4e1;
-  //   border-radius: 50%;
-  // }
-  // .highlight9 {
-  //   background: #da70d6;
-  //   border-radius: 50%;
-  // }
-  // .highlight10 {
-  //   background: #fff5ee;
-  //   border-radius: 50%;
-  // }
-  // .highlight11 {
-  //   background: #87ceeb;
-  //   border-radius: 50%;
-  // }
-  // .highlight12 {
-  //   background: #f5deb3;
-  //   border-radius: 50%;
-  // }
-  // .highlight13 {
-  //   background: #f0f8ff;
-  //   border-radius: 50%;
-  // }
-  // .highlight14 {
-  //   background: #ff7f50;
-  //   border-radius: 50%;
-  // }
+  .highlight2 {
+    background: #add8e6;
+    border-radius: 50%;
+  }
+  .highlight3 {
+    background: #fffacd;
+    border-radius: 50%;
+  }
+  .highlight4 {
+    background: #87cefa;
+    border-radius: 50%;
+  }
+  .highlight5 {
+    background: #20b2aa;
+    border-radius: 50%;
+  }
+  .highlight6 {
+    background: #ffa07a;
+    border-radius: 50%;
+  }
+  .highlight7 {
+    background: #00fa9a;
+    border-radius: 50%;
+  }
+  .highlight8 {
+    background: #ffe4e1;
+    border-radius: 50%;
+  }
+  .highlight9 {
+    background: #da70d6;
+    border-radius: 50%;
+  }
+  .highlight10 {
+    background: #fff5ee;
+    border-radius: 50%;
+  }
+  .highlight11 {
+    background: #87ceeb;
+    border-radius: 50%;
+  }
+  .highlight12 {
+    background: #f5deb3;
+    border-radius: 50%;
+  }
+  .highlight13 {
+    background: #f0f8ff;
+    border-radius: 50%;
+  }
+  .highlight14 {
+    background: #ff7f50;
+    border-radius: 50%;
+  }
   

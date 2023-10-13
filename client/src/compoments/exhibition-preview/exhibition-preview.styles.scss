@@ -1,6 +1,9 @@
-.exhibitions-container{
-    padding: 10px;
-    @media (max-width: 767px) {
-        margin: auto;
-      }
+.exhibitions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+  @media (max-width: 767px) {
+    margin: auto;
+  }
 }

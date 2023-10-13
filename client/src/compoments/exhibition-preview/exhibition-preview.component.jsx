@@ -13,8 +13,8 @@ const ExhibitionPreview = () => {
 
   return (
     <Fragment>
-      <ExhibitionCalendar />
       <div className="exhibitions-container">
+        <ExhibitionCalendar />
         <PreviewOneItemsInALine>
           {exhibitions &&
             exhibitions.map((exhibition) => {
