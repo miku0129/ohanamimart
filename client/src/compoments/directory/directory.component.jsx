@@ -13,7 +13,13 @@ import { get_product_array_for_main_visual } from "../../utils/data/data.utils";
 import MainVisualImages from "../../assets/main-visual-images";
 
 import { ReactComponent as TeamLogo } from "../../assets/hanami-cat-logo.svg";
-import { team_text, team_sub_text } from "../../assets/page-assets";
+import { ReactComponent as InstagramLogo } from "../../assets/instagram-svgrepo-com.svg";
+
+import {
+  team_text,
+  team_sub_text,
+  team_instagram_url,
+} from "../../assets/page-assets";
 
 import "./directory.styles.scss";
 
@@ -28,7 +34,17 @@ const Directory = () => {
       <div className="main-visual-message-container">
         <p className="message">{team_text}</p>
         <p>{team_sub_text}</p>
-        <TeamLogo id="team-logo" style={{ width: "150px", height: "150px" }} />
+        <div>
+          <TeamLogo
+            id="team-logo"
+            style={{ width: "150px", height: "100px" }}
+          />
+          <a href={team_instagram_url} target="_blank">
+            <InstagramLogo
+              style={{ width: "20px", height: "20px", opacity: "50%" }}
+            />
+          </a>
+        </div>
       </div>
       <PreviewFourItemsInALine>
         {products.length > 0 &&
