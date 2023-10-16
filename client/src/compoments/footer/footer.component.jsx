@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="footer-text">
               <span>
                 &copy;{footerText} |{" "}
-                <a href={team_instagram_url} target="_blank">
+                <a href={team_instagram_url} target="_blank" rel="noreferrer">
                 <InstagramLogo style={{ width: "20px", height: "15px", opacity: "50%" }} /></a>
               </span>
             </div>
