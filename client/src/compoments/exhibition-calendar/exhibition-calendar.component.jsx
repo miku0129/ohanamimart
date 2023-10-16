@@ -1,19 +1,20 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useContext } from "react";
 
 import Calendar from "react-calendar";
 import moment from "moment";
 
+import { ExhibitionsContext } from "../../context/exhibitions.context";
+
 import "./exhibition-calendar.scss";
 
-const mark = ["04-10-2023", "03-10-2023", "05-10-2023"];
-//todo: markの配列に exhibitions contextからイベント開催日を持ってきて加工する
-
 const ExhibitionCalendar = () => {
+  const { exhibitions } = useContext(ExhibitionsContext);
+  const mark = exhibitions.map((exhibition) => exhibition.start_date);
+
   const [value, setValue] = useState(new Date());
   function onChange(nextValue) {
     setValue(nextValue);
   }
-
   return (
     <Fragment>
       <Calendar
@@ -21,10 +22,13 @@ const ExhibitionCalendar = () => {
         onChange={onChange}
         value={value}
         tileClassName={({ date }) => {
-          if (mark.find((x) => x === moment(date).format("DD-MM-YYYY"))) {
+          if (mark.find((x) => x === moment(date).format("YYYY/MM/DD"))) {
             return "highlight1";
-          } else if (moment(value).format("DD-MM-YYYY") === moment(date).format("DD-MM-YYYY")) {
-            return "highlight3";
+          } else if (
+            moment(value).format("DD-MM-YYYY") ===
+            moment(date).format("DD-MM-YYYY")
+          ) {
+            return "highlight8";
           }
         }}
       ></Calendar>
