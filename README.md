@@ -4,6 +4,8 @@ This repository contains the codebase of a website for <strong>Hanami</strong> -
 They sell one-off handmade pieces combining delicate Japanese culture with French elegance.<br/>
 Platform offering opportunities to become familiar with Japanese culture and share inspiration in France.
 
+## Welcome 👋
+
 In Japan, there is a custom of cherry blossom viewing in spring. <br/>
 People enjoy delicious food and drink while admiring the cherry blossoms.<br/>
 The website <strong>Hanami</strong> captures this lively and fun atmosphere in its name.🌸🍡🏮
