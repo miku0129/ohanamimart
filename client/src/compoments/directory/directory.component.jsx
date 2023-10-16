@@ -39,7 +39,7 @@ const Directory = () => {
             id="team-logo"
             style={{ width: "150px", height: "100px" }}
           />
-          <a href={team_instagram_url} target="_blank">
+          <a href={team_instagram_url} target="_blank" rel="noreferrer">
             <InstagramLogo
               style={{ width: "20px", height: "20px", opacity: "50%" }}
             />
