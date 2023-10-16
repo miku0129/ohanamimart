@@ -14,7 +14,6 @@
       @media (max-width: 767px) {
         min-width: 150px;
       }
-  
     }
 
     .blog-title {
@@ -41,7 +40,6 @@
         font-size: 15px;
       }
 
-
       &.date {
         font-size: 20px;
         color: crimson;
@@ -49,6 +47,19 @@
 
       &.about {
         font-size: 23px;
+      }
+    }
+
+    .exhibitors-list {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      text-align: left;
+      flex-wrap: wrap;
+      list-style: none;
+
+      li:hover {
+        color: pink;
       }
     }
   }
