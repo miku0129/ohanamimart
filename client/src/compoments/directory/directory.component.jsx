@@ -13,6 +13,7 @@ import { get_product_array_for_main_visual } from "../../utils/data/data.utils";
 import MainVisualImages from "../../assets/main-visual-images";
 
 import { ReactComponent as TeamLogo } from "../../assets/hanami-cat-logo.svg";
+import { team_text, team_sub_text } from "../../assets/page-assets";
 
 import "./directory.styles.scss";
 
@@ -25,11 +26,8 @@ const Directory = () => {
     <div className="main-visual-container">
       <Slick images={MainVisualImages} slickUsage="mainVisual" />
       <div className="main-visual-message-container">
-        <p className="message">
-          Acheter en ligne des articles, directement auprès des fabricants
-          japonais
-        </p>
-        <p>Hanami est la maison de l'artisanat japonais de qualité</p>
+        <p className="message">{team_text}</p>
+        <p>{team_sub_text}</p>
         <TeamLogo id="team-logo" style={{ width: "150px", height: "150px" }} />
       </div>
       <PreviewFourItemsInALine>

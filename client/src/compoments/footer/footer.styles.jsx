@@ -10,6 +10,7 @@ export const FooterContainer = styled.div`
     .footer-text {
       display: flex;
       justify-content: center;
+      font-size: larger;
     }
   }
 `;

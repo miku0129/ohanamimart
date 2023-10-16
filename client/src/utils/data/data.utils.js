@@ -31,7 +31,8 @@ export const get_product_by_id = (categoriesArray, id) => {
   return result;
 };
 
-export const get_shop_by_id = (categoriesArray, id) => categoriesArray.filter((shop) => shop.id === id)[0];
+export const get_shop_by_id = (categoriesArray, id) =>
+  categoriesArray.filter((shop) => shop.id === id)[0];
 
 export const get_exhibitions_array = () => {
   const { exhibitions } = EXHIBITIONS_DATA;
