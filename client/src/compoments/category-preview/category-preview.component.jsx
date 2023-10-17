@@ -14,7 +14,6 @@ import "./category-preview.style.scss";
 const CategoryPreview = ({ category }) => {
   const { id, shop_name_lowercase_no_spaces_for_url, shop_name, products } =
     category;
-  console.log("id", id);
   return (
     <div className="category-preview-container">
       <LabelWithIndicatorLink>

@@ -20,6 +20,7 @@ const ExhibitionCard = ({ exhibition }) => {
     exhibition_image_url,
     about_exhibition,
     exhibition_url,
+    exhibitors,
   } = exhibition;
 
   const date =
@@ -41,6 +42,14 @@ const ExhibitionCard = ({ exhibition }) => {
     ""
   );
 
+  const exhibitors_list = exhibitors.map((exhibitor) => {
+    return (
+      <a href={exhibitor.shop_website_url} target="_blank" rel="noreferrer">
+        <li style={{ fontSize: "small" }}>{exhibitor.shop_name}</li>
+      </a>
+    );
+  });
+
   return (
     <div>
       <div className="blog-card">
@@ -61,6 +70,10 @@ const ExhibitionCard = ({ exhibition }) => {
               <p className="blog-description about">{about_exhibition}</p>
               <p className="blog-description">{address}</p>
               {url}
+              <hr />
+              <div className="blog-description exhibitors-list">
+                {exhibitors && exhibitors_list}
+              </div>
             </div>
           </div>
         </div>
