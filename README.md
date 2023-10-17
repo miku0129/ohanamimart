@@ -8,18 +8,18 @@ Platform offering opportunities to become familiar with Japanese culture and sha
 
 In Japan, there is a custom of cherry blossom viewing in spring. <br/>
 People enjoy delicious food and drink while admiring the cherry blossoms.<br/>
-The website <strong>Hanami</strong> captures this lively and fun atmosphere in its name.🌸🍡🏮
+The name <strong>Hanami</strong> captures this lively and fun atmosphere in it.🌸🍡🏮
 
 <img src="https://i.ibb.co/gyZcTns/HANAMI-trimed.png" alt="group logo" width="400px"/>
 &copy;Hanami
 
 ## Motivation 🏮
 
-Wanted to create a meeting place between Japanese creator abroad and local people interested in Japan.
+Want to bridge between Japanese creators abroad and local french people interested in Japan.
 
 ## Features 🌸
 
-- **Appeal to the eye:** Enhance visuals with react-image-gallery and react-slick.
+- **Appeal to the eye:** Enhance visuals with react-image-gallery, react-slick and react-calendar.
 - **Achieved stability in status management:** Introducing Redux for status management.
 - **Architected data driven application:** Embedded Google Analytics to provide research on user preferences.
 - **Increased development speed:** Enabled Github Actions in Firebase Hosting to gain CI/CD.
@@ -30,7 +30,7 @@ Wanted to create a meeting place between Japanese creator abroad and local peopl
 
 ## Links 🍵
 
-[Website-Hanami](https://ohanamimart-37000.web.app/)<br>
+[Hanami(Website)](https://ohanamimart-37000.web.app/)<br>
 
 [Instagram](https://www.instagram.com/hanami.37/)
 
