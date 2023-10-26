@@ -69,8 +69,7 @@ const SHOP_DATA = {
       shop_name: "Biscuits o riz",
       shop_name_lowercase_no_spaces_for_url: "biscuitsoriz",
       shop_image_url: "",
-      shop_icon_url:
-        "https://i.ibb.co/4ssj3BG/Screenshot-2023-10-26-152815.jpg",
+      shop_icon_url: "https://i.ibb.co/GQ08w16/17583-small.jpg",
       shop_website_url: "https://www.biscuitsoriz.com/index.php",
       shop_purchase_website_url: "",
       shop_headline:
