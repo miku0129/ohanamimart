@@ -88,7 +88,7 @@ const SHOP_DATA = {
       shop_headline:
         "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Un essai de massage 15mins 10euro",
       shop_intro_text:
-        "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Qualifications: TUINA-diplôme Grade A fédération mondiale des sociétés de médecine chinoise/ RÉFLEXOLOGIE PLANTAIRE-université de médecine chinoise, collège japonais/ ZUGAI SEIATSU-élève de M.chikayoshi seki, fondateur du Zugai seiatsu. Un essai de massage 15mins 10euro",
+        "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Un essai de massage 15mins 10euro",
     },
   ],
 };
