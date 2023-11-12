@@ -20,7 +20,7 @@ const SHOP_DATA = {
       shop_image_url: "https://i.ibb.co/RTVB88N/7843.jpg",
       shop_icon_url:
         "https://i.ibb.co/tCjd8c0/Screenshot-2023-08-11-185242.jpg",
-        shop_website_url: "https://www.nami-creations.fr/",
+      shop_website_url: "https://www.nami-creations.fr/",
       shop_purchase_website_url: "",
       shop_headline: "Auteure manga et créatrice d'objets en papier",
       shop_intro_text:
@@ -63,6 +63,32 @@ const SHOP_DATA = {
       shop_headline: "Boutique de produits traditionnels japonais",
       shop_intro_text:
         "SUGAR est une toute nouvelle entreprise d'origine japonaise dont l'objectif est de promouvoir l'artisanat traditionnel et les spécialités régionales à l'étranger. Au travers son catalogue de produits, notre équipe franco-nippone souhaite vous faire découvrir avec passion, les multiples facettes de l'histoire du Japon et ce qui reste de celle-ci.\nNos produits sont confectionnés par des artisans locaux du pays du soleil levant. Chaque produit possède une touche artistique propre à chaque créateur. Vous découvrirez un panel d'objets d'une époque passée et les techniques utilisées. \nMais également les objets contemporains qui font tout le charme de la culture du pays.",
+    },
+    {
+      id: 5,
+      shop_name: "Biscuits o riz",
+      shop_name_lowercase_no_spaces_for_url: "biscuitsoriz",
+      shop_image_url: "",
+      shop_icon_url: "https://i.ibb.co/GQ08w16/17583-small.jpg",
+      shop_website_url: "https://www.biscuitsoriz.com/index.php",
+      shop_purchase_website_url: "",
+      shop_headline:
+        "Fondée en 2016, Biscuits o riz propose un panel varié de biscuits à base de farine de riz.",
+      shop_intro_text:
+        "Fondée en 2016, Biscuits o riz propose un panel varié de biscuits à base de farine de riz. \nNos créations sucrées et salées, naturellement sans gluten, sont fabriquées artisanalement au coeur de la Touraine.",
+    },
+    {
+      id: 6,
+      shop_name: "FUMIHITO ONDA Massage",
+      shop_name_lowercase_no_spaces_for_url: "fumihitoondamassage",
+      shop_image_url: "",
+      shop_icon_url: "https://i.ibb.co/SVV1qHt/img-for-icon.jpg",
+      shop_website_url: "",
+      shop_purchase_website_url: "",
+      shop_headline:
+        "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Un essai de massage 15mins 10euro",
+      shop_intro_text:
+        "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Qualifications: TUINA-diplôme Grade A fédération mondiale des sociétés de médecine chinoise/ RÉFLEXOLOGIE PLANTAIRE-université de médecine chinoise, collège japonais/ ZUGAI SEIATSU-élève de M.chikayoshi seki, fondateur du Zugai seiatsu. Un essai de massage 15mins 10euro",
     },
   ],
 };

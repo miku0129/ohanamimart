@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-// import { useEffect } from "react";
 
 import BasicLayout from "./routes/basic-layout/basic-layout.component";
 import Home from "./routes/home/home.component";
@@ -9,6 +8,7 @@ import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import ScrollToTop from "./component-utils/scroll-to-top";
 import LoadingResource from "./component-utils/loading-resource";
 
+// import { useEffect } from "react";
 // import { initializeCategoryData } from "./utils/firebase/firebase.utils";
 
 const App = () => {
