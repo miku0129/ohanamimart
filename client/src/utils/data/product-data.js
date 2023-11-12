@@ -391,7 +391,7 @@ const PRODUCT_DATA = {
       id: 42,
       product_name: "TUINA",
       product_description:
-        "Massage où l'on stimule le corps en utilisant les méridiens et les points pour diminuer les tensions et pour une meilleure circulation d'énergie.",
+        "Massage où l'on stimule le corps en utilisant les méridiens et les points pour diminuer les tensions et pour une meilleure circulation d'énergie. M.Onda possède la qualification suivante: TUINA-diplôme Grade A fédération mondiale des sociétés de médecine chinoise",
       product_price: null,
       shop_id: 6,
       is_product_image_used_in_main_visual: false,
@@ -401,7 +401,7 @@ const PRODUCT_DATA = {
       id: 43,
       product_name: "RÉFLEXOLOGIE PLANTAIRE",
       product_description:
-        "Les pieds sont connectés aux organs par le système nerveux. Les organs sont liés aux émotions.",
+        "Les pieds sont connectés aux organs par le système nerveux. Les organs sont liés aux émotions. M.Onda possède la qualification suivante: RÉFLEXOLOGIE PLANTAIRE-université de médecine chinoise, collège japonais",
       product_price: null,
       shop_id: 6,
       is_product_image_used_in_main_visual: false,
@@ -411,7 +411,7 @@ const PRODUCT_DATA = {
       id: 44,
       product_name: "ZUGAI SEIATSU",
       product_description:
-        "Il y a également des points réflexes sur le crâne. Je stimule chaque point très doucement et avec beaucoup d'attention. Enfin je rééquilibre les placements des os du crâne et améliore la circulation du liquide cephalo rachidien.",
+        "Il y a également des points réflexes sur le crâne. Je stimule chaque point très doucement et avec beaucoup d'attention. Enfin je rééquilibre les placements des os du crâne et améliore la circulation du liquide cephalo rachidien. M.Onda possède la qualification suivante: ZUGAI SEIATSU-élève de M.chikayoshi seki, fondateur du Zugai seiatsu.",
       product_price: null,
       shop_id: 6,
       is_product_image_used_in_main_visual: false,
