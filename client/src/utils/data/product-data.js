@@ -387,6 +387,36 @@ const PRODUCT_DATA = {
       is_product_image_used_in_main_visual: false,
       is_book: false,
     },
+    {
+      id: 42,
+      product_name: "TUINA",
+      product_description:
+        "Massage où l'on stimule le corps en utilisant les méridiens et les points pour diminuer les tensions et pour une meilleure circulation d'énergie.",
+      product_price: null,
+      shop_id: 6,
+      is_product_image_used_in_main_visual: false,
+      is_book: false,
+    },
+    {
+      id: 43,
+      product_name: "RÉFLEXOLOGIE PLANTAIRE",
+      product_description:
+        "Les pieds sont connectés aux organs par le système nerveux. Les organs sont liés aux émotions.",
+      product_price: null,
+      shop_id: 6,
+      is_product_image_used_in_main_visual: false,
+      is_book: false,
+    },
+    {
+      id: 44,
+      product_name: "ZUGAI SEIATSU",
+      product_description:
+        "Il y a également des points réflexes sur le crâne. Je stimule chaque point très doucement et avec beaucoup d'attention. Enfin je rééquilibre les placements des os du crâne et améliore la circulation du liquide cephalo rachidien.",
+      product_price: null,
+      shop_id: 6,
+      is_product_image_used_in_main_visual: false,
+      is_book: false,
+    },
   ],
 };
 

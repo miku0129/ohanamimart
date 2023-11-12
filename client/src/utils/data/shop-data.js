@@ -75,7 +75,20 @@ const SHOP_DATA = {
       shop_headline:
         "Fondée en 2016, Biscuits o riz propose un panel varié de biscuits à base de farine de riz.",
       shop_intro_text:
-        "Fondée en 2016, Biscuits o riz propose un panel varié de biscuits à base de farine de riz. \nNos créations sucrées et salées, naturellement sans gluten, sont fabriquées artisanalement au cœur de la Touraine.",
+        "Fondée en 2016, Biscuits o riz propose un panel varié de biscuits à base de farine de riz. \nNos créations sucrées et salées, naturellement sans gluten, sont fabriquées artisanalement au coeur de la Touraine.",
+    },
+    {
+      id: 6,
+      shop_name: "FUMIHITO ONDA Massage",
+      shop_name_lowercase_no_spaces_for_url: "fumihitoondamassage",
+      shop_image_url: "",
+      shop_icon_url: "https://i.ibb.co/SVV1qHt/img-for-icon.jpg",
+      shop_website_url: "",
+      shop_purchase_website_url: "",
+      shop_headline:
+        "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Un essai de massage 15mins 10euro",
+      shop_intro_text:
+        "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Qualifications: TUINA-diplôme Grade A fédération mondiale des sociétés de médecine chinoise/ RÉFLEXOLOGIE PLANTAIRE-université de médecine chinoise, collège japonais/ ZUGAI SEIATSU-élève de M.chikayoshi seki, fondateur du Zugai seiatsu. Un essai de massage 15mins 10euro",
     },
   ],
 };

@@ -54,13 +54,18 @@ const EXHIBITIONS_DATA = {
       location: "YOÏSHO",
       address: "11, avenue Grammont Tours",
       exhibition_image_url: "https://i.ibb.co/m5J51hG/16533.jpg",
-      exhibitors: ["GOEN", "Tsubaki création", "Nami Créations"],
+      exhibitors: [
+        "GOEN",
+        "Tsubaki création",
+        "Nami Créations",
+        "FUMIHITO ONDA Massage",
+      ],
       about_exhibition:
         "Créateurs japonais vendent des produits faits à la main",
       exhibition_url: "",
     },
     {
-      id: 2,
+      id: 4,
       exhibition_title: "MARCHÉ ARTISANAL JAPON, TOURS",
       start_date: "2023/11/26",
       end_date: "2023/11/26",
