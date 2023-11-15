@@ -1,5 +1,5 @@
 export const team_text =
-  "Hanami, un groupe d'artistes japonais basés en Touraine";
+  "Hanami37, un groupe d'artistes japonais basés en Touraine";
 
 export const team_sub_text =
   "qui exposent leurs créations faites-mains dans des salons dédiés à celles-ci.";
