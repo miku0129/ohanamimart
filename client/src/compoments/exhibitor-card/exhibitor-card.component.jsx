@@ -14,6 +14,7 @@ const ExhibitorCard = (exhibitor) => {
     shop_name_lowercase_no_spaces_for_url,
     shop_headline,
   } = exhibitor["exhibitor"];
+  console.log("shop icon", shop_icon_url)
   return (
     <Exhibitor>
       <IconwithLogoAtTheLeftBottom>
