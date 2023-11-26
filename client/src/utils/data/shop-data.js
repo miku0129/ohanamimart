@@ -38,19 +38,6 @@ const SHOP_DATA = {
       shop_intro_text: "Créateur de bijoux à partir de l'origami japonais ",
     },
     {
-      id: 3,
-      shop_name: "AT bijoux",
-      shop_name_lowercase_no_spaces_for_url: "atbijoux",
-      shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
-      shop_icon_url:
-        "https://i.ibb.co/55vzdb5/Screenshot-2023-08-11-184044.jpg",
-      shop_website_url: "http://www.atbijoux.com",
-      shop_purchase_website_url: "",
-      shop_headline: "Créatrice de bijoux en soie",
-      shop_intro_text:
-        "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon.\nIl faut du temps, de la précision et de la patience ",
-    },
-    {
       id: 4,
       shop_name: "SUGAR",
       shop_name_lowercase_no_spaces_for_url: "sugar",
@@ -88,6 +75,19 @@ const SHOP_DATA = {
         "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Un essai de massage 15mins 10euro",
       shop_intro_text:
         "Massage utilisant les méridiens et les points de pression pour stimuler le corps, soulager les tensions et améliorer la circulation de l'énergie. Un essai de massage 15mins 10euro",
+    },
+    {
+      id: 3,
+      shop_name: "AT bijoux",
+      shop_name_lowercase_no_spaces_for_url: "atbijoux",
+      shop_image_url: "https://i.ibb.co/CbPqQdD/1.jpg",
+      shop_icon_url:
+        "https://i.ibb.co/55vzdb5/Screenshot-2023-08-11-184044.jpg",
+      shop_website_url: "http://www.atbijoux.com",
+      shop_purchase_website_url: "",
+      shop_headline: "Créatrice de bijoux en soie",
+      shop_intro_text:
+        "Toutes les pièces d'AT bijoux sont fabriquées à la main selon la méthode de couture traditionnelle japonaise avec des fils de soie importés du Japon.\nIl faut du temps, de la précision et de la patience ",
     },
   ],
 };
