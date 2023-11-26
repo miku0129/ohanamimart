@@ -1,7 +1,7 @@
 const MainVisualImages = [
   {
     id: 0,
-    src: "https://i.ibb.co/m5J51hG/16533.jpg",
+    src: "https://i.ibb.co/0q99sCm/19917.jpg",
     alt: "Image 0",
   },
   {
@@ -11,27 +11,27 @@ const MainVisualImages = [
   },
   {
     id: 2,
-    src: "https://i.ibb.co/qszJcVw/IMG-9828-3.jpg",
+    src: "https://i.ibb.co/3kbt3Db/colabo-1.jpg",
     alt: "Image 2",
   },
   {
     id: 3,
-    src: "https://i.ibb.co/dQvbCc4/IMG-9941.jpg",
+    src: "https://i.ibb.co/q9q3ZW3/colabo-3.jpg",
     alt: "Image 3",
   },
   {
     id: 4,
-    src: "https://i.ibb.co/3dYhjVq/IMG-9972.jpg",
+    src: "https://i.ibb.co/0fy1vSP/colago-2.jpg",
     alt: "Image 4",
   },
   {
     id: 5,
-    src: "https://i.ibb.co/YpCz2Wk/IMG-9955.jpg",
+    src: "https://i.ibb.co/LZ9bqT8/Yuki-sweets-3.jpg",
     alt: "Image 5",
   },
   {
     id: 6,
-    src: "https://i.ibb.co/Jd8vDHq/IMG-9968.jpg",
+    src: "https://i.ibb.co/3rL2ncg/marche.jpg",
     alt: "Image 6",
   },
 ];
