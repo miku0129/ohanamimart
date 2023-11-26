@@ -8,7 +8,7 @@ import { rootReducer } from "./root-reducer";
 const persistConfig = {
   key: "root",
   storage,
-  blacklist: ["categories"] //categoriesをStore永続化対象から外す
+  // blacklist: ["categories"] //categoriesをStore永続化対象から外す
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
