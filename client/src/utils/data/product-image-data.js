@@ -393,7 +393,7 @@ const PRODUCT_IMAGE_DATA = {
     },
     {
       id: 55,
-      product_image_url: "https://i.ibb.co/twRKdjp/17576.jpg",
+      product_image_url: "https://i.ibb.co/pxmPr9J/Yuki-sweets-2.jpg",
       is_main_product_image: true,
       product_id: 38,
       shop_id: 5,
@@ -407,14 +407,14 @@ const PRODUCT_IMAGE_DATA = {
     },
     {
       id: 57,
-      product_image_url: "https://i.ibb.co/rQKg4Jk/17582.jpg",
+      product_image_url: "https://i.ibb.co/zRVtXhG/19912-0.jpg",
       is_main_product_image: true,
       product_id: 40,
       shop_id: 5,
     },
     {
       id: 58,
-      product_image_url: "https://i.ibb.co/55mN6zx/17583.jpg",
+      product_image_url: "https://i.ibb.co/FWVsxbx/Yuki-sweets1.jpg",
       is_main_product_image: true,
       product_id: 41,
       shop_id: 5,
@@ -439,6 +439,13 @@ const PRODUCT_IMAGE_DATA = {
       is_main_product_image: true,
       product_id: 44,
       shop_id: 6,
+    },
+    {
+      id: 62,
+      product_image_url: "https://i.ibb.co/K2dwdtV/19914-0.jpg",
+      is_main_product_image: true,
+      product_id: 45,
+      shop_id: 5,
     },
   ],
 };

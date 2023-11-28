@@ -417,6 +417,15 @@ const PRODUCT_DATA = {
       is_product_image_used_in_main_visual: false,
       is_book: false,
     },
+    {
+      id: 45,
+      product_name: "Petite pâtisserie",
+      product_description: "",
+      product_price: null,
+      shop_id: 5,
+      is_product_image_used_in_main_visual: false,
+      is_book: false,
+    },
   ],
 };
 
