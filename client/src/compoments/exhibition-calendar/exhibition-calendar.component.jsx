@@ -9,12 +9,13 @@ import "./exhibition-calendar.scss";
 
 const ExhibitionCalendar = () => {
   const { exhibitions } = useContext(ExhibitionsContext);
-  const mark = exhibitions.map((exhibition) => exhibition.start_date);
+  const datesOfEvent = exhibitions.map((exhibition) => exhibition.start_date);
 
   const [value, setValue] = useState(new Date());
   function onChange(nextValue) {
     setValue(nextValue);
   }
+
   return (
     <Fragment>
       <Calendar
@@ -22,7 +23,7 @@ const ExhibitionCalendar = () => {
         onChange={onChange}
         value={value}
         tileClassName={({ date }) => {
-          if (mark.find((x) => x === moment(date).format("YYYY/MM/DD"))) {
+          if (datesOfEvent.find((dateOfEvent) => dateOfEvent === moment(date).format("YYYY/M/D"))) {
             return "highlight1";
           } else if (
             moment(value).format("DD-MM-YYYY") ===
