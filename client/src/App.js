@@ -4,7 +4,6 @@ import BasicLayout from "./routes/basic-layout/basic-layout.component";
 import Home from "./routes/home/home.component";
 import Shop from "./routes/shop/shop.component";
 import Exhibitions from "./routes/exhibitions/exhibitions.component";
-// import SignIn from "./routes/sign-in/sign-in.component";
 import ScrollToTop from "./component-utils/scroll-to-top";
 import LoadingResource from "./component-utils/loading-resource";
 
