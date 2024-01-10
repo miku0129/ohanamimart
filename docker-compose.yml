@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ohanamimart
+    environment:
+      - FIREBASE_APIKEY=${FIREBASE_APIKEY}
+      - FIREBASE_AUTHDOMAIN=${FIREBASE_AUTHDOMAIN}
+      - FIREBASE_PROJECTID=${FIREBASE_PROJECTID}
+      - FIREBASE_STORAGEBUCKET=${FIREBASE_STORAGEBUCKET}
+      - FIREBASE_MESSAGINGSENDERID=${FIREBASE_MESSAGINGSENDERID}
+      - FIREBASE_APPID=${FIREBASE_APPID}
+    ports:
+      - "127.0.0.1:4000:8080"

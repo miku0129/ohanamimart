@@ -174,6 +174,40 @@ const EXHIBITIONS_DATA = {
         "Créateurs japonais vendent des produits faits à la main",
       exhibition_url: "",
     },
+    {
+      id: 11,
+      exhibition_title: "MARCHÉ ARTISANAL JAPON, TOURS",
+      start_date: "2024/1/14",
+      end_date: "2024/1/14",
+      start_time: "10:30",
+      end_time: "18:00",
+      location: "YOÏSHO",
+      address: "11, avenue Grammont Tours",
+      exhibition_image_url: "https://i.ibb.co/KVKKqkS/22473-0.jpg",
+      exhibitors: [
+        "Tsubaki création",
+        "Nami Créations",
+        "FUMIHITO ONDA Massage",
+      ],
+      about_exhibition:
+        "Créateurs japonais vendent des produits faits à la main",
+      exhibition_url: "",
+    },
+    {
+      id: 12,
+      exhibition_title: "MARCHÉ ARTISANAL JAPON, TOURS",
+      start_date: "2024/2/18",
+      end_date: "2024/2/18",
+      start_time: "10:30",
+      end_time: "18:00",
+      location: "YOÏSHO",
+      address: "11, avenue Grammont Tours",
+      exhibition_image_url: "https://i.ibb.co/KVKKqkS/22473-0.jpg",
+      exhibitors: ["Tsubaki création", "Nami Créations", "Biscuits o riz"],
+      about_exhibition:
+        "Créateurs japonais vendent des produits faits à la main",
+      exhibition_url: "",
+    },
   ],
 };
 
