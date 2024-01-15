@@ -19,11 +19,10 @@ Want to bridge between Japanese creators abroad and local french people interest
 
 ## Features 🌸
 
-- **Appeal to the eye:** Enhance visuals with react-image-gallery, react-slick and react-calendar.
-- **Responsive design:** That takes into account both mobile and PCs.
-- **Achieved stability in status management:** Introducing Redux for status management.
-- **Architected data driven application:** Embedded Google Analytics to provide research on user preferences.
-- **Increased development speed:** Enabled Github Actions in Firebase Hosting to gain CI/CD.
+- Responsive design. 
+- Introduced Redux to improve the status management.
+- Enabled Github Actions in Firebase Hosting to gain CI/CD.
+- Embedded Google Analytics to provide research on user preferences.
 
 ## Demo 🍱
 
