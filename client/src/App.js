@@ -1,3 +1,6 @@
+// import { useEffect } from "react";
+// import { initializeCategoryData } from "./utils/firebase/firebase.utils";
+
 import { Routes, Route } from "react-router-dom";
 
 import BasicLayout from "./routes/basic-layout/basic-layout.component";
@@ -6,9 +9,6 @@ import Shop from "./routes/shop/shop.component";
 import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import ScrollToTop from "./component-utils/scroll-to-top";
 import LoadingResource from "./component-utils/loading-resource";
-
-// import { useEffect } from "react";
-// import { initializeCategoryData } from "./utils/firebase/firebase.utils";
 
 const App = () => {
   // useEffect(() => {
