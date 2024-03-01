@@ -1,8 +1,8 @@
 const MainVisualImages = [
   {
     id: 0,
-    src: "https://i.ibb.co/KVKKqkS/22473-0.jpg",
-    alt: "Image 0",
+    src: "https://i.ibb.co/xhWvYWW/28340.jpg",
+    alt: "Flyer of upcoming event",
   },
   {
     id: 1,
