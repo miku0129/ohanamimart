@@ -10,6 +10,9 @@ import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import ScrollToTop from "./component-utils/scroll-to-top";
 import LoadingResource from "./component-utils/loading-resource";
 
+import AdminSignin from "./compoments/admin-signin/admin-signin.component";
+import AdminDashboad from "./compoments/admin-dashboad/admin-dashboad.component";
+
 const App = () => {
   // useEffect(() => {
   //   const initCategoryData = async () => {
@@ -27,6 +30,9 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="shop/*" element={<Shop />} />
           <Route path="/exhibitions/*" element={<Exhibitions />} />
+          
+          <Route path="admin/*" element={<AdminSignin />} />
+          <Route path="admin/dashboad" element={<AdminDashboad />} />
         </Route>
       </Routes>
     </>

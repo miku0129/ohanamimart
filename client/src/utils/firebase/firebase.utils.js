@@ -65,6 +65,8 @@ export const initializeCategoryData = async () => {
           shop_headline: shop.shop_headline,
           shop_intro_text: shop.shop_intro_text,
           products: products_array,
+
+          shop_email: shop.shop_email
         });
       } catch (e) {
         console.error("Error adding document: ", e);
