@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from "react";
 import { Hanko } from "@teamhanko/hanko-elements";
 
-import HankoProfile from "../hanko-profile/hanko-profile.component";
-import HankoLogoutBtn from "../hanko-logout-button/hanko-logout-button.component";
+import HankoProfile from "../../hanko/hanko-profile/hanko-profile.component"
+import HankoLogoutBtn from "../../hanko/hanko-logout-button/hanko-logout-button.component"
 
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { selectCategories } from "../../store/categories/category.selector";

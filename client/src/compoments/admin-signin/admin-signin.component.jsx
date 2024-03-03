@@ -1,4 +1,4 @@
-import HankoAuth from "../hanko-auth/hanko-auth.component";
+import HankoAuth from "../../hanko/hanko-auth/hanko-auth.component"
 
 const AdminSignin = () => {
   return (
