@@ -7,6 +7,8 @@ import HankoLogoutBtn from "../../hanko/hanko-logout-button/hanko-logout-button.
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { selectCategories } from "../../store/categories/category.selector";
 
+// import { createProduct } from "../../utils/firebase/firebase.utils";
+
 const hankoApi = process.env.REACT_APP_HANKO_API_URL;
 
 const AdminDashboad = () => {
@@ -31,15 +33,16 @@ const AdminDashboad = () => {
 
   useEffect(() => {
     if (userEmail) {
-      const shop = categories.filter((shop) => {
+      const shopInfo = categories.filter((shop) => {
         return shop.shop_email === userEmail;
       })[0];
-      setShopName(shop.shop_name);
-      setProducts(shop.products)
+      setShopName(shopInfo.shop_name);
+      setProducts(shopInfo.products)
     }
   }, [userEmail, categories]);
 
-  console.log(products)
+  // let test = createProduct()
+  // console.log("test", test)
 
   return (
     <div>

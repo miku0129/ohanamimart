@@ -17,17 +17,10 @@ import SHOP_DATA from "../data/shop-data";
 import PRODUCT_DATA from "../data/product-data";
 import PRODUCT_IMAGE_DATA from "../data/product-image-data";
 
-// import EXHIBITIONS_DATA from "../data/exhibition-data";
-
 const app = initializeApp(FIREBASECONFIG);
 export const firestore = getFirestore(app);
 export const analytics = getAnalytics(app);
-export const analytics_logEvent = logEvent
-
-export const getAllDocuments = async () => {
-  const querySnapshot = await getDocs(collection(db, "shops"));
-  return querySnapshot.docs.map((docsnapshot) => docsnapshot.data());
-};
+export const analytics_logEvent = logEvent;
 
 export const initializeCategoryData = async () => {
   const { shops } = SHOP_DATA;
@@ -66,7 +59,7 @@ export const initializeCategoryData = async () => {
           shop_intro_text: shop.shop_intro_text,
           products: products_array,
 
-          shop_email: shop.shop_email
+          shop_email: shop.shop_email,
         });
       } catch (e) {
         console.error("Error adding document: ", e);
@@ -75,34 +68,14 @@ export const initializeCategoryData = async () => {
   });
 };
 
-// exhibition-dataは今後 Facebook APIから取得する方向
-// export const initializeExhibitionData = async () => {
-//   const { exhibitions } = EXHIBITIONS_DATA;
+export const getAllDocuments = async () => {
+  const querySnapshot = await getDocs(collection(db, "shops"));
+  return querySnapshot.docs.map((docsnapshot) => docsnapshot.data());
+};
 
-//   exhibitions.forEach(async (exhibition, idx) => {
-//     const exhibition_id = String(idx);
-//     const docRef = doc(db, "exhibitions", exhibition_id);
-//     const docSnap = await getDoc(docRef);
+// export const createProduct = async () => {
+//   const shopRef = doc(db, "shops", "0");
 
-//     if (!docSnap.exists()) {
-//       try {
-//         await setDoc(doc(db, "exhibitions", exhibition_id), {
-//           id: idx,
-//           exhibition_title: exhibition.exhibition_title,
-//           start_date: exhibition.start_date,
-//           end_date: exhibition.end_date,
-//           start_time: exhibition.start_time,
-//           end_time: exhibition.end_time,
-//           location: exhibition.location,
-//           address: exhibition.address,
-//           exhibition_image_url: exhibition.exhibition_image_url,
-//           exhibitors: exhibition.exhibitors,
-//           about_exhibition: exhibition.about_exhibition,
-//           exhibition_url: exhibition.exhibition_url,
-//         });
-//       } catch (e) {
-//         console.error("Error adding document: ", e);
-//       }
-//     }
-//   });
+//   await setDoc(shopRef, { "shop_name": "test update" }, { merge: true });
+
 // };
