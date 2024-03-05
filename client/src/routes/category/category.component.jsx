@@ -6,7 +6,7 @@ import ProductDetail from "../../compoments/product-detail/product-detail.compon
 const Items = () => {
   return (
     <Routes>
-      {/* <Route index element={<Category />} /> */}
+      <Route index element={<Category />} />
       <Route path=":product_id" element={<ProductDetail />} />
     </Routes>
   );

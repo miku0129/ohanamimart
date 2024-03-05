@@ -77,8 +77,21 @@ export const initializeCategoryData = async () => {
 };
 
 export const getAllDocuments = async () => {
-  const querySnapshot = await getDocs(collection(db, "shops"));
-  return querySnapshot.docs.map((docsnapshot) => docsnapshot.data());
+  const querySnapshot_of_shops = await getDocs(collection(db, "shops_2"));
+  let shops = querySnapshot_of_shops.docs.map((docsnapshot) =>
+    docsnapshot.data()
+  );
+
+  for (let i = 0; i < shops.length; i++) {
+    let querySnapshot_of_products = await getDocs(
+      collection(db, "shops_2", String(shops[i].id), "products")
+    );
+    const products = querySnapshot_of_products.docs.map((doc) => {
+      return doc.data();
+    });
+    shops[i] = { ...shops[i], products: products };
+  }
+  return shops;
 };
 
 export const initializeCategoryData_2 = async () => {
