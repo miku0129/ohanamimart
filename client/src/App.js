@@ -1,5 +1,6 @@
 // import { useEffect } from "react";
 // import { initializeCategoryData } from "./utils/firebase/firebase.utils";
+// import { initializeCategoryData_2 } from "./utils/firebase/firebase.utils";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -21,6 +22,13 @@ const App = () => {
   //   initCategoryData();
   // }, []);
 
+  // useEffect(() => {
+  //   const initCategoryData = async () => {
+  //     await initializeCategoryData_2();
+  //   };
+  //   initCategoryData();
+  // }, []);
+
   return (
     <>
       <LoadingResource />
@@ -30,7 +38,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="shop/*" element={<Shop />} />
           <Route path="/exhibitions/*" element={<Exhibitions />} />
-          
+
           <Route path="admin/*" element={<AdminSignin />} />
           <Route path="admin/dashboad" element={<AdminDashboad />} />
         </Route>
