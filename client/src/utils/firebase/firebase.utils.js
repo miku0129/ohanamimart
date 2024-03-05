@@ -113,10 +113,6 @@ export const initializeCategoryData_2 = async () => {
             "products"
           );
           addDoc(productsCollection, product);
-          // await setDoc(
-          //   doc(db, "shops_2", String(shop.id), "products", String(idx)),
-          //   product
-          // );
         });
       } catch (e) {
         console.error("Error adding document: ", e);

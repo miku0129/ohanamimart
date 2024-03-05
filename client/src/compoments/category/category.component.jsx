@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
-import { useSelector } from "react-redux";
-import { selectCategories } from "../../store/categories/category.selector";
+import { CategoriesContext } from "../../context/categories.context";
+// import { useSelector } from "react-redux";
+// import { selectCategories } from "../../store/categories/category.selector";
 
 import ProductCard from "../../compoments/product-card/product-card.component";
 
@@ -22,7 +24,9 @@ import {
 
 const Category = () => {
   const { category } = useParams();
-  const categories = useSelector(selectCategories);
+  // const categories = useSelector(selectCategories);
+  const categories = useContext(CategoriesContext)
+  console.log("categories", categories)
   const shop = categories.filter((shop) => {
     return shop.shop_name_lowercase_no_spaces_for_url === category;
   })[0];

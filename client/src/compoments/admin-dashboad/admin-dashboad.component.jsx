@@ -1,11 +1,13 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useContext } from "react";
 import { Hanko } from "@teamhanko/hanko-elements";
 
 import HankoProfile from "../../hanko/hanko-profile/hanko-profile.component"
 import HankoLogoutBtn from "../../hanko/hanko-logout-button/hanko-logout-button.component"
 
-import { useSelector } from "react-redux/es/hooks/useSelector";
-import { selectCategories } from "../../store/categories/category.selector";
+import { CategoriesContext } from "../../context/categories.context";
+
+// import { useSelector } from "react-redux/es/hooks/useSelector";
+// import { selectCategories } from "../../store/categories/category.selector";
 
 // import { createProduct } from "../../utils/firebase/firebase.utils";
 
@@ -18,7 +20,8 @@ const AdminDashboad = () => {
 
   const hanko = useMemo(() => new Hanko(hankoApi), []);
 
-  const categories = useSelector(selectCategories);
+  // const categories = useSelector(selectCategories);
+  const categories = useContext(CategoriesContext)
 
   useEffect(() => {
     hanko.user
