@@ -9,6 +9,7 @@ import {
   getDocs,
   setDoc,
   addDoc,
+  deleteDoc,
 } from "firebase/firestore/lite";
 import FIREBASECONFIG from "./firebase.config";
 import { firestore as db } from "./firebase.utils";
@@ -118,18 +119,46 @@ export const initializeCategoryData_2 = async () => {
           shop_email: shop.shop_email,
         });
 
+        console.log("products_array", products_array);
         products_array.forEach(async (product, idx) => {
-          const productsCollection = collection(
+          console.log("products", product)
+          const docRref_of_products = doc(
             db,
             "shops_2",
-            String(shop.id),
-            "products"
+            shop_id,
+            "products",
+            idx
           );
-          addDoc(productsCollection, product);
+          const docSnap_of_products = await getDoc(docRref_of_products);
+          if (!docSnap_of_products.exists()) {
+            // const productsCollection = collection(
+            //   db,
+            //   "shops_2",
+            //   String(shop.id),
+            //   "products",
+            //   idx
+            // );
+            try {
+              await setDoc(
+                doc(db, "shops_2", shop_id, "products", idx),
+                product
+              );
+            } catch (e) {
+              console.error("Error adding document: ", e);
+            }
+          }
         });
       } catch (e) {
         console.error("Error adding document: ", e);
       }
     }
   });
+};
+
+export const deleteDocument = async (shopId, productId) => {
+  const prods = await getAllDocuments();
+  const products_of_the_shop = prods
+    .filter((shop) => shop.id === shopId)[0]
+    .products.filter((product) => product.id === productId);
+  console.log(products_of_the_shop);
 };
