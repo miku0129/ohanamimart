@@ -14,7 +14,9 @@ import {
 import FIREBASECONFIG from "./firebase.config";
 import { firestore as db } from "./firebase.utils";
 
-//To initialize shop data
+import { makeProductsArray_for_initializeCategoryData } from "./firebase.helper";
+
+//initial shop data
 import SHOP_DATA from "../data/shop-data";
 import PRODUCT_DATA from "../data/product-data";
 import PRODUCT_IMAGE_DATA from "../data/product-image-data";
@@ -24,26 +26,6 @@ export const firestore = getFirestore(app);
 export const analytics = getAnalytics(app);
 export const analytics_logEvent = logEvent;
 
-const makeProductsArray = (index) => {
-  const { products } = PRODUCT_DATA;
-  const { product_images } = PRODUCT_IMAGE_DATA;
-
-  let products_array =
-    products.length > 0
-      ? products.filter((product) => product.shop_id === index)
-      : null;
-  if (products_array !== null) {
-    products_array = products_array.map((product) => {
-      const images = product_images.filter(
-        (image) => image.product_id === product.id
-      );
-      const result = { ...product, product_images: images };
-      return result;
-    });
-  }
-  return products_array;
-};
-
 export const initializeCategoryData = async () => {
   const { shops } = SHOP_DATA;
 
@@ -52,7 +34,11 @@ export const initializeCategoryData = async () => {
     const docRef = doc(db, "shops", shop_id);
     const docSnap = await getDoc(docRef);
 
-    let products_array = makeProductsArray(idx);
+    let products_array = makeProductsArray_for_initializeCategoryData(
+      idx,
+      PRODUCT_DATA,
+      PRODUCT_IMAGE_DATA
+    );
 
     if (!docSnap.exists()) {
       try {
@@ -77,31 +63,17 @@ export const initializeCategoryData = async () => {
   });
 };
 
-export const getAllDocuments = async () => {
-  const querySnapshot_of_shops = await getDocs(collection(db, "shops_2"));
-  let shops = querySnapshot_of_shops.docs.map((docsnapshot) =>
-    docsnapshot.data()
-  );
-
-  for (let i = 0; i < shops.length; i++) {
-    let querySnapshot_of_products = await getDocs(
-      collection(db, "shops_2", String(shops[i].id), "products")
-    );
-    const products = querySnapshot_of_products.docs.map((doc) => {
-      return doc.data();
-    });
-    shops[i] = { ...shops[i], products: products };
-  }
-  return shops;
-};
-
 export const initializeCategoryData_2 = async () => {
   const { shops } = SHOP_DATA;
   shops.forEach(async (shop, idx) => {
     const shop_id = String(idx);
     const docRef = doc(db, "shops_2", shop_id);
     const docSnap = await getDoc(docRef);
-    const products_array = makeProductsArray(idx);
+    let products_array = makeProductsArray_for_initializeCategoryData(
+      idx,
+      PRODUCT_DATA,
+      PRODUCT_IMAGE_DATA
+    );
 
     if (!docSnap.exists()) {
       try {
@@ -144,6 +116,24 @@ export const initializeCategoryData_2 = async () => {
       }
     }
   });
+};
+
+export const getAllDocuments = async () => {
+  const querySnapshot_of_shops = await getDocs(collection(db, "shops_2"));
+  let shops = querySnapshot_of_shops.docs.map((docsnapshot) =>
+    docsnapshot.data()
+  );
+
+  for (let i = 0; i < shops.length; i++) {
+    let querySnapshot_of_products = await getDocs(
+      collection(db, "shops_2", String(shops[i].id), "products")
+    );
+    const products = querySnapshot_of_products.docs.map((doc) => {
+      return doc.data();
+    });
+    shops[i] = { ...shops[i], products: products };
+  }
+  return shops;
 };
 
 export const deleteDocument_of_a_product = async (shopId, productId) => {
