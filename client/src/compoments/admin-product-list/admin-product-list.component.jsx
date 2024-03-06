@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { deleteDocument_of_a_product } from "../../utils/firebase/firebase.utils";
 import { CustomBtnGroup } from "../../component-utils/component-utils.styles";
 import "./admin-product-list.styles.scss";
@@ -16,7 +17,6 @@ const AdminProductList = ({ props }) => {
                 アイテムの価格:{" "}
                 {product.product_price ? product.product_price : "表示無し"}
               </p>
-
               <CustomBtnGroup>
                 <button
                   onClick={() =>
@@ -26,7 +26,12 @@ const AdminProductList = ({ props }) => {
                   削除
                 </button>
 
-                <button>編集</button>
+                <Link
+                  to={`product/edit/${product.id}`}
+                  state={{ shopId: shopId }}
+                >
+                  <button>編集</button>
+                </Link>
               </CustomBtnGroup>
             </div>
           );

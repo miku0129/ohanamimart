@@ -9,8 +9,8 @@ const Admin = () => {
     <Routes>
       <Route index element={<AdminSignin />} />
       <Route path="param" element={<AdminParamSetting />} />
-      <Route path="dashboad" element={<AdminDashboad />} />
-      <Route path="product/edit/:product_id" element={<AdminProductEdit />} />
+      <Route path="dashboad/*" element={<AdminDashboad />} />
+      <Route path="dashboad/product/edit/:product_id" element={<AdminProductEdit />} />
     </Routes>
   );
 };

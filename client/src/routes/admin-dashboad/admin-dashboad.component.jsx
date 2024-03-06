@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import AdminHeader from "../../compoments/admin-header.component/admin-header.component";
-import AdminProductRegisterForm from "../../compoments/admin-product-register-form/admin-product-register-form.component";
+import AdminProductRegister from "../../compoments/admin-product-register/admin-product-register.component";
 import AdminProductList from "../../compoments/admin-product-list/admin-product-list.component"
 
 const AdminDashboad = () => {
@@ -22,11 +22,11 @@ const AdminDashboad = () => {
           setShopId: setShopId,
         }}
       />
-      <AdminProductRegisterForm shopId={shopId} />
+      <AdminProductRegister shopId={shopId} />
       <AdminProductList
         props={{
           products: products,
-          setShopId: setShopId,
+          shopId: shopId,
         }}
       />
     </div>
