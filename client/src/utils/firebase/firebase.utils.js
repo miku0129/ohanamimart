@@ -119,28 +119,19 @@ export const initializeCategoryData_2 = async () => {
           shop_email: shop.shop_email,
         });
 
-        console.log("products_array", products_array);
         products_array.forEach(async (product, idx) => {
-          console.log("products", product)
           const docRref_of_products = doc(
             db,
             "shops_2",
-            shop_id,
+            String(shop_id),
             "products",
-            idx
+            String(idx)
           );
           const docSnap_of_products = await getDoc(docRref_of_products);
           if (!docSnap_of_products.exists()) {
-            // const productsCollection = collection(
-            //   db,
-            //   "shops_2",
-            //   String(shop.id),
-            //   "products",
-            //   idx
-            // );
             try {
               await setDoc(
-                doc(db, "shops_2", shop_id, "products", idx),
+                doc(db, "shops_2", String(shop_id), "products", String(idx)),
                 product
               );
             } catch (e) {
