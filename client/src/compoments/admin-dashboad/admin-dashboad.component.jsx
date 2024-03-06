@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo, useContext } from "react";
 import { Hanko } from "@teamhanko/hanko-elements";
 
-import HankoProfile from "../../hanko/hanko-profile/hanko-profile.component";
 import HankoLogoutBtn from "../../hanko/hanko-logout-button/hanko-logout-button.component";
 import AdminProductRegisterForm from "../admin-product-register-form/admin-product-register-form.component";
 
@@ -59,6 +58,9 @@ const AdminDashboad = () => {
 
       <div>
         <div>
+          <AdminProductRegisterForm shopId={shopId} />
+        </div>
+        <div>
           {products &&
             products.map((product) => {
               return (
@@ -74,11 +76,6 @@ const AdminDashboad = () => {
                 </div>
               );
             })}
-        </div>
-        <br />
-        <hr />
-        <div>
-          <AdminProductRegisterForm shopId={shopId} />
         </div>
       </div>
     </div>

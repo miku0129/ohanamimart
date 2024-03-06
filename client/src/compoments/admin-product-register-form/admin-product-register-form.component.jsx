@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { addDocument_of_a_product } from "../../utils/firebase/firebase.utils";
 
+import "./admin-product-register-form.styles.scss"
+
 const initFormData = {
   product_name: "",
   product_description: "",
@@ -30,43 +32,49 @@ const AdminProductRegisterForm = ({ shopId }) => {
       product_images: [],
     };
 
-    console.log("??", newProduct)
-
     await addDocument_of_a_product(shopId, newProduct);
     setFormData(initFormData);
     window.location.reload();
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="product_name">アイテムの名前:</label>
-        <input
-          type="text"
-          id="product_name"
-          name="product_name"
-          value={formData.product_name}
-          onChange={handleChange}
-        />
+      <form className="admin-product-register-form" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="product_name">アイテムの名前:</label>
+          <input
+            type="text"
+            id="product_name"
+            name="product_name"
+            value={formData.product_name}
+            onChange={handleChange}
+          />
+        </div>
 
-        <label htmlFor="product_description">アイテムの説明:</label>
-        <textarea
-          type="text"
-          id="product_description"
-          name="product_description"
-          value={formData.product_description}
-          onChange={handleChange}
-        />
+        <div>
+          <label htmlFor="product_description">アイテムの説明:</label>
+          <textarea
+            type="text"
+            id="product_description"
+            name="product_description"
+            value={formData.product_description}
+            onChange={handleChange}
+          />
+        </div>
 
-        <label htmlFor="product_price">アイテムの価格(euro):</label>
-        <input
-          type="text"
-          id="product_price"
-          name="product_price"
-          value={formData.product_price}
-          onChange={handleChange}
-        />
+        <div>
+          <label htmlFor="product_price">アイテムの価格(euro):</label>
+          <input
+            type="text"
+            id="product_price"
+            name="product_price"
+            value={formData.product_price}
+            onChange={handleChange}
+          />
+        </div>
 
-        <button type="submit">アイテムを追加する</button>
+        <div>
+          <button type="submit">アイテムを追加する</button>
+        </div>
       </form>{" "}
     </div>
   );
