@@ -11,6 +11,7 @@ import Shop from "./routes/shop/shop.component";
 // import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import AdminSignin from "./compoments/admin-signin/admin-signin.component";
 import AdminDashboad from "./compoments/admin-dashboad/admin-dashboad.component";
+import AdminParamSetting from "./compoments/admin-param-setting/admin-param-setting.component";
 
 import ScrollToTop from "./component-utils/scroll-to-top";
 
@@ -34,13 +35,12 @@ const App = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<BasicLayout />}>
-
           <Route index element={<Home />} />
           <Route path="shop/*" element={<Shop />} />
           {/* <Route path="/exhibitions/*" element={<Exhibitions />} /> */}
-
           <Route path="admin/*" element={<AdminSignin />} />
           <Route path="admin/dashboad" element={<AdminDashboad />} />
+          <Route path="admin/param" element={<AdminParamSetting />} />
         </Route>
       </Routes>
     </>

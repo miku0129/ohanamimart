@@ -123,7 +123,6 @@ export const getAllDocuments = async () => {
   let shops = querySnapshot_of_shops.docs.map((docsnapshot) =>
     docsnapshot.data()
   );
-
   for (let i = 0; i < shops.length; i++) {
     let querySnapshot_of_products = await getDocs(
       collection(db, "shops_2", String(shops[i].id), "products")
@@ -143,24 +142,22 @@ export const deleteDocument_of_a_product = async (shopId, productId) => {
   window.location.reload();
 };
 
-export const addDocument_of_a_product = async (shopId) => {
+export const addDocument_of_a_product = async (shopId, product) => {
   const products_of_the_shop = (await getAllDocuments()).filter(
     (shop) => shop.id === shopId
   )[0].products;
+  //FireStoreにおいてデータは必ずしも追加順に格納されないため
+  //最後尾のIDを取得するためにソートする必要がある。
+  const array_of_id_of_products = products_of_the_shop.map(
+    (product) => product.id
+  );
+  const sorted_array_of_id_of_products = array_of_id_of_products.sort(
+    (a, b) => a - b
+  );
   const id_for_the_new_product =
-    products_of_the_shop[products_of_the_shop.length - 1].id + 1;
-  console.log(id_for_the_new_product);
-
-  const newProduct = {
-    id: id_for_the_new_product,
-    product_name: "sample",
-    product_description: "This is sample product",
-    product_price: null,
-    shop_id: shopId,
-    is_product_image_used_in_main_visual: false,
-    is_book: false,
-    product_images: [],
-  };
+    sorted_array_of_id_of_products[sorted_array_of_id_of_products.length - 1] +
+    1;
+  product = { ...product, id: id_for_the_new_product };
 
   await setDoc(
     doc(
@@ -170,6 +167,7 @@ export const addDocument_of_a_product = async (shopId) => {
       "products",
       String(id_for_the_new_product)
     ),
-    newProduct
+    product
   );
+  console.log(product);
 };

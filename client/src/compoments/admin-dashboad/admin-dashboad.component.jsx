@@ -3,13 +3,14 @@ import { Hanko } from "@teamhanko/hanko-elements";
 
 import HankoProfile from "../../hanko/hanko-profile/hanko-profile.component";
 import HankoLogoutBtn from "../../hanko/hanko-logout-button/hanko-logout-button.component";
+import AdminProductRegisterForm from "../admin-product-register-form/admin-product-register-form.component";
 
 import { CategoriesContext } from "../../context/categories.context";
 
-import {
-  deleteDocument_of_a_product,
-  addDocument_of_a_product,
-} from "../../utils/firebase/firebase.utils";
+import { deleteDocument_of_a_product } from "../../utils/firebase/firebase.utils";
+import { CustomBtnGroup } from "../../component-utils/component-utils.styles";
+
+import "./admin-dashboad.styles.scss";
 
 const hankoApi = process.env.REACT_APP_HANKO_API_URL;
 
@@ -49,9 +50,12 @@ const AdminDashboad = () => {
 
   return (
     <div>
-      <p>Hello {shopName}</p>
-      <HankoLogoutBtn />
-      <hr />
+      <CustomBtnGroup>
+        <p>Hello {shopName}</p>
+        <div className="hankoLogoutBtn-style">
+          <HankoLogoutBtn className="btn-style" />
+        </div>
+      </CustomBtnGroup>
 
       <div>
         <div>
@@ -72,13 +76,11 @@ const AdminDashboad = () => {
             })}
         </div>
         <br />
+        <hr />
         <div>
-          <button onClick={()=>addDocument_of_a_product(shopId)}>Add product</button>
+          <AdminProductRegisterForm shopId={shopId} />
         </div>
       </div>
-
-      <hr />
-      <HankoProfile />
     </div>
   );
 };

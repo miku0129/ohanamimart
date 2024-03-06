@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { CustomBtn } from "../../component-utils/component-utils.styles";
 
 const hankoApi = process.env.REACT_APP_HANKO_API_URL;
 
@@ -22,7 +23,7 @@ const HankoLogoutBtn = () => {
     }
   };
 
-  return <button onClick={logout}>Logout</button>;
+  return <CustomBtn onClick={logout}>Logout</CustomBtn>;
 };
 
 export default HankoLogoutBtn;
