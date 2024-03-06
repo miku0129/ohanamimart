@@ -1,0 +1,11 @@
+.admin-product-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.admin-product-list-card{
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
