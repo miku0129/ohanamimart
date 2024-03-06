@@ -10,8 +10,8 @@ import Home from "./routes/home/home.component";
 import Shop from "./routes/shop/shop.component";
 // import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import AdminSignin from "./compoments/admin-signin/admin-signin.component";
-import AdminDashboad from "./compoments/admin-dashboad/admin-dashboad.component";
 import AdminParamSetting from "./compoments/admin-param-setting/admin-param-setting.component";
+import AdminDashboad from "./routes/admin-dashboad/admin-dashboad.component";
 
 import ScrollToTop from "./component-utils/scroll-to-top";
 
