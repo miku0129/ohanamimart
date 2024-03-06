@@ -132,7 +132,7 @@ export const initializeCategoryData_2 = async () => {
             try {
               await setDoc(
                 doc(db, "shops_2", String(shop_id), "products", String(idx)),
-                product
+                { ...product, id: idx }
               );
             } catch (e) {
               console.error("Error adding document: ", e);
@@ -146,10 +146,40 @@ export const initializeCategoryData_2 = async () => {
   });
 };
 
-export const deleteDocument = async (shopId, productId) => {
-  const prods = await getAllDocuments();
-  const products_of_the_shop = prods
-    .filter((shop) => shop.id === shopId)[0]
-    .products.filter((product) => product.id === productId);
-  console.log(products_of_the_shop);
+export const deleteDocument_of_a_product = async (shopId, productId) => {
+  await deleteDoc(
+    doc(db, "shops_2", String(shopId), "products", String(productId))
+  );
+  window.location.reload();
+};
+
+export const addDocument_of_a_product = async (shopId) => {
+  const products_of_the_shop = (await getAllDocuments()).filter(
+    (shop) => shop.id === shopId
+  )[0].products;
+  const id_for_the_new_product =
+    products_of_the_shop[products_of_the_shop.length - 1].id + 1;
+  console.log(id_for_the_new_product);
+
+  const newProduct = {
+    id: id_for_the_new_product,
+    product_name: "sample",
+    product_description: "This is sample product",
+    product_price: null,
+    shop_id: shopId,
+    is_product_image_used_in_main_visual: false,
+    is_book: false,
+    product_images: [],
+  };
+
+  await setDoc(
+    doc(
+      db,
+      "shops_2",
+      String(shopId),
+      "products",
+      String(id_for_the_new_product)
+    ),
+    newProduct
+  );
 };

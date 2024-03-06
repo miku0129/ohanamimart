@@ -9,13 +9,10 @@ import BasicLayout from "./routes/basic-layout/basic-layout.component";
 import Home from "./routes/home/home.component";
 import Shop from "./routes/shop/shop.component";
 // import Exhibitions from "./routes/exhibitions/exhibitions.component";
-
-import ScrollToTop from "./component-utils/scroll-to-top";
-// import LoadingResource from "./component-utils/loading-resource";
-
 import AdminSignin from "./compoments/admin-signin/admin-signin.component";
 import AdminDashboad from "./compoments/admin-dashboad/admin-dashboad.component";
 
+import ScrollToTop from "./component-utils/scroll-to-top";
 
 const App = () => {
   // useEffect(() => {
@@ -34,7 +31,6 @@ const App = () => {
 
   return (
     <>
-      {/* <LoadingResource /> */}
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<BasicLayout />}>

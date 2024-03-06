@@ -6,10 +6,10 @@ import HankoLogoutBtn from "../../hanko/hanko-logout-button/hanko-logout-button.
 
 import { CategoriesContext } from "../../context/categories.context";
 
-// import { useSelector } from "react-redux/es/hooks/useSelector";
-// import { selectCategories } from "../../store/categories/category.selector";
-
-import { deleteDocument } from "../../utils/firebase/firebase.utils";
+import {
+  deleteDocument_of_a_product,
+  addDocument_of_a_product,
+} from "../../utils/firebase/firebase.utils";
 
 const hankoApi = process.env.REACT_APP_HANKO_API_URL;
 
@@ -21,7 +21,6 @@ const AdminDashboad = () => {
 
   const hanko = useMemo(() => new Hanko(hankoApi), []);
 
-  // const categories = useSelector(selectCategories);
   const categories = useContext(CategoriesContext);
 
   useEffect(() => {
@@ -43,7 +42,7 @@ const AdminDashboad = () => {
       if (shopInfo) {
         setShopName(shopInfo.shop_name);
         setProducts(shopInfo.products);
-        setShopId(shopInfo.id)
+        setShopId(shopInfo.id);
       }
     }
   }, [userEmail, categories]);
@@ -51,22 +50,33 @@ const AdminDashboad = () => {
   return (
     <div>
       <p>Hello {shopName}</p>
+      <HankoLogoutBtn />
+      <hr />
 
       <div>
-        {products &&
-          products.map((product) => {
-            return (
-              <div>
-                <p key={product.product_name}>{product.product_name}</p>
-                <button onClick={() => deleteDocument(shopId, product.id)}>
-                  delete
-                </button>
-              </div>
-            );
-          })}
+        <div>
+          {products &&
+            products.map((product) => {
+              return (
+                <div>
+                  <p key={product.product_name}>{product.product_name}</p>
+                  <button
+                    onClick={() =>
+                      deleteDocument_of_a_product(shopId, product.id)
+                    }
+                  >
+                    delete
+                  </button>
+                </div>
+              );
+            })}
+        </div>
+        <br />
+        <div>
+          <button onClick={()=>addDocument_of_a_product(shopId)}>Add product</button>
+        </div>
       </div>
 
-      <HankoLogoutBtn />
       <hr />
       <HankoProfile />
     </div>
