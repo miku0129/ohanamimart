@@ -7,7 +7,6 @@ const initFormState = {
   product_name: "",
   product_description: "",
   product_price: undefined,
-  shop_id: undefined,
   is_product_image_used_in_main_visual: false,
   is_book: false,
   product_images: [],

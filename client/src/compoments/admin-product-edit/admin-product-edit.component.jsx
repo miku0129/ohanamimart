@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { CategoriesContext } from "../../context/categories.context";
+import AdminProductForm from "../admin-product-form/admin-product-form.component";
+import { formTypes } from "../../types/types";
 
 const AdminProductEdit = () => {
   const { product_id } = useParams();
@@ -21,7 +23,7 @@ const AdminProductEdit = () => {
         .products.filter((product) => String(product.id) === product_id)[0];
       setSelectedProductName(selectedProduct.product_name);
       setSelectedProductPrice(selectedProduct.product_price);
-      setSelectedProductDiscription(selectedProductDiscription);
+      setSelectedProductDiscription(selectedProduct.product_description);
     }
   }, [
     categories,
@@ -32,12 +34,34 @@ const AdminProductEdit = () => {
     selectedProductDiscription,
   ]);
 
-  
+  const initFormState = {
+    product_name: selectedProductName,
+    product_description: selectedProductDiscription,
+    product_price: selectedProductPrice,
+    // shop_id: undefined,
+    is_product_image_used_in_main_visual: false,
+    is_book: false,
+    product_images: [],
+  };
+
+  console.log(selectedProductName);
+  console.log(selectedProductPrice);
+  console.log(selectedProductDiscription);
+
   return (
     <div>
-      <p>{selectedProductName}</p>
+      {selectedProductName && (
+          <AdminProductForm
+            props={{
+              formType: formTypes["UPDATE"],
+              shopId: state.shopId,
+              initFormState: initFormState,
+              product_id : product_id
+            }}
+          />
+        )}
     </div>
-  )
+  );
 };
 
 export default AdminProductEdit;

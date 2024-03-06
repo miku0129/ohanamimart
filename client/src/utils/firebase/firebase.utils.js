@@ -8,8 +8,8 @@ import {
   getDoc,
   getDocs,
   setDoc,
-  addDoc,
   deleteDoc,
+  updateDoc,
 } from "firebase/firestore/lite";
 import FIREBASECONFIG from "./firebase.config";
 import { firestore as db } from "./firebase.utils";
@@ -170,4 +170,18 @@ export const addDocument_of_a_product = async (shopId, product) => {
     product
   );
   console.log(product);
+};
+
+export const updateDocument_of_a_product = async (shopId, product_id, data) => {
+  const targetProductRef = doc(
+    db,
+    "shops_2",
+    String(shopId),
+    "products",
+    String(product_id)
+  );
+  const docSnap = await getDoc(targetProductRef);
+  if (docSnap.exists()) {
+    await updateDoc(targetProductRef, data);
+  }
 };

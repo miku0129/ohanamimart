@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { addDocument_of_a_product } from "../../utils/firebase/firebase.utils";
+import {
+  addDocument_of_a_product,
+  updateDocument_of_a_product,
+} from "../../utils/firebase/firebase.utils";
 import { formTypes } from "../../types/types";
 
 const AdminProductForm = ({ props }) => {
-  const { formType, shopId, initFormState } = props;
+  const { formType, shopId, initFormState, product_id } = props;
   const [formData, setFormData] = useState(initFormState);
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -12,7 +15,7 @@ const AdminProductForm = ({ props }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const newProduct = {
+    const product = {
       product_name: formData.product_name,
       product_description: formData.product_description,
       product_price: Number(formData.product_price),
@@ -23,8 +26,11 @@ const AdminProductForm = ({ props }) => {
     };
 
     if (formType === formTypes["REGISTER"]) {
-      await addDocument_of_a_product(shopId, newProduct);
+      await addDocument_of_a_product(shopId, product);
       setFormData(initFormState);
+    } else if (formType === formTypes["UPDATE"]) {
+        console.log("product in form",product)
+      await updateDocument_of_a_product(shopId, product_id, product);
     }
     window.location.reload();
   };
@@ -65,7 +71,7 @@ const AdminProductForm = ({ props }) => {
       </div>
 
       <div>
-        <button type="submit">アイテムを追加する</button>
+        <button type="submit">{formType === formTypes["REGISTER"] ? "アイテムを追加する" : "アイテムを更新する"}</button>
       </div>
     </form>
   );
