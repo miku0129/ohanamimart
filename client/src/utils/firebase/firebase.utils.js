@@ -179,12 +179,28 @@ export const getAllDocuments = async () => {
     docsnapshot.data()
   );
   for (let i = 0; i < shops.length; i++) {
-    let querySnapshot_of_products = await getDocs(
+    let querySnapshot_of_products_of_the_shop = await getDocs(
       collection(db, "shops_2", String(shops[i].id), "products")
     );
-    const products = querySnapshot_of_products.docs.map((doc) => {
+    const products = querySnapshot_of_products_of_the_shop.docs.map((doc) => {
       return doc.data();
     });
+    for (let j = 0; j < products.length; j++) {
+      let querySnapshot_of_images_of_the_product = await getDocs(
+        collection(
+          db,
+          "shops_2",
+          String(shops[i].id),
+          "products",
+          String(products[j].id),
+          "images_of_product"
+        )
+      );
+      const images = querySnapshot_of_images_of_the_product.docs.map((doc) =>
+        doc.data()
+      );
+      products[j] = { ...products[j], product_images: images };
+    }
     shops[i] = { ...shops[i], products: products };
   }
   return shops;
