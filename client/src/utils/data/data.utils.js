@@ -17,22 +17,10 @@ export const get_product_array_for_main_visual = (categoriesArray) => {
   );
 };
 
-export const get_product_by_id = (categoriesArray, id) => {
-  const search_id = Number(id);
-  // const categoriesMap = await getAllDocuments();
-  const filteredShop = categoriesArray.filter((category) => {
-    const result = category.products.filter((prod) => prod.id === search_id);
-    return result.length > 0;
-  })[0];
-
-  const result = filteredShop.products.filter(
-    (prod) => prod.id === search_id
-  )[0];
-  return result;
+export const get_shop_by_id = (categoriesArray, id) => {
+  id = Number(id);
+  return categoriesArray.filter((shop) => shop.id === id)[0];
 };
-
-export const get_shop_by_id = (categoriesArray, id) =>
-  categoriesArray.filter((shop) => shop.id === id)[0];
 
 export const get_exhibitions_array = () => {
   const { exhibitions } = EXHIBITIONS_DATA;

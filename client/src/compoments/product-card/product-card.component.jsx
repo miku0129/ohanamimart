@@ -8,7 +8,6 @@ import { get_shop_by_id } from "../../utils/data/data.utils";
 import "./product-card.styles.scss";
 
 const ProductCard = ({ product }) => {
-  console.log(product)
   const { id, product_name, product_price, shop_id, product_images } = product;
 
   const name_of_product =
@@ -37,6 +36,7 @@ const ProductCard = ({ product }) => {
         <div className="product-card-footer-left">
           <Link
             to={`/shop/${shop.shop_name_lowercase_no_spaces_for_url}/${id}`}
+            state={{ shopId: `${shop.id}` }}
           >
             <SpanLink className="name_of_product">{name_of_product}</SpanLink>
           </Link>
