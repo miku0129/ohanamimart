@@ -188,7 +188,7 @@ const PRODUCT_DATA = {
       product_price: null,
       shop_id: 1,
       is_product_image_used_in_main_visual: false,
-      is_book: false,
+      is_book: true, //fix as true @2024/3/7
     },
     {
       id: 21,

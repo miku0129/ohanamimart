@@ -8,7 +8,9 @@ const AdminProductList = ({ props }) => {
   return (
     <div className="admin-product-list-container">
       {products &&
-        products.map((product) => {
+        products.filter(product => {
+          //当座は編集できるアイテムは本以外かつHomeトップに画像が表示されていないもののみとする
+          return !product.is_book && !product.is_product_image_used_in_main_visual}).map((product) => {
           return (
             <div key={product.id} className="admin-product-list-card">
               <p>アイテムの名前: {product.product_name}</p>
