@@ -16,6 +16,8 @@ import { firestore as db } from "./firebase.utils";
 
 import {
   makeProductsArray_for_initializeCategoryData,
+  makeArrayOfProductsForTheShop,
+  makeArrayOfImagesForTheProduct,
   getTheTailendId,
 } from "./firebase.helper";
 
@@ -70,15 +72,10 @@ export const initializeCategoryData_2 = async () => {
   const { shops } = SHOP_DATA;
   shops.forEach(async (shop, idx) => {
     const shop_id = String(idx);
-    const docRef = doc(db, "shops_2", shop_id);
-    const docSnap = await getDoc(docRef);
-    let products_array = makeProductsArray_for_initializeCategoryData(
-      idx,
-      PRODUCT_DATA,
-      PRODUCT_IMAGE_DATA
-    );
+    const shopDocRef = doc(db, "shops_2", shop_id);
+    const shopDocSnap = await getDoc(shopDocRef);
 
-    if (!docSnap.exists()) {
+    if (!shopDocSnap.exists()) {
       try {
         await setDoc(doc(db, "shops_2", shop_id), {
           id: idx,
@@ -94,21 +91,76 @@ export const initializeCategoryData_2 = async () => {
           shop_email: shop.shop_email,
         });
 
+        let products_array = makeArrayOfProductsForTheShop(
+          idx, //各shopのid
+          PRODUCT_DATA
+        );
+
         products_array.forEach(async (product, idx) => {
-          const docRref_of_products = doc(
+          const product_id = String(idx);
+          const productDocRef = doc(
             db,
             "shops_2",
-            String(shop_id),
+            shop_id,
             "products",
-            String(idx)
+            product_id
           );
-          const docSnap_of_products = await getDoc(docRref_of_products);
-          if (!docSnap_of_products.exists()) {
+          const productDocSnap = await getDoc(productDocRef);
+          if (!productDocSnap.exists()) {
             try {
+              //productのimageとの照合に使用
+              const productIdOfSourceFile = product.id;
+              //もとのIDをfirestore用に上書きする
+              product = {
+                ...product,
+                id: idx,
+                productIdOfSourceFile: productIdOfSourceFile,
+              };
               await setDoc(
-                doc(db, "shops_2", String(shop_id), "products", String(idx)),
-                { ...product, id: idx }
+                doc(db, "shops_2", shop_id, "products", product_id),
+                product
               );
+
+              let productImages_array = makeArrayOfImagesForTheProduct(
+                productIdOfSourceFile,
+                PRODUCT_IMAGE_DATA
+              );
+              productImages_array.forEach(async (image, idx) => {
+                const product_image_id = String(idx);
+                const productImgDocRef = doc(
+                  db,
+                  "shops_2",
+                  shop_id,
+                  "products",
+                  product_id,
+                  "images_of_product",
+                  product_image_id
+                );
+                const productImgDocSnap = await getDoc(productImgDocRef);
+                if (!productImgDocSnap.exists()) {
+                  try {
+                    await setDoc(
+                      doc(
+                        db,
+                        "shops_2",
+                        shop_id,
+                        "products",
+                        product_id,
+                        "images_of_product",
+                        product_image_id
+                      ),
+                      //もとのIDをfirestore用に上書きする
+                      {
+                        ...image,
+                        id: idx,
+                        productIdOfSourceFile: productIdOfSourceFile,
+                      }
+                    );
+                  } catch (e) {
+                    console.error("Error adding document: ", e);
+                  }
+                }
+              });
             } catch (e) {
               console.error("Error adding document: ", e);
             }

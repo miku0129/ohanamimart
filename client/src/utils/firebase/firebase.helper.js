@@ -1,3 +1,25 @@
+export const makeArrayOfProductsForTheShop = (shopId, product_data) => {
+  const { products } = product_data;
+
+  let products_array =
+    products.length > 0
+      ? products.filter((product) => product.shop_id === shopId)
+      : null;
+  return products_array;
+};
+
+export const makeArrayOfImagesForTheProduct = (
+  productId,
+  product_image_data
+) => {
+  const { product_images } = product_image_data;
+  const images_array = product_images.filter(
+    (image) => image.product_id === productId
+  );
+  return images_array;
+};
+
+//firesotre, shopsで使用
 export const makeProductsArray_for_initializeCategoryData = (
   index,
   product_data,
