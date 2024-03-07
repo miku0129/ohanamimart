@@ -69,7 +69,8 @@ const AdminProductForm = ({ props }) => {
         />
       </div>
 
-      {formData &&
+      {formType === formTypes["UPDATE"] &&
+        formData &&
         formData.product_images.map((image) => {
           return (
             <div>
@@ -84,6 +85,18 @@ const AdminProductForm = ({ props }) => {
             </div>
           );
         })}
+      {formType === formTypes["REGISTER"] &&
+            <div>
+              <label htmlFor="product_price">アイテム写真URL:</label>
+              <input
+                type="text"
+                id="product_price"
+                name="product_price"
+                value={formData.product_image_url}
+                onChange={handleChange}
+              />
+            </div>
+        }
 
       <div>
         <button type="submit">

@@ -18,14 +18,18 @@ const AdminProductList = ({ props }) => {
                 アイテムの価格:{" "}
                 {product.product_price ? product.product_price : "表示無し"}
               </p>
-              <p>アイテムの写真: {product.product_images.map(img => {
-                return (
-                  <div>
-                    <a href={img.product_image_url} target="blank">{img.product_image_url}</a>
-
-                  </div>
-                )
-              })}</p>
+              <p>
+                アイテム写真URL:{" "}
+                {product.product_images.map((img) => {
+                  return (
+                    <div>
+                      <a href={img.product_image_url} target="blank">
+                        {img.product_image_url}
+                      </a>
+                    </div>
+                  );
+                })}
+              </p>
               <CustomBtnGroup>
                 <button
                   onClick={() =>
