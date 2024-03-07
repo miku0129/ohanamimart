@@ -17,6 +17,14 @@ export const get_product_array_for_main_visual = (categoriesArray) => {
   );
 };
 
+export const get_product_by_id = (categoriesArray, shopId, productId) => {
+  shopId = Number(shopId);
+  productId = Number(productId);
+  return categoriesArray
+    .filter((category) => category.id === shopId)[0]
+    .products.filter((product) => product.id === productId)[0];
+};
+
 export const get_shop_by_id = (categoriesArray, id) => {
   id = Number(id);
   return categoriesArray.filter((shop) => shop.id === id)[0];

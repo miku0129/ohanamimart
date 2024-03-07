@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { CategoriesContext } from "../../context/categories.context";
-import { get_shop_by_id } from "../../utils/data/data.utils";
+import { get_product_by_id, get_shop_by_id } from "../../utils/data/data.utils";
 
 import ImgGallery from "../img-gallery/img-gallery";
 import Slick from "../slick/slick.component";
@@ -24,15 +24,15 @@ const ProductDetail = () => {
 
   const categories = useContext(CategoriesContext);
   const { product_id } = useParams();
-  
+
   const location = useLocation();
   const state = location.state;
-  
+
   if (state !== null) {
     shop = get_shop_by_id(categories, state.shopId);
-    console.log("shop", shop)
+    console.log("shop", shop);
     if (categories.length > 0) {
-      product = shop.products.filter(product => product.id === Number(product_id))[0]
+      product = get_product_by_id(categories, state.shopId, product_id);
     }
   }
 

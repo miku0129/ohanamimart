@@ -1,7 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import { CategoriesContext } from "../../context/categories.context";
+
 import AdminProductForm from "../admin-product-form/admin-product-form.component";
+
+import { CategoriesContext } from "../../context/categories.context";
+import { get_product_by_id } from "../../utils/data/data.utils";
 import { formTypes } from "../../types/types";
 
 const AdminProductEdit = () => {
@@ -11,46 +14,49 @@ const AdminProductEdit = () => {
 
   const categories = useContext(CategoriesContext);
 
-  const [selectedProductName, setSelectedProductName] = useState("");
-  const [selectedProductPrice, setSelectedProductPrice] = useState(null);
-  const [selectedProductDescription, setSelectedProductDescription] =
-    useState("");
+  const [selectedProdName, setSelectedProdName] = useState("");
+  const [selectedProdPrice, setSelectedProdPrice] = useState(null);
+  const [selectedProdDescription, setSelectedProdDescription] = useState("");
+  const [isSelectedProdMainVisual, setIsSelectedProdMainVisual] =
+    useState(false);
+  const [selectedProdImages, setSelectedProdImages] = useState([]);
 
   useEffect(() => {
     if (state !== null) {
-      const selectedProduct = categories
-        .filter((category) => category.id === state.shopId)[0]
-        .products.filter((product) => String(product.id) === product_id)[0];
-      setSelectedProductName(selectedProduct.product_name);
-      setSelectedProductPrice(selectedProduct.product_price);
-      setSelectedProductDescription(selectedProduct.product_description);
+      // const selectedProd = categories
+      //   .filter((category) => category.id === state.shopId)[0]
+      //   .products.filter((product) => String(product.id) === product_id)[0];
+      const selectedProd = get_product_by_id(categories, )
+      setSelectedProdName(selectedProd.product_name);
+      setSelectedProdPrice(selectedProd.product_price);
+      setSelectedProdDescription(selectedProd.product_description);
     }
   }, [
     categories,
     state,
     product_id,
-    selectedProductName,
-    selectedProductPrice,
-    selectedProductDescription,
+    selectedProdName,
+    selectedProdPrice,
+    selectedProdDescription,
   ]);
 
   const initFormState = {
-    product_name: selectedProductName,
-    product_description: selectedProductDescription,
-    product_price: selectedProductPrice,
+    product_name: selectedProdName,
+    product_description: selectedProdDescription,
+    product_price: selectedProdPrice,
     // shop_id: undefined,
     is_product_image_used_in_main_visual: false,
     is_book: false,
     product_images: [],
   };
 
-  console.log(selectedProductName);
-  console.log(selectedProductPrice);
-  console.log(selectedProductDescription);
+  console.log(selectedProdName);
+  console.log(selectedProdPrice);
+  console.log(selectedProdDescription);
 
   return (
     <div>
-      {selectedProductName && (
+      {selectedProdName && (
         <AdminProductForm
           props={{
             formType: formTypes["UPDATE"],
