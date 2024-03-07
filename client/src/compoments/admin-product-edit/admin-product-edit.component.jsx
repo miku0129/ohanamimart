@@ -15,7 +15,7 @@ const AdminProductEdit = () => {
   const categories = useContext(CategoriesContext);
 
   const [selectedProdName, setSelectedProdName] = useState("");
-  const [selectedProdPrice, setSelectedProdPrice] = useState(null);
+  const [selectedProdPrice, setSelectedProdPrice] = useState(0);
   const [selectedProdDescription, setSelectedProdDescription] = useState("");
   // const [isSelectedProdMainVisual, setIsSelectedProdMainVisual] =
   //   useState(false);

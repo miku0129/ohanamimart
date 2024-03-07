@@ -213,26 +213,50 @@ export const deleteDocument_of_a_product = async (shopId, productId) => {
   window.location.reload();
 };
 
-export const addDocument_of_a_product = async (shopId, product) => {
+export const addDocument_of_a_product = async (shopId, product, image) => {
   const products_of_the_shop = (await getAllDocuments()).filter(
     (shop) => shop.id === shopId
   )[0].products;
-
   const tailEndId_for_newProduct = getTheTailendId(products_of_the_shop);
-
-  product = { ...product, id: tailEndId_for_newProduct };
-
-  await setDoc(
-    doc(
-      db,
-      "shops_2",
-      String(shopId),
-      "products",
-      String(tailEndId_for_newProduct)
-    ),
-    product
-  );
-  console.log(`new product: ${product}`);
+  try {
+    product = { ...product, id: tailEndId_for_newProduct };
+    await setDoc(
+      doc(
+        db,
+        "shops_2",
+        String(shopId),
+        "products",
+        String(tailEndId_for_newProduct)
+      ),
+      product
+    );
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+  try {
+    //当座は1productにつき1画像とする
+    const imageOfNewProduct = {
+      id: 0,
+      is_main_product_image: true,
+      product_id: tailEndId_for_newProduct,
+      product_image_url: image.product_images,
+      shop_id: shopId,
+    };
+    await setDoc(
+      doc(
+        db,
+        "shops_2",
+        String(shopId),
+        "products",
+        String(tailEndId_for_newProduct),
+        "images_of_product",
+        "0"
+      ),
+      imageOfNewProduct
+    );
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
 };
 
 export const updateDocument_of_a_product = async (shopId, product_id, data) => {

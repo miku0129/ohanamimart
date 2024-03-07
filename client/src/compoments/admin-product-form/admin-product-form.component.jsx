@@ -19,19 +19,19 @@ const AdminProductForm = ({ props }) => {
       product_name: formData.product_name,
       product_description: formData.product_description,
       product_price: Number(formData.product_price),
-      // is_product_image_used_in_main_visual:
-      //   formData.is_product_image_used_in_main_visual,
+    };
+    const image = {
       product_images: formData.product_images,
     };
 
     if (formType === formTypes["REGISTER"]) {
-      await addDocument_of_a_product(shopId, product);
+      await addDocument_of_a_product(shopId, product, image);
       setFormData(initFormState);
+      window.location.reload();
     } else if (formType === formTypes["UPDATE"]) {
       await updateDocument_of_a_product(shopId, product_id, product);
       //リダイレクトさせる
     }
-    // window.location.reload();
   };
 
   return (
@@ -69,34 +69,34 @@ const AdminProductForm = ({ props }) => {
         />
       </div>
 
-      {formType === formTypes["UPDATE"] &&
+      {/* {formType === formTypes["UPDATE"] &&
         formData &&
         formData.product_images.map((image) => {
           return (
             <div>
-              <label htmlFor="product_price">アイテムイメージ:</label>
+              <label htmlFor="product_images">アイテム写真URL:</label>
               <input
                 type="text"
-                id="product_price"
-                name="product_price"
-                value={image.product_image_url}
+                id="product_images"
+                name="product_images"
+                value={formData.product_images}
                 onChange={handleChange}
-              />
+              />{" "}
             </div>
           );
-        })}
-      {formType === formTypes["REGISTER"] &&
-            <div>
-              <label htmlFor="product_price">アイテム写真URL:</label>
-              <input
-                type="text"
-                id="product_price"
-                name="product_price"
-                value={formData.product_image_url}
-                onChange={handleChange}
-              />
-            </div>
-        }
+        })} */}
+      {formType === formTypes["REGISTER"] && (
+        <div>
+          <label htmlFor="product_images">アイテム写真URL:</label>
+          <input
+            type="text"
+            id="product_images"
+            name="product_images"
+            value={formData.product_images}
+            onChange={handleChange}
+          />
+        </div>
+      )}
 
       <div>
         <button type="submit">
