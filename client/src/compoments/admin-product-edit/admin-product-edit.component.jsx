@@ -17,19 +17,18 @@ const AdminProductEdit = () => {
   const [selectedProdName, setSelectedProdName] = useState("");
   const [selectedProdPrice, setSelectedProdPrice] = useState(null);
   const [selectedProdDescription, setSelectedProdDescription] = useState("");
-  const [isSelectedProdMainVisual, setIsSelectedProdMainVisual] =
-    useState(false);
+  // const [isSelectedProdMainVisual, setIsSelectedProdMainVisual] =
+  //   useState(false);
   const [selectedProdImages, setSelectedProdImages] = useState([]);
 
   useEffect(() => {
     if (state !== null) {
-      // const selectedProd = categories
-      //   .filter((category) => category.id === state.shopId)[0]
-      //   .products.filter((product) => String(product.id) === product_id)[0];
-      const selectedProd = get_product_by_id(categories, )
+      const selectedProd = get_product_by_id(categories, state.shopId, product_id )
       setSelectedProdName(selectedProd.product_name);
       setSelectedProdPrice(selectedProd.product_price);
       setSelectedProdDescription(selectedProd.product_description);
+      // setIsSelectedProdMainVisual(selectedProd.is_product_image_used_in_main_visual)
+      setSelectedProdImages(selectedProd.product_images)
     }
   }, [
     categories,
@@ -44,15 +43,12 @@ const AdminProductEdit = () => {
     product_name: selectedProdName,
     product_description: selectedProdDescription,
     product_price: selectedProdPrice,
-    // shop_id: undefined,
-    is_product_image_used_in_main_visual: false,
-    is_book: false,
-    product_images: [],
+    // is_product_image_used_in_main_visual: isSelectedProdMainVisual,
+    // is_book: false,
+    product_images: selectedProdImages,
   };
 
-  console.log(selectedProdName);
-  console.log(selectedProdPrice);
-  console.log(selectedProdDescription);
+  console.log(selectedProdImages);
 
   return (
     <div>

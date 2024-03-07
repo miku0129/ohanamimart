@@ -19,20 +19,19 @@ const AdminProductForm = ({ props }) => {
       product_name: formData.product_name,
       product_description: formData.product_description,
       product_price: Number(formData.product_price),
-      shop_id: shopId,
-      is_product_image_used_in_main_visual: false,
-      is_book: false,
-      product_images: [],
+      // is_product_image_used_in_main_visual:
+      //   formData.is_product_image_used_in_main_visual,
+      product_images: formData.product_images,
     };
 
     if (formType === formTypes["REGISTER"]) {
       await addDocument_of_a_product(shopId, product);
       setFormData(initFormState);
     } else if (formType === formTypes["UPDATE"]) {
-        console.log("product in form",product)
       await updateDocument_of_a_product(shopId, product_id, product);
+      //リダイレクトさせる
     }
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (
@@ -60,7 +59,7 @@ const AdminProductForm = ({ props }) => {
       </div>
 
       <div>
-        <label htmlFor="product_price">アイテムの価格(euro):</label>
+        <label htmlFor="product_price">アイテムの価格(単位/euro):</label>
         <input
           type="text"
           id="product_price"
@@ -70,8 +69,28 @@ const AdminProductForm = ({ props }) => {
         />
       </div>
 
+      {formData &&
+        formData.product_images.map((image) => {
+          return (
+            <div>
+              <label htmlFor="product_price">アイテムイメージ:</label>
+              <input
+                type="text"
+                id="product_price"
+                name="product_price"
+                value={image.product_image_url}
+                onChange={handleChange}
+              />
+            </div>
+          );
+        })}
+
       <div>
-        <button type="submit">{formType === formTypes["REGISTER"] ? "アイテムを追加する" : "アイテムを更新する"}</button>
+        <button type="submit">
+          {formType === formTypes["REGISTER"]
+            ? "アイテムを追加する"
+            : "アイテムを更新する"}
+        </button>
       </div>
     </form>
   );
