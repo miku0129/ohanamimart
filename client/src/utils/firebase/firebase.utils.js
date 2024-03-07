@@ -207,10 +207,15 @@ export const getAllDocuments = async () => {
 };
 
 export const deleteDocument_of_a_product = async (shopId, productId) => {
-  await deleteDoc(
-    doc(db, "shops_2", String(shopId), "products", String(productId))
-  );
-  window.location.reload();
+  try {
+    await deleteDoc(
+      doc(db, "shops_2", String(shopId), "products", String(productId))
+    );
+    window.alert(`アイテムの削除に成功しました。`);
+    window.location.reload();
+  } catch (e) {
+    window.alert(`アイテムの削除に失敗しました。Error log: ${e}`);
+  }
 };
 
 export const addDocument_of_a_product = async (shopId, product, image) => {
@@ -230,32 +235,34 @@ export const addDocument_of_a_product = async (shopId, product, image) => {
       ),
       product
     );
+
+    try {
+      //当座は1productにつき1画像とする
+      const imageOfNewProduct = {
+        id: 0,
+        is_main_product_image: true,
+        product_id: tailEndId_for_newProduct,
+        product_image_url: image.product_images,
+        shop_id: shopId,
+      };
+      await setDoc(
+        doc(
+          db,
+          "shops_2",
+          String(shopId),
+          "products",
+          String(tailEndId_for_newProduct),
+          "images_of_product",
+          "0"
+        ),
+        imageOfNewProduct
+      );
+      window.alert("アイテムの登録に成功しました。");
+    } catch (e) {
+      window.alert(`アイテム画像の登録に失敗しました。Error log: ${e}`);
+    }
   } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-  try {
-    //当座は1productにつき1画像とする
-    const imageOfNewProduct = {
-      id: 0,
-      is_main_product_image: true,
-      product_id: tailEndId_for_newProduct,
-      product_image_url: image.product_images,
-      shop_id: shopId,
-    };
-    await setDoc(
-      doc(
-        db,
-        "shops_2",
-        String(shopId),
-        "products",
-        String(tailEndId_for_newProduct),
-        "images_of_product",
-        "0"
-      ),
-      imageOfNewProduct
-    );
-  } catch (e) {
-    console.error("Error adding document: ", e);
+    window.alert(`アイテムの登録に失敗しました。Error log: ${e}`);
   }
 };
 
