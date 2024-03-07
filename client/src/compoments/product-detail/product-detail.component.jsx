@@ -1,7 +1,5 @@
 import { useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-// import { useSelector } from "react-redux";
-// import { selectCategories } from "../../store/categories/category.selector";
 import { CategoriesContext } from "../../context/categories.context";
 import { get_product_by_id, get_shop_by_id } from "../../utils/data/data.utils";
 
@@ -21,7 +19,6 @@ import {
 import "./product-detail.styles.scss";
 
 const ProductDetail = () => {
-  // const categories = useSelector(selectCategories);
   const categories = useContext(CategoriesContext)
   const { product_id } = useParams();
 

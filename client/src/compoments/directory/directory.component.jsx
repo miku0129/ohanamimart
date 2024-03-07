@@ -1,5 +1,3 @@
-// import { useSelector } from "react-redux";
-// import { selectCategories } from "../../store/categories/category.selector";
 import { useContext } from "react";
 import { CategoriesContext } from "../../context/categories.context";
 
@@ -26,7 +24,6 @@ import {
 import "./directory.styles.scss";
 
 const Directory = () => {
-  // const categories = useSelector(selectCategories);
   const categories = useContext(CategoriesContext);
   const products =
     categories.length > 0 ? get_product_array_for_main_visual(categories) : [];
