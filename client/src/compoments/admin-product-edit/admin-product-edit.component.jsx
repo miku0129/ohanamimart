@@ -13,7 +13,7 @@ const AdminProductEdit = () => {
 
   const [selectedProductName, setSelectedProductName] = useState("");
   const [selectedProductPrice, setSelectedProductPrice] = useState(null);
-  const [selectedProductDiscription, setSelectedProductDiscription] =
+  const [selectedProductDescription, setSelectedProductDescription] =
     useState("");
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const AdminProductEdit = () => {
         .products.filter((product) => String(product.id) === product_id)[0];
       setSelectedProductName(selectedProduct.product_name);
       setSelectedProductPrice(selectedProduct.product_price);
-      setSelectedProductDiscription(selectedProduct.product_description);
+      setSelectedProductDescription(selectedProduct.product_description);
     }
   }, [
     categories,
@@ -31,12 +31,12 @@ const AdminProductEdit = () => {
     product_id,
     selectedProductName,
     selectedProductPrice,
-    selectedProductDiscription,
+    selectedProductDescription,
   ]);
 
   const initFormState = {
     product_name: selectedProductName,
-    product_description: selectedProductDiscription,
+    product_description: selectedProductDescription,
     product_price: selectedProductPrice,
     // shop_id: undefined,
     is_product_image_used_in_main_visual: false,
@@ -46,20 +46,20 @@ const AdminProductEdit = () => {
 
   console.log(selectedProductName);
   console.log(selectedProductPrice);
-  console.log(selectedProductDiscription);
+  console.log(selectedProductDescription);
 
   return (
     <div>
       {selectedProductName && (
-          <AdminProductForm
-            props={{
-              formType: formTypes["UPDATE"],
-              shopId: state.shopId,
-              initFormState: initFormState,
-              product_id : product_id
-            }}
-          />
-        )}
+        <AdminProductForm
+          props={{
+            formType: formTypes["UPDATE"],
+            shopId: state.shopId,
+            initFormState: initFormState,
+            product_id: product_id,
+          }}
+        />
+      )}
     </div>
   );
 };

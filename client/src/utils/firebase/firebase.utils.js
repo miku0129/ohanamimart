@@ -14,7 +14,10 @@ import {
 import FIREBASECONFIG from "./firebase.config";
 import { firestore as db } from "./firebase.utils";
 
-import { makeProductsArray_for_initializeCategoryData } from "./firebase.helper";
+import {
+  makeProductsArray_for_initializeCategoryData,
+  getTheTailendId,
+} from "./firebase.helper";
 
 //initial shop data
 import SHOP_DATA from "../data/shop-data";
@@ -146,18 +149,10 @@ export const addDocument_of_a_product = async (shopId, product) => {
   const products_of_the_shop = (await getAllDocuments()).filter(
     (shop) => shop.id === shopId
   )[0].products;
-  //FireStoreにおいてデータは必ずしも追加順に格納されないため
-  //最後尾のIDを取得するためにソートする必要がある。
-  const array_of_id_of_products = products_of_the_shop.map(
-    (product) => product.id
-  );
-  const sorted_array_of_id_of_products = array_of_id_of_products.sort(
-    (a, b) => a - b
-  );
-  const id_for_the_new_product =
-    sorted_array_of_id_of_products[sorted_array_of_id_of_products.length - 1] +
-    1;
-  product = { ...product, id: id_for_the_new_product };
+
+  const tailEndId_for_newProduct = getTheTailendId(products_of_the_shop);
+
+  product = { ...product, id: tailEndId_for_newProduct };
 
   await setDoc(
     doc(
@@ -165,11 +160,11 @@ export const addDocument_of_a_product = async (shopId, product) => {
       "shops_2",
       String(shopId),
       "products",
-      String(id_for_the_new_product)
+      String(tailEndId_for_newProduct)
     ),
     product
   );
-  console.log(product);
+  console.log(`new product: ${product}`);
 };
 
 export const updateDocument_of_a_product = async (shopId, product_id, data) => {

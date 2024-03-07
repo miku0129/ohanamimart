@@ -21,3 +21,17 @@ export const makeProductsArray_for_initializeCategoryData = (
   }
   return products_array;
 };
+
+//FireStoreにおいてデータは必ずしも追加順に格納されないため
+//最後尾のIDを取得するためにソートする必要がある。
+export const getTheTailendId = (products) => {
+  const array_of_id_of_products = products.map((product) => product.id);
+  const sorted_array_of_id_of_products = array_of_id_of_products.sort(
+    (a, b) => a - b
+  );
+  const id_for_the_new_product =
+    sorted_array_of_id_of_products[sorted_array_of_id_of_products.length - 1] +
+    1;
+
+  return id_for_the_new_product;
+};
