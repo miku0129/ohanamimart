@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import AdminHeader from "../../compoments/admin-header.component/admin-header.component";
+import AdminHeader from "../../compoments/admin-header/admin-header.component";
 import AdminProductRegister from "../../compoments/admin-product-register/admin-product-register.component";
 import AdminProductList from "../../compoments/admin-product-list/admin-product-list.component"
 

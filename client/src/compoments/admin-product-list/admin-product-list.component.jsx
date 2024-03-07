@@ -12,11 +12,18 @@ const AdminProductList = ({ props }) => {
           return (
             <div key={product.id} className="admin-product-list-card">
               <p>アイテムの名前: {product.product_name}</p>
-              <p>アイテムの説明: {product.product_description}</p>
               <p>
                 アイテムの価格:{" "}
                 {product.product_price ? product.product_price : "表示無し"}
               </p>
+              <p>アイテムの写真: {product.product_images.map(img => {
+                return (
+                  <div>
+                    <a href={img.product_image_url} target="blank">{img.product_image_url}</a>
+
+                  </div>
+                )
+              })}</p>
               <CustomBtnGroup>
                 <button
                   onClick={() =>
