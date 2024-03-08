@@ -2,7 +2,9 @@ import { useState } from "react";
 
 import AdminHeader from "../../compoments/admin-header/admin-header.component";
 import AdminProductRegister from "../../compoments/admin-product-register/admin-product-register.component";
-import AdminProductList from "../../compoments/admin-product-list/admin-product-list.component"
+import AdminProductList from "../../compoments/admin-product-list/admin-product-list.component";
+
+import { CustomContentContainer } from "../../component-utils/component-utils.styles";
 
 const AdminDashboad = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -11,7 +13,7 @@ const AdminDashboad = () => {
   const [products, setProducts] = useState([]);
 
   return (
-    <div>
+    <CustomContentContainer>
       <AdminHeader
         props={{
           setUserEmail: setUserEmail,
@@ -29,7 +31,7 @@ const AdminDashboad = () => {
           shopId: shopId,
         }}
       />
-    </div>
+    </CustomContentContainer>
   );
 };
 

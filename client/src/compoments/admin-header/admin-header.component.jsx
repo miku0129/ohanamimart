@@ -58,7 +58,7 @@ const AdminHeader = ({ props }) => {
         </div>
       </CustomBtnGroup>
       <Link to="/admin/setting">
-        <Button variant="outline-secondary">設定</Button>
+        <Button variant="secondary">設定</Button>
       </Link>
     </div>
   );

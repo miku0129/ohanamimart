@@ -192,3 +192,7 @@ export const CustomBtnGroup = styled.div`
   display: flex;
   gap: 10px;
 `;
+
+export const CustomContentContainer = styled.div`
+  padding: 20px;
+`;
