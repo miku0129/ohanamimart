@@ -237,7 +237,7 @@ export const addDocument_of_a_product = async (shopId, product, image) => {
     );
 
     try {
-      //当座は1productにつき1画像とする
+      //当座は1productにつき1画像のみ登録可能とする
       const imageOfNewProduct = {
         id: 0,
         is_main_product_image: true,
