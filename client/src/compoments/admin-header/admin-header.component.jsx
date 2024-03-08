@@ -52,7 +52,7 @@ const AdminHeader = ({ props }) => {
   return (
     <div>
       <CustomBtnGroup>
-        <p>Hello, {shopName}</p>
+        <h3>Hello, {shopName}</h3>
         <div className="hankoLogoutBtn-style">
           <HankoLogoutBtn className="btn-style" />
         </div>

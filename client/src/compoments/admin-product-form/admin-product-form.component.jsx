@@ -9,6 +9,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { CustomContentContainer } from "../../component-utils/component-utils.styles";
+import "./admin-product-form.styles.scss"
 
 const AdminProductForm = ({ props }) => {
   const { formType, shopId, initFormState, product_id } = props;
@@ -43,8 +44,8 @@ const AdminProductForm = ({ props }) => {
   };
 
   return (
-    <CustomContentContainer>
-      <Form>
+    <CustomContentContainer className="admin-product-form">
+      <Form >
         <Row>
           <Form.Label htmlFor="product_name">アイテムの名前</Form.Label>
           <Form.Control

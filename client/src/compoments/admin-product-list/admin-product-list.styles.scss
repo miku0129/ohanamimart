@@ -1,4 +1,12 @@
+.admin-product-list-row {
+  padding: 10px;
+}
+.admin-product-card {
+  max-width: 350px;
 
-.admin-product-card{
-    max-width: 350px;
+  .admin-product-list-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
 }
