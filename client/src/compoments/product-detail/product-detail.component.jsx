@@ -30,7 +30,6 @@ const ProductDetail = () => {
 
   if (state !== null) {
     shop = get_shop_by_id(categories, state.shopId);
-    console.log("shop", shop);
     if (categories.length > 0) {
       product = get_product_by_id(categories, state.shopId, product_id);
     }

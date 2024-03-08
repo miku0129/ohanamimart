@@ -242,7 +242,7 @@ export const addDocument_of_a_product = async (shopId, product, image) => {
         id: 0,
         is_main_product_image: true,
         product_id: tailEndId_for_newProduct,
-        product_image_url: image.product_images,
+        product_image_url: image.product_image_url,
         shop_id: shopId,
       };
       await setDoc(
