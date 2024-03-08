@@ -21,6 +21,10 @@ const AdminProductForm = ({ props }) => {
       product_name: formData.product_name,
       product_description: formData.product_description,
       product_price: Number(formData.product_price),
+      shop_id: shopId,
+      is_product_image_used_in_main_visual: false,
+      is_book: false,
+
     };
     const image = {
       product_image_url: formData.product_images,
