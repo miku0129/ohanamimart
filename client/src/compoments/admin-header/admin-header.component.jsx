@@ -7,7 +7,8 @@ import { CategoriesContext } from "../../context/categories.context";
 import HankoLogoutBtn from "../../hanko/hanko-logout-button/hanko-logout-button.component";
 
 import { CustomBtnGroup } from "../../component-utils/component-utils.styles";
-import "./admin-header.styles.scss"
+import Button from 'react-bootstrap/Button';
+import "./admin-header.styles.scss";
 
 const hankoApi = process.env.REACT_APP_HANKO_API_URL;
 
@@ -57,7 +58,7 @@ const AdminHeader = ({ props }) => {
         </div>
       </CustomBtnGroup>
       <Link to="/admin/setting">
-      <button>設定</button>
+        <Button variant="outline-secondary">設定</Button>
       </Link>
     </div>
   );

@@ -11,6 +11,7 @@ import Shop from "./routes/shop/shop.component";
 import Admin from "./routes/admin/admin.component";
 
 import ScrollToTop from "./component-utils/scroll-to-top";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   // useEffect(() => {
