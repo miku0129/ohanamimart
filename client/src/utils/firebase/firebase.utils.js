@@ -266,16 +266,43 @@ export const addDocument_of_a_product = async (shopId, product, image) => {
   }
 };
 
-export const updateDocument_of_a_product = async (shopId, product_id, data) => {
-  const targetProductRef = doc(
+export const updateDocument_of_a_product = async (
+  shopId,
+  product,
+  product_id,
+  image
+) => {
+  const productRef = doc(
     db,
     "shops_2",
     String(shopId),
     "products",
     String(product_id)
   );
-  const docSnap = await getDoc(targetProductRef);
-  if (docSnap.exists()) {
-    await updateDoc(targetProductRef, data);
+  try {
+    const docSnap_of_product = await getDoc(productRef);
+    if (docSnap_of_product.exists()) {
+      await updateDoc(productRef, product);
+    }
+    const ProductImgRef = doc(
+      db,
+      "shops_2",
+      String(shopId),
+      "products",
+      String(product_id),
+      "images_of_product",
+      "0"
+    );
+    try {
+      const docSnap_of_img = await getDoc(ProductImgRef);
+      if (docSnap_of_img.exists()) {
+        await updateDoc(ProductImgRef, image);
+      }
+      window.alert(`アイテムの更新に成功しました。`);
+    } catch (e) {
+      window.alert(`アイテム画像の更新に失敗しました。Error log: ${e}`);
+    }
+  } catch (e) {
+    window.alert(`アイテムの更新に失敗しました。Error log: ${e}`);
   }
 };

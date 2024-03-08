@@ -21,7 +21,7 @@ const AdminProductForm = ({ props }) => {
       product_price: Number(formData.product_price),
     };
     const image = {
-      product_images: formData.product_images,
+      product_image_url: formData.product_images,
     };
 
     if (formType === formTypes["REGISTER"]) {
@@ -29,8 +29,9 @@ const AdminProductForm = ({ props }) => {
       setFormData(initFormState);
       window.location.reload();
     } else if (formType === formTypes["UPDATE"]) {
-      await updateDocument_of_a_product(shopId, product_id, product);
+      await updateDocument_of_a_product(shopId, product, product_id, image);
       //リダイレクトさせる
+      console.log("suceeded");
     }
   };
 
@@ -79,12 +80,25 @@ const AdminProductForm = ({ props }) => {
                 type="text"
                 id="product_images"
                 name="product_images"
-                value={formData.product_images}
+                value={image.product_image_url}
                 onChange={handleChange}
               />{" "}
             </div>
           );
         })} */}
+      {formType === formTypes["UPDATE"] && formData && (
+        <div>
+          <label htmlFor="product_images">アイテム写真URL:</label>
+          <input
+            type="text"
+            id="product_images"
+            name="product_images"
+            value={formData.product_images && formData.product_images[0].product_image_url}
+            onChange={handleChange}
+          />{" "}
+        </div>
+      )}
+
       {formType === formTypes["REGISTER"] && (
         <div>
           <label htmlFor="product_images">アイテム写真URL:</label>
