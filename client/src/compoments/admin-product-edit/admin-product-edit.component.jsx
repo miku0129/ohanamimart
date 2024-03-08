@@ -6,6 +6,8 @@ import AdminProductForm from "../admin-product-form/admin-product-form.component
 import { CategoriesContext } from "../../context/categories.context";
 import { get_product_by_id } from "../../utils/data/data.utils";
 import { formTypes } from "../../types/types";
+import { CustomContentContainer } from "../../component-utils/component-utils.styles";
+import Button from 'react-bootstrap/Button';
 
 const AdminProductEdit = () => {
   const [selectedProdName, setSelectedProdName] = useState("");
@@ -56,10 +58,10 @@ const AdminProductEdit = () => {
   console.log(selectedProdImages);
 
   return (
-    <div>
-      <button type="button" onClick={() => navigate(-1)}>
+    <CustomContentContainer>
+      <Button variant="secondary" onClick={() => navigate(-1)}>
         戻る
-      </button>
+      </Button>
       {selectedProdName && (
         <AdminProductForm
           props={{
@@ -70,7 +72,7 @@ const AdminProductEdit = () => {
           }}
         />
       )}
-    </div>
+    </CustomContentContainer>
   );
 };
 
