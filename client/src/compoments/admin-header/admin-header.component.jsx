@@ -1,4 +1,5 @@
 import { useMemo, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import { Hanko } from "@teamhanko/hanko-elements";
 
 import { CategoriesContext } from "../../context/categories.context";
@@ -55,6 +56,9 @@ const AdminHeader = ({ props }) => {
           <HankoLogoutBtn className="btn-style" />
         </div>
       </CustomBtnGroup>
+      <Link to="/admin/setting">
+      <button>設定</button>
+      </Link>
     </div>
   );
 };

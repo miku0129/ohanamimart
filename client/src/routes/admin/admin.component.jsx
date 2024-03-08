@@ -8,7 +8,7 @@ const Admin = () => {
   return (
     <Routes>
       <Route index element={<AdminSignin />} />
-      <Route path="param" element={<AdminParamSetting />} />
+      <Route path="setting" element={<AdminParamSetting />} />
       <Route path="dashboad/*" element={<AdminDashboad />} />
       <Route path="dashboad/product/edit/:product_id" element={<AdminProductEdit />} />
     </Routes>

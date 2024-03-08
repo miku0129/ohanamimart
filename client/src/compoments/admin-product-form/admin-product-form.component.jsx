@@ -4,6 +4,7 @@ import {
   updateDocument_of_a_product,
 } from "../../utils/firebase/firebase.utils";
 import { formTypes } from "../../types/types";
+import { redirect } from "react-router-dom";
 
 const AdminProductForm = ({ props }) => {
   const { formType, shopId, initFormState, product_id } = props;
@@ -28,10 +29,10 @@ const AdminProductForm = ({ props }) => {
       await addDocument_of_a_product(shopId, product, image);
       setFormData(initFormState);
       window.location.reload();
+
     } else if (formType === formTypes["UPDATE"]) {
       await updateDocument_of_a_product(shopId, product, product_id, image);
-      //リダイレクトさせる
-      console.log("suceeded");
+      window.location = "http://localhost:3000/admin/dashboad/";
     }
   };
 
@@ -77,7 +78,10 @@ const AdminProductForm = ({ props }) => {
             type="text"
             id="product_images"
             name="product_images"
-            value={formData.product_images && formData.product_images[0].product_image_url}
+            value={
+              formData.product_images &&
+              formData.product_images[0].product_image_url
+            }
             onChange={handleChange}
           />{" "}
         </div>
