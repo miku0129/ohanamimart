@@ -35,15 +35,9 @@ const Nav = () => {
           </div>
         </div>
         {/* <div className="nav-links-container">
-          <Link className="nav-link" to="/shop">
-            SHOP
-            </Link>
-            <Link className="nav-link" to="/sign-in">
-            SIGN IN
+          <Link className="nav-link" to="/admin">
+            admin
           </Link>
-          <div>
-            <span>Unis par la créativité</span>
-          </div>
         </div> */}
       </div>
     </Fragment>
