@@ -2,6 +2,16 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
 
 import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+
+import {
   getFirestore,
   collection,
   doc,
@@ -21,7 +31,6 @@ import {
   getTheTailendId,
 } from "./firebase.helper";
 
-//initial shop data
 import SHOP_DATA from "../data/shop-data";
 import PRODUCT_DATA from "../data/product-data";
 import PRODUCT_IMAGE_DATA from "../data/product-image-data";
@@ -31,6 +40,46 @@ export const firestore = getFirestore(app);
 export const analytics = getAnalytics(app);
 export const analytics_logEvent = logEvent;
 
+//authenticaiton
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({
+  prompt: "select_account",
+});
+
+export const auth = getAuth();
+
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+  return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+
+export const signInAuthUserEmailAndPassword = async (auth, email, password) => {
+  if (!email || !password) return;
+
+  return await signInWithEmailAndPassword(auth, email, password);
+};
+
+export const signOutUser = async () => await signOut(auth);
+
+export const onAuthStateChangedListener = (callback) =>
+  onAuthStateChanged(auth, callback);
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (userAuth) => {
+        unsubscribe();
+        resolve(userAuth);
+      },
+      reject
+    );
+  });
+};
+
+//initial shop data
 export const initializeCategoryData_1 = async () => {
   const { shops } = SHOP_DATA;
 
