@@ -34,11 +34,11 @@ const Nav = () => {
             </LabelLink>
           </div>
         </div>
-        <div className="nav-links-container">
+        {/* <div className="nav-links-container">
           <Link className="nav-link" to="/admin">
             admin
           </Link>
-        </div>
+        </div> */}
       </div>
     </Fragment>
   );

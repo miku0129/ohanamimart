@@ -31,7 +31,7 @@ export const firestore = getFirestore(app);
 export const analytics = getAnalytics(app);
 export const analytics_logEvent = logEvent;
 
-export const initializeCategoryData = async () => {
+export const initializeCategoryData_1 = async () => {
   const { shops } = SHOP_DATA;
 
   shops.forEach(async (shop, idx) => {
@@ -66,6 +66,11 @@ export const initializeCategoryData = async () => {
       }
     }
   });
+};
+
+export const getAllDocuments_1 = async () => {
+  const querySnapshot = await getDocs(collection(db, "shops"));
+  return querySnapshot.docs.map((docsnapshot) => docsnapshot.data());
 };
 
 export const initializeCategoryData_2 = async () => {
@@ -173,7 +178,7 @@ export const initializeCategoryData_2 = async () => {
   });
 };
 
-export const getAllDocuments = async () => {
+export const getAllDocuments_2 = async () => {
   const querySnapshot_of_shops = await getDocs(collection(db, "shops_2"));
   let shops = querySnapshot_of_shops.docs.map((docsnapshot) =>
     docsnapshot.data()
@@ -219,7 +224,7 @@ export const deleteDocument_of_a_product = async (shopId, productId) => {
 };
 
 export const addDocument_of_a_product = async (shopId, product, image) => {
-  const products_of_the_shop = (await getAllDocuments()).filter(
+  const products_of_the_shop = (await getAllDocuments_2()).filter(
     (shop) => shop.id === shopId
   )[0].products;
   const tailEndId_for_newProduct = getTheTailendId(products_of_the_shop);

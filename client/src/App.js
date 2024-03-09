@@ -1,7 +1,7 @@
 // import { useEffect } from "react";
 // import { initializeCategoryData_2 } from "./utils/firebase/firebase.utils";
 
-// import { initializeCategoryData } from "./utils/firebase/firebase.utils";
+// import { initializeCategoryData_1 } from "./utils/firebase/firebase.utils";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -12,19 +12,18 @@ import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import Admin from "./routes/admin/admin.component";
 
 import ScrollToTop from "./component-utils/scroll-to-top";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   // useEffect(() => {
   //   const initCategoryData = async () => {
-  //     await initializeCategoryData();
+  //     await initializeCategoryData_2();
   //   };
   //   initCategoryData();
   // }, []);
 
   // useEffect(() => {
-  //   const initCategoryData = async () => {
-  //     await initializeCategoryData_2();
+  //   const initCategoryData_1 = async () => {
   //   };
   //   initCategoryData();
   // }, []);
