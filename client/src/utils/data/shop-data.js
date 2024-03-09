@@ -13,7 +13,7 @@ const SHOP_DATA = {
       shop_intro_text:
         "Tsubaki Création  confectionne des créations textiles authentiques et originales, dont les tissus  viennent du Japon.  Vous pouvez trouver des sacs et des accessoires que vous pouvez utiliser, facilement, tous les jours !",
 
-      shop_email: "svartkatt39@gmail.com",
+      shop_email: "",
     },
     {
       id: 1,
