@@ -3,7 +3,9 @@ import {
   addDocument_of_a_product,
   updateDocument_of_a_product,
 } from "../../utils/firebase/firebase.utils";
+
 import { formTypes } from "../../types/types";
+import { redirect_url_after_updating_product } from "../../assets/page-assets";
 
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -53,7 +55,7 @@ const AdminProductForm = ({ props }) => {
       window.location.reload();
     } else if (formType === formTypes["UPDATE"]) {
       await updateDocument_of_a_product(shopId, product, product_id, image);
-      window.location = "http://localhost:3000/admin/dashboad/";
+      window.location = redirect_url_after_updating_product;
     }
   };
 
