@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import AdminAuth from "../admin-auth/admin-auth.component";
-import AdminDashboad from "../admin-dashboad/admin-dashboad.component";
+import AdminAuthSignin from "../../compoments/admin-auth-signin/admin-auth-signin.component";
+import AdminAuthSignup from "../../compoments/admin-auth-signup/admin-auth-signup.component";
+import AdminDashboad from "../../compoments/admin-dashboad/admin-dashboad.component";
 import { auth } from "../../utils/firebase/firebase.utils";
+import "./admin.styles.scss"
 
 const Admin = () => {
   const [user, setUser] = useState(null);
@@ -13,11 +15,14 @@ const Admin = () => {
     checkLogin();
   }, [user]);
 
-  console.log("user", user);
-
   return (
     <div>
-      {!user && <AdminAuth setUser={setUser} />}
+      {!user && (
+        <div className="authenticationContainer">
+          <AdminAuthSignup setUser={setUser}/>
+          <AdminAuthSignin setUser={setUser}/>
+        </div>
+      )}
       {user && <AdminDashboad setUser={setUser} />}
     </div>
     // <Routes>
