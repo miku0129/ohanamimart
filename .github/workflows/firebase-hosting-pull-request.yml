@@ -14,6 +14,7 @@ jobs:
           echo "${{ secrets.SERVER_ENV }}" >> .env
       - run: |
           touch .env 
+          echo secrets.CLIENT_ENV
           echo "${{ secrets.CLIENT_ENV }}" >> .env
           npm ci && npm run client-build
         working-directory: ./client
