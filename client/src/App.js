@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { initializeCategoryData_2 } from "./utils/firebase/firebase.utils";
+// import { useEffect } from "react";
+// import { initializeCategoryData_2 } from "./utils/firebase/firebase.utils";
 
 // import { initializeCategoryData } from "./utils/firebase/firebase.utils";
 

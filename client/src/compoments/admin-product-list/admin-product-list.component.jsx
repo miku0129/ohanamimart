@@ -45,6 +45,7 @@ const AdminProductList = ({ props }) => {
                             <img
                               class="admin-product-list-img"
                               src={img.product_image_url}
+                              alt={`Id:${img.id}`}
                             />
                           );
                         })}
