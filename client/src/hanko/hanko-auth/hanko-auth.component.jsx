@@ -8,16 +8,28 @@ const HankoAuth = () => {
   const navigate = useNavigate();
   const hanko = useMemo(() => new Hanko(hankoApi), []);
 
-  console.log("??", hankoApi)
+  console.log("??", hankoApi);
 
   const redirectAfterLogin = useCallback(() => {
-    navigate("/admin/dashboad");
+    try {
+      console.log("redirectAfterLogin is work");
+
+      navigate("/admin/dashboad");
+    } catch (e) {
+      console.log(`error: ${e} `);
+    }
   }, [navigate]);
 
   useEffect(
     () =>
       hanko.onAuthFlowCompleted(() => {
-        redirectAfterLogin();
+        try {
+          console.log("onAuthFlowCompleted is work");
+
+          redirectAfterLogin();
+        } catch (e) {
+          console.log(`error: ${e} `);
+        }
       }),
     [hanko, redirectAfterLogin]
   );
