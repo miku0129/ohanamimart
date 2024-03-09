@@ -1,65 +1,61 @@
-import { useMemo, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-import { Hanko } from "@teamhanko/hanko-elements";
+import { useEffect, useContext } from "react";
 
 import { CategoriesContext } from "../../context/categories.context";
-
-import HankoLogoutBtn from "../../hanko/hanko-logout-button/hanko-logout-button.component";
-
+import { auth, signOutUser } from "../../utils/firebase/firebase.utils";
 import { CustomBtnGroup } from "../../component-utils/component-utils.styles";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import "./admin-header.styles.scss";
 
-const hankoApi = process.env.REACT_APP_HANKO_API_URL;
-
 const AdminHeader = ({ props }) => {
-  const hanko = useMemo(() => new Hanko(hankoApi), []);
   const {
-    setUserEmail,
-    userEmail,
-    setShopName,
-    shopName,
-    setProducts,
-    setShopId,
+    setUser,
+    //   setUserEmail,
+    //   userEmail,
+    //   setShopName,
+    //   shopName,
+    //   setProducts,
+    //   setShopId,
   } = props;
 
   const categories = useContext(CategoriesContext);
 
-  useEffect(() => {
-    hanko.user
-      .getCurrent()
-      .then(({ email }) => {
-        setUserEmail(email);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [hanko, setUserEmail]);
+  // useEffect(() => {
+  //   hanko.user
+  //     .getCurrent()
+  //     .then(({ email }) => {
+  //       setUserEmail(email);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, [hanko, setUserEmail]);
 
-  useEffect(() => {
-    if (userEmail) {
-      const shopInfo = categories.filter((shop) => {
-        return shop.shop_email === userEmail;
-      })[0];
-      if (shopInfo) {
-        setShopName(shopInfo.shop_name);
-        setProducts(shopInfo.products);
-        setShopId(shopInfo.id);
-      }
-    }
-  }, [userEmail, setShopId, setShopName, setProducts, categories]);
+  // useEffect(() => {
+  //   if (userEmail) {
+  //     const shopInfo = categories.filter((shop) => {
+  //       return shop.shop_email === userEmail;
+  //     })[0];
+  //     if (shopInfo) {
+  //       setShopName(shopInfo.shop_name);
+  //       setProducts(shopInfo.products);
+  //       setShopId(shopInfo.id);
+  //     }
+  //   }
+  // }, [userEmail, setShopId, setShopName, setProducts, categories]);
+
+  const signOut = async () => {
+    await signOutUser();
+    setUser(auth.currentUser);
+  };
 
   return (
     <div>
       <CustomBtnGroup>
-        <h3>Hello, {shopName}</h3>
+        {/* <h3>Hello, {shopName}</h3> */}
         <div className="hankoLogoutBtn-style">
-          <HankoLogoutBtn className="btn-style" />
+          <button onClick={signOut}>Sign out</button>
         </div>
       </CustomBtnGroup>
-      <Link to="/admin/setting">
-        <Button variant="secondary">設定</Button>
-      </Link>
     </div>
   );
 };

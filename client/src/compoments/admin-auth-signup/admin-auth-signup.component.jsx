@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import AdminAuthFormInput from "../admin-auth-form-input/admin-auth-form-input.component";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
-import { redirect_url_after_login_or_signin } from "../../assets/page-assets";
 import "./admin-auth-signup.styles.scss";
 
 const defaultFormField = {
@@ -11,11 +9,9 @@ const defaultFormField = {
   confirmPassword: "",
 };
 
-const AdminAuthSignup = () => {
+const AdminAuthSignup = ({ setUser }) => {
   const [field, setField] = useState(defaultFormField);
   const { email, password, confirmPassword } = field;
-
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,13 +20,15 @@ const AdminAuthSignup = () => {
       return;
     } else {
       try {
-        await createAuthUserWithEmailAndPassword(email, password);
-
+        const { user } = await createAuthUserWithEmailAndPassword(
+          email,
+          password
+        );
+        setUser(user);
         setField(defaultFormField); //フォームを初期化
       } catch (error) {
         console.log("error: ", error);
       }
-      navigate(redirect_url_after_login_or_signin);
     }
   };
 

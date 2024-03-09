@@ -10,5 +10,3 @@ export const team_instagram_url = "https://www.instagram.com/hanami.37/";
 
 export const redirect_url_after_updating_product =
   "http://localhost:3000/admin/dashboad/";
-
-export const redirect_url_after_login_or_signin = "http://localhost:3000/admin/dashboad/";

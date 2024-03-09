@@ -9,7 +9,7 @@ const defaultFormField = {
   password: "",
 };
 
-const AdminAuthSignin = () => {
+const AdminAuthSignin = ({setUser}) => {
   const [field, setField] = useState(defaultFormField);
   const { email, password } = field;
 
@@ -23,7 +23,7 @@ const AdminAuthSignin = () => {
     e.preventDefault();
     try {
       const user = await signInAuthUserEmailAndPassword(auth, email, password);
-      console.log("user.user", user.user);
+      setUser(user.user)
       alert("login succeed");
       resetFormFields();
     } catch (error) {
@@ -48,7 +48,7 @@ const AdminAuthSignin = () => {
   return (
     <div className="signinContainer">
       <h4>サインインします</h4>
-      <span>登録済みのEmailアドレスとパスワードが必要です</span>
+      <span>Emailアドレスとパスワードが必要です</span>
       <form onSubmit={handleSubmit}>
         <AdminAuthFormInput
           label="email"
