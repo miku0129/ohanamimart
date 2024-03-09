@@ -4,7 +4,6 @@ import { ReactComponent as DefaultIcon } from "../assets/cherry-blossom-9-svgrep
 import { ReactComponent as PurchaseLogo } from "../assets/gift-1-svgrepo-com.svg";
 import { ReactComponent as UserLogo } from "../assets/user-2-svgrepo-com.svg";
 
-
 //component
 export const SlickImage = styled.img`
   object-fit: cover;
@@ -14,7 +13,10 @@ export const SlickImage = styled.img`
     props.slickUsage === "mainVisual" || props.slickUsage === "common-product"
       ? "400px"
       : "600px"};
-  width: ${(props) => (props.slickUsage === "mainVisual" ? "100%" : "100%")}; //これがないとレスポンシブが崩れる
+  width: ${(props) =>
+    props.slickUsage === "mainVisual"
+      ? "100%"
+      : "100%"}; //これがないとレスポンシブが崩れる
 
   @media (max-width: 767px) {
     height: ${(props) =>
@@ -180,4 +182,17 @@ export const PreviewFourItemsInALine = styled.div`
     padding: 0;
     padding: 0 10px; // 両端に余白を追加
   }
+`;
+
+export const CustomBtn = styled.button`
+  height: 20px;
+`;
+
+export const CustomBtnGroup = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const CustomContentContainer = styled.div`
+  padding: 20px;
 `;

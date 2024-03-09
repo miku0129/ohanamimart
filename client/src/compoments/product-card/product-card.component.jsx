@@ -1,6 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux/es/hooks/useSelector";
-import { selectCategories } from "../../store/categories/category.selector";
+import { CategoriesContext } from "../../context/categories.context";
 
 import { SpanLink } from "../../component-utils/component-utils.styles";
 import { get_shop_by_id } from "../../utils/data/data.utils";
@@ -13,8 +13,8 @@ const ProductCard = ({ product }) => {
   const name_of_product =
     product_name.length < 20 ? product_name : product_name.slice(0, 20) + "...";
 
-  const categories = useSelector(selectCategories);
-  const shop = get_shop_by_id(categories, shop_id)
+  const categories = useContext(CategoriesContext);
+  const shop = get_shop_by_id(categories, shop_id);
 
   return (
     <div className="product-card-container">
@@ -36,6 +36,7 @@ const ProductCard = ({ product }) => {
         <div className="product-card-footer-left">
           <Link
             to={`/shop/${shop.shop_name_lowercase_no_spaces_for_url}/${id}`}
+            state={{ shopId: `${shop.id}` }}
           >
             <SpanLink className="name_of_product">{name_of_product}</SpanLink>
           </Link>

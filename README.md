@@ -6,8 +6,7 @@ Platform offering opportunities to become familiar with Japanese culture and sha
 
 ## Welcome 👋
 
-In Japan, there is a custom of cherry blossom viewing in spring. <br/>
-People enjoy delicious food and drink while admiring the cherry blossoms.<br/>
+Japanese people enjoy delicious food and drink while admiring the cherry blossoms in spring.<br/>
 The name <strong>Hanami</strong> captures this lively and fun atmosphere in it.🌸🍡🏮
 
 <img src="https://i.ibb.co/gyZcTns/HANAMI-trimed.png" alt="group logo" width="400px"/>

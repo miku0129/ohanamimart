@@ -1,6 +1,6 @@
-import { useParams, Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectCategories } from "../../store/categories/category.selector";
+import { useContext } from "react";
+import { useParams, Link, useLocation } from "react-router-dom";
+import { CategoriesContext } from "../../context/categories.context";
 import { get_product_by_id, get_shop_by_id } from "../../utils/data/data.utils";
 
 import ImgGallery from "../img-gallery/img-gallery";
@@ -19,17 +19,27 @@ import {
 import "./product-detail.styles.scss";
 
 const ProductDetail = () => {
-  const categories = useSelector(selectCategories);
+  let shop;
+  let product;
+
+  const categories = useContext(CategoriesContext);
   const { product_id } = useParams();
 
-  const product =
-    categories.length > 0 ? get_product_by_id(categories, product_id) : {};
-  const shop = get_shop_by_id(categories, product.shop_id);
+  const location = useLocation();
+  const state = location.state;
+
+  if (state !== null) {
+    shop = get_shop_by_id(categories, state.shopId);
+    if (categories.length > 0) {
+      product = get_product_by_id(categories, state.shopId, product_id);
+    }
+  }
+
   const productType = product.is_book ? "book" : "common-product";
 
   analytics_logEvent(analytics, "view_item", {
-        item_id: product_id,
-        item_name: product.product_name,
+    item_id: product_id,
+    item_name: product.product_name,
   });
 
   return (

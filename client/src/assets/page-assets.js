@@ -7,3 +7,6 @@ export const team_sub_text =
 export const footerText = "Hanami37";
 
 export const team_instagram_url = "https://www.instagram.com/hanami.37/";
+
+export const redirect_url_after_updating_product =
+  "http://localhost:3000/admin/dashboad/";
