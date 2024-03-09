@@ -8,8 +8,6 @@ const HankoAuth = () => {
   const navigate = useNavigate();
   const hanko = useMemo(() => new Hanko(hankoApi), []);
 
-  console.log("??", hankoApi);
-
   const redirectAfterLogin = useCallback(() => {
     try {
       console.log("redirectAfterLogin is work");

@@ -43,9 +43,10 @@ const AdminProductList = ({ props }) => {
                         {product.product_images.map((img) => {
                           return (
                             <img
-                              class="admin-product-list-img"
+                              className="admin-product-list-img"
                               src={img.product_image_url}
                               alt={`Id:${img.id}`}
+                              key={img.id}
                             />
                           );
                         })}
