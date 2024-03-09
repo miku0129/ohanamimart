@@ -8,9 +8,9 @@ import { getAuth } from "firebase/auth";
 import AdminAuthFormInput from "../admin-auth-form-input/admin-auth-form-input.component";
 
 import {
-  auth,
+//   auth,
   signInAuthUserEmailAndPassword,
-  signInWithGooglePopup,
+//   signInWithGooglePopup,
 } from "../../utils/firebase/firebase.utils";
 
 // import { setCurrentUser } from "../../store/user/user.action";
@@ -33,9 +33,9 @@ const AdminAuthSignin = () => {
     setField(defaultFormField);
   };
 
-  const signInWithGoogle = async () => {
-    await signInWithGooglePopup();
-  };
+//   const signInWithGoogle = async () => {
+//     await signInWithGooglePopup();
+//   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -100,9 +100,9 @@ const AdminAuthSignin = () => {
             G signin
           </Button> */}
           <button type="submit">Signin</button>
-          <button type="button" onClick={signInWithGoogle}>
+          {/* <button type="button" onClick={signInWithGoogle}>
             G signin
-          </button>
+          </button> */}
         </div>
       </form>
     </div>

@@ -3,8 +3,6 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 
 import {
   getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
@@ -41,19 +39,12 @@ export const analytics = getAnalytics(app);
 export const analytics_logEvent = logEvent;
 
 //authenticaiton
-const provider = new GoogleAuthProvider();
-provider.setCustomParameters({
-  prompt: "select_account",
-});
-
 export const auth = getAuth();
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
   return await createUserWithEmailAndPassword(auth, email, password);
 };
-
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const signInAuthUserEmailAndPassword = async (auth, email, password) => {
   if (!email || !password) return;
