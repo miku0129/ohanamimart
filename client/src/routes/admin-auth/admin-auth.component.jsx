@@ -1,20 +1,15 @@
-// import SignUpForm from "../../compoments/sign-up-form/sign-up-form.component";
-// import SignInForm from "../../compoments/sign-in-form/sign-in-form.component";
+import { useState } from "react";
 import AdminAuthSignup from "../../compoments/admin-auth-signup/admin-auth-signup.component";
 import AdminAuthSignin from "../../compoments/admin-auth-signin/admin-auth-signin.component";
-
-
-// import { AuthenticationContainer } from "./authentication.styles";
+import "./admin-auth.styles.scss";
 
 const AdminAuth = () => {
+  const [admin, setAdmin] = useState(null);
+
   return (
-    // <AuthenticationContainer>
-    //   <SignInForm />
-    //   <SignUpForm />
-    // </AuthenticationContainer>
-    <div>
-      <AdminAuthSignup />
-      <AdminAuthSignin />
+    <div className="authenticationContainer">
+      <AdminAuthSignup setAdmin={setAdmin} />
+      <AdminAuthSignin setAdmin={setAdmin} />
     </div>
   );
 };

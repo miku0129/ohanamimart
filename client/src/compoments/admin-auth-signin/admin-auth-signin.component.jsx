@@ -1,20 +1,8 @@
 import { useState } from "react";
-// import { useDispatch } from "react-redux";
-
 import { getAuth } from "firebase/auth";
-
-// import FormInput from "../form-input/form-input.component";
-// import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import AdminAuthFormInput from "../admin-auth-form-input/admin-auth-form-input.component";
-
-import {
-//   auth,
-  signInAuthUserEmailAndPassword,
-//   signInWithGooglePopup,
-} from "../../utils/firebase/firebase.utils";
-
-// import { setCurrentUser } from "../../store/user/user.action";
-// import { SigninContainer } from "./sign-in-form.styles";
+import { signInAuthUserEmailAndPassword } from "../../utils/firebase/firebase.utils";
+import "./admin-auth-signin.styles.scss";
 
 const defaultFormField = {
   email: "",
@@ -22,8 +10,6 @@ const defaultFormField = {
 };
 
 const AdminAuthSignin = () => {
-  //   const dispatch = useDispatch();
-
   const [field, setField] = useState(defaultFormField);
   const { email, password } = field;
 
@@ -33,16 +19,11 @@ const AdminAuthSignin = () => {
     setField(defaultFormField);
   };
 
-//   const signInWithGoogle = async () => {
-//     await signInWithGooglePopup();
-//   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const user = await signInAuthUserEmailAndPassword(auth, email, password);
       console.log("user.user", user.user);
-      //   dispatch(setCurrentUser(user.user));
       alert("login succeed");
       resetFormFields();
     } catch (error) {
@@ -65,10 +46,9 @@ const AdminAuthSignin = () => {
   };
 
   return (
-    // <SigninContainer>
-    <div>
-      <h2>Already have an account</h2>
-      <span>Sing in with your email and password</span>
+    <div className="signinContainer">
+      <h4>サインインします</h4>
+      <span>登録済みのEmailアドレスとパスワードが必要です</span>
       <form onSubmit={handleSubmit}>
         <AdminAuthFormInput
           label="email"
@@ -91,23 +71,10 @@ const AdminAuthSignin = () => {
           }}
         />
         <div className="buttons-container">
-          {/* <Button type="submit">Signin</Button>
-          <Button
-            type="button"
-            buttonType={BUTTON_TYPE_CLASSES.google}
-            onClick={signInWithGoogle}
-          >
-            G signin
-          </Button> */}
           <button type="submit">Signin</button>
-          {/* <button type="button" onClick={signInWithGoogle}>
-            G signin
-          </button> */}
         </div>
       </form>
     </div>
-
-    // </SigninContainer>
   );
 };
 

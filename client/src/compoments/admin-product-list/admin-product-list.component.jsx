@@ -14,7 +14,6 @@ const AdminProductList = ({ props }) => {
     <div>
       <hr />
       <Row xs={1} md={3} className="g-4 admin-product-list-row">
-        {/* {Array.from({ length: 4 }).map((_, idx) => ( */}
         {products &&
           products
             .filter((product) => {
