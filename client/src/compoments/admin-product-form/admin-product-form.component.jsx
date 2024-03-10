@@ -109,6 +109,7 @@ const AdminProductForm = ({ props }) => {
                 id="product_images"
                 name="product_images"
                 value={
+                  formData.product_images &&
                   formData.product_images[0].product_image_url
                 }
                 onChange={handleChange}

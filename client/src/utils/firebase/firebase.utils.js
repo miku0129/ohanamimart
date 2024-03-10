@@ -6,7 +6,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  onAuthStateChanged
+  onAuthStateChanged,
 } from "firebase/auth";
 
 import {
@@ -325,6 +325,17 @@ export const updateDocument_of_a_product = async (
       "images_of_product",
       "0"
     );
+
+    //フォームで更新前のアイテムの画像urlを表示させるため
+    //画像urlの更新を行わず更新ボタンを押下するとデータがdbに正しく挿入されない。
+    //データを正しく上書きし更新できるようにする
+    if (Array.isArray(image.product_image_url)) {
+      image = {
+        ...image,
+        product_image_url: image.product_image_url[0].product_image_url,
+      };
+    }
+
     try {
       const docSnap_of_img = await getDoc(ProductImgRef);
       if (docSnap_of_img.exists()) {
