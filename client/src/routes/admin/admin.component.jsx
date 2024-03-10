@@ -2,28 +2,33 @@ import { useState, useEffect } from "react";
 import AdminAuthSignin from "../../compoments/admin-auth-signin/admin-auth-signin.component";
 import AdminAuthSignup from "../../compoments/admin-auth-signup/admin-auth-signup.component";
 import AdminDashboad from "../../compoments/admin-dashboad/admin-dashboad.component";
-import { auth } from "../../utils/firebase/firebase.utils";
-import "./admin.styles.scss"
+import {onAuthStateChangedListener  } from "../../utils/firebase/firebase.utils";
+import "./admin.styles.scss";
 
 const Admin = () => {
-  const [user, setUser] = useState(null);
+  const [admin, setAdmin] = useState(null);
+
   useEffect(() => {
-    const checkLogin = () => {
-      const currentUser = auth.currentUser;
-      setUser(currentUser);
-    };
-    checkLogin();
-  }, [user]);
+    onAuthStateChangedListener((currentUser)=>{
+      if (currentUser) {
+            setAdmin(currentUser);
+            console.log("signin");
+          } else {
+            setAdmin(null);
+            console.log("signout");
+          }
+    })
+  }, []);
 
   return (
     <div>
-      {!user && (
+      {!admin && (
         <div className="authenticationContainer">
-          <AdminAuthSignup setUser={setUser}/>
-          <AdminAuthSignin setUser={setUser}/>
+          <AdminAuthSignup setAdmin={setAdmin} />
+          <AdminAuthSignin setAdmin={setAdmin} />
         </div>
       )}
-      {user && <AdminDashboad setUser={setUser} />}
+      {admin && <AdminDashboad props={{ setAdmin: setAdmin, admin: admin }} />}
     </div>
     // <Routes>
     //   <Route index element={<AdminAuth />} />

@@ -9,7 +9,7 @@ const defaultFormField = {
   confirmPassword: "",
 };
 
-const AdminAuthSignup = ({ setUser }) => {
+const AdminAuthSignup = ({ setAdmin }) => {
   const [field, setField] = useState(defaultFormField);
   const { email, password, confirmPassword } = field;
 
@@ -24,7 +24,8 @@ const AdminAuthSignup = ({ setUser }) => {
           email,
           password
         );
-        setUser(user);
+        setAdmin(user);
+        alert("Signup succeed");
         setField(defaultFormField); //フォームを初期化
       } catch (error) {
         console.log("error: ", error);

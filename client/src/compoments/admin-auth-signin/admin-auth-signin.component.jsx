@@ -9,7 +9,7 @@ const defaultFormField = {
   password: "",
 };
 
-const AdminAuthSignin = ({setUser}) => {
+const AdminAuthSignin = ({setAdmin}) => {
   const [field, setField] = useState(defaultFormField);
   const { email, password } = field;
 
@@ -23,8 +23,8 @@ const AdminAuthSignin = ({setUser}) => {
     e.preventDefault();
     try {
       const user = await signInAuthUserEmailAndPassword(auth, email, password);
-      setUser(user.user)
-      alert("login succeed");
+      setAdmin(user.user)
+      alert("Signin succeed");
       resetFormFields();
     } catch (error) {
       switch (error.code) {

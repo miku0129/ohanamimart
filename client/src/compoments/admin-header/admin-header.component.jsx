@@ -8,16 +8,16 @@ import "./admin-header.styles.scss";
 
 const AdminHeader = ({ props }) => {
   const {
-    setUser,
+    setAdmin,
+    // shopName,
     //   setUserEmail,
     //   userEmail,
     //   setShopName,
-    //   shopName,
     //   setProducts,
     //   setShopId,
   } = props;
 
-  const categories = useContext(CategoriesContext);
+  // const categories = useContext(CategoriesContext);
 
   // useEffect(() => {
   //   hanko.user
@@ -45,7 +45,9 @@ const AdminHeader = ({ props }) => {
 
   const signOut = async () => {
     await signOutUser();
-    setUser(auth.currentUser);
+    setAdmin(auth.currentUser);
+    
+    alert("Signout succeed");
   };
 
   return (
