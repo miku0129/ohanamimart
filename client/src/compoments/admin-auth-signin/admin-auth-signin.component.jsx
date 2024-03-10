@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { getAuth } from "firebase/auth";
 import AdminAuthFormInput from "../admin-auth-form-input/admin-auth-form-input.component";
-import { signInAuthUserEmailAndPassword } from "../../utils/firebase/firebase.utils";
+import { signInAuthUserEmailAndPassword, auth } from "../../utils/firebase/firebase.utils";
+import Button from "react-bootstrap/Button";
 import "./admin-auth-signin.styles.scss";
 
 const defaultFormField = {
@@ -9,11 +9,9 @@ const defaultFormField = {
   password: "",
 };
 
-const AdminAuthSignin = ({setAdmin}) => {
+const AdminAuthSignin = ({ setAdmin }) => {
   const [field, setField] = useState(defaultFormField);
   const { email, password } = field;
-
-  const auth = getAuth();
 
   const resetFormFields = () => {
     setField(defaultFormField);
@@ -23,7 +21,7 @@ const AdminAuthSignin = ({setAdmin}) => {
     e.preventDefault();
     try {
       const user = await signInAuthUserEmailAndPassword(auth, email, password);
-      setAdmin(user.user)
+      setAdmin(user.user);
       alert("Signin succeed");
       resetFormFields();
     } catch (error) {
@@ -71,7 +69,9 @@ const AdminAuthSignin = ({setAdmin}) => {
           }}
         />
         <div className="buttons-container">
-          <button type="submit">Signin</button>
+          <Button variant="secondary" type="submit">
+            Sign in
+          </Button>
         </div>
       </form>
     </div>

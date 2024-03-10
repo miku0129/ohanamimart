@@ -10,6 +10,7 @@ import Home from "./routes/home/home.component";
 import Shop from "./routes/shop/shop.component";
 import Exhibitions from "./routes/exhibitions/exhibitions.component";
 import Admin from "./routes/admin/admin.component";
+import AdminProductEdit from "./compoments/admin-product-edit/admin-product-edit.component";
 
 import ScrollToTop from "./component-utils/scroll-to-top";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -37,6 +38,10 @@ const App = () => {
           <Route path="shop/*" element={<Shop />} />
           <Route path="exhibitions/*" element={<Exhibitions />} />
           <Route path="admin/*" element={<Admin />} />
+          <Route
+            path="admin/product/edit/:product_id"
+            element={<AdminProductEdit />}
+          />
         </Route>
       </Routes>
     </>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AdminAuthFormInput from "../admin-auth-form-input/admin-auth-form-input.component";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
+import Button from "react-bootstrap/Button";
 import "./admin-auth-signup.styles.scss";
 
 const defaultFormField = {
@@ -75,7 +76,9 @@ const AdminAuthSignup = ({ setAdmin }) => {
               value: confirmPassword,
             }}
           />
-          <button type="submit">Sign up</button>
+          <Button variant="secondary" type="submit">
+            Sign up
+          </Button>
         </form>
       </div>
     </div>
