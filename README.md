@@ -17,7 +17,7 @@ Want to bridge between Japanese creators abroad and local french people interest
 ## Features 🌸
 
 - Mobile user friendly responsive design.  
-- Registered creators can edit their products using the authentication account implemented in Firebase Authentication. 
+- Registered creators can edit their products using the authentication account implemented in Firebase. 
 - Enabled Github Actions in Firebase Hosting to gain CI/CD.
 - Embedded Google Analytics to provide research on user preferences.
 
