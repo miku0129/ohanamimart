@@ -1,11 +1,9 @@
 # Ohanamimart 
 
-This repository contains the codebase of a website for <strong>Hanami</strong> - Group of Japanese creators based in Tours, France.<br/>
-They sell one-off handmade pieces combining delicate Japanese culture with French elegance.<br/>
-Platform offering opportunities to become familiar with Japanese culture and share inspiration in France.
-
 ## Welcome 👋
 
+This repository contains the codebase of a website for <strong>Hanami</strong> - Group of Japanese creators based in Tours, France.<br/>
+Platform offering opportunities to become familiar with Japanese culture and share inspiration in France.<br/>
 Japanese people enjoy delicious food and drink while admiring the cherry blossoms in spring.<br/>
 The name <strong>Hanami</strong> captures this lively and fun atmosphere in it.🌸🍡🏮
 
@@ -18,8 +16,8 @@ Want to bridge between Japanese creators abroad and local french people interest
 
 ## Features 🌸
 
-- Responsive design. 
-- Introduced Redux to improve the status management.
+- Mobile user friendly responsive design.  
+- Registered creators can edit their products using the authentication account implemented in Firebase. 
 - Enabled Github Actions in Firebase Hosting to gain CI/CD.
 - Embedded Google Analytics to provide research on user preferences.
 
@@ -27,10 +25,6 @@ Want to bridge between Japanese creators abroad and local french people interest
 
 <img src="https://media.giphy.com/media/Ji3Hi8zckqmpLNuvn0/giphy.gif" alt="demo video" width="700px"/>
 
-## Links 🍵
+## Link 🍵
 
-[Hanami(Website)](https://ohanamimart-37000.web.app/)<br>
-
-[Instagram](https://www.instagram.com/hanami.37/)
-
-[Facebook](https://www.facebook.com/profile.php?id=61551923815475)<br>
+[Hanami(Website)](https://ohanamimart-37000.web.app/)

@@ -2,6 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
 
 import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+
+import {
   getFirestore,
   collection,
   doc,
@@ -15,13 +23,12 @@ import FIREBASECONFIG from "./firebase.config";
 import { firestore as db } from "./firebase.utils";
 
 import {
-  makeProductsArray_for_initializeCategoryData,
+  // makeProductsArray_for_initializeCategoryData,
   makeArrayOfProductsForTheShop,
   makeArrayOfImagesForTheProduct,
   getTheTailendId,
 } from "./firebase.helper";
 
-//initial shop data
 import SHOP_DATA from "../data/shop-data";
 import PRODUCT_DATA from "../data/product-data";
 import PRODUCT_IMAGE_DATA from "../data/product-image-data";
@@ -31,58 +38,78 @@ export const firestore = getFirestore(app);
 export const analytics = getAnalytics(app);
 export const analytics_logEvent = logEvent;
 
-export const initializeCategoryData_1 = async () => {
-  const { shops } = SHOP_DATA;
+//authenticaiton
+export const auth = getAuth();
 
-  shops.forEach(async (shop, idx) => {
-    const shop_id = String(idx);
-    const docRef = doc(db, "shops", shop_id);
-    const docSnap = await getDoc(docRef);
-
-    let products_array = makeProductsArray_for_initializeCategoryData(
-      idx,
-      PRODUCT_DATA,
-      PRODUCT_IMAGE_DATA
-    );
-
-    if (!docSnap.exists()) {
-      try {
-        await setDoc(doc(db, "shops", shop_id), {
-          id: idx,
-          shop_name: shop.shop_name,
-          shop_name_lowercase_no_spaces_for_url:
-            shop.shop_name_lowercase_no_spaces_for_url,
-          shop_icon_url: shop.shop_icon_url,
-          shop_website_url: shop.shop_website_url,
-          shop_purchase_website_url: shop.shop_purchase_website_url,
-          shop_headline: shop.shop_headline,
-          shop_intro_text: shop.shop_intro_text,
-          products: products_array,
-
-          shop_email: shop.shop_email,
-        });
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
-    }
-  });
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+  return await createUserWithEmailAndPassword(auth, email, password);
 };
 
-export const getAllDocuments_1 = async () => {
-  const querySnapshot = await getDocs(collection(db, "shops"));
-  return querySnapshot.docs.map((docsnapshot) => docsnapshot.data());
+export const signInAuthUserEmailAndPassword = async (auth, email, password) => {
+  if (!email || !password) return;
+
+  return await signInWithEmailAndPassword(auth, email, password);
 };
 
-export const initializeCategoryData_2 = async () => {
+export const signOutUser = async () => await signOut(auth);
+
+export const onAuthStateChangedListener = (callback) =>
+  onAuthStateChanged(auth, callback);
+
+//initial shop data
+
+// export const initializeCategoryData_1 = async () => {
+//   const { shops } = SHOP_DATA;
+
+//   shops.forEach(async (shop, idx) => {
+//     const shop_id = String(idx);
+//     const docRef = doc(db, "shops", shop_id);
+//     const docSnap = await getDoc(docRef);
+
+//     let products_array = makeProductsArray_for_initializeCategoryData(
+//       idx,
+//       PRODUCT_DATA,
+//       PRODUCT_IMAGE_DATA
+//     );
+
+//     if (!docSnap.exists()) {
+//       try {
+//         await setDoc(doc(db, "shops", shop_id), {
+//           id: idx,
+//           shop_name: shop.shop_name,
+//           shop_name_lowercase_no_spaces_for_url:
+//             shop.shop_name_lowercase_no_spaces_for_url,
+//           shop_icon_url: shop.shop_icon_url,
+//           shop_website_url: shop.shop_website_url,
+//           shop_purchase_website_url: shop.shop_purchase_website_url,
+//           shop_headline: shop.shop_headline,
+//           shop_intro_text: shop.shop_intro_text,
+//           products: products_array,
+
+//           shop_email: shop.shop_email,
+//         });
+//       } catch (e) {
+//         console.error("Error adding document: ", e);
+//       }
+//     }
+//   });
+// };
+// export const getAllDocuments_1 = async () => {
+//   const querySnapshot = await getDocs(collection(db, "shops"));
+//   return querySnapshot.docs.map((docsnapshot) => docsnapshot.data());
+// };
+
+export const initializeCategoryData = async () => {
   const { shops } = SHOP_DATA;
   shops.forEach(async (shop, idx) => {
     const shop_id = String(idx);
-    const shopDocRef = doc(db, "shops_2", shop_id);
+    const shopDocRef = doc(db, "shops", shop_id);
     const shopDocSnap = await getDoc(shopDocRef);
 
     if (!shopDocSnap.exists()) {
       try {
-        await setDoc(doc(db, "shops_2", shop_id), {
+        await setDoc(doc(db, "shops", shop_id), {
           id: idx,
           shop_name: shop.shop_name,
           shop_name_lowercase_no_spaces_for_url:
@@ -105,7 +132,7 @@ export const initializeCategoryData_2 = async () => {
           const product_id = String(idx);
           const productDocRef = doc(
             db,
-            "shops_2",
+            "shops",
             shop_id,
             "products",
             product_id
@@ -122,7 +149,7 @@ export const initializeCategoryData_2 = async () => {
                 productIdOfSourceFile: productIdOfSourceFile,
               };
               await setDoc(
-                doc(db, "shops_2", shop_id, "products", product_id),
+                doc(db, "shops", shop_id, "products", product_id),
                 product
               );
 
@@ -134,7 +161,7 @@ export const initializeCategoryData_2 = async () => {
                 const product_image_id = String(idx);
                 const productImgDocRef = doc(
                   db,
-                  "shops_2",
+                  "shops",
                   shop_id,
                   "products",
                   product_id,
@@ -147,7 +174,7 @@ export const initializeCategoryData_2 = async () => {
                     await setDoc(
                       doc(
                         db,
-                        "shops_2",
+                        "shops",
                         shop_id,
                         "products",
                         product_id,
@@ -178,14 +205,14 @@ export const initializeCategoryData_2 = async () => {
   });
 };
 
-export const getAllDocuments_2 = async () => {
-  const querySnapshot_of_shops = await getDocs(collection(db, "shops_2"));
+export const getAllDocuments = async () => {
+  const querySnapshot_of_shops = await getDocs(collection(db, "shops"));
   let shops = querySnapshot_of_shops.docs.map((docsnapshot) =>
     docsnapshot.data()
   );
   for (let i = 0; i < shops.length; i++) {
     let querySnapshot_of_products_of_the_shop = await getDocs(
-      collection(db, "shops_2", String(shops[i].id), "products")
+      collection(db, "shops", String(shops[i].id), "products")
     );
     const products = querySnapshot_of_products_of_the_shop.docs.map((doc) => {
       return doc.data();
@@ -194,7 +221,7 @@ export const getAllDocuments_2 = async () => {
       let querySnapshot_of_images_of_the_product = await getDocs(
         collection(
           db,
-          "shops_2",
+          "shops",
           String(shops[i].id),
           "products",
           String(products[j].id),
@@ -214,7 +241,7 @@ export const getAllDocuments_2 = async () => {
 export const deleteDocument_of_a_product = async (shopId, productId) => {
   try {
     await deleteDoc(
-      doc(db, "shops_2", String(shopId), "products", String(productId))
+      doc(db, "shops", String(shopId), "products", String(productId))
     );
     window.alert(`アイテムの削除に成功しました。`);
     window.location.reload();
@@ -224,7 +251,7 @@ export const deleteDocument_of_a_product = async (shopId, productId) => {
 };
 
 export const addDocument_of_a_product = async (shopId, product, image) => {
-  const products_of_the_shop = (await getAllDocuments_2()).filter(
+  const products_of_the_shop = (await getAllDocuments()).filter(
     (shop) => shop.id === shopId
   )[0].products;
   const tailEndId_for_newProduct = getTheTailendId(products_of_the_shop);
@@ -233,7 +260,7 @@ export const addDocument_of_a_product = async (shopId, product, image) => {
     await setDoc(
       doc(
         db,
-        "shops_2",
+        "shops",
         String(shopId),
         "products",
         String(tailEndId_for_newProduct)
@@ -253,7 +280,7 @@ export const addDocument_of_a_product = async (shopId, product, image) => {
       await setDoc(
         doc(
           db,
-          "shops_2",
+          "shops",
           String(shopId),
           "products",
           String(tailEndId_for_newProduct),
@@ -279,7 +306,7 @@ export const updateDocument_of_a_product = async (
 ) => {
   const productRef = doc(
     db,
-    "shops_2",
+    "shops",
     String(shopId),
     "products",
     String(product_id)
@@ -291,13 +318,24 @@ export const updateDocument_of_a_product = async (
     }
     const ProductImgRef = doc(
       db,
-      "shops_2",
+      "shops",
       String(shopId),
       "products",
       String(product_id),
       "images_of_product",
       "0"
     );
+
+    //フォームで更新前のアイテムの画像urlを表示させるため
+    //画像urlの更新を行わず更新ボタンを押下するとデータがdbに正しく挿入されない。
+    //データを正しく上書きし更新できるようにする
+    if (Array.isArray(image.product_image_url)) {
+      image = {
+        ...image,
+        product_image_url: image.product_image_url[0].product_image_url,
+      };
+    }
+
     try {
       const docSnap_of_img = await getDoc(ProductImgRef);
       if (docSnap_of_img.exists()) {

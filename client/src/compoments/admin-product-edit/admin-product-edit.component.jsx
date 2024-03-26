@@ -55,8 +55,6 @@ const AdminProductEdit = () => {
     product_images: selectedProdImages,
   };
 
-  console.log(selectedProdImages);
-
   return (
     <CustomContentContainer>
       <Button variant="secondary" onClick={() => navigate(-1)}>

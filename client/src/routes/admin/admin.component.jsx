@@ -1,17 +1,35 @@
-import { Routes, Route } from "react-router-dom";
-import AdminSignin from "../../compoments/admin-signin/admin-signin.component";
-import AdminParamSetting from "../../compoments/admin-param-setting/admin-param-setting.component";
-import AdminDashboad from "../admin-dashboad/admin-dashboad.component";
-import AdminProductEdit from "../../compoments/admin-product-edit/admin-product-edit.component";
+import { useState, useEffect } from "react";
+import AdminAuthSignin from "../../compoments/admin-auth-signin/admin-auth-signin.component";
+import AdminAuthSignup from "../../compoments/admin-auth-signup/admin-auth-signup.component";
+import AdminDashboad from "../../compoments/admin-dashboad/admin-dashboad.component";
+import { onAuthStateChangedListener } from "../../utils/firebase/firebase.utils";
+import "./admin.styles.scss";
 
 const Admin = () => {
+  const [admin, setAdmin] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChangedListener((currentUser) => {
+      if (currentUser) {
+        setAdmin(currentUser);
+        console.log("signin");
+      } else {
+        setAdmin(null);
+        console.log("signout");
+      }
+    });
+  }, []);
+
   return (
-    <Routes>
-      <Route index element={<AdminSignin />} />
-      <Route path="setting" element={<AdminParamSetting />} />
-      <Route path="dashboad/*" element={<AdminDashboad />} />
-      <Route path="dashboad/product/edit/:product_id" element={<AdminProductEdit />} />
-    </Routes>
+    <div>
+      {!admin && (
+        <div className="authenticationContainer">
+          <AdminAuthSignup setAdmin={setAdmin} />
+          <AdminAuthSignin setAdmin={setAdmin} />
+        </div>
+      )}
+      {admin && <AdminDashboad props={{ setAdmin: setAdmin, admin: admin }} />}
+    </div>
   );
 };
 
