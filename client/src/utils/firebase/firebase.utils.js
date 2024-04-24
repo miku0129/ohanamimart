@@ -57,15 +57,15 @@ export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
 
 export const initializeCategoryData = async () => {
-  const { shops } = SHOP_DATA;
-  shops.forEach(async (shop, idx) => {
+  const { shops_test } = SHOP_DATA;
+  shops_test.forEach(async (shop, idx) => {
     const shop_id = String(idx);
-    const shopDocRef = doc(db, "shops", shop_id);
+    const shopDocRef = doc(db, "shops_test", shop_id);
     const shopDocSnap = await getDoc(shopDocRef);
 
     if (!shopDocSnap.exists()) {
       try {
-        await setDoc(doc(db, "shops", shop_id), {
+        await setDoc(doc(db, "shops_test", shop_id), {
           id: idx,
           shop_name: shop.shop_name,
           shop_name_lowercase_no_spaces_for_url:
@@ -88,7 +88,7 @@ export const initializeCategoryData = async () => {
           const product_id = String(idx);
           const productDocRef = doc(
             db,
-            "shops",
+            "shops_test",
             shop_id,
             "products",
             product_id
@@ -105,7 +105,7 @@ export const initializeCategoryData = async () => {
                 productIdOfSourceFile: productIdOfSourceFile,
               };
               await setDoc(
-                doc(db, "shops", shop_id, "products", product_id),
+                doc(db, "shops_test", shop_id, "products", product_id),
                 product
               );
 
@@ -117,7 +117,7 @@ export const initializeCategoryData = async () => {
                 const product_image_id = String(idx);
                 const productImgDocRef = doc(
                   db,
-                  "shops",
+                  "shops_test",
                   shop_id,
                   "products",
                   product_id,
@@ -130,7 +130,7 @@ export const initializeCategoryData = async () => {
                     await setDoc(
                       doc(
                         db,
-                        "shops",
+                        "shops_test",
                         shop_id,
                         "products",
                         product_id,
@@ -162,13 +162,13 @@ export const initializeCategoryData = async () => {
 };
 
 export const getAllDocuments = async () => {
-  const querySnapshot_of_shops = await getDocs(collection(db, "shops"));
-  let shops = querySnapshot_of_shops.docs.map((docsnapshot) =>
+  const querySnapshot_of_shops = await getDocs(collection(db, "shops_test"));
+  let shops_test = querySnapshot_of_shops.docs.map((docsnapshot) =>
     docsnapshot.data()
   );
-  for (let i = 0; i < shops.length; i++) {
+  for (let i = 0; i < shops_test.length; i++) {
     let querySnapshot_of_products_of_the_shop = await getDocs(
-      collection(db, "shops", String(shops[i].id), "products")
+      collection(db, "shops_test", String(shops_test[i].id), "products")
     );
     const products = querySnapshot_of_products_of_the_shop.docs.map((doc) => {
       return doc.data();
@@ -177,8 +177,8 @@ export const getAllDocuments = async () => {
       let querySnapshot_of_images_of_the_product = await getDocs(
         collection(
           db,
-          "shops",
-          String(shops[i].id),
+          "shops_test",
+          String(shops_test[i].id),
           "products",
           String(products[j].id),
           "images_of_product"
@@ -189,15 +189,15 @@ export const getAllDocuments = async () => {
       );
       products[j] = { ...products[j], product_images: images };
     }
-    shops[i] = { ...shops[i], products: products };
+    shops_test[i] = { ...shops_test[i], products: products };
   }
-  return shops;
+  return shops_test;
 };
 
 export const deleteDocument_of_a_product = async (shopId, productId) => {
   try {
     await deleteDoc(
-      doc(db, "shops", String(shopId), "products", String(productId))
+      doc(db, "shops_test", String(shopId), "products", String(productId))
     );
     window.alert(`アイテムの削除に成功しました。`);
     window.location.reload();
@@ -216,7 +216,7 @@ export const addDocument_of_a_product = async (shopId, product, image) => {
     await setDoc(
       doc(
         db,
-        "shops",
+        "shops_test",
         String(shopId),
         "products",
         String(tailEndId_for_newProduct)
@@ -236,7 +236,7 @@ export const addDocument_of_a_product = async (shopId, product, image) => {
       await setDoc(
         doc(
           db,
-          "shops",
+          "shops_test",
           String(shopId),
           "products",
           String(tailEndId_for_newProduct),
@@ -262,7 +262,7 @@ export const updateDocument_of_a_product = async (
 ) => {
   const productRef = doc(
     db,
-    "shops",
+    "shops_test",
     String(shopId),
     "products",
     String(product_id)
@@ -274,7 +274,7 @@ export const updateDocument_of_a_product = async (
     }
     const ProductImgRef = doc(
       db,
-      "shops",
+      "shops_test",
       String(shopId),
       "products",
       String(product_id),

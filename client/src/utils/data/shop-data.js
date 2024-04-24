@@ -1,5 +1,5 @@
 const SHOP_DATA = {
-  shops: [
+  shops_test: [
     {
       id: 0,
       shop_name: "Tsubaki création",

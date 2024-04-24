@@ -32,7 +32,7 @@ export const get_shop_by_id = (categoriesArray, id) => {
 
 export const get_exhibitions_array = () => {
   const { exhibitions } = EXHIBITIONS_DATA;
-  const { shops } = SHOP_DATA;
+  const { shops_test } = SHOP_DATA;
 
   return exhibitions
     .filter((exhibition) => {
@@ -42,7 +42,8 @@ export const get_exhibitions_array = () => {
     })
     .map((exhibition) => {
       const exhibitors = exhibition.exhibitors.map(
-        (exhibitor) => shops.filter((shop) => shop.shop_name === exhibitor)[0]
+        (exhibitor) =>
+          shops_test.filter((shop) => shop.shop_name === exhibitor)[0]
       );
       return { ...exhibition, exhibitors: exhibitors };
     });
