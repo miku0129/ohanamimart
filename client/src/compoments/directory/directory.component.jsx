@@ -10,7 +10,6 @@ import {
 } from "../../component-utils/component-utils.styles";
 
 import { get_product_array_for_main_visual } from "../../utils/data/data.utils";
-import MainVisualImages from "../../assets/main-visual-images";
 
 import { ReactComponent as TeamLogo } from "../../assets/hanami-cat-logo.svg";
 import { ReactComponent as InstagramLogo } from "../../assets/instagram-svgrepo-com.svg";
@@ -30,7 +29,7 @@ const Directory = () => {
 
   return (
     <div className="main-visual-container">
-      <Slick images={MainVisualImages} slickUsage="mainVisual" />
+      <Slick slickUsage="mainVisual" />
       <div className="main-visual-message-container">
         <p className="message">{team_text}</p>
         <p>{team_sub_text}</p>
