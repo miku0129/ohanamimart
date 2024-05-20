@@ -42,14 +42,16 @@ const ProductDetail = () => {
     item_name: product.product_name,
   });
 
+  const imgs = product.product_images.map(image=> image.product_image_url)
+
   return (
     <div className="product-detail-container">
       <div className="product-detail-sub-container-upper">
         <div className="product-detail-sub-right">
-          {!product.is_book && (
-            <Slick images={product.product_images} slickUsage={productType} />
+          {product && !product.is_book && (
+            <Slick images={imgs} slickUsage={productType} />
           )}
-          {product.is_book && (
+          {product && product.is_book && (
             <ImgGallery
               images={product.product_images}
               slickUsage={productType}

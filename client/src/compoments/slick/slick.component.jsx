@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { getPhotos } from "../../utils/data/flickr.util";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,8 +7,7 @@ import {
   SlickContainer,
 } from "../../component-utils/component-utils.styles";
 
-const Slick = ({ slickUsage }) => {
-  const [photos, setPhotos] = useState([]);
+const Slick = ({ images, slickUsage }) => {
   const settings = {
     dots: true,
     fade: true,
@@ -25,22 +22,14 @@ const Slick = ({ slickUsage }) => {
     autoplaySpeed: 3000,
   };
 
-  useEffect(() => {
-    const triggerFunc = async () => {
-      const res = await getPhotos();
-      console.log("res", res);
-      setPhotos(res);
-    };
-    triggerFunc();
-  }, []);
-
   return (
     <SlickContainer slickUsage={slickUsage}>
       <Slider {...settings} slickUsage={slickUsage}>
-        {photos.map((photo) => {
+        {images.map((image) => {
+          console.log("image", image);
           return (
             <div>
-              <SlickImage src={photo} alt={photo} slickUsage={slickUsage} />
+              <SlickImage src={image} alt={image} slickUsage={slickUsage} />
             </div>
           );
         })}
