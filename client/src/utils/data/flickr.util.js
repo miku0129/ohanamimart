@@ -1,10 +1,9 @@
 import { createFlickr } from "flickr-sdk";
 
-export const getPhotos = async () => {
+export const getPhotos = async (photoSetId, serverId) => {
   const { flickr } = createFlickr(process.env.REACT_APP_FLICKR_API_KEY);
-  const serverId = process.env.REACT_APP_FLICKR_SERVER_ID;
   const res = await flickr("flickr.photosets.getPhotos", {
-    photoset_id: process.env.REACT_APP_FLICKR_PHOTOSET_ID,
+    photoset_id: photoSetId,
     user_id: process.env.REACT_APP_FLICKR_USER_ID,
   });
 
@@ -21,10 +20,8 @@ export const getPhotos = async () => {
   //   };
 
   const photos = res.photoset.photo.map((item) => {
-    console.log(item);
     const photoUrl = `https://live.staticflickr.com/${serverId}/${item.id}_${item.secret}.jpg`;
     return photoUrl;
   });
   return photos;
 };
-
